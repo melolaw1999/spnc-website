@@ -1,0 +1,228 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  phoneHash    String   @unique
+  phoneMasked  String
+  displayName  String
+  role         String   @default("MEMBER")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  sessions     UserSession[]
+  orders       ExternalOrder[]
+  claims       OrderClaim[]
+  ledgers      PointLedger[]
+  favorites    Favorite[]
+  auditLogs    AuditLog[] @relation("AuditActor")
+}
+
+model UserSession {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Product {
+  id              String   @id @default(cuid())
+  slug            String   @unique
+  brand           String
+  name            String
+  type            String
+  summary         String
+  highlightsJson  String
+  audience        String
+  formula         String
+  versionInfo     String
+  usage           String
+  allergen        String
+  featured        Boolean  @default(false)
+  active          Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  variants        ProductVariant[]
+  images          ProductImage[]
+  favorites       Favorite[]
+}
+
+model ProductVariant {
+  id        String  @id @default(cuid())
+  productId String
+  sku       String  @unique
+  size      String
+  flavor    String
+  priceHint String?
+  imagePath String?
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  images    ProductImage[]
+  orderItems ExternalOrderItem[]
+}
+
+model Asset {
+  id                    String   @id @default(cuid())
+  fileName              String
+  projectPath           String   @unique
+  fileType              String
+  width                 Int
+  height                Int
+  sizeBytes             Int
+  transparentBackground Boolean  @default(false)
+  sha256                String   @unique
+  guessedBrand          String
+  guessedProduct        String
+  guessedSize           String?
+  guessedFlavor         String?
+  possibleOldPackaging  Boolean  @default(false)
+  watermarkStatus       String   @default("NONE")
+  websiteSuitability    String   @default("SUITABLE")
+  confidence            Float
+  reviewStatus          String   @default("PENDING")
+  adopted               Boolean  @default(false)
+  sourceType            String   @default("LOCAL_COPY")
+  humanConfirmed        Boolean  @default(false)
+  note                  String?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+  productImages         ProductImage[]
+}
+
+model ProductImage {
+  id          String   @id @default(cuid())
+  productId   String
+  variantId   String?
+  assetId     String
+  role        String
+  altText     String
+  sortOrder   Int      @default(0)
+  sourceType  String   @default("LOCAL_COPY")
+  confirmed   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  variant     ProductVariant? @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  asset       Asset    @relation(fields: [assetId], references: [id], onDelete: Restrict)
+  @@unique([productId, variantId, assetId, role])
+  @@index([productId, sortOrder])
+  @@index([variantId, sortOrder])
+}
+
+model ExternalOrder {
+  id                      String      @id @default(cuid())
+  provider                String
+  externalOrderId         String      @unique
+  status                  String
+  buyerPaidAmount         Int
+  productPaidAmount       Int
+  shippingAmount          Int
+  refundAmount            Int         @default(0)
+  orderedAt               DateTime
+  paidAt                  DateTime?
+  shippedAt               DateTime?
+  completedAt             DateTime?
+  providerUpdatedAt       DateTime
+  recipientPhoneLast4Hash String
+  boundUserId             String?
+  rawPayload              String?
+  createdAt               DateTime    @default(now())
+  updatedAt               DateTime    @updatedAt
+  boundUser               User?       @relation(fields: [boundUserId], references: [id])
+  items                   ExternalOrderItem[]
+  claims                  OrderClaim[]
+}
+
+model ExternalOrderItem {
+  id            String   @id @default(cuid())
+  orderId       String
+  variantId     String?
+  title         String
+  quantity      Int
+  paidAmount    Int
+  refundedAmount Int      @default(0)
+  order         ExternalOrder @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  variant       ProductVariant? @relation(fields: [variantId], references: [id])
+}
+
+model OrderClaim {
+  id          String   @id @default(cuid())
+  orderId     String   @unique
+  userId      String
+  claimedAt   DateTime @default(now())
+  attemptHash String
+  order       ExternalOrder @relation(fields: [orderId], references: [id])
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model PointLedger {
+  id                String       @id @default(cuid())
+  userId            String
+  type              String
+  amount            Int
+  status            String
+  sourceType        String
+  sourceId          String
+  externalReference String
+  description       String
+  availableAt       DateTime?
+  createdAt         DateTime     @default(now())
+  createdBy         String?
+  metadata          String?
+  user              User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([sourceType, sourceId, externalReference])
+  @@index([userId, status])
+}
+
+model PointRule {
+  id              String   @id @default("default")
+  pointsPerYuan   Int      @default(1)
+  activationDays  Int      @default(7)
+  expirationEnabled Boolean @default(false)
+  updatedAt       DateTime @updatedAt
+}
+
+model SyncJob {
+  id          String   @id @default(cuid())
+  provider    String
+  kind        String
+  status      String
+  processed   Int      @default(0)
+  error       String?
+  startedAt   DateTime @default(now())
+  completedAt DateTime?
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String?
+  action     String
+  targetType String
+  targetId   String?
+  detail     String
+  createdAt  DateTime @default(now())
+  actor      User?    @relation("AuditActor", fields: [actorId], references: [id])
+}
+
+model Favorite {
+  id        String   @id @default(cuid())
+  userId    String
+  productId String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  @@unique([userId, productId])
+}
+
+model RateLimitEvent {
+  id        String   @id @default(cuid())
+  keyHash   String
+  action    String
+  createdAt DateTime @default(now())
+  @@index([keyHash, action, createdAt])
+}

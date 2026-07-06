@@ -1,0 +1,2 @@
+import Image from "next/image";import{LoginForm}from"@/components/LoginForm";
+export default function Login(){return <main className="section soft" style={{minHeight:"75vh"}}><div className="container"><div style={{textAlign:"center",marginBottom:30}}><Image src="/assets/brand/ideal-nutrition-logo-blue.png" width={1326} height={700} alt="理想营养，正品源自正道" style={{width:220,height:100,objectFit:"contain",margin:"auto"}}/><div className="eyebrow">Member</div><h1 style={{fontSize:48,margin:10}}>登录理想营养</h1><p className="muted">第一阶段使用模拟手机验证码。</p></div><LoginForm/></div></main>}
