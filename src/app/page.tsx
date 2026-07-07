@@ -2,115 +2,86 @@ import Link from "next/link";
 import { TaobaoButton } from "@/components/TaobaoButton";
 import { enterpriseContacts, mailto } from "@/data/contacts";
 
-const capabilities = [
+const brands = ["ON", "YAVA", "Yamamoto", "BPJ", "Arla", "King Caesar"] as const;
+
+const billboards = [
   {
-    name: "Performance Nutrition",
-    title: "运动营养商品矩阵",
-    text: "围绕乳清、分离乳清、水解乳清、肌酸、即饮蛋白等类别，整理在售商品与基础信息。",
+    tone: "blue",
+    title: "版本说明",
+    subtitle: "把国产、跨境与一般贸易讲清楚。",
+    text: "不同流通方式下的包装、标签与渠道信息，一页看明白。",
+    href: "/versions",
+    cta: "查看版本说明",
   },
   {
-    name: "Version Clarity",
-    title: "国产 / 跨境 / 一般贸易版本说明",
-    text: "用克制、可核对的方式说明不同销售版本在标签、渠道与包装表达上的差异。",
+    tone: "silver",
+    title: "防伪溯源",
+    subtitle: "提供防伪标、溯源码与收货检查指引。",
+    text: "在购买前后，帮助用户快速判断商品信息与版本来源。",
+    href: "/authenticity",
+    cta: "查看防伪溯源",
   },
   {
-    name: "Traceability",
-    title: "防伪验证 / 跨境溯源",
-    text: "提供防伪标、溯源码、封膜、标签和收货检查的基础核验路径。",
-  },
-  {
-    name: "Retail Channel",
-    title: "淘宝成交 / 售后支持",
-    text: "官网负责信息说明与信任建立，购买、付款、退款与售后仍回到淘宝订单完成。",
+    tone: "white",
+    title: "售后 FAQ",
+    subtitle: "购买、退款与售后问题，提前说清楚。",
+    text: "售后处理与购买行为仍通过淘宝店完成。",
+    href: "/faq",
+    cta: "查看售后 FAQ",
   },
 ] as const;
-
-const brandMatrix = [
-  ["ON", "Optimum Nutrition 相关乳清、分离乳清与训练补剂信息。"],
-  ["YAVA", "YAVA LABS 乳清、分离乳清与肌酸类商品资料。"],
-  ["Yamamoto", "Yamamoto ISO-FUJI 等分离乳清商品资料。"],
-  ["BPJ", "即饮高蛋白饮料与便携营养场景。"],
-  ["Arla", "乳品原料与相关营养商品资料整理方向。"],
-  ["King Caesar", "后续纳入商品矩阵与版本资料的品牌方向。"],
-] as const;
-
-const onTopics = ["金标乳清", "金标分离", "白金水解", "肌酸", "谷氨酰胺"] as const;
-const versionTopics = ["国产版本", "跨境进口", "一般贸易", "海外渠道", "Sam’s 版本"] as const;
-const traceabilityTopics = ["防伪标", "溯源码", "封膜", "标签", "收货检查"] as const;
-const knowledgeTopics = ["乳清 / 分离 / 水解区别", "为什么会有白色颗粒", "蛋白粉桶软说明", "肌酸基础知识", "版本选择指南"] as const;
 
 export default function Home() {
-  return <main>
-    <section className="corporate-hero">
-      <div className="container corporate-hero-grid">
-        <div>
-          <div className="eyebrow">Ideal Performance Nutrition</div>
-          <h1>理想营养</h1>
-          <p className="hero-slogan">正品源自正道</p>
-          <p className="lead hero-lead">全球运动营养品牌精选渠道。专注全球运动营养品牌商品的正品供应、版本说明、防伪溯源与售后服务。</p>
-          <div className="actions actions-left"><Link className="btn" href="/products">查看商品矩阵</Link><Link className="btn secondary" href="/authenticity">查看防伪溯源</Link><TaobaoButton label="进入淘宝店" secondary /></div>
+  return <main className="apple-home">
+    <section className="apple-hero-screen">
+      <div className="container apple-hero-inner">
+        <div className="apple-copy">
+          <div className="eyebrow">SPNC</div>
+          <h1><span>SPNC</span><span>理想营养</span></h1>
+          <p className="apple-subtitle">正品源自正道</p>
+          <p className="apple-desc">全球运动营养品牌精选渠道。</p>
+          <p className="apple-desc apple-desc-small">提供商品信息、版本说明、防伪溯源与售后指引。</p>
+          <div className="actions"><Link className="btn" href="/products">查看商品矩阵</Link><Link className="btn secondary" href="/authenticity">查看防伪溯源</Link><TaobaoButton label="进入淘宝店" secondary /></div>
         </div>
-        <div className="hero-info-card" aria-label="官网定位说明">
-          <span className="tag">Brand trust website</span>
-          <h2>运动营养正品供应与版本说明中心</h2>
-          <p>官网用于提供商品信息、版本说明、防伪溯源和售后指引。理想营养不代表所售品牌主体，也不承担排他渠道身份；所有购买行为继续跳转淘宝店完成。</p>
-          <div className="hero-info-list"><span>商品矩阵</span><span>版本说明</span><span>防伪溯源</span><span>售后指引</span></div>
+        <div className="apple-visual" aria-hidden="true">
+          <div className="visual-ring visual-ring-one" />
+          <div className="visual-ring visual-ring-two" />
+          <div className="visual-orb"><span>SPNC</span></div>
+          <div className="visual-pill visual-pill-left">Protein</div>
+          <div className="visual-pill visual-pill-right">Traceable</div>
         </div>
       </div>
     </section>
 
-    <section className="section">
-      <div className="container">
-        <div className="section-head corporate-head"><div><div className="eyebrow">Core Capabilities</div><h2>从商品到售后，把关键信息讲清楚。</h2></div><p className="muted">企业官网式的信息结构，不做促销页，也不把官网变成独立商城。</p></div>
-        <div className="grid four capability-grid">{capabilities.map((item) => <article className="card capability-card" key={item.name}><div className="capability-name">{item.name}</div><h3>{item.title}</h3><p className="muted">{item.text}</p></article>)}</div>
+    <section className="home-billboard home-billboard-soft">
+      <div className="container billboard-inner">
+        <div className="billboard-copy">
+          <h2>商品矩阵</h2>
+          <p className="billboard-subtitle">覆盖蛋白粉、肌酸、饮品与功能补剂。</p>
+          <div className="brand-cloud" aria-label="品牌矩阵">{brands.map((brand) => <span key={brand}>{brand}</span>)}</div>
+          <Link className="btn" href="/products">浏览商品矩阵</Link>
+        </div>
       </div>
     </section>
 
-    <section className="section soft">
-      <div className="container">
-        <div className="section-head corporate-head"><div><div className="eyebrow">Brand Matrix</div><h2>商品 / 品牌矩阵预览</h2></div><Link className="text-link" href="/products">查看完整商品矩阵</Link></div>
-        <div className="brand-matrix">{brandMatrix.map(([brand, text]) => <article className="brand-card" key={brand}><strong>{brand}</strong><p>{text}</p></article>)}</div>
+    {billboards.map((item) => <section className={`home-billboard home-billboard-${item.tone}`} key={item.title}>
+      <div className="container billboard-inner">
+        <div className="billboard-copy">
+          <h2>{item.title}</h2>
+          <p className="billboard-subtitle">{item.subtitle}</p>
+          <p className="billboard-text">{item.text}</p>
+          <Link className="btn" href={item.href}>{item.cta}</Link>
+        </div>
       </div>
-    </section>
+    </section>)}
 
-    <section className="section">
-      <div className="container split-section">
-        <Link className="card feature-link panel-link" href="/on">
-          <div className="eyebrow">ON Zone</div>
-          <h2>ON 专区入口</h2>
-          <p className="muted">集中查看 ON 相关商品资料。规格、口味、库存与价格以淘宝店实时页面为准。</p>
-          <div className="topic-row">{onTopics.map((topic) => <span key={topic}>{topic}</span>)}</div>
-        </Link>
-        <Link className="card feature-link panel-link" href="/versions">
-          <div className="eyebrow">Version Clarity</div>
-          <h2>版本说明入口</h2>
-          <p className="muted">了解不同销售版本可能出现的标签、包装与渠道表达差异。</p>
-          <div className="topic-row">{versionTopics.map((topic) => <span key={topic}>{topic}</span>)}</div>
-        </Link>
-      </div>
-    </section>
-
-    <section className="section soft">
-      <div className="container split-section">
-        <Link className="card feature-link panel-link" href="/authenticity">
-          <div className="eyebrow">Traceability</div>
-          <h2>防伪溯源入口</h2>
-          <p className="muted">把防伪核验、跨境溯源与收货检查拆成可执行步骤，减少误判。</p>
-          <div className="topic-row">{traceabilityTopics.map((topic) => <span key={topic}>{topic}</span>)}</div>
-        </Link>
-        <Link className="card feature-link panel-link" href="/knowledge">
-          <div className="eyebrow">Knowledge Center</div>
-          <h2>知识中心入口</h2>
-          <p className="muted">以常见问题为起点，解释运动营养商品选择、包装现象与版本核对方法。</p>
-          <div className="topic-row">{knowledgeTopics.map((topic) => <span key={topic}>{topic}</span>)}</div>
-        </Link>
-      </div>
-    </section>
-
-    <section className="section">
-      <div className="container contact-panel">
-        <div><div className="eyebrow">Contact</div><h2>联系我们</h2><p className="muted">购买前请先查看商品矩阵、版本说明与防伪溯源；需要沟通时，可按事项选择企业邮箱。</p></div>
-        <div className="contact-list">{enterpriseContacts.map((contact) => <a className="contact-row" href={mailto(contact.email)} key={contact.email}><span>{contact.role}</span><strong>{contact.email}</strong></a>)}</div>
+    <section className="home-billboard home-billboard-contact">
+      <div className="container billboard-inner contact-billboard">
+        <div className="billboard-copy">
+          <h2>联系我们</h2>
+          <p className="billboard-subtitle">如有合作、咨询或售后问题，可通过以下邮箱联系。</p>
+          <div className="mail-strip">{enterpriseContacts.map((contact) => <a href={mailto(contact.email)} key={contact.email}><span>{contact.email}</span><small>{contact.role}</small></a>)}</div>
+        </div>
       </div>
     </section>
   </main>;

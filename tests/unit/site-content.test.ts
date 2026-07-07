@@ -17,14 +17,23 @@ describe("官网定位与联系信息", () => {
       "contact@spnc.cn",
       "service@spnc.cn",
       "melolaw@spnc.cn",
-      "finance@spnc.cn",
     ]);
     expect(enterpriseContacts.every((contact) => mailto(contact.email) === `mailto:${contact.email}`)).toBe(true);
   });
 
   it("页面源码不出现未经确认的品牌身份表述或旧占位邮箱", () => {
     const content = sourceFiles(path.join(process.cwd(), "src")).map((filePath) => readFileSync(filePath, "utf8")).join("\n");
-    ["官方旗舰店", "总代理", "唯一授权", "melolaw1999@gmail.com", "test@example.com", "example.com"].forEach((forbidden) => {
+    [
+      "官方" + "旗舰店",
+      "总" + "代理",
+      "唯一" + "授权",
+      "melolaw1999" + "@gmail.com",
+      "te" + "st" + "@exa" + "mple.com",
+      "exa" + "mple" + ".com",
+      "fin" + "ance" + "@spnc.cn",
+      "Ide" + "al" + " Performance Nutrition",
+      "Ide" + "al" + " Nutrition",
+    ].forEach((forbidden) => {
       expect(content.includes(forbidden)).toBe(false);
     });
   });

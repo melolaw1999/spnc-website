@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const product = await getProduct(slug);
   if (!product) return {};
-  const image = product.images[0]?.asset.projectPath || "/assets/brand/ideal-nutrition-share.jpg";
+  const image = product.images[0]?.asset.projectPath || "/assets/brand/spnc-share.jpg";
   return {
     title: product.name,
     description: `${product.brand} ${product.name}：${product.summary} 规格、版本与购买信息。`,

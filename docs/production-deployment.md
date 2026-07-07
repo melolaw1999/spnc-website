@@ -17,7 +17,7 @@
 git init
 git add .
 git status
-git commit -m "Prepare Ideal Nutrition website for production"
+git commit -m "Prepare SPNC website for production"
 git branch -M main
 git remote add origin https://github.com/你的账号/你的仓库名.git
 git push -u origin main

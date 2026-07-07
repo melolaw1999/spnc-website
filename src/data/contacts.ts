@@ -14,11 +14,6 @@ export const enterpriseContacts = [
     email: "melolaw@spnc.cn",
     note: "适用于需要负责人直联的长期合作与重要事项沟通。",
   },
-  {
-    role: "财务对账 / 付款沟通",
-    email: "finance@spnc.cn",
-    note: "适用于已确认合作后的对账、发票与付款沟通。",
-  },
 ] as const;
 
 export const publicContactEmail = "contact@spnc.cn";
