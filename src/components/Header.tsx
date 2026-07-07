@@ -6,6 +6,7 @@ const links = [
   ["ON 专区", "/on"],
   ["防伪溯源", "/authenticity"],
   ["版本说明", "/versions"],
+  ["知识中心", "/knowledge"],
   ["售后 FAQ", "/faq"],
   ["关于我们", "/about"],
   ["联系我们", "/contact"],

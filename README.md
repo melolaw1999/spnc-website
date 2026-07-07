@@ -1,6 +1,6 @@
 # 理想营养官网
 
-理想营养（Ideal Performance Nutrition）生产版官网，使用 Next.js App Router、TypeScript 与真实品牌/产品素材构建。公开官网不依赖本地数据库，可直接部署至 Vercel；购买、付款和退款统一跳转淘宝店完成。
+理想营养生产版官网，使用 Next.js App Router、TypeScript 与真实品牌/商品素材构建。官网不依赖数据库；购买、付款和订单售后统一在淘宝店完成。
 
 ## 本地运行
 
@@ -21,18 +21,22 @@ npm run build
 npm run start
 ```
 
-## 环境变量
+## 正式地址
 
-- `NEXT_PUBLIC_SITE_URL`：正式域名，例如 `https://www.example.com`，用于 canonical、Open Graph、sitemap 和 robots。
-- `NEXT_PUBLIC_TAOBAO_STORE_URL`：理想营养淘宝店地址；所有购买按钮统一读取该变量。
-- `DATABASE_URL`、`SESSION_SECRET`：仅供本地会员/后台演示模块使用。公开官网部署不需要。
+- 官网：`https://www.spnc.cn`
+- 淘宝店：`https://spnc.taobao.com`
+
+环境变量只有两个：
+
+- `NEXT_PUBLIC_SITE_URL`：canonical、Open Graph、sitemap 和 robots 使用的正式域名。
+- `NEXT_PUBLIC_TAOBAO_STORE_URL`：所有淘宝购买与咨询按钮的唯一跳转来源。
 
 ## 公开页面
 
 - `/`：首页
 - `/products`：商品矩阵
-- `/on`：ON 专区
-- `/authenticity`：防伪溯源
+- `/on`：ON 商品专区
+- `/authenticity`：正品说明与防伪溯源
 - `/versions`：版本说明
 - `/faq`：售后 FAQ
 - `/about`：关于我们
@@ -45,7 +49,7 @@ npm run start
 - 网页压缩版本：`public/assets/optimized/`
 - 公开商品数据：`src/data/catalog.ts`
 
-原始素材复制件不会被网页压缩流程覆盖。产品图保持原始宽高比并使用 `object-fit: contain`；除首屏关键图片外，图片均采用延迟加载。
+原始素材复制件不会被网页压缩流程覆盖。商品图保持原始宽高比并使用 `object-fit: contain`。
 
 ## 质量检查
 
@@ -55,6 +59,4 @@ npm run test
 npm run build
 ```
 
-GitHub 上传与 Vercel 部署步骤见 [生产部署指南](docs/production-deployment.md)。
-
-> 膳食补充剂不能替代均衡饮食。产品信息以实物包装标签为准。
+> 膳食补充剂不能替代均衡饮食。商品信息以实物包装标签及淘宝订单页面为准。

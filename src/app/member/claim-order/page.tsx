@@ -1,1 +1,0 @@
-import{ClaimForm}from"@/components/ClaimForm";export default function Claim(){return <><h2 style={{textAlign:'center'}}>认领淘宝订单</h2><p className="muted" style={{textAlign:'center'}}>订单核对成功后会绑定到当前账户。系统只保存手机号后四位的哈希，不保存完整收件手机号。</p><ClaimForm/></>}

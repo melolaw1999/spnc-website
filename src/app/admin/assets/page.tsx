@@ -1,8 +1,0 @@
-import Link from "next/link";
-import {redirect} from "next/navigation";
-import {currentUser} from "@/lib/security";
-import {db} from "@/lib/db";
-import {AssetReviewCard} from "@/components/AssetReviewCard";
-
-export const dynamic="force-dynamic";
-export default async function Assets(){const u=await currentUser();if(!u)redirect("/login");if(u.role!=="ADMIN")redirect("/member");const[assets,products]=await Promise.all([db.asset.findMany({orderBy:[{adopted:"desc"},{guessedBrand:"asc"},{fileName:"asc"}]}),db.product.findMany({include:{variants:true},orderBy:{name:"asc"}})]);const options=products.flatMap(p=>[{value:`${p.id}|`,label:`${p.name}（商品级）`},...p.variants.map(v=>({value:`${p.id}|${v.id}`,label:`${p.name} · ${v.size} · ${v.flavor}`}))]);return <main className="section"><div className="container"><div className="section-head"><div><div className="eyebrow">Asset Review</div><h1 style={{fontSize:52,margin:"8px 0"}}>素材审核与商品绑定</h1><p className="muted">这里只管理复制进项目的素材，不移动、不删除、不修改本机原始文件。未人工确认的绑定保留确认标记。</p></div><Link className="btn subtle" href="/admin">返回控制台</Link></div><div className="dashboard" style={{marginBottom:30}}><div className="metric">素材总数<strong>{assets.length}</strong></div><div className="metric">已采用<strong>{assets.filter(x=>x.adopted).length}</strong></div><div className="metric">待确认<strong>{assets.filter(x=>x.reviewStatus==="PENDING").length}</strong></div><div className="metric">不使用<strong>{assets.filter(x=>x.reviewStatus==="REJECTED").length}</strong></div></div><div className="asset-grid">{assets.map(a=><AssetReviewCard key={a.id} asset={a} options={options}/>)}</div></div></main>}
