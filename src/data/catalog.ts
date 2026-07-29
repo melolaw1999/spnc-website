@@ -19,6 +19,7 @@ export type CatalogProduct = {
   brand: "OPTIMUM NUTRITION";
   name: string;
   type: string;
+  salesVersion?: (typeof publicSalesVersions)[number];
   summary: string;
   highlights: string[];
   audience: string;
@@ -101,6 +102,67 @@ export const catalog: CatalogProduct[] = [
     ],
     images: [
       image("/assets/optimized/products/on/isolate/on-gold-standard-isolate-3lb-chocolate-bliss-front-official.webp", "ON 金标分离乳清 3 磅巧克力正面透明背景图", { width: 1000, height: 1000, variantIds: ["on-isolate-3lb-chocolate-bliss"], caption: "3 磅 · 巧克力", sourceType: "brand-official-copy" }),
+    ],
+  },
+  {
+    ...shared,
+    id: "on-domestic-creatine",
+    slug: "on-domestic-creatine",
+    brand: "OPTIMUM NUTRITION",
+    name: "国产肌酸粉",
+    type: "肌酸",
+    salesVersion: "国产版本",
+    summary: "ON 国产肌酸粉。当前确认展示 100 克与 200 克无味包装，实时在售情况以淘宝商品页为准。",
+    highlights: ["100 克与 200 克", "无味"],
+    versionInfo: "本条目展示国产版本包装。购买前请在淘宝商品页核对规格，并以实际到货商品标签为准。",
+    featured: true,
+    variants: [
+      { id: "on-domestic-creatine-200g-unflavored", size: "200 克", flavor: "无味" },
+      { id: "on-domestic-creatine-100g-unflavored", size: "100 克", flavor: "无味" },
+    ],
+    images: [
+      image("/assets/optimized/products/on/domestic/creatine/on-domestic-creatine-200g-unflavored-front.webp", "ON 国产肌酸粉 200 克无味正面白底图", { width: 346, height: 366, variantIds: ["on-domestic-creatine-200g-unflavored"], caption: "国产版本 · 200 克 · 无味", sourceType: "user-confirmed-copy" }),
+      image("/assets/optimized/products/on/domestic/creatine/on-domestic-creatine-100g-unflavored-front.webp", "ON 国产肌酸粉 100 克无味正面白底图", { width: 412, height: 472, variantIds: ["on-domestic-creatine-100g-unflavored"], caption: "国产版本 · 100 克 · 无味", sourceType: "user-confirmed-copy" }),
+    ],
+  },
+  {
+    ...shared,
+    id: "on-domestic-glutamine",
+    slug: "on-domestic-glutamine",
+    brand: "OPTIMUM NUTRITION",
+    name: "国产谷氨酰胺粉",
+    type: "氨基酸补充剂",
+    salesVersion: "国产版本",
+    summary: "ON 国产谷氨酰胺粉。当前确认展示 300 克无味包装，实时在售情况以淘宝商品页为准。",
+    highlights: ["300 克", "无味"],
+    versionInfo: "本条目展示国产版本包装。购买前请在淘宝商品页核对规格，并以实际到货商品标签为准。",
+    featured: false,
+    variants: [
+      { id: "on-domestic-glutamine-300g-unflavored", size: "300 克", flavor: "无味" },
+    ],
+    images: [
+      image("/assets/optimized/products/on/domestic/glutamine/on-domestic-glutamine-300g-unflavored-front.webp", "ON 国产谷氨酰胺粉 300 克无味正面白底图", { width: 1172, height: 1342, variantIds: ["on-domestic-glutamine-300g-unflavored"], caption: "国产版本 · 300 克 · 无味", sourceType: "user-confirmed-copy" }),
+    ],
+  },
+  {
+    ...shared,
+    id: "on-domestic-double-layer-crispy-whey-protein-bar",
+    slug: "on-domestic-double-layer-crispy-whey-protein-bar",
+    brand: "OPTIMUM NUTRITION",
+    name: "国产双层香脆乳清蛋白棒",
+    type: "蛋白棒",
+    salesVersion: "国产版本",
+    summary: "ON 国产双层香脆乳清蛋白棒。当前确认展示两种 30 克单支包装，实时在售情况以淘宝商品页为准。",
+    highlights: ["30 克单支装", "两种口味"],
+    versionInfo: "本条目展示国产版本包装。购买前请在淘宝商品页核对口味与装数，并以实际到货商品标签为准。",
+    featured: false,
+    variants: [
+      { id: "on-domestic-protein-bar-30g-peanut-sauce", size: "30 克", flavor: "花生酱味" },
+      { id: "on-domestic-protein-bar-30g-cocoa-brownie", size: "30 克", flavor: "可可布朗尼味" },
+    ],
+    images: [
+      image("/assets/optimized/products/on/domestic/protein-bar/on-domestic-protein-bar-30g-peanut-sauce-front.webp", "ON 国产双层香脆乳清蛋白棒 30 克花生酱味正面白底图", { width: 836, height: 542, variantIds: ["on-domestic-protein-bar-30g-peanut-sauce"], caption: "国产版本 · 30 克 · 花生酱味", sourceType: "user-confirmed-copy" }),
+      image("/assets/optimized/products/on/domestic/protein-bar/on-domestic-protein-bar-30g-cocoa-brownie-front.webp", "ON 国产双层香脆乳清蛋白棒 30 克可可布朗尼味正面白底图", { width: 564, height: 241, variantIds: ["on-domestic-protein-bar-30g-cocoa-brownie"], caption: "国产版本 · 30 克 · 可可布朗尼味", sourceType: "user-confirmed-copy" }),
     ],
   },
   {

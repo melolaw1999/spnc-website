@@ -6,7 +6,7 @@ import { siteUrl, taobaoStoreUrl } from "@/lib/site";
 
 describe("生产商品目录", () => {
   it("商品 slug 唯一且公开目录完整", () => {
-    expect(catalog).toHaveLength(7);
+    expect(catalog).toHaveLength(10);
     expect(new Set(catalog.map((product) => product.slug)).size).toBe(catalog.length);
   });
 
@@ -15,6 +15,9 @@ describe("生产商品目录", () => {
     expect(catalog.map((product) => product.name)).toEqual([
       "金标乳清蛋白粉",
       "金标分离乳清",
+      "国产肌酸粉",
+      "国产谷氨酰胺粉",
+      "国产双层香脆乳清蛋白棒",
       "白金水解乳清",
       "微粉化肌酸粉",
       "谷氨酰胺粉",
@@ -27,11 +30,36 @@ describe("生产商品目录", () => {
     expect(publicSalesVersions).toEqual(["跨境进口", "国产版本", "一般贸易"]);
   });
 
+  it("国产系列按版本独立登记并绑定对应图片", () => {
+    const domesticProducts = catalog.filter((product) => product.salesVersion === "国产版本");
+    expect(domesticProducts.map((product) => product.name)).toEqual([
+      "国产肌酸粉",
+      "国产谷氨酰胺粉",
+      "国产双层香脆乳清蛋白棒",
+    ]);
+    expect(domesticProducts.flatMap((product) => product.images).every((item) => item.sourceType === "user-confirmed-copy")).toBe(true);
+    expect(domesticProducts.flatMap((product) => product.images).every((item) => item.asset.projectPath.includes("/products/on/domestic/"))).toBe(true);
+
+    for (const product of domesticProducts) {
+      expect(product.images.flatMap((item) => item.variantIds).sort()).toEqual(product.variants.map((variant) => variant.id).sort());
+    }
+  });
+
   it("已采用商品图只读取 public/assets 下的压缩副本", () => {
     const paths = catalog.flatMap((product) => product.images.map((image) => image.asset.projectPath));
     expect(paths.length).toBeGreaterThan(0);
     expect(paths.every((path) => path.startsWith("/assets/optimized/"))).toBe(true);
     expect(paths.every((assetPath) => existsSync(path.join(process.cwd(), "public", assetPath)))).toBe(true);
+  });
+
+  it("国产网页图均保留未经修改的项目内 PNG 原图", () => {
+    const domesticImages = catalog
+      .filter((product) => product.salesVersion === "国产版本")
+      .flatMap((product) => product.images);
+    for (const item of domesticImages) {
+      const originalPath = item.asset.projectPath.replace("/assets/optimized/", "/assets/").replace(/\.webp$/, ".png");
+      expect(existsSync(path.join(process.cwd(), "public", originalPath))).toBe(true);
+    }
   });
 
   it("购买入口始终使用淘宝店地址", () => {
