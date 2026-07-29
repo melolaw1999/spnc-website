@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: siteName, template: `%s｜${siteName}` },
   description: siteDescription,
-  applicationName: "理想营养",
+  applicationName: "SPNC",
   alternates: { canonical: "/" },
-  icons: { icon: "/favicon.ico", apple: "/assets/brand/ideal-nutrition-share.jpg" },
-  openGraph: { type: "website", locale: "zh_CN", siteName: "理想营养", title: siteName, description: siteDescription, url: "/", images: [{ url: "/assets/brand/ideal-nutrition-share.jpg", width: 800, height: 800, alt: "理想营养品牌 Logo" }] },
-  twitter: { card: "summary_large_image", title: siteName, description: siteDescription, images: ["/assets/brand/ideal-nutrition-share.jpg"] },
+  icons: { icon: "/favicon.ico", apple: "/assets/brand/spnc-share.jpg" },
+  openGraph: { type: "website", locale: "zh_CN", siteName: "SPNC", title: siteName, description: siteDescription, url: "/", images: [{ url: "/assets/brand/spnc-share.jpg", width: 800, height: 800, alt: "SPNC 理想营养 Logo" }] },
+  twitter: { card: "summary_large_image", title: siteName, description: siteDescription, images: ["/assets/brand/spnc-share.jpg"] },
   robots: { index: true, follow: true },
 };
 

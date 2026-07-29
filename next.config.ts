@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   compress: true,
   images: { formats: ["image/avif", "image/webp"] },
   experimental: { optimizePackageImports: ["lucide-react"] },
+  async redirects() {
+    return [
+      { source: "/products/on-hydro-whey", destination: "/products/on-platinum-hydrowhey", permanent: true },
+      { source: "/products/on-creatine-glutamine", destination: "/products/on-micronized-creatine", permanent: true },
+    ];
+  },
   async headers() {
     return [{ source: "/(.*)", headers: [
       { key: "X-Content-Type-Options", value: "nosniff" },

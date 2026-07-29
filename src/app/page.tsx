@@ -1,14 +1,96 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ProductCard } from "@/components/ProductCard";
-import { getProducts } from "@/lib/products";
-import { taobaoStoreUrl } from "@/lib/site";
+import { SeasonalOpening } from "@/components/SeasonalOpening";
+import { TaobaoButton } from "@/components/TaobaoButton";
+import { catalog, publicSalesVersions } from "@/data/catalog";
+import { publicContactEmail, serviceEmail, mailto } from "@/data/contacts";
 
-export default async function Home() {
-  const products = await getProducts();
-  return <main>
-    <section className="hero"><div className="container"><div className="eyebrow">Ideal Performance Nutrition</div><h1>为认真训练的人，提供可靠的营养选择</h1><p className="lead">稳定供应链、透明版本说明、专业产品支持。我们相信，信任来自把每一件事讲清楚。</p><div className="actions"><Link className="btn" href="/products">浏览商品矩阵</Link><a className="btn secondary" href={taobaoStoreUrl} target="_blank" rel="noopener noreferrer">前往淘宝店</a></div></div></section>
-    <section className="section"><div className="container"><div className="section-head"><div><div className="eyebrow">Featured</div><h2>真实产品，清楚地选</h2></div><p className="muted">规格、口味与版本信息集中呈现，不用在促销话术里找答案。</p></div><div className="grid">{products.filter((product) => product.featured).slice(0, 3).map((product) => <ProductCard key={product.id} p={product} />)}</div></div></section>
-    <section className="section soft"><div className="container"><div className="section-head"><h2>为什么选择理想营养</h2></div><div className="grid"><div className="card"><span className="tag">01</span><h3>正品源自正道</h3><p className="muted">重视采购路径、订单核验和批次信息，不使用无法证明的授权或背书。</p></div><div className="card"><span className="tag">02</span><h3>版本解释透明</h3><p className="muted">不同销售版本在包装和标签上可能不同，我们把基础区别讲清楚。</p></div><div className="card"><span className="tag">03</span><h3>专业而克制</h3><p className="muted">补剂不是药品，也不是训练捷径。选择应回到饮食、训练与真实需要。</p></div></div></div></section>
-    <section className="section"><div className="container"><div className="grid"><Link className="card feature-link" href="/on"><div className="eyebrow">Optimum Nutrition</div><h2>ON 专区</h2><p className="muted">集中查看金标乳清、分离乳清、水解乳清和训练补剂。</p></Link><Link className="card feature-link" href="/authenticity"><div className="eyebrow">Authenticity</div><h2>防伪与溯源</h2><p className="muted">了解防伪标签、溯源码和包装批次变化。</p></Link><Link className="card feature-link" href="/versions"><div className="eyebrow">Versions</div><h2>版本说明</h2><p className="muted">理解一般贸易、跨境与其他销售版本的基础差异。</p></Link></div></div></section>
+const billboards = [
+  {
+    tone: "blue",
+    title: "版本说明",
+    subtitle: "把跨境、国产与一般贸易讲清楚。",
+    text: "核对包装、标签与订单中的销售版本。",
+    href: "/versions",
+    cta: "查看版本说明",
+  },
+  {
+    tone: "silver",
+    title: "防伪溯源",
+    subtitle: "从防伪标到收货检查。",
+    text: "结合订单、包装、封口与批次信息进行核验。",
+    href: "/authenticity",
+    cta: "查看防伪溯源",
+  },
+] as const;
+
+export default function Home() {
+  const featured = catalog.filter((product) => product.featured).slice(0, 4);
+  return <main className="apple-home">
+    <SeasonalOpening />
+
+    <section className="home-billboard home-billboard-identity">
+      <div className="container billboard-inner identity-inner">
+        <div className="billboard-copy">
+          <div className="eyebrow">SPNC · 理想营养</div>
+          <h2>长期训练，<br />需要可靠的选择。</h2>
+          <p className="billboard-text">提供 ON 商品信息、版本说明、防伪溯源与售后指引。</p>
+          <div className="actions"><Link className="btn" href="/products">查看 ON 商品</Link><TaobaoButton label="进入淘宝店" secondary /></div>
+        </div>
+      </div>
+    </section>
+
+    <section className="home-billboard home-billboard-products">
+      <div className="container billboard-inner product-billboard">
+        <div className="billboard-copy">
+          <div className="eyebrow">ON Product Library</div>
+          <h2>ON 商品矩阵</h2>
+          <p className="billboard-subtitle">只展示已经确认的真实商品素材。</p>
+          <div className="version-scope version-scope-centered">{publicSalesVersions.map((version) => <span key={version}>{version}</span>)}</div>
+          <div className="home-product-row">
+            {featured.map((product) => <Link href={`/products/${product.slug}`} key={product.id} className="home-product-item">
+              <Image src={product.images[0].asset.projectPath} alt={product.images[0].altText} width={product.images[0].asset.width} height={product.images[0].asset.height} loading="lazy" sizes="(max-width: 560px) 42vw, 210px" />
+              <span>{product.name}</span>
+            </Link>)}
+          </div>
+          <Link className="btn" href="/products">浏览商品矩阵</Link>
+        </div>
+      </div>
+    </section>
+
+    {billboards.map((item) => <section className={`home-billboard home-billboard-${item.tone}`} key={item.title}>
+      <div className="container billboard-inner">
+        <div className="billboard-copy">
+          <h2>{item.title}</h2>
+          <p className="billboard-subtitle">{item.subtitle}</p>
+          <p className="billboard-text">{item.text}</p>
+          <Link className="btn" href={item.href}>{item.cta}</Link>
+        </div>
+      </div>
+    </section>)}
+
+    <section className="home-billboard home-billboard-service">
+      <div className="container billboard-inner">
+        <div className="billboard-copy">
+          <h2>售后登记</h2>
+          <p className="billboard-subtitle">订单问题，先把资料一次提交清楚。</p>
+          <p className="billboard-text">瘪桶、破损、版本疑问与活动权益均可登记；退款与交易处理仍回到淘宝订单完成。</p>
+          <div className="actions"><Link className="btn" href="/support">提交工单</Link><Link className="btn secondary" href="/faq">查看售后 FAQ</Link></div>
+        </div>
+      </div>
+    </section>
+
+    <section className="home-billboard home-billboard-contact">
+      <div className="container billboard-inner contact-billboard">
+        <div className="billboard-copy">
+          <h2>联系我们</h2>
+          <p className="billboard-subtitle">合作与售后，分别找到正确入口。</p>
+          <div className="mail-strip mail-strip-two">
+            <a href={mailto(publicContactEmail)}><span>{publicContactEmail}</span><small>品牌合作 / 通用联系</small></a>
+            <a href={mailto(serviceEmail)}><span>{serviceEmail}</span><small>售后客服 / 消费者咨询</small></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>;
 }
