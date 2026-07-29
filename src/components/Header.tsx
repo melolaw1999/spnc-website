@@ -7,6 +7,7 @@ const links = [
   ["防伪溯源", "/authenticity"],
   ["版本说明", "/versions"],
   ["售后 FAQ", "/faq"],
+  ["售后登记", "/support"],
   ["关于我们", "/about"],
   ["联系我们", "/contact"],
 ] as const;

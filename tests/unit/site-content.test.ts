@@ -33,6 +33,9 @@ describe("官网定位与联系信息", () => {
       "fin" + "ance" + "@spnc.cn",
       "Ide" + "al" + " Performance Nutrition",
       "Ide" + "al" + " Nutrition",
+      "YAVA" + " LABS",
+      "YAMA" + "MOTO",
+      "King" + " Caesar",
     ].forEach((forbidden) => {
       expect(content.includes(forbidden)).toBe(false);
     });

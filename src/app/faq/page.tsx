@@ -14,5 +14,5 @@ const questions = [
 ] as const;
 
 export default function Faq() {
-  return <main className="section"><div className="container narrow"><div className="eyebrow">After-sales FAQ</div><h1 className="page-title">售后问题，回到原订单处理。</h1><p className="lead detail-lead">购买记录、商品信息和沟通过程都留在淘宝订单内，处理售后更清楚。消费者咨询也可发送邮件至 <a className="text-link inline-link" href={mailto(serviceEmail)}>{serviceEmail}</a>。</p><div className="faq-list">{questions.map(([question, answer]) => <details className="faq-item" key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div><div className="actions actions-left"><Link className="btn" href="/contact">查看联系方式</Link></div></div></main>;
+  return <main className="section"><div className="container narrow"><div className="eyebrow">After-sales FAQ</div><h1 className="page-title">售后问题，回到原订单处理。</h1><p className="lead detail-lead">购买记录、商品信息和沟通过程都留在淘宝订单内，处理售后更清楚。消费者咨询也可发送邮件至 <a className="text-link inline-link" href={mailto(serviceEmail)}>{serviceEmail}</a>。</p><div className="faq-list">{questions.map(([question, answer]) => <details className="faq-item" key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div><div className="actions actions-left"><Link className="btn" href="/support">提交售后工单</Link><Link className="btn secondary" href="/contact">查看联系方式</Link></div></div></main>;
 }
