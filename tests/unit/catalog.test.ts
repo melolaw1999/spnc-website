@@ -58,6 +58,17 @@ describe("生产商品目录", () => {
     expect(hydrowhey?.images.flatMap((item) => item.variantIds).sort()).toEqual(hydrowhey?.variants.map((variant) => variant.id).sort());
   });
 
+  it("优先使用已核对规格的品牌透明主图", () => {
+    const officialMainImages = [
+      "on-gold-standard-whey",
+      "on-gold-standard-isolate",
+      "on-platinum-hydrowhey",
+    ].map((id) => catalog.find((product) => product.id === id)?.images[0]);
+
+    expect(officialMainImages.every((item) => item?.sourceType === "brand-official-copy")).toBe(true);
+    expect(officialMainImages.every((item) => item?.asset.projectPath.endsWith("-official.webp"))).toBe(true);
+  });
+
   it("每张已绑定图片只引用同一商品内的规格", () => {
     for (const product of catalog) {
       const variantIds = new Set(product.variants.map((variant) => variant.id));

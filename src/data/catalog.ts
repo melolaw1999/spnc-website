@@ -81,7 +81,7 @@ export const catalog: CatalogProduct[] = [
       { id: "on-whey-2lb-strawberry", size: "2 磅", flavor: "草莓味" },
     ],
     images: [
-      image("/assets/optimized/products/on/gold-standard-whey/on-gold-standard-whey-5lb-double-rich-chocolate-front.webp", "ON 金标乳清蛋白粉 5 磅双重巧克力正面白底图", { variantIds: ["on-whey-5lb-chocolate"], caption: "5 磅 · 双重巧克力" }),
+      image("/assets/optimized/products/on/gold-standard-whey/on-gold-standard-whey-5lb-double-rich-chocolate-front-official.webp", "ON 金标乳清蛋白粉 5 磅双重巧克力正面透明背景图", { width: 1200, height: 1200, variantIds: ["on-whey-5lb-chocolate"], caption: "5 磅 · 双重巧克力", sourceType: "brand-official-copy" }),
       image("/assets/optimized/products/on/gold-standard-whey/on-gold-standard-whey-5lb-vanilla-ice-cream-front.webp", "ON 金标乳清蛋白粉 5 磅香草冰激凌正面白底图", { variantIds: ["on-whey-5lb-vanilla"], caption: "5 磅 · 香草冰激凌" }),
       image("/assets/optimized/products/on/gold-standard-whey/on-gold-standard-whey-2lb-strawberry-front.webp", "ON 金标乳清蛋白粉 2 磅草莓味正面白底图", { variantIds: ["on-whey-2lb-strawberry"], caption: "2 磅 · 草莓味" }),
     ],
@@ -100,7 +100,7 @@ export const catalog: CatalogProduct[] = [
       { id: "on-isolate-3lb-chocolate-bliss", size: "3 磅", flavor: "巧克力" },
     ],
     images: [
-      image("/assets/optimized/products/on/isolate/on-gold-standard-isolate-3lb-chocolate-bliss-front.webp", "ON 金标分离乳清 3 磅巧克力正面白底图", { width: 1000, height: 1000, variantIds: ["on-isolate-3lb-chocolate-bliss"], caption: "3 磅 · 巧克力" }),
+      image("/assets/optimized/products/on/isolate/on-gold-standard-isolate-3lb-chocolate-bliss-front-official.webp", "ON 金标分离乳清 3 磅巧克力正面透明背景图", { width: 1000, height: 1000, variantIds: ["on-isolate-3lb-chocolate-bliss"], caption: "3 磅 · 巧克力", sourceType: "brand-official-copy" }),
     ],
   },
   {
@@ -118,8 +118,8 @@ export const catalog: CatalogProduct[] = [
       { id: "on-hydrowhey-1-8lb-turbo-chocolate", size: "1.8 磅（820 克）", flavor: "Turbo Chocolate（巧克力）" },
     ],
     images: [
-      image("/assets/optimized/products/on/hydro-whey/on-platinum-hydrowhey-3-61lb-turbo-chocolate-front.webp", "ON 白金水解乳清大规格 3.61 磅 Turbo Chocolate 正面透明背景图", { width: 1200, height: 1200, variantIds: ["on-hydrowhey-3-61lb-turbo-chocolate"], caption: "大规格 · 3.61 磅（1.64 千克）", sourceType: "user-confirmed-copy" }),
-      image("/assets/optimized/products/on/hydro-whey/on-platinum-hydrowhey-1-8lb-turbo-chocolate-front.webp", "ON 白金水解乳清小规格 1.8 磅 Turbo Chocolate 正面透明背景图", { width: 1200, height: 1200, variantIds: ["on-hydrowhey-1-8lb-turbo-chocolate"], caption: "小规格 · 1.8 磅（820 克）", sourceType: "user-confirmed-copy" }),
+      image("/assets/optimized/products/on/hydro-whey/on-platinum-hydrowhey-3-61lb-turbo-chocolate-front-official.webp", "ON 白金水解乳清大规格 3.61 磅 Turbo Chocolate 正面透明背景图", { width: 1200, height: 1200, variantIds: ["on-hydrowhey-3-61lb-turbo-chocolate"], caption: "大规格 · 3.61 磅（1.64 千克）", sourceType: "brand-official-copy" }),
+      image("/assets/optimized/products/on/hydro-whey/on-platinum-hydrowhey-1-8lb-turbo-chocolate-front-official.webp", "ON 白金水解乳清小规格 1.8 磅 Turbo Chocolate 正面透明背景图", { width: 1200, height: 1200, variantIds: ["on-hydrowhey-1-8lb-turbo-chocolate"], caption: "小规格 · 1.8 磅（820 克）", sourceType: "brand-official-copy" }),
     ],
   },
   {
