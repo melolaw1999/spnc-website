@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SeasonalOpening } from "@/components/SeasonalOpening";
 import { TaobaoButton } from "@/components/TaobaoButton";
 import { catalog, publicSalesVersions } from "@/data/catalog";
 import { publicContactEmail, serviceEmail, mailto } from "@/data/contacts";
@@ -27,7 +26,20 @@ const billboards = [
 export default function Home() {
   const featured = catalog.filter((product) => product.featured).slice(0, 4);
   return <main className="apple-home">
-    <SeasonalOpening />
+    <section className="home-hero" aria-label="为你的下一次突破做好准备">
+      <div className="home-hero-visual">
+        <Image
+          src="/assets/hero/spnc-finish-line-rain.png"
+          alt="雨中冲过终点线的跑者高举双臂"
+          fill
+          priority
+          sizes="(max-width: 760px) 100vw, 58vw"
+        />
+      </div>
+      <div className="container home-hero-content">
+        <h1>为你的下一次突破做好准备</h1>
+      </div>
+    </section>
 
     <section className="home-billboard home-billboard-identity">
       <div className="container billboard-inner identity-inner">

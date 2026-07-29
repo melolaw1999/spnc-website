@@ -51,3 +51,21 @@
 .product-card-labels{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.version-tag{background:#f5f5f7;color:#515154}.catalog-family{padding-top:54px}.catalog-family:first-of-type{padding-top:34px}.catalog-family-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}.catalog-family-head h2{font-size:clamp(32px,4vw,48px);margin:8px 0 0}.catalog-family-head p{max-width:440px;line-height:1.7;margin:0}
 @media(max-width:860px){.support-fields.two-columns{grid-template-columns:1fr}.ticket-summary{grid-template-columns:1fr 1fr}.ticket-admin-actions{grid-template-columns:1fr}.ticket-admin-actions .btn{width:100%}}
 @media(max-width:560px){.support-form{padding:22px 18px;border-radius:26px}.support-form-section{grid-template-columns:42px 1fr;gap:12px}.support-step{width:36px;height:36px}.support-form-section h2{font-size:22px}.support-submit{width:100%}.ticket-card-head{display:grid}.ticket-summary{grid-template-columns:1fr}.ticket-card{padding:20px}.ticket-number{display:grid;gap:4px;border-radius:18px}.catalog-family{padding-top:42px}.catalog-family-head{align-items:start;flex-direction:column;gap:10px}.catalog-family-head p{max-width:none}}
+
+/* Header and home hero: intentionally scoped to the approved visual update. */
+.nav{height:76px;padding-top:12px;background:transparent;border-bottom:0;backdrop-filter:none;pointer-events:none}
+.navin{height:52px;gap:20px;padding:0 18px;border:1px solid rgba(255,255,255,.72);border-radius:12px;background:rgba(248,248,247,.9);box-shadow:0 8px 28px rgba(0,0,0,.08);backdrop-filter:blur(18px);pointer-events:auto}
+.navlinks{gap:8px;color:#262626;font-size:13px;font-weight:560}
+.navlinks a{padding:10px 7px;border-radius:8px;transition:background-color .2s ease,color .2s ease}
+.navlinks a:hover{background:rgba(0,0,0,.05)}
+.brand-image{width:142px;height:40px;overflow:hidden}
+.brand-image img{width:100%;height:auto;flex:none}
+.mobile-nav summary{border:0;border-radius:8px;padding:8px 12px;background:rgba(0,0,0,.05);font-size:13px;font-weight:600}
+.mobile-nav nav{top:44px;border-color:rgba(210,210,215,.6);border-radius:14px}
+.home-hero{position:relative;min-height:clamp(680px,100svh,920px);margin-top:-76px;padding-top:76px;overflow:hidden;background:#f1f2ef}
+.home-hero-visual{position:absolute;inset:0 0 0 48%;overflow:hidden;background:#d9ddd6}
+.home-hero-visual img{object-fit:cover;object-position:center 54%}
+.home-hero-content{position:relative;z-index:2;min-height:inherit;display:flex;align-items:center;padding-top:42px;padding-bottom:42px}
+.home-hero h1{width:min(42%,500px);margin:0;font-size:clamp(50px,5.15vw,80px);font-weight:720;line-height:1.08;letter-spacing:-.055em;text-wrap:balance}
+@media(max-width:1040px){.navin{padding:0 14px}.brand-image{width:136px}}
+@media(max-width:760px){.nav{height:72px;padding-top:10px}.navin{height:52px}.brand-image{width:130px}.home-hero{min-height:100svh;margin-top:-72px;padding-top:72px;background:#30342f}.home-hero:after{content:"";position:absolute;inset:38% 0 0;z-index:1;background:linear-gradient(180deg,transparent,rgba(8,12,9,.68))}.home-hero-visual{inset:0}.home-hero-visual img{object-position:center center}.home-hero-content{align-items:flex-end;padding-bottom:52px}.home-hero h1{width:100%;max-width:540px;color:#fff;font-size:clamp(42px,12vw,62px);line-height:1.1;text-shadow:0 2px 22px rgba(0,0,0,.28)}}
