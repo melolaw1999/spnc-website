@@ -1,7 +1,9 @@
 export type CatalogImage = {
   asset: { projectPath: string; width: number; height: number };
   altText: string;
-  sourceType: "local-verified-copy" | "brand-official-copy";
+  caption: string;
+  variantIds: string[];
+  sourceType: "local-verified-copy" | "brand-official-copy" | "user-confirmed-copy";
   humanConfirmed: boolean;
 };
 
@@ -34,12 +36,19 @@ export const publicSalesVersions = ["跨境进口", "国产版本", "一般贸�
 const image = (
   projectPath: string,
   altText: string,
-  width = 800,
-  height = 800,
+  options: {
+    caption?: string;
+    variantIds?: string[];
+    width?: number;
+    height?: number;
+    sourceType?: CatalogImage["sourceType"];
+  } = {},
 ): CatalogImage => ({
-  asset: { projectPath, width, height },
+  asset: { projectPath, width: options.width ?? 800, height: options.height ?? 800 },
   altText,
-  sourceType: "local-verified-copy",
+  caption: options.caption ?? altText,
+  variantIds: options.variantIds ?? [],
+  sourceType: options.sourceType ?? "local-verified-copy",
   humanConfirmed: true,
 });
 
@@ -72,9 +81,9 @@ export const catalog: CatalogProduct[] = [
       { id: "on-whey-2lb-strawberry", size: "2 磅", flavor: "草莓味" },
     ],
     images: [
-      image("/assets/optimized/products/on/gold-standard-whey/on-gold-standard-whey-5lb-double-rich-chocolate-front.webp", "ON 金标乳清蛋白粉 5 磅双重巧克力正面白底图"),
-      image("/assets/optimized/products/on/gold-standard-whey/on-gold-standard-whey-5lb-vanilla-ice-cream-front.webp", "ON 金标乳清蛋白粉 5 磅香草冰激凌正面白底图"),
-      image("/assets/optimized/products/on/gold-standard-whey/on-gold-standard-whey-2lb-strawberry-front.webp", "ON 金标乳清蛋白粉 2 磅草莓味正面白底图"),
+      image("/assets/optimized/products/on/gold-standard-whey/on-gold-standard-whey-5lb-double-rich-chocolate-front.webp", "ON 金标乳清蛋白粉 5 磅双重巧克力正面白底图", { variantIds: ["on-whey-5lb-chocolate"], caption: "5 磅 · 双重巧克力" }),
+      image("/assets/optimized/products/on/gold-standard-whey/on-gold-standard-whey-5lb-vanilla-ice-cream-front.webp", "ON 金标乳清蛋白粉 5 磅香草冰激凌正面白底图", { variantIds: ["on-whey-5lb-vanilla"], caption: "5 磅 · 香草冰激凌" }),
+      image("/assets/optimized/products/on/gold-standard-whey/on-gold-standard-whey-2lb-strawberry-front.webp", "ON 金标乳清蛋白粉 2 磅草莓味正面白底图", { variantIds: ["on-whey-2lb-strawberry"], caption: "2 磅 · 草莓味" }),
     ],
   },
   {
@@ -91,7 +100,7 @@ export const catalog: CatalogProduct[] = [
       { id: "on-isolate-3lb-chocolate-bliss", size: "3 磅", flavor: "巧克力" },
     ],
     images: [
-      image("/assets/optimized/products/on/isolate/on-gold-standard-isolate-3lb-chocolate-bliss-front.webp", "ON 金标分离乳清 3 磅巧克力正面白底图", 1000, 1000),
+      image("/assets/optimized/products/on/isolate/on-gold-standard-isolate-3lb-chocolate-bliss-front.webp", "ON 金标分离乳清 3 磅巧克力正面白底图", { width: 1000, height: 1000, variantIds: ["on-isolate-3lb-chocolate-bliss"], caption: "3 磅 · 巧克力" }),
     ],
   },
   {
@@ -101,14 +110,16 @@ export const catalog: CatalogProduct[] = [
     brand: "OPTIMUM NUTRITION",
     name: "白金水解乳清",
     type: "水解乳清",
-    summary: "ON 白金水解乳清。包装可能因市场和批次变化，购买前请核对淘宝商品页。",
-    highlights: ["水解乳清类别", "包装批次可能变化"],
+    summary: "ON 白金水解乳清当前确认在售大小两个规格，购买前请在淘宝商品页核对版本与库存。",
+    highlights: ["大小规格分别展示", "Turbo Chocolate（巧克力）"],
     featured: true,
     variants: [
-      { id: "on-hydrowhey-3-5lb-chocolate", size: "3.5 磅", flavor: "巧克力" },
+      { id: "on-hydrowhey-3-61lb-turbo-chocolate", size: "3.61 磅（1.64 千克）", flavor: "Turbo Chocolate（巧克力）" },
+      { id: "on-hydrowhey-1-8lb-turbo-chocolate", size: "1.8 磅（820 克）", flavor: "Turbo Chocolate（巧克力）" },
     ],
     images: [
-      image("/assets/optimized/products/on/hydro-whey/on-platinum-hydrowhey-3-5lb-front.webp", "ON 白金水解乳清 3.5 磅正面白底图"),
+      image("/assets/optimized/products/on/hydro-whey/on-platinum-hydrowhey-3-61lb-turbo-chocolate-front.webp", "ON 白金水解乳清大规格 3.61 磅 Turbo Chocolate 正面透明背景图", { width: 1200, height: 1200, variantIds: ["on-hydrowhey-3-61lb-turbo-chocolate"], caption: "大规格 · 3.61 磅（1.64 千克）", sourceType: "user-confirmed-copy" }),
+      image("/assets/optimized/products/on/hydro-whey/on-platinum-hydrowhey-1-8lb-turbo-chocolate-front.webp", "ON 白金水解乳清小规格 1.8 磅 Turbo Chocolate 正面透明背景图", { width: 1200, height: 1200, variantIds: ["on-hydrowhey-1-8lb-turbo-chocolate"], caption: "小规格 · 1.8 磅（820 克）", sourceType: "user-confirmed-copy" }),
     ],
   },
   {
@@ -125,7 +136,7 @@ export const catalog: CatalogProduct[] = [
       { id: "on-creatine-300g-unflavored", size: "300 克", flavor: "无味" },
     ],
     images: [
-      image("/assets/optimized/products/on/creatine/on-micronized-creatine-300g-front.webp", "ON 微粉化肌酸粉 300 克无味正面白底图"),
+      image("/assets/optimized/products/on/creatine/on-micronized-creatine-300g-front.webp", "ON 微粉化肌酸粉 300 克无味正面白底图", { variantIds: ["on-creatine-300g-unflavored"], caption: "300 克 · 无味" }),
     ],
   },
   {
@@ -142,7 +153,39 @@ export const catalog: CatalogProduct[] = [
       { id: "on-glutamine-300g-unflavored", size: "300 克", flavor: "无味" },
     ],
     images: [
-      image("/assets/optimized/products/on/glutamine/on-glutamine-front.webp", "ON 谷氨酰胺粉 300 克无味正面白底图"),
+      image("/assets/optimized/products/on/glutamine/on-glutamine-front.webp", "ON 谷氨酰胺粉 300 克无味正面白底图", { variantIds: ["on-glutamine-300g-unflavored"], caption: "300 克 · 无味" }),
+    ],
+  },
+  {
+    ...shared,
+    id: "on-double-layer-crispy-whey-protein-bar",
+    slug: "on-double-layer-crispy-whey-protein-bar",
+    brand: "OPTIMUM NUTRITION",
+    name: "双层香脆乳清蛋白棒",
+    type: "蛋白棒",
+    summary: "ON 双层香脆乳清蛋白棒。图片展示当前确认在售包装，具体口味、单支净含量与装数以淘宝商品页为准。",
+    highlights: ["两款包装同图展示", "具体口味与装数购买前核对"],
+    featured: false,
+    variants: [],
+    images: [
+      image("/assets/optimized/products/on/protein-bar/on-double-layer-crispy-whey-protein-bar-assortment.webp", "ON 双层香脆乳清蛋白棒两款包装与独立包装展示图", { width: 429, height: 307, caption: "双层香脆乳清蛋白棒 · 两款包装", sourceType: "user-confirmed-copy" }),
+    ],
+  },
+  {
+    ...shared,
+    id: "on-gold-standard-pre-workout",
+    slug: "on-gold-standard-pre-workout",
+    brand: "OPTIMUM NUTRITION",
+    name: "金标训练前配方",
+    type: "训练前配方",
+    summary: "ON 金标训练前配方。当前确认展示 300 克蓝莓柠檬味包装，购买前请核对在售版本与标签。",
+    highlights: ["300 克", "蓝莓柠檬味"],
+    featured: false,
+    variants: [
+      { id: "on-pre-workout-300g-blueberry-lemonade", size: "300 克", flavor: "蓝莓柠檬味" },
+    ],
+    images: [
+      image("/assets/optimized/products/on/pre-workout/on-gold-standard-pre-workout-300g-blueberry-lemonade-front.webp", "ON 金标训练前配方 300 克蓝莓柠檬味正面商品图", { width: 463, height: 576, variantIds: ["on-pre-workout-300g-blueberry-lemonade"], caption: "300 克 · 蓝莓柠檬味", sourceType: "user-confirmed-copy" }),
     ],
   },
 ];
