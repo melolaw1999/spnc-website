@@ -6,7 +6,7 @@ import { siteUrl, taobaoStoreUrl } from "@/lib/site";
 
 describe("生产商品目录", () => {
   it("商品 slug 唯一且公开目录完整", () => {
-    expect(catalog).toHaveLength(10);
+    expect(catalog).toHaveLength(9);
     expect(new Set(catalog.map((product) => product.slug)).size).toBe(catalog.length);
   });
 
@@ -20,7 +20,6 @@ describe("生产商品目录", () => {
       "国产双层香脆乳清蛋白棒",
       "白金水解乳清",
       "微粉化肌酸粉",
-      "谷氨酰胺粉",
       "双层香脆乳清蛋白棒",
       "金标训练前配方",
     ]);
@@ -45,6 +44,12 @@ describe("生产商品目录", () => {
     }
   });
 
+  it("谷氨酰胺只保留当前在售的国产版本", () => {
+    const glutamineProducts = catalog.filter((product) => product.name.includes("谷氨酰胺"));
+    expect(glutamineProducts.map((product) => product.id)).toEqual(["on-domestic-glutamine"]);
+    expect(glutamineProducts.every((product) => product.salesVersion === "国产版本")).toBe(true);
+  });
+
   it("已采用商品图只读取 public/assets 下的压缩副本", () => {
     const paths = catalog.flatMap((product) => product.images.map((image) => image.asset.projectPath));
     expect(paths.length).toBeGreaterThan(0);
@@ -58,6 +63,17 @@ describe("生产商品目录", () => {
       .flatMap((product) => product.images);
     for (const item of domesticImages) {
       const originalPath = item.asset.projectPath.replace("/assets/optimized/", "/assets/").replace(/\.webp$/, ".png");
+      expect(existsSync(path.join(process.cwd(), "public", originalPath))).toBe(true);
+    }
+  });
+
+  it("新肌酸与训练前配方主图保留原图并读取压缩副本", () => {
+    const productIds = ["on-micronized-creatine", "on-gold-standard-pre-workout"];
+    for (const id of productIds) {
+      const item = catalog.find((product) => product.id === id)?.images[0];
+      expect(item?.sourceType).toBe("user-confirmed-copy");
+      expect(item?.asset.projectPath.endsWith("-user.webp")).toBe(true);
+      const originalPath = item?.asset.projectPath.replace("/assets/optimized/", "/assets/").replace(/\.webp$/, ".png") ?? "";
       expect(existsSync(path.join(process.cwd(), "public", originalPath))).toBe(true);
     }
   });

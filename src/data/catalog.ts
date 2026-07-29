@@ -198,24 +198,7 @@ export const catalog: CatalogProduct[] = [
       { id: "on-creatine-300g-unflavored", size: "300 克", flavor: "无味" },
     ],
     images: [
-      image("/assets/optimized/products/on/creatine/on-micronized-creatine-300g-front.webp", "ON 微粉化肌酸粉 300 克无味正面白底图", { variantIds: ["on-creatine-300g-unflavored"], caption: "300 克 · 无味" }),
-    ],
-  },
-  {
-    ...shared,
-    id: "on-glutamine-powder",
-    slug: "on-glutamine-powder",
-    brand: "OPTIMUM NUTRITION",
-    name: "谷氨酰胺粉",
-    type: "氨基酸补充剂",
-    summary: "ON 谷氨酰胺粉。包装和规格可能因市场与批次变化，购买前请核对淘宝商品页。",
-    highlights: ["无味粉剂", "包装批次可能变化"],
-    featured: false,
-    variants: [
-      { id: "on-glutamine-300g-unflavored", size: "300 克", flavor: "无味" },
-    ],
-    images: [
-      image("/assets/optimized/products/on/glutamine/on-glutamine-front.webp", "ON 谷氨酰胺粉 300 克无味正面白底图", { variantIds: ["on-glutamine-300g-unflavored"], caption: "300 克 · 无味" }),
+      image("/assets/optimized/products/on/creatine/on-micronized-creatine-300g-unflavored-front-user.webp", "ON 微粉化肌酸粉 300 克无味正面白底图", { width: 474, height: 498, variantIds: ["on-creatine-300g-unflavored"], caption: "300 克 · 无味", sourceType: "user-confirmed-copy" }),
     ],
   },
   {
@@ -247,7 +230,7 @@ export const catalog: CatalogProduct[] = [
       { id: "on-pre-workout-300g-blueberry-lemonade", size: "300 克", flavor: "蓝莓柠檬味" },
     ],
     images: [
-      image("/assets/optimized/products/on/pre-workout/on-gold-standard-pre-workout-300g-blueberry-lemonade-front.webp", "ON 金标训练前配方 300 克蓝莓柠檬味正面商品图", { width: 463, height: 576, variantIds: ["on-pre-workout-300g-blueberry-lemonade"], caption: "300 克 · 蓝莓柠檬味", sourceType: "user-confirmed-copy" }),
+      image("/assets/optimized/products/on/pre-workout/on-gold-standard-pre-workout-300g-blueberry-lemonade-front-user.webp", "ON 金标训练前配方 300 克蓝莓柠檬味正面白底图", { width: 1122, height: 1402, variantIds: ["on-pre-workout-300g-blueberry-lemonade"], caption: "300 克 · 蓝莓柠檬味", sourceType: "user-confirmed-copy" }),
     ],
   },
 ];
