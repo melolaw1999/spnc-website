@@ -1,44 +1,41 @@
-import Image from "next/image";
-import Link from "next/link";
-import { articleYears, articles, formatArticleDate } from "@/data/articles";
+import ArticleTimeline from "./ArticleTimeline";
+import styles from "./articles.module.css";
+import { articleSeries, articles } from "@/data/articles";
 import { pageMetadata } from "@/lib/site";
 
 export const metadata = pageMetadata(
   "文章",
-  "理想营养公众号文章存档：保留原文、原图和首发日期，记录长期有效的运动营养知识与买家答疑。",
+  "理想营养微信公众号文章：按公众号原始发布日期排列，并按答网友问、运动营养科普、饮食与健康及行业与消费分类。",
   "/articles",
 );
 
 export default function ArticlesPage() {
-  const [featured, ...remaining] = articles;
+  const oldestYear = articles.at(-1)?.publishedAt.slice(0, 4);
+  const newestYear = articles[0]?.publishedAt.slice(0, 4);
+  const timelineArticles = articles.map(({ slug, title, summary, publishedAt, series, coverImage }) => ({ slug, title, summary, publishedAt, series, coverImage }));
 
-  return <main className="article-index">
-    <section className="article-index-hero"><div className="container article-index-hero-grid">
-      <div className="article-index-intro">
-        <div className="eyebrow">SPNC Journal · 理想营养</div>
-        <h1>文章会变旧，<br />认真不会。</h1>
-        <p>这里保存理想营养公众号的原文、原图和首发时间。多年前写下的科普，只要事实仍然成立，就值得继续被看见。</p>
-        <div className="article-index-meta"><span><strong>{articles.length}</strong> 篇已迁移</span><span><strong>{articleYears.length}</strong> 个年份</span><span>按原发布时间归档</span></div>
+  return <main className={styles.page}>
+    <section className={styles.hero}>
+      <div className="container">
+        <div className={styles.heroEyebrow}>理想营养 · 文章</div>
+        <div className={styles.heroGrid}>
+          <div>
+            <h1>公众号文章，<br />按时间阅读。</h1>
+            <p>这里收录理想营养微信公众号文章。每篇标明公众号原始发布日期，并归入对应系列。</p>
+          </div>
+          <div className={styles.heroFacts} aria-label="文章数据">
+            <div><strong>{articles.length}</strong><span>篇文章</span></div>
+            <div><strong>{articleSeries.length}</strong><span>个系列</span></div>
+            <div><strong>{oldestYear}—{newestYear}</strong><span>发布时间</span></div>
+          </div>
+        </div>
       </div>
-      {featured && <Link className="article-feature" href={`/articles/${featured.slug}`}>
-        <div className="article-feature-media"><Image src={featured.coverImage} alt="" fill priority sizes="(max-width: 860px) 92vw, 48vw" /></div>
-        <div className="article-feature-copy"><span>{featured.series} · 最新迁移</span><h2>{featured.title}</h2><p>{featured.summary}</p><time dateTime={featured.publishedAt}>{formatArticleDate(featured.publishedAt)}</time></div>
-      </Link>}
-    </div></section>
+    </section>
 
-    <section className="article-archive-section"><div className="container">
-      <header className="article-archive-head"><div><span>Archive</span><h2>按首发时间阅读</h2></div><p>不是重新包装后的营销稿，而是理想营养自己写下、自己负责的内容。</p></header>
-      <div className="article-year-groups">{articleYears.map((year) => {
-        const yearArticles = remaining.filter((article) => article.publishedAt.startsWith(year));
-        if (!yearArticles.length) return null;
-        return <section className="article-year" key={year}><div className="article-year-label"><strong>{year}</strong><span>{yearArticles.length} 篇</span></div><div className="article-list">{yearArticles.map((article) => <Link className="article-row" href={`/articles/${article.slug}`} key={article.slug}>
-          <time dateTime={article.publishedAt}>{formatArticleDate(article.publishedAt, true).slice(5)}</time>
-          <div><span>{article.series}</span><h3>{article.title}</h3><p>{article.summary}</p></div>
-          <div className="article-row-cover"><Image src={article.coverImage} alt="" fill sizes="(max-width: 560px) 38vw, 180px" /></div>
-          <i aria-hidden="true">↗</i>
-        </Link>)}</div></section>;
-      })}</div>
-      <div className="article-archive-note"><span>From the archive</span><p>早期文章将继续按原始发布时间补入。官网只负责整理与保存，不把旧文章伪装成今天新写的内容。</p></div>
-    </div></section>
+    <section className={styles.content}>
+      <div className="container">
+        <ArticleTimeline articles={timelineArticles} series={articleSeries} />
+      </div>
+    </section>
   </main>;
 }

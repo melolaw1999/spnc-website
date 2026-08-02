@@ -13,7 +13,12 @@ describe("公众号文章档案", () => {
       expect(article.title.trim().length).toBeGreaterThan(0);
       expect(article.publishedAt).toMatch(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/);
       expect(article.coverImage).toMatch(/^\/assets\/articles\//);
-      expect(article.author).toBe("理想营养");
+      expect(["理想营养", "Manluo"]).toContain(article.author);
+      article.contentImages?.forEach((image) => {
+        expect(image.src).toMatch(/^\/assets\/articles\//);
+        expect(image.width).toBeGreaterThan(0);
+        expect(image.height).toBeGreaterThan(0);
+      });
     });
   });
 

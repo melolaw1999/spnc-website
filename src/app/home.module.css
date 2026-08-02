@@ -264,7 +264,7 @@
   position: relative;
   min-height: 84svh;
   display: grid;
-  grid-template-columns: minmax(0, .9fr) minmax(480px, 1.1fr);
+  grid-template-columns: minmax(0, .82fr) minmax(540px, 1.18fr);
   grid-template-rows: 1fr auto;
   gap: clamp(34px, 5vw, 76px);
   align-items: center;
@@ -371,7 +371,8 @@
 }
 
 .authHomeVisual {
-  min-height: 560px;
+  width: 100%;
+  min-height: 640px;
   isolation: isolate;
 }
 
@@ -414,22 +415,23 @@
 
 .authHomeTrace {
   z-index: 1;
-  top: 4%;
-  right: 0;
-  width: min(44%, 260px);
+  top: 0;
+  right: -1%;
+  width: min(50%, 330px);
   transform: rotate(5deg);
 }
 
 .authHomeOn {
   z-index: 2;
-  bottom: 1%;
-  left: 4%;
-  width: min(60%, 350px);
+  bottom: -1%;
+  left: -2%;
+  width: min(72%, 455px);
   transform: rotate(-4deg);
 }
 
 .authHomeSteps {
   grid-column: 1 / -1;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid rgba(255, 255, 255, .14);
@@ -472,15 +474,15 @@
   }
 
   .authHomeVisual {
-    min-height: 520px;
+    min-height: 610px;
   }
 
   .authHomeTrace {
-    right: 8%;
+    right: 4%;
   }
 
   .authHomeOn {
-    left: 12%;
+    left: 5%;
   }
 }
 
@@ -615,20 +617,20 @@
   }
 
   .authHomeVisual {
-    min-height: 390px;
+    min-height: 455px;
     margin-top: 2px;
   }
 
   .authHomeTrace {
-    top: 2%;
-    right: 2%;
-    width: 42%;
+    top: 0;
+    right: 0;
+    width: 48%;
   }
 
   .authHomeOn {
     bottom: 0;
-    left: 0;
-    width: 62%;
+    left: -2%;
+    width: 74%;
   }
 
   .authHomeSteps {

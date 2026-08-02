@@ -147,7 +147,7 @@ export default function Home() {
             <figcaption><span>02</span>进口商品溯源码</figcaption>
           </figure>
           <figure className={styles.authHomeOn}>
-            <Image src="/assets/authenticity/on-authentication-label-crop.png" width={1035} height={1035} alt="ON 百分百防伪验证标签示意" sizes="(max-width: 560px) 52vw, 330px" />
+            <Image src="/assets/authenticity/on-authentication-label-transparent.png" width={1035} height={1035} alt="ON 百分百防伪验证标签示意" sizes="(max-width: 560px) 68vw, 430px" />
             <figcaption><span>01</span>ON 防伪码</figcaption>
           </figure>
         </div>

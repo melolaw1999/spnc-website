@@ -105,7 +105,7 @@ describe("官网定位与联系信息", () => {
     expect(homePage).toContain("两种码");
     expect(homePage).toContain("ON 防伪码");
     expect(homePage).toContain("进口商品溯源码");
-    expect(homePage).toContain("on-authentication-label-crop.png");
+    expect(homePage).toContain("on-authentication-label-transparent.png");
     expect(homePage).toContain("import-traceability-label-crop.png");
     expect(homePage).not.toContain("home-billboard-service");
     expect(homePage).not.toContain("<h2>售后登记</h2>");
