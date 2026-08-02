@@ -57,4 +57,22 @@ describe("官网定位与联系信息", () => {
     expect(homePage).toContain("double-rich-chocolate-front-transparent-v2.png");
     expect(homePage).not.toContain("长期训练");
   });
+
+  it("首页与版本说明页一致区分三种销售版本", () => {
+    const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
+    const versionsPage = readFileSync(path.join(process.cwd(), "src/app/versions/page.tsx"), "utf8");
+
+    expect(homePage).toContain("同是 ON");
+    expect(homePage).toContain("看懂三个版本");
+    expect(homePage).toContain('href="/versions"');
+
+    ["跨境进口版", "一般贸易进口版", "国产版本"].forEach((version) => {
+      expect(versionsPage).toContain(version);
+    });
+    expect(versionsPage).toContain("三个版本");
+    expect(versionsPage).toContain("均有防伪码");
+    expect(versionsPage).toContain("跨境进口再扫描溯源码");
+    expect(versionsPage).toContain("境内保税仓发货");
+    expect(versionsPage).toContain("中国生产");
+  });
 });
