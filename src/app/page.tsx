@@ -3,6 +3,7 @@ import Link from "next/link";
 import { TaobaoButton } from "@/components/TaobaoButton";
 import { catalog, publicSalesVersions } from "@/data/catalog";
 import { publicContactEmail, serviceEmail, mailto } from "@/data/contacts";
+import styles from "./home.module.css";
 
 const billboards = [
   {
@@ -55,9 +56,10 @@ export default function Home() {
     <section className="home-billboard home-billboard-products">
       <div className="container billboard-inner product-billboard">
         <div className="billboard-copy">
-          <div className="eyebrow">ON Product Library</div>
-          <h2>ON 商品矩阵</h2>
-          <p className="billboard-subtitle">只展示已经确认的真实商品素材。</p>
+          <h2 className={styles.teamOn} aria-label="TEAM ON">
+            <span aria-hidden="true">TEAM</span>
+            <Image className={styles.teamOnLogo} src="/assets/brand/on-swoosh-logo.png" width={4096} height={1696} alt="" aria-hidden="true" sizes="(max-width: 560px) 150px, 220px" />
+          </h2>
           <div className="version-scope version-scope-centered">{publicSalesVersions.map((version) => <span key={version}>{version}</span>)}</div>
           <div className="home-product-row">
             {featured.map((product) => <Link href={`/products/${product.slug}`} key={product.id} className="home-product-item">

@@ -40,4 +40,11 @@ describe("官网定位与联系信息", () => {
       expect(content.includes(forbidden)).toBe(false);
     });
   });
+
+  it("首页 ON 商品区只使用 TEAM ON 标识", () => {
+    const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
+    expect(homePage).toContain('aria-label="TEAM ON"');
+    expect(homePage).not.toContain("ON Product Library");
+    expect(homePage).not.toContain("ON 商品矩阵");
+  });
 });
