@@ -1,0 +1,3 @@
+.blackMembershipLink{border:1px solid rgba(179,137,60,.58);background:linear-gradient(135deg,#211a0f 0%,#080808 72%);box-shadow:inset 0 1px rgba(255,255,255,.08),0 6px 16px rgba(0,0,0,.09);color:#d9ba73!important;font-weight:720!important}
+.blackMembershipLink:hover{border-color:rgba(204,163,81,.82);background:linear-gradient(135deg,#2c2111 0%,#050505 72%)!important;color:#f0d28d!important}
+@media(max-width:1040px){.blackMembershipLink{margin:3px 0;padding:11px 12px!important;border-radius:10px!important}}
