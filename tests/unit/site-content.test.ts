@@ -75,4 +75,16 @@ describe("官网定位与联系信息", () => {
     expect(versionsPage).toContain("境内保税仓发货");
     expect(versionsPage).toContain("中国生产");
   });
+
+  it("首页使用两种真实标签介绍防伪溯源，并移除售后登记信息栏", () => {
+    const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
+
+    expect(homePage).toContain("两种码");
+    expect(homePage).toContain("ON 防伪码");
+    expect(homePage).toContain("进口商品溯源码");
+    expect(homePage).toContain("on-authentication-label-crop.png");
+    expect(homePage).toContain("import-traceability-label-crop.png");
+    expect(homePage).not.toContain("home-billboard-service");
+    expect(homePage).not.toContain("<h2>售后登记</h2>");
+  });
 });

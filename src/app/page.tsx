@@ -6,17 +6,6 @@ import styles from "./home.module.css";
 
 const bestSellerTaobaoUrl = "https://item.taobao.com/item.htm?id=794493827958&mi_id=0000-9V2LcrTfxjJgXjEcUmo8aM2EtipRAyJ6fZTVLQyMow&spm=a21xtw.29178619.0.0&xxc=shop&sku_properties=1627207%3A10026360243";
 
-const billboards = [
-  {
-    tone: "silver",
-    title: "防伪溯源",
-    subtitle: "从防伪标到收货检查。",
-    text: "结合订单、包装、封口与批次信息进行核验。",
-    href: "/authenticity",
-    cta: "查看防伪溯源",
-  },
-] as const;
-
 const versionHighlights = [
   {
     number: "01",
@@ -137,24 +126,36 @@ export default function Home() {
       </div>
     </section>
 
-    {billboards.map((item) => <section className={`home-billboard home-billboard-${item.tone}`} key={item.title}>
-      <div className="container billboard-inner">
-        <div className="billboard-copy">
-          <h2>{item.title}</h2>
-          <p className="billboard-subtitle">{item.subtitle}</p>
-          <p className="billboard-text">{item.text}</p>
-          <Link className="btn" href={item.href}>{item.cta}</Link>
-        </div>
-      </div>
-    </section>)}
+    <section className={`home-billboard ${styles.authHomeSection}`} aria-labelledby="home-auth-title">
+      <div className={`container billboard-inner ${styles.authHome}`}>
+        <div className={styles.authHomeCopy}>
+          <p>AUTHENTICITY &amp; TRACEABILITY</p>
+          <h2 id="home-auth-title">两种码，<br />各有用途。</h2>
+          <span>国产与一般贸易核对 ON 防伪码；跨境进口还要核对进口商品溯源码。</span>
 
-    <section className="home-billboard home-billboard-service">
-      <div className="container billboard-inner">
-        <div className="billboard-copy">
-          <h2>售后登记</h2>
-          <p className="billboard-subtitle">订单问题，先把资料一次提交清楚。</p>
-          <p className="billboard-text">瘪桶、破损、版本疑问与活动权益均可登记；退款与交易处理仍回到淘宝订单完成。</p>
-          <div className="actions"><Link className="btn" href="/support">提交工单</Link><Link className="btn secondary" href="/faq">查看售后 FAQ</Link></div>
+          <div className={styles.authHomeRules}>
+            <div><small>01</small><p>国产 / 一般贸易</p><strong>防伪码</strong></div>
+            <div><small>02</small><p>跨境进口</p><strong>防伪码 <i aria-hidden="true">＋</i> 溯源码</strong></div>
+          </div>
+
+          <Link className="btn" href="/authenticity">看懂两种码</Link>
+        </div>
+
+        <div className={styles.authHomeVisual} aria-label="ON 防伪码与进口商品溯源码标签示意">
+          <figure className={styles.authHomeTrace}>
+            <Image src="/assets/authenticity/import-traceability-label-crop.png" width={810} height={1190} alt="进口商品防伪溯源码标签示意" sizes="(max-width: 560px) 37vw, 260px" />
+            <figcaption><span>02</span>进口商品溯源码</figcaption>
+          </figure>
+          <figure className={styles.authHomeOn}>
+            <Image src="/assets/authenticity/on-authentication-label-crop.png" width={1035} height={1035} alt="ON 百分百防伪验证标签示意" sizes="(max-width: 560px) 52vw, 330px" />
+            <figcaption><span>01</span>ON 防伪码</figcaption>
+          </figure>
+        </div>
+
+        <div className={styles.authHomeSteps} aria-label="防伪溯源核对步骤">
+          <span><b>01</b>扫描实物标签</span>
+          <span><b>02</b>按提示刮开验证</span>
+          <span><b>03</b>核对订单与商品</span>
         </div>
       </div>
     </section>
