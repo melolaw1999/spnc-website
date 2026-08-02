@@ -1,0 +1,4140 @@
+{
+  "productName": "GOLD STANDARD 100% WHEY™",
+  "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder",
+  "retrievedAt": "2026-07-29T17:10:19.166Z",
+  "variants": [
+    {
+      "id": "on-gsw-2lb-banana-cream",
+      "variantId": "52138905501963",
+      "sku": "1111987",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Banana Cream",
+      "flavorZh": "香蕉奶油",
+      "availableOnOfficialSite": false,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "29 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Salt, Acesulfame Potassium, Sucralose, Yellow 5.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "29 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "4g",
+            "amountZh": "4 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "160mg",
+            "amountZh": "160 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 食盐, 安赛蜜, 三氯蔗糖, 黄色 5 号.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905501963",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/banana-cream/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/banana-cream/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/banana-cream/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/banana-cream/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-caramel-macchiato",
+      "variantId": "52138906321163",
+      "sku": "1146879",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Caramel Macchiato",
+      "flavorZh": "焦糖玛奇朵",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "28 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Coffee Powder, Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Creamer (Sunflower Oil, Maltodextrin, Modified Food Starch, Dipotassium Phosphate, Tricalcium Phosphate, Tocopherols), Salt, Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "28 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "0.5g",
+            "amountZh": "0.5 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "40mg",
+            "amountZh": "40 毫克",
+            "dailyValue": "13%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "85mg",
+            "amountZh": "85 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "140mg",
+            "amountZh": "140 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "180mg",
+            "amountZh": "180 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 咖啡粉, 天然及人工香料, 葵花籽和/或大豆卵磷脂, 植脂末 (葵花籽油, 麦芽糊精, 改性食用淀粉, 磷酸氢二钾, 磷酸三钙, 生育酚), 食盐, 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK AND SOY",
+        "allergensZh": "牛奶 和 大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906321163",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/caramel-macchiato/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/caramel-macchiato/product-front.jpg",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/caramel-macchiato/nutrition.webp",
+        "width": 1800,
+        "height": 1799
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/caramel-macchiato/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-chocolate-hazelnut",
+      "variantId": "52138906517771",
+      "sku": "1086331",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Chocolate Hazelnut",
+      "flavorZh": "巧克力榛子",
+      "availableOnOfficialSite": true,
+      "servingSize": "33g (About 1 Scoop)",
+      "servingsPerContainer": "27 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Salt, Gum Blend (Guar Gum, Gum Acacia, Xanthan Gum), Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "27 份",
+        "servingSizeZh": "33 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "60mg",
+            "amountZh": "60 毫克",
+            "dailyValue": "20%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "160mg",
+            "amountZh": "160 毫克",
+            "dailyValue": "7%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "<1g",
+            "amountZh": "<1 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.7mg",
+            "amountZh": "0.7 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 食盐, 复配增稠剂 (瓜尔胶, 阿拉伯胶, 黄原胶), 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（33 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906517771",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/chocolate-hazelnut/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/chocolate-hazelnut/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/chocolate-hazelnut/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/chocolate-hazelnut/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-chocolate-malt",
+      "variantId": "52138905403659",
+      "sku": "1111986",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Chocolate Malt",
+      "flavorZh": "麦芽巧克力",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "29 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Salt, Creamer (Sunflower Oil, Maltodextrin, Modified Food Starch, Dipotassium Phosphate, Tricalcium Phosphate, Tocopherols), Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "29 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.8mg",
+            "amountZh": "0.8 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 食盐, 植脂末 (葵花籽油, 麦芽糊精, 改性食用淀粉, 磷酸氢二钾, 磷酸三钙, 生育酚), 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905403659",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/chocolate-malt/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/chocolate-malt/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/chocolate-malt/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/chocolate-malt/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-chocolate-peanut-butter",
+      "variantId": "52138906288395",
+      "sku": "1111983",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Chocolate Peanut Butter",
+      "flavorZh": "巧克力花生酱",
+      "availableOnOfficialSite": true,
+      "servingSize": "33g (About 1 Scoop)",
+      "servingsPerContainer": "27 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Salt, Creamer (Sunflower Oil, Maltodextrin, Modified Food Starch, Dipotassium Phosphate, Tricalcium Phosphate, Tocopherols), Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "27 份",
+        "servingSizeZh": "33 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "190mg",
+            "amountZh": "190 毫克",
+            "dailyValue": "8%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "4g",
+            "amountZh": "4 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "<1g",
+            "amountZh": "<1 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.7mg",
+            "amountZh": "0.7 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 食盐, 植脂末 (葵花籽油, 麦芽糊精, 改性食用淀粉, 磷酸氢二钾, 磷酸三钙, 生育酚), 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（33 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906288395",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/chocolate-peanut-butter/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/chocolate-peanut-butter/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/chocolate-peanut-butter/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/chocolate-peanut-butter/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-cinnamon-roll",
+      "variantId": "52138906779915",
+      "sku": "1146802",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Cinnamon Roll",
+      "flavorZh": "肉桂卷",
+      "availableOnOfficialSite": false,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "29 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Ground Cinnamon, Sunflower and/or Soy Lecithin, Salt, Gum Blend (Cellulose Gum, Xanthan Gum, Carrageenan), Sucralose, Acesulfame Potassium.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "29 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "<1g",
+            "amountZh": "<1 克",
+            "dailyValue": "0%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "140mg",
+            "amountZh": "140 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "150mg",
+            "amountZh": "150 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 肉桂粉, 葵花籽和/或大豆卵磷脂, 食盐, 复配增稠剂 (纤维素胶, 黄原胶, 卡拉胶), 三氯蔗糖, 安赛蜜.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906779915",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/cinnamon-roll/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/cinnamon-roll/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/cinnamon-roll/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/cinnamon-roll/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-cookies-and-cream",
+      "variantId": "52138905796875",
+      "sku": "1111990",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Cookies & Cream",
+      "flavorZh": "曲奇奶油",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "27 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Cookie Crumbs (Sugar, Rice Flour, Cocoa [Processed with Alkali], Canola Oil, Salt), Sunflower and/or Soy Lecithin, Gum Blend (Guar Gum, Gum Acacia, Xanthan Gum), Salt, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "27 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "150mg",
+            "amountZh": "150 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 曲奇碎 (糖, 米粉, 可可粉 [碱化处理], 菜籽油, 食盐), 葵花籽和/或大豆卵磷脂, 复配增稠剂 (瓜尔胶, 阿拉伯胶, 黄原胶), 食盐, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905796875",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/cookies-and-cream/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/cookies-and-cream/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/cookies-and-cream/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/cookies-and-cream/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-delicious-strawberry",
+      "variantId": "52138906550539",
+      "sku": "1111980",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Delicious Strawberry",
+      "flavorZh": "美味草莓",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "29 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Sunflower and/or Soy Lecithin, Natural and Artificial Flavor, Citric Acid, Sucralose, Red 40 Lake.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "29 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "60mg",
+            "amountZh": "60 毫克",
+            "dailyValue": "20%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "140mg",
+            "amountZh": "140 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "150mg",
+            "amountZh": "150 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 葵花籽和/或大豆卵磷脂, 天然及人工香料, 柠檬酸, 三氯蔗糖, 红色 40 号色淀.",
+        "allergensEn": "MILK AND SOY",
+        "allergensZh": "牛奶 和 大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906550539",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/delicious-strawberry/product-front.webp",
+        "width": 1270,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/delicious-strawberry/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/delicious-strawberry/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/delicious-strawberry/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-double-rich-chocolate",
+      "variantId": "52138905305355",
+      "sku": "1158130",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Double Rich Chocolate",
+      "flavorZh": "双重巧克力",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "29 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali), Sunflower and/or Soy Lecithin, Natural and Artificial Flavor, Acesulfame Potassium.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "29 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "<1g",
+            "amountZh": "<1 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.7mg",
+            "amountZh": "0.7 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 葵花籽和/或大豆卵磷脂, 天然及人工香料, 安赛蜜.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905305355",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/double-rich-chocolate/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/double-rich-chocolate/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/double-rich-chocolate/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/double-rich-chocolate/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-extreme-milk-chocolate",
+      "variantId": "52138905862411",
+      "sku": "1111979",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Extreme Milk Chocolate",
+      "flavorZh": "浓郁牛奶巧克力",
+      "availableOnOfficialSite": true,
+      "servingSize": "32g (About 1 Scoop)",
+      "servingsPerContainer": "28 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Creamer (Sunflower Oil, Maltodextrin, Modified Corn Starch, Dipotassium Phosphate, Tricalcium Phosphate, Tocopherols), Salt, Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "28 份",
+        "servingSizeZh": "32 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "< 1g",
+            "amountZh": "< 1 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.9mg",
+            "amountZh": "0.9 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 植脂末 (葵花籽油, 麦芽糊精, 改性玉米淀粉, 磷酸氢二钾, 磷酸三钙, 生育酚), 食盐, 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（32 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905862411",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/extreme-milk-chocolate/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/extreme-milk-chocolate/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/extreme-milk-chocolate/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/extreme-milk-chocolate/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-french-vanilla-creme",
+      "variantId": "52138906747147",
+      "sku": "1111978",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "French Vanilla Creme",
+      "flavorZh": "法式香草奶油",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "29 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Salt, Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "29 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "160mg",
+            "amountZh": "160 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 食盐, 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906747147",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/french-vanilla-creme/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/french-vanilla-creme/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/french-vanilla-creme/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/french-vanilla-creme/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-fruity-cereal",
+      "variantId": "52138905108747",
+      "sku": "1147144",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Fruity Cereal",
+      "flavorZh": "水果谷物",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "29 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Salt, Sucralose, Acesulfame Potassium, Red 40 Lake.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "29 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "<1g",
+            "amountZh": "<1 克",
+            "dailyValue": "0%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "140mg",
+            "amountZh": "140 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "150mg",
+            "amountZh": "150 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 食盐, 三氯蔗糖, 安赛蜜, 红色 40 号色淀.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905108747",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/fruity-cereal/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/fruity-cereal/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/fruity-cereal/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/fruity-cereal/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-smores",
+      "variantId": "52138906255627",
+      "sku": "1154592",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "S'Mores",
+      "flavorZh": "烤棉花糖",
+      "availableOnOfficialSite": true,
+      "servingSize": "32g (About 1 Scoop)",
+      "servingsPerContainer": "28 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "rotein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Xanthan Gum, Salt, Sucralose, Acesulfame Potassium.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "28 份",
+        "servingSizeZh": "32 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "160mg",
+            "amountZh": "160 毫克",
+            "dailyValue": "7%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "<1g",
+            "amountZh": "<1 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "140mg",
+            "amountZh": "140 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.7mg",
+            "amountZh": "0.7 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 黄原胶, 食盐, 三氯蔗糖, 安赛蜜.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（32 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906255627",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/smores/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/smores/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/smores/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/smores/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-strawberry-banana",
+      "variantId": "52138905600267",
+      "sku": "1111988",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Strawberry Banana",
+      "flavorZh": "草莓香蕉",
+      "availableOnOfficialSite": true,
+      "servingSize": "30g (About 1 Scoop)",
+      "servingsPerContainer": "30 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Acesulfame Potassium, Sucralose, Red 40.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "30 份",
+        "servingSizeZh": "30 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "60mg",
+            "amountZh": "60 毫克",
+            "dailyValue": "20%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "150mg",
+            "amountZh": "150 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 安赛蜜, 三氯蔗糖, 红色 40 号.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（30 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905600267",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/strawberry-banana/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/strawberry-banana/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/strawberry-banana/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/strawberry-banana/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-2lb-vanilla-ice-cream",
+      "variantId": "52138905207051",
+      "sku": "1111984",
+      "size": "2 lb",
+      "sizeLabel": "2 磅（907 克）",
+      "flavor": "Vanilla Ice Cream",
+      "flavorZh": "香草冰淇淋",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "29 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Cellulose Gum, Xanthan Gum, Salt, Sucralose, Acesulfame Potassium.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "29 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "4g",
+            "amountZh": "4 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "150mg",
+            "amountZh": "150 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 纤维素胶, 黄原胶, 食盐, 三氯蔗糖, 安赛蜜.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905207051",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/vanilla-ice-cream/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/vanilla-ice-cream/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/2lb/vanilla-ice-cream/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/2lb/vanilla-ice-cream/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-banana-cream",
+      "variantId": "52138906157323",
+      "sku": "1111970",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Banana Cream",
+      "flavorZh": "香蕉奶油",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "73 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Salt, Acesulfame Potassium, Sucralose, Yellow 5.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "73 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "4g",
+            "amountZh": "4 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "160mg",
+            "amountZh": "160 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 食盐, 安赛蜜, 三氯蔗糖, 黄色 5 号.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906157323",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/banana-cream/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/banana-cream/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/banana-cream/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/banana-cream/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-chocolate-coconut",
+      "variantId": "52138906714379",
+      "sku": "1111972",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Chocolate Coconut",
+      "flavorZh": "巧克力椰子",
+      "availableOnOfficialSite": true,
+      "servingSize": "32g (About 1 Scoop)",
+      "servingsPerContainer": "71 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Salt, Creamer (Sunflower Oil, Maltodextrin, Modified Food Starch, Dipotassium Phosphate, Tricalcium Phosphate, Tocopherols), Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "71 份",
+        "servingSizeZh": "32 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "4g",
+            "amountZh": "4 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "<1g",
+            "amountZh": "<1 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.8mg",
+            "amountZh": "0.8 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 食盐, 植脂末 (葵花籽油, 麦芽糊精, 改性食用淀粉, 磷酸氢二钾, 磷酸三钙, 生育酚), 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（32 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906714379",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/chocolate-coconut/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/chocolate-coconut/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/chocolate-coconut/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/chocolate-coconut/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-chocolate-malt",
+      "variantId": "52138905829643",
+      "sku": "1111969",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Chocolate Malt",
+      "flavorZh": "麦芽巧克力",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "73 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa (Processed with Alkali), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Salt, Creamer (Sunflower Oil, Maltodextrin, Modified Corn Starch, Dipotassium Phosphate, Tricalcium Phosphate, Tocopherols), Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "73 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.8mg",
+            "amountZh": "0.8 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 食盐, 植脂末 (葵花籽油, 麦芽糊精, 改性玉米淀粉, 磷酸氢二钾, 磷酸三钙, 生育酚), 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK AND SOY",
+        "allergensZh": "牛奶 和 大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905829643",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/chocolate-malt/product-front.webp",
+        "width": 1400,
+        "height": 1152
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/chocolate-malt/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/chocolate-malt/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/chocolate-malt/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-chocolate-mint",
+      "variantId": "52138905338123",
+      "sku": "1111977",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Chocolate Mint",
+      "flavorZh": "巧克力薄荷",
+      "availableOnOfficialSite": true,
+      "servingSize": "32g (About 1 Scoop)",
+      "servingsPerContainer": "70 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Gum Blend (Guar Gum, Gum Acacia, Xanthan Gum), Salt, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "70 份",
+        "servingSizeZh": "32 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "60mg",
+            "amountZh": "60 毫克",
+            "dailyValue": "20%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "< 1g",
+            "amountZh": "< 1 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.8mg",
+            "amountZh": "0.8 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 复配增稠剂 (瓜尔胶, 阿拉伯胶, 黄原胶), 食盐, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（32 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905338123",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/chocolate-mint/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/chocolate-mint/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/chocolate-mint/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/chocolate-mint/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-chocolate-peanut-butter",
+      "variantId": "52138905764107",
+      "sku": "1111966",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Chocolate Peanut Butter",
+      "flavorZh": "巧克力花生酱",
+      "availableOnOfficialSite": true,
+      "servingSize": "33g (About 1 Scoop)",
+      "servingsPerContainer": "68 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Salt, Creamer (Sunflower Oil, Maltodextrin, Modified Food Starch, Dipotassium Phosphate, Tricalcium Phosphate, Tocopherols), Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "68 份",
+        "servingSizeZh": "33 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "190mg",
+            "amountZh": "190 毫克",
+            "dailyValue": "8%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "4g",
+            "amountZh": "4 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "<1g",
+            "amountZh": "<1 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.7mg",
+            "amountZh": "0.7 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 食盐, 植脂末 (葵花籽油, 麦芽糊精, 改性食用淀粉, 磷酸氢二钾, 磷酸三钙, 生育酚), 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（33 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905764107",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/chocolate-peanut-butter/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/chocolate-peanut-butter/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/chocolate-peanut-butter/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/chocolate-peanut-butter/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-coffee",
+      "variantId": "52138906353931",
+      "sku": "1111973",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Coffee",
+      "flavorZh": "咖啡",
+      "availableOnOfficialSite": false,
+      "servingSize": "32g (About 1 Scoop)",
+      "servingsPerContainer": "71 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Coffee Powder, Creamer (Sunflower Oil, Maltodextrin, Modified Food Starch, Dipotassium Phosphate, Tricalcium Phosphate, Tocopherols), Sunflower and/or Soy Lecithin, Natural Flavor, Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Naturally flavored with other natural flavors",
+        "flavoringZh": "天然调味，并含其他天然香料",
+        "servingsPerContainerZh": "71 份",
+        "servingSizeZh": "32 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "60mg",
+            "amountZh": "60 毫克",
+            "dailyValue": "20%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "4g",
+            "amountZh": "4 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "140mg",
+            "amountZh": "140 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 咖啡粉, 植脂末 (葵花籽油, 麦芽糊精, 改性食用淀粉, 磷酸氢二钾, 磷酸三钙, 生育酚), 葵花籽和/或大豆卵磷脂, 天然香料, 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（32 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906353931",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/coffee/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/coffee/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/coffee/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/coffee/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-cookies-and-cream",
+      "variantId": "52138905567499",
+      "sku": "1111976",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Cookies & Cream",
+      "flavorZh": "曲奇奶油",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "68 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Cookie Crumbs (Sugar, Rice Flour, Cocoa [Processed with Alkalil, Canola Oil, Salt), Sunflower and/or Soy Lecithin, Gum Blend (Guar Gum, Gum Acacia, Xanthan Gum), Salt, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "68 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "150mg",
+            "amountZh": "150 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 曲奇碎 (糖, 米粉, 可可粉 [碱化处理, 菜籽油, 食盐), 葵花籽和/或大豆卵磷脂, 复配增稠剂 (瓜尔胶, 阿拉伯胶, 黄原胶), 食盐, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905567499",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/cookies-and-cream/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/cookies-and-cream/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/cookies-and-cream/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/cookies-and-cream/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-delicious-strawberry",
+      "variantId": "52138905698571",
+      "sku": "1111963",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Delicious Strawberry",
+      "flavorZh": "美味草莓",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "73 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Citric Acid, Beet Juice Powder (Color), Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "73 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "60mg",
+            "amountZh": "60 毫克",
+            "dailyValue": "20%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "addedSugars",
+            "labelEn": "Includes Added Sugars",
+            "labelZh": "其中添加糖",
+            "amount": "0g",
+            "amountZh": "0 克",
+            "dailyValue": "0%"
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "140mg",
+            "amountZh": "140 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "2%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 柠檬酸, 甜菜汁粉 (着色剂), 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905698571",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/delicious-strawberry/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/delicious-strawberry/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/delicious-strawberry/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/delicious-strawberry/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-double-rich-chocolate",
+      "variantId": "52138906845451",
+      "sku": "1158131",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Double Rich Chocolate",
+      "flavorZh": "双重巧克力",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "74 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali), Sunflower and/or Soy Lecithin, Natural and Artificial Flavor, Acesulfame Potassium.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "74 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "<1g",
+            "amountZh": "<1 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.7mg",
+            "amountZh": "0.7 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 葵花籽和/或大豆卵磷脂, 天然及人工香料, 安赛蜜.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906845451",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/double-rich-chocolate/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/double-rich-chocolate/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/double-rich-chocolate/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/double-rich-chocolate/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-extreme-milk-chocolate",
+      "variantId": "52138906222859",
+      "sku": "1111962",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Extreme Milk Chocolate",
+      "flavorZh": "浓郁牛奶巧克力",
+      "availableOnOfficialSite": true,
+      "servingSize": "32g (About 1 Scoop)",
+      "servingsPerContainer": "71 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Creamer (Sunflower Oil, Maltodextrin, Modified Corn Starch, Dipotassium Phosphate, Tricalcium Phosphate, Tocopherols), Salt, Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "71 份",
+        "servingSizeZh": "32 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "dietaryFiber",
+            "labelEn": "Dietary Fiber",
+            "labelZh": "膳食纤维",
+            "amount": "< 1g",
+            "amountZh": "< 1 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.9mg",
+            "amountZh": "0.9 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 植脂末 (葵花籽油, 麦芽糊精, 改性玉米淀粉, 磷酸氢二钾, 磷酸三钙, 生育酚), 食盐, 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（32 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906222859",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/extreme-milk-chocolate/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/extreme-milk-chocolate/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/extreme-milk-chocolate/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/extreme-milk-chocolate/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-french-vanilla-creme",
+      "variantId": "52138906386699",
+      "sku": "1111961",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "French Vanilla Creme",
+      "flavorZh": "法式香草奶油",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "73 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Salt, Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "73 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "160mg",
+            "amountZh": "160 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 食盐, 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906386699",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/french-vanilla-creme/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/french-vanilla-creme/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/french-vanilla-creme/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/french-vanilla-creme/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-mocha-cappuccino",
+      "variantId": "52138906583307",
+      "sku": "1111965",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Mocha Cappuccino",
+      "flavorZh": "摩卡卡布奇诺",
+      "availableOnOfficialSite": true,
+      "servingSize": "32g (About 1 Scoop)",
+      "servingsPerContainer": "71 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 130,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Cocoa Powder (Processed with Alkali, Coffee Powder, Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Acesulfame Potassium, Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "71 份",
+        "servingSizeZh": "32 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "iron",
+            "labelEn": "Iron",
+            "labelZh": "铁",
+            "amount": "0.7mg",
+            "amountZh": "0.7 毫克",
+            "dailyValue": "4%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "200mg",
+            "amountZh": "200 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 可可粉 (碱化处理, 咖啡粉, 天然及人工香料, 葵花籽和/或大豆卵磷脂, 安赛蜜, 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（32 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906583307",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/mocha-cappuccino/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/mocha-cappuccino/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/mocha-cappuccino/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/mocha-cappuccino/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-rocky-road",
+      "variantId": "52138905075979",
+      "sku": "1111968",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Rocky Road",
+      "flavorZh": "落基路",
+      "availableOnOfficialSite": true,
+      "servingSize": null,
+      "servingsPerContainer": "72 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": null,
+      "ingredients": null,
+      "nutritionReference": null,
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905075979",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/rocky-road/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/rocky-road/product-front.png",
+      "nutritionImage": null,
+      "nutritionOriginal": null
+    },
+    {
+      "id": "on-gsw-5lb-strawberries-and-cream",
+      "variantId": "52138906419467",
+      "sku": "1111975",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Strawberries & Cream",
+      "flavorZh": "草莓奶油",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "73 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Gum Blend (Guar Gum, Gum Acacia, Xanthan Gum), Citric Acid, Salt, Beet Juice Powder (color), Sucralose.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "73 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "3%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "60mg",
+            "amountZh": "60 毫克",
+            "dailyValue": "20%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "140mg",
+            "amountZh": "140 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "140mg",
+            "amountZh": "140 毫克",
+            "dailyValue": "2%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 复配增稠剂 (瓜尔胶, 阿拉伯胶, 黄原胶), 柠檬酸, 食盐, 甜菜汁粉 (着色剂), 三氯蔗糖.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906419467",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/strawberries-and-cream/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/strawberries-and-cream/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/strawberries-and-cream/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/strawberries-and-cream/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-strawberry-banana",
+      "variantId": "52138905469195",
+      "sku": "1111971",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Strawberry Banana",
+      "flavorZh": "草莓香蕉",
+      "availableOnOfficialSite": true,
+      "servingSize": "30g (About 1 Scoop)",
+      "servingsPerContainer": "75 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Acesulfame Potassium, Sucralose, Red 40.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "75 份",
+        "servingSizeZh": "30 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "60mg",
+            "amountZh": "60 毫克",
+            "dailyValue": "20%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "150mg",
+            "amountZh": "150 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 安赛蜜, 三氯蔗糖, 红色 40 号.",
+        "allergensEn": "MILK AND SOY",
+        "allergensZh": "牛奶 和 大豆",
+        "directionsZh": "取约 1 勺（30 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905469195",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/strawberry-banana/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/strawberry-banana/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/strawberry-banana/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/strawberry-banana/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-vanilla-ice-cream",
+      "variantId": "52138905141515",
+      "sku": "1111967",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "Vanilla Ice Cream",
+      "flavorZh": "香草冰淇淋",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "73 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Cellulose Gum, Xanthan Gum, Salt, Sucralose, Acesulfame Potassium.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "73 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "4g",
+            "amountZh": "4 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": null
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "150mg",
+            "amountZh": "150 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 纤维素胶, 黄原胶, 食盐, 三氯蔗糖, 安赛蜜.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、添加糖、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138905141515",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/vanilla-ice-cream/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/vanilla-ice-cream/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/vanilla-ice-cream/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/vanilla-ice-cream/nutrition.jpg"
+    },
+    {
+      "id": "on-gsw-5lb-white-chocolate",
+      "variantId": "52138906616075",
+      "sku": "1111974",
+      "size": "5 lb",
+      "sizeLabel": "5 磅（2.27 千克）",
+      "flavor": "White Chocolate",
+      "flavorZh": "白巧克力",
+      "availableOnOfficialSite": true,
+      "servingSize": "31g (About 1 Scoop)",
+      "servingsPerContainer": "73 Servings",
+      "proteinPerServing": "24 g",
+      "bcaaInformation": "5.5 g naturally occurring BCAAs per serving",
+      "calories": 120,
+      "ingredients": "Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Whey Protein), Natural and Artificial Flavor, Sunflower and/or Soy Lecithin, Creamer (Sunflower Oil, Maltodextrin, Modified Food Starch, Dipotassium Phosphate, Tricalcium Phosphate, Tocopherols), Gum Blend (Guar Gum, Gum Acacia, Xanthan Gum), Sucralose, Acesulfame Potassium.",
+      "nutritionReference": {
+        "flavoringEn": "Artificially flavored",
+        "flavoringZh": "人工调味",
+        "servingsPerContainerZh": "73 份",
+        "servingSizeZh": "31 克（约 1 勺）",
+        "nutrientRows": [
+          {
+            "key": "totalFat",
+            "labelEn": "Total Fat",
+            "labelZh": "总脂肪",
+            "amount": "1.5g",
+            "amountZh": "1.5 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "saturatedFat",
+            "labelEn": "Saturated Fat",
+            "labelZh": "饱和脂肪",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "5%"
+          },
+          {
+            "key": "cholesterol",
+            "labelEn": "Cholesterol",
+            "labelZh": "胆固醇",
+            "amount": "55mg",
+            "amountZh": "55 毫克",
+            "dailyValue": "18%"
+          },
+          {
+            "key": "sodium",
+            "labelEn": "Sodium",
+            "labelZh": "钠",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "6%"
+          },
+          {
+            "key": "totalCarbohydrate",
+            "labelEn": "Total Carbohydrate",
+            "labelZh": "总碳水化合物",
+            "amount": "3g",
+            "amountZh": "3 克",
+            "dailyValue": "1%"
+          },
+          {
+            "key": "totalSugars",
+            "labelEn": "Total Sugars",
+            "labelZh": "总糖",
+            "amount": "2g",
+            "amountZh": "2 克",
+            "dailyValue": null
+          },
+          {
+            "key": "addedSugars",
+            "labelEn": "Includes Added Sugars",
+            "labelZh": "其中添加糖",
+            "amount": "1g",
+            "amountZh": "1 克",
+            "dailyValue": "2%"
+          },
+          {
+            "key": "protein",
+            "labelEn": "Protein",
+            "labelZh": "蛋白质",
+            "amount": "24g",
+            "amountZh": "24 克",
+            "dailyValue": "48%"
+          },
+          {
+            "key": "calcium",
+            "labelEn": "Calcium",
+            "labelZh": "钙",
+            "amount": "130mg",
+            "amountZh": "130 毫克",
+            "dailyValue": "10%"
+          },
+          {
+            "key": "potassium",
+            "labelEn": "Potassium",
+            "labelZh": "钾",
+            "amount": "160mg",
+            "amountZh": "160 毫克",
+            "dailyValue": "4%"
+          }
+        ],
+        "ingredientsZh": "蛋白质混合物 (分离乳清蛋白, 浓缩乳清蛋白, 水解乳清蛋白), 天然及人工香料, 葵花籽和/或大豆卵磷脂, 植脂末 (葵花籽油, 麦芽糊精, 改性食用淀粉, 磷酸氢二钾, 磷酸三钙, 生育酚), 复配增稠剂 (瓜尔胶, 阿拉伯胶, 黄原胶), 三氯蔗糖, 安赛蜜.",
+        "allergensEn": "MILK, SOY",
+        "allergensZh": "牛奶、大豆",
+        "directionsZh": "取约 1 勺（31 克）粉末，加入 6–8 液体盎司（约 177–237 毫升）冷水、牛奶或其他饮料，搅拌、摇匀或用搅拌机混合约 30 秒，直至溶解。",
+        "insignificantSourceZh": "非显著来源：反式脂肪、膳食纤维、维生素 D、铁。",
+        "dailyValueNoteZh": "每日营养参考值百分比表示一份食品中的营养素对每日饮食的贡献；一般营养建议以每日 2,000 千卡为参考。",
+        "claims": [
+          {
+            "labelEn": "Gluten Free",
+            "labelZh": "无麸质"
+          },
+          {
+            "labelEn": "Informed Choice / Regularly Tested for Banned Substances",
+            "labelZh": "Informed Choice 标识 / 定期进行禁用物质检测"
+          }
+        ]
+      },
+      "officialUrl": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-whey-protein-powder?variant=52138906616075",
+      "frontImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/white-chocolate/product-front.webp",
+        "width": 1400,
+        "height": 1400
+      },
+      "frontOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/white-chocolate/product-front.png",
+      "nutritionImage": {
+        "src": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/white-chocolate/nutrition.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "nutritionOriginal": "/assets/products/on/gold-standard-whey/selector/5lb/white-chocolate/nutrition.jpg"
+    }
+  ]
+}

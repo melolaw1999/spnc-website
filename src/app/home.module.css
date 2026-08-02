@@ -17,6 +17,69 @@
   height: auto;
 }
 
+.bestSeller {
+  position: relative;
+  min-height: clamp(690px, 86svh, 900px);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 4px;
+  padding-top: clamp(34px, 4vw, 60px);
+  padding-bottom: clamp(32px, 4vw, 54px);
+  background:
+    radial-gradient(circle at 50% 42%, rgba(193, 145, 54, .14), transparent 28%),
+    linear-gradient(180deg, #fbfaf7 0%, #f2f1ed 100%);
+}
+
+.bestSellerTitle {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: #111;
+  font-size: clamp(48px, 6.3vw, 84px);
+  font-weight: 780;
+  line-height: .92;
+  letter-spacing: -.055em;
+}
+
+.bestSellerVisual {
+  position: relative;
+  width: min(100%, 620px);
+  height: clamp(440px, 48svh, 560px);
+  margin: -4px auto -16px;
+}
+
+.bestSellerVisual::before {
+  content: "";
+  position: absolute;
+  inset: 15% 17% 12%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(207, 166, 82, .24), rgba(207, 166, 82, 0) 68%);
+  filter: blur(16px);
+}
+
+.bestSellerProduct {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: translateY(18px) scale(1.34);
+  transform-origin: center 49%;
+  filter: drop-shadow(0 34px 30px rgba(29, 24, 15, .19));
+}
+
+.bestSellerActions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bestSellerActions :global(.btn) {
+  margin-top: 0;
+}
+
 @media (max-width: 560px) {
   .teamOn {
     gap: 12px;
@@ -25,5 +88,28 @@
 
   .teamOnLogo {
     width: 145px;
+  }
+
+  .bestSeller {
+    min-height: 660px;
+    padding: 40px 18px 34px;
+  }
+
+  .bestSellerTitle {
+    font-size: clamp(44px, 14vw, 58px);
+  }
+
+  .bestSellerVisual {
+    width: 100%;
+    height: 400px;
+    margin: -8px auto -10px;
+  }
+
+  .bestSellerActions {
+    width: 100%;
+  }
+
+  .bestSellerActions :global(.btn) {
+    flex: 1 1 150px;
   }
 }

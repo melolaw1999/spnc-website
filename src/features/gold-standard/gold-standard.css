@@ -1,0 +1,125 @@
+.gold-standard-page{background:#fff}
+.gold-selector-hero{padding:72px 0 86px;background:linear-gradient(180deg,#fbfbfd 0%,#fff 72%)}
+.gold-selector-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(420px,.92fr);gap:clamp(42px,6vw,84px);align-items:center}
+.gold-product-stage{min-width:0;display:grid;justify-items:center;gap:12px}
+.gold-product-image{position:relative;width:100%;height:clamp(500px,54vw,720px);border-radius:40px;background:radial-gradient(circle at 50% 46%,#fff 0 31%,#f3f3f5 72%,#ececef 100%);overflow:hidden}
+.gold-product-image:after{content:"";position:absolute;left:22%;right:22%;bottom:8%;height:7%;border-radius:50%;background:rgba(0,0,0,.12);filter:blur(22px)}
+.gold-product-image img{z-index:1;object-fit:contain;padding:clamp(28px,5vw,68px);animation:gold-product-enter .28s ease-out}
+.gold-image-caption{margin:0;color:var(--muted);font-size:14px}
+.gold-product-copy h1{font-size:clamp(48px,5.7vw,78px);line-height:1;letter-spacing:-.058em;margin:16px 0 18px}
+.gold-intro{margin:0;max-width:620px;color:var(--muted);font-size:20px;line-height:1.65}
+.gold-selector-panel{display:grid;grid-template-columns:.74fr 1.26fr;gap:12px;margin:34px 0 18px}
+.gold-selector-panel label{display:grid;gap:8px;color:#424245;font-size:13px;font-weight:650}
+.gold-selector-panel select{width:100%;height:54px;border:1px solid rgba(210,210,215,.9);border-radius:15px;padding:0 42px 0 15px;background:#fff;color:#111;box-shadow:0 12px 30px rgba(0,0,0,.035);cursor:pointer}
+.gold-selector-panel select:focus-visible{outline:3px solid rgba(0,113,227,.25);border-color:var(--blue)}
+.gold-selection-summary{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px;border-radius:20px;background:#f5f5f7}
+.gold-selection-summary>div{display:grid;gap:4px;min-width:0}
+.gold-selection-summary span,.gold-selection-summary small{color:var(--muted);font-size:12px}
+.gold-selection-summary strong{font-size:17px;line-height:1.35}
+.gold-source-status{flex:none!important;padding:7px 10px;border-radius:999px;background:#eaf8ef;color:#147b36!important;font-weight:700}
+.gold-source-status.is-unavailable{background:#fff1e8;color:#9a4b00!important}
+.gold-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 0}
+.gold-facts div{min-width:0;padding:15px 13px;border:1px solid rgba(210,210,215,.68);border-radius:17px;background:#fff}
+.gold-facts dt{color:var(--muted);font-size:12px;line-height:1.35}
+.gold-facts dd{margin:7px 0 0;font-size:18px;font-weight:720;line-height:1.2;overflow-wrap:anywhere}
+.gold-serving{margin:14px 0 0;color:var(--muted);font-size:14px}
+.gold-actions{margin-top:24px}
+.gold-role-note{margin:18px 0 0;color:var(--muted);font-size:13px;line-height:1.65}
+.gold-info-section{padding:92px 0;background:#fff}
+.gold-info-layout{display:grid;grid-template-columns:minmax(260px,.66fr) minmax(0,1.34fr);gap:clamp(46px,7vw,96px);align-items:start}
+.gold-info-heading{position:sticky;top:106px}
+.gold-info-heading h2{margin:14px 0 20px;font-size:clamp(38px,4.8vw,62px);line-height:1.02;letter-spacing:-.052em}
+.gold-info-heading p{margin:0;color:#515154;font-size:15px;line-height:1.8}
+.gold-info-accordions{min-width:0;border-top:1px solid var(--line)}
+.gold-info-accordions details{border-bottom:1px solid var(--line)}
+.gold-info-accordions summary{display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:82px;padding:20px 4px;cursor:pointer;list-style:none;font-size:22px;font-weight:760;line-height:1.2}
+.gold-info-accordions summary::-webkit-details-marker{display:none}
+.gold-info-accordions summary small{display:block;margin-top:5px;color:#86868b;font-size:11px;font-weight:560;letter-spacing:.055em;text-transform:uppercase}
+.gold-info-accordions summary:after{content:"";width:10px;height:10px;margin-right:7px;border-right:2px solid #111;border-bottom:2px solid #111;transform:rotate(45deg);transition:transform .2s ease}
+.gold-info-accordions details[open] summary:after{transform:rotate(225deg)}
+.gold-info-content{padding:0 46px 30px 4px;color:#424245}
+.gold-info-content h3{margin:4px 0 20px;color:#111;font-size:24px;line-height:1.3;letter-spacing:-.025em}
+.gold-info-content p{margin:0;font-size:16px;line-height:1.85}
+.gold-info-content p+p{margin-top:17px}
+.gold-benefit-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;margin:2px 0 0;padding:0;list-style:none}
+.gold-benefit-list li{position:relative;padding:14px 16px 14px 38px;border-radius:16px;background:#f5f5f7;font-size:14px;line-height:1.55}
+.gold-benefit-list li:before{content:"";position:absolute;left:17px;top:21px;width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(0,113,227,.1)}
+.gold-use-content{display:grid;gap:20px}
+.gold-use-current{padding:22px;border:1px solid rgba(0,113,227,.18);border-radius:20px;background:#f3f8ff}
+.gold-use-current span{display:block;color:#4c739b;font-size:12px}
+.gold-use-current strong{display:block;margin-top:5px;color:#123e68;font-size:17px}
+.gold-use-current p{margin-top:13px;color:#315b7d;font-size:14px;line-height:1.75}
+.gold-use-content>ul{display:grid;gap:10px;margin:0;padding-left:21px;color:#515154;font-size:14px;line-height:1.7}
+.gold-nutrition-section{padding:90px 0;background:#f5f5f7}
+.gold-nutrition-layout{display:grid;grid-template-columns:minmax(300px,.72fr) minmax(0,1.28fr);gap:clamp(34px,5vw,70px);align-items:start}
+.gold-nutrition-copy{position:sticky;top:106px}
+.gold-nutrition-copy h2{font-size:clamp(38px,4.7vw,60px);line-height:1.04;letter-spacing:-.05em;margin:14px 0 20px}
+.gold-nutrition-copy>p{line-height:1.7}
+.gold-ingredients{margin:28px 0 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gold-ingredients summary{cursor:pointer;padding:18px 30px 18px 0;font-weight:700}
+.gold-ingredients p{margin:0 0 20px;color:#515154;font-size:14px;line-height:1.8}
+.gold-label-stack{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;min-width:0}
+.gold-nutrition-stage{min-width:0;min-height:620px;border:1px solid rgba(210,210,215,.65);border-radius:32px;padding:clamp(16px,3vw,34px);background:#fff;box-shadow:0 24px 65px rgba(0,0,0,.055);display:grid;place-items:center;overflow:hidden}
+.gold-nutrition-image{display:block;width:100%;height:auto;max-height:980px;object-fit:contain;animation:gold-product-enter .28s ease-out}
+.gold-nutrition-missing{max-width:520px;padding:40px;text-align:center;color:#515154}
+.gold-nutrition-missing strong{display:block;color:#111;font-size:22px;line-height:1.4}
+.gold-nutrition-missing p{line-height:1.7}
+.gold-translation-card,.gold-translation-missing{min-width:0;border:1px solid rgba(210,210,215,.72);border-radius:32px;background:#fff;box-shadow:0 20px 54px rgba(0,0,0,.045)}
+.gold-translation-card{padding:clamp(22px,3.5vw,42px);overflow:hidden}
+.gold-translation-header{display:grid;grid-template-columns:minmax(170px,.7fr) minmax(240px,1.3fr);gap:24px;align-items:end;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.gold-translation-header h3{margin:10px 0 0;font-size:clamp(28px,3.2vw,42px);line-height:1.08;letter-spacing:-.035em}
+.gold-translation-header p{margin:0;color:#515154;font-size:14px;line-height:1.75}
+.gold-reference-badge{display:inline-flex;align-items:center;width:max-content;padding:6px 10px;border-radius:999px;background:#fff2d9;color:#8a4b00;font-size:12px;font-weight:760;letter-spacing:.04em}
+.gold-label-summary{display:grid;grid-template-columns:1fr 1fr;margin:24px 0;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.gold-label-summary div{display:grid;grid-template-columns:minmax(110px,.8fr) minmax(0,1.2fr);gap:16px;padding:17px 18px;border-bottom:1px solid var(--line)}
+.gold-label-summary div:nth-child(odd){border-right:1px solid var(--line)}
+.gold-label-summary div:nth-last-child(-n+2){border-bottom:0}
+.gold-label-summary dt{color:#515154;font-size:13px;line-height:1.4}
+.gold-label-summary dd{margin:0;font-size:14px;font-weight:680;line-height:1.45;overflow-wrap:anywhere}
+.gold-label-summary small,.gold-nutrient-table small,.gold-label-sections small{display:block;margin-top:4px;color:#86868b;font-size:10px;font-weight:520;line-height:1.35}
+.gold-table-scroll{min-width:0;max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:20px}
+.gold-nutrient-table{width:100%;border-collapse:collapse;min-width:560px;text-align:left}
+.gold-nutrient-table th,.gold-nutrient-table td{padding:13px 16px;border-bottom:1px solid var(--line);font-size:14px}
+.gold-nutrient-table thead th{background:#f5f5f7;color:#424245;font-size:12px}
+.gold-nutrient-table tbody th{font-weight:700}
+.gold-nutrient-table tbody tr:last-child th,.gold-nutrient-table tbody tr:last-child td{border-bottom:0}
+.gold-nutrient-table th:first-child{width:44%}
+.gold-label-sections{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.gold-label-sections section{padding:20px;border-radius:20px;background:#f5f5f7}
+.gold-label-sections section:first-child{grid-column:1/-1}
+.gold-label-sections h4{margin:0 0 12px;font-size:16px}
+.gold-label-sections p{margin:0;color:#424245;font-size:13px;line-height:1.75;overflow-wrap:anywhere}
+.gold-label-sections details{margin-top:14px;padding-top:12px;border-top:1px solid rgba(210,210,215,.85)}
+.gold-label-sections summary{cursor:pointer;color:#424245;font-size:12px;font-weight:650}
+.gold-label-sections details p{margin-top:10px;color:#6e6e73;font-size:12px}
+.gold-label-original{margin-top:8px!important;color:#86868b!important;font-size:11px!important}
+.gold-label-sections ul{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.gold-label-sections li{font-size:13px;line-height:1.45}
+.gold-translation-notes{margin-top:24px;padding:18px 20px;border-radius:18px;background:#edf6ff;color:#315b7d}
+.gold-translation-notes p{margin:0;font-size:12px;line-height:1.7}
+.gold-translation-notes p+p{margin-top:6px}
+.gold-translation-notes strong{display:block;margin-top:10px;color:#163f63;font-size:13px}
+.gold-translation-missing{display:grid;gap:12px;justify-items:start;padding:clamp(26px,4vw,42px)}
+.gold-translation-missing strong{font-size:22px}
+.gold-translation-missing p{margin:0;color:#515154;line-height:1.7}
+.gold-faq-section{padding:96px 0 104px;background:linear-gradient(180deg,#fff 0%,#f8f9fb 100%)}
+.gold-faq-layout{max-width:980px}
+.gold-faq-heading{max-width:760px;margin:0 auto 48px;text-align:center}
+.gold-faq-heading h2{margin:14px 0 18px;font-size:clamp(40px,5.5vw,68px);line-height:1.02;letter-spacing:-.055em}
+.gold-faq-heading p{margin:0;color:#515154;font-size:16px;line-height:1.75}
+.gold-faq-list{border-top:1px solid var(--line)}
+.gold-faq-list details{border-bottom:1px solid var(--line)}
+.gold-faq-list summary{display:grid;grid-template-columns:48px minmax(0,1fr) 20px;gap:16px;align-items:center;min-height:82px;padding:20px 4px;cursor:pointer;list-style:none;color:#1d1d1f;font-size:20px;font-weight:720;line-height:1.35}
+.gold-faq-list summary::-webkit-details-marker{display:none}
+.gold-faq-list summary:after{content:"";width:9px;height:9px;border-right:2px solid #111;border-bottom:2px solid #111;transform:rotate(45deg);transition:transform .2s ease}
+.gold-faq-list details[open] summary:after{transform:rotate(225deg)}
+.gold-faq-number{color:#86868b;font-size:12px;font-weight:650;letter-spacing:.08em}
+.gold-faq-answer{padding:0 54px 28px 68px}
+.gold-faq-answer p{margin:0;color:#515154;font-size:15px;line-height:1.85}
+.gold-faq-answer a{display:inline-flex;margin-top:14px;color:var(--blue);font-size:14px;font-weight:700}
+.gold-faq-note{margin-top:30px;padding:18px 20px;border-radius:18px;background:#fff8e8;color:#6d4b00;font-size:13px;line-height:1.7}
+@keyframes gold-product-enter{from{opacity:.35;transform:scale(.985)}to{opacity:1;transform:scale(1)}}
+@media(max-width:1040px){.gold-selector-layout{grid-template-columns:minmax(0,1fr) minmax(380px,.95fr);gap:38px}.gold-info-layout,.gold-nutrition-layout{grid-template-columns:1fr}.gold-info-heading,.gold-nutrition-copy{position:static}.gold-info-heading p{max-width:760px}.gold-facts{grid-template-columns:1fr 1fr}.gold-product-image{height:560px}}
+@media(max-width:860px){.gold-selector-hero{padding:42px 0 64px}.gold-selector-layout,.gold-nutrition-layout{grid-template-columns:1fr}.gold-product-copy{order:-1}.gold-product-image{height:min(76vw,590px)}.gold-nutrition-copy{position:static}.gold-nutrition-section{padding:64px 0}.gold-nutrition-stage{min-height:420px}}
+@media(max-width:560px){.gold-selector-panel{grid-template-columns:1fr}.gold-product-copy h1{font-size:48px}.gold-intro{font-size:17px}.gold-selection-summary{align-items:flex-start;flex-direction:column}.gold-product-image{height:410px;border-radius:28px}.gold-product-image img{padding:25px}.gold-facts{gap:8px}.gold-facts div{padding:13px 11px}.gold-facts dd{font-size:16px}.gold-actions .btn{width:100%}.gold-info-section{padding:64px 0}.gold-info-heading h2{font-size:40px}.gold-info-accordions summary{min-height:72px;font-size:19px}.gold-info-content{padding-right:4px}.gold-info-content h3{font-size:21px}.gold-benefit-list{grid-template-columns:1fr}.gold-nutrition-copy h2{font-size:40px}.gold-nutrition-stage{min-height:320px;border-radius:24px;padding:10px}.gold-nutrition-missing{padding:28px 16px}.gold-translation-card,.gold-translation-missing{border-radius:24px}.gold-translation-header{grid-template-columns:1fr;gap:14px}.gold-label-summary{grid-template-columns:1fr}.gold-label-summary div,.gold-label-summary div:nth-child(odd),.gold-label-summary div:nth-last-child(-n+2){border-right:0;border-bottom:1px solid var(--line)}.gold-label-summary div:last-child{border-bottom:0}.gold-nutrient-table{min-width:0}.gold-nutrient-table th,.gold-nutrient-table td{padding:12px 8px;font-size:12px}.gold-nutrient-table thead th{font-size:11px}.gold-label-sections{grid-template-columns:1fr}.gold-label-sections section:first-child{grid-column:auto}.gold-faq-section{padding:64px 0 72px}.gold-faq-heading{margin-bottom:34px;text-align:left}.gold-faq-heading h2{font-size:40px}.gold-faq-list summary{grid-template-columns:34px minmax(0,1fr) 16px;gap:10px;min-height:72px;padding:17px 2px;font-size:17px}.gold-faq-answer{padding:0 28px 24px 46px}.gold-faq-answer p{font-size:14px}.gold-faq-note{margin-top:24px}}
+@media(prefers-reduced-motion:reduce){.gold-product-image img,.gold-nutrition-image{animation:none}}

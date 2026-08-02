@@ -47,4 +47,14 @@ describe("官网定位与联系信息", () => {
     expect(homePage).not.toContain("ON Product Library");
     expect(homePage).not.toContain("ON 商品矩阵");
   });
+
+  it("首页 Hero 后展示跨境版金标乳清 BEST SELLER", () => {
+    const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
+    expect(homePage).toContain("BEST SELLER");
+    expect(homePage).toContain("/products/on-gold-standard-whey");
+    expect(homePage).toContain("id=794493827958");
+    expect(homePage).toContain("5 磅双重巧克力跨境版");
+    expect(homePage).toContain("double-rich-chocolate-front-transparent-v2.png");
+    expect(homePage).not.toContain("长期训练");
+  });
 });

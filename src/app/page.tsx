@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { TaobaoButton } from "@/components/TaobaoButton";
 import { catalog, publicSalesVersions } from "@/data/catalog";
 import { publicContactEmail, serviceEmail, mailto } from "@/data/contacts";
 import styles from "./home.module.css";
+
+const bestSellerTaobaoUrl = "https://item.taobao.com/item.htm?id=794493827958&mi_id=0000-9V2LcrTfxjJgXjEcUmo8aM2EtipRAyJ6fZTVLQyMow&spm=a21xtw.29178619.0.0&xxc=shop&sku_properties=1627207%3A10026360243";
 
 const billboards = [
   {
@@ -42,13 +43,22 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="home-billboard home-billboard-identity">
-      <div className="container billboard-inner identity-inner">
-        <div className="billboard-copy">
-          <div className="eyebrow">SPNC · 理想营养</div>
-          <h2>长期训练，<br />需要可靠的选择。</h2>
-          <p className="billboard-text">提供 ON 商品信息、版本说明、防伪溯源与售后指引。</p>
-          <div className="actions"><Link className="btn" href="/products">查看 ON 商品</Link><TaobaoButton label="进入淘宝店" secondary /></div>
+    <section className="home-billboard" aria-labelledby="best-seller-title">
+      <div className={`container billboard-inner ${styles.bestSeller}`}>
+        <h2 className={styles.bestSellerTitle} id="best-seller-title">BEST SELLER</h2>
+        <div className={styles.bestSellerVisual}>
+          <Image
+            className={styles.bestSellerProduct}
+            src="/assets/products/on/gold-standard-whey/on-gold-standard-whey-5lb-double-rich-chocolate-front-transparent-v2.png"
+            alt="ON 金标乳清蛋白粉 5 磅双重巧克力跨境版"
+            width={1254}
+            height={1254}
+            sizes="(max-width: 560px) 88vw, 620px"
+          />
+        </div>
+        <div className={styles.bestSellerActions}>
+          <Link className="btn" href="/products/on-gold-standard-whey">官网产品详情</Link>
+          <a className="btn secondary" href={bestSellerTaobaoUrl} target="_blank" rel="noopener noreferrer">淘宝店购买</a>
         </div>
       </div>
     </section>
