@@ -3,7 +3,6 @@ import Link from "next/link";
 import styles from "./Header.module.css";
 
 const links = [
-  ["商品矩阵", "/products"],
   ["ON 专区", "/on"],
   ["防伪溯源", "/authenticity"],
   ["版本说明", "/versions"],

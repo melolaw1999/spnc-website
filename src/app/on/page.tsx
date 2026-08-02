@@ -7,7 +7,7 @@ export const metadata = pageMetadata("ON 商品专区", "理想营养售卖品�
 
 export default function OnZone() {
   const domesticProducts = catalog.filter((product) => product.salesVersion === "国产版本");
-  const otherProducts = catalog.filter((product) => product.salesVersion !== "国产版本");
+  const importedProducts = catalog.filter((product) => product.salesVersion !== "国产版本");
 
   return <main>
     <section className="hero compact-hero"><div className="container">
@@ -17,13 +17,13 @@ export default function OnZone() {
       <div className="actions"><TaobaoButton label="前往淘宝店查看 ON 商品" /></div>
     </div></section>
     <section className="section"><div className="container">
+      <section className="catalog-family" aria-labelledby="on-imported-title">
+        <div className="catalog-family-head"><div><div className="eyebrow">Cross-Border Import Series</div><h2 id="on-imported-title">跨境进口系列</h2></div><p className="muted">展示已完成商品身份与素材核对的跨境进口产品，规格与实时库存以淘宝商品页为准。</p></div>
+        <div className="grid">{importedProducts.map((product) => <ProductCard p={product} key={product.id} />)}</div>
+      </section>
       <section className="catalog-family" aria-labelledby="on-domestic-title">
         <div className="catalog-family-head"><div><div className="eyebrow">Domestic Series</div><h2 id="on-domestic-title">ON 国产系列</h2></div><p className="muted">已确认素材按国产包装独立展示，规格与实时库存以淘宝商品页为准。</p></div>
         <div className="grid">{domesticProducts.map((product) => <ProductCard p={product} key={product.id} />)}</div>
-      </section>
-      <section className="catalog-family" aria-labelledby="on-other-title">
-        <div className="catalog-family-head"><div><div className="eyebrow">More ON Products</div><h2 id="on-other-title">其他 ON 商品</h2></div><p className="muted">只展示已有真实图片且商品身份可以确认的条目。</p></div>
-        <div className="grid">{otherProducts.map((product) => <ProductCard p={product} key={product.id} />)}</div>
       </section>
     </div></section>
   </main>;

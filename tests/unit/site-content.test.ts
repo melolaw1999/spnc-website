@@ -48,6 +48,29 @@ describe("官网定位与联系信息", () => {
     expect(homePage).not.toContain("ON 商品矩阵");
   });
 
+  it("ON 专区先展示跨境进口系列，再展示国产系列", () => {
+    const onPage = readFileSync(path.join(process.cwd(), "src/app/on/page.tsx"), "utf8");
+
+    expect(onPage).toContain("跨境进口系列");
+    expect(onPage).not.toContain("其他 ON 商品");
+    expect(onPage.indexOf("跨境进口系列")).toBeLessThan(onPage.indexOf("ON 国产系列"));
+  });
+
+  it("公开入口只保留 ON 专区，不再展示商品矩阵", () => {
+    const publicEntryFiles = [
+      "src/components/Header.tsx",
+      "src/components/Footer.tsx",
+      "src/app/page.tsx",
+      "src/app/about/page.tsx",
+      "src/app/not-found.tsx",
+    ].map((filePath) => readFileSync(path.join(process.cwd(), filePath), "utf8")).join("\n");
+    const productsPage = readFileSync(path.join(process.cwd(), "src/app/products/page.tsx"), "utf8");
+
+    expect(publicEntryFiles).not.toContain("商品矩阵");
+    expect(publicEntryFiles).not.toContain('href="/products"');
+    expect(productsPage).toContain('redirect("/on")');
+  });
+
   it("首页 Hero 后展示跨境版金标乳清 BEST SELLER", () => {
     const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
     expect(homePage).toContain("BEST SELLER");

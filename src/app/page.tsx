@@ -121,7 +121,7 @@ export default function Home() {
               <span>{product.name}</span>
             </Link>)}
           </div>
-          <Link className="btn" href="/products">浏览商品矩阵</Link>
+          <Link className="btn" href="/on">浏览 ON 专区</Link>
         </div>
       </div>
     </section>
