@@ -2,10 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
+  ["训复", "/lab"],
   ["商品矩阵", "/products"],
   ["ON 专区", "/on"],
   ["防伪溯源", "/authenticity"],
   ["版本说明", "/versions"],
+  ["文章", "/articles"],
   ["售后 FAQ", "/faq"],
   ["售后登记", "/support"],
   ["关于我们", "/about"],
