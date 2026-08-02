@@ -6,7 +6,7 @@ import { siteUrl, taobaoStoreUrl } from "@/lib/site";
 
 describe("生产商品目录", () => {
   it("商品 slug 唯一且公开目录完整", () => {
-    expect(catalog).toHaveLength(10);
+    expect(catalog).toHaveLength(9);
     expect(new Set(catalog.map((product) => product.slug)).size).toBe(catalog.length);
   });
 
@@ -21,7 +21,6 @@ describe("生产商品目录", () => {
       "国产双层香脆乳清蛋白棒",
       "白金水解乳清",
       "微粉化肌酸粉",
-      "双层香脆乳清蛋白棒",
       "金标训练前配方",
     ]);
   });
@@ -52,6 +51,12 @@ describe("生产商品目录", () => {
     const glutamineProducts = catalog.filter((product) => product.name.includes("谷氨酰胺"));
     expect(glutamineProducts.map((product) => product.id)).toEqual(["on-domestic-glutamine"]);
     expect(glutamineProducts.every((product) => product.salesVersion === "国产版本")).toBe(true);
+  });
+
+  it("蛋白棒只保留国产系列", () => {
+    const proteinBars = catalog.filter((product) => product.type === "蛋白棒");
+    expect(proteinBars.map((product) => product.id)).toEqual(["on-domestic-double-layer-crispy-whey-protein-bar"]);
+    expect(proteinBars.every((product) => product.salesVersion === "国产版本")).toBe(true);
   });
 
   it("已采用商品图只读取 public/assets 下的压缩副本", () => {

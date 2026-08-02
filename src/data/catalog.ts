@@ -234,21 +234,6 @@ export const catalog: CatalogProduct[] = [
   },
   {
     ...shared,
-    id: "on-double-layer-crispy-whey-protein-bar",
-    slug: "on-double-layer-crispy-whey-protein-bar",
-    brand: "OPTIMUM NUTRITION",
-    name: "双层香脆乳清蛋白棒",
-    type: "蛋白棒",
-    summary: "ON 双层香脆乳清蛋白棒。图片展示当前确认在售包装，具体口味、单支净含量与装数以淘宝商品页为准。",
-    highlights: ["两款包装同图展示", "具体口味与装数购买前核对"],
-    featured: false,
-    variants: [],
-    images: [
-      image("/assets/optimized/products/on/protein-bar/on-double-layer-crispy-whey-protein-bar-assortment.webp", "ON 双层香脆乳清蛋白棒两款包装与独立包装展示图", { width: 429, height: 307, caption: "双层香脆乳清蛋白棒 · 两款包装", sourceType: "user-confirmed-copy" }),
-    ],
-  },
-  {
-    ...shared,
     id: "on-gold-standard-pre-workout",
     slug: "on-gold-standard-pre-workout",
     brand: "OPTIMUM NUTRITION",
