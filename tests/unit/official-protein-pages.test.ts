@@ -3,7 +3,8 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 import isolateData from "@/data/gold-standard-isolate.json";
 import hydrowheyData from "@/data/platinum-hydrowhey.json";
-import { hydrowheyPageContent, isolatePageContent } from "@/features/official-protein/content";
+import { domesticGoldStandardData } from "@/data/domestic-gold-standard-whey";
+import { domesticGoldStandardPageContent, hydrowheyPageContent, isolatePageContent } from "@/features/official-protein/content";
 
 const publicAssetExists = (assetPath: string) => existsSync(path.join(process.cwd(), "public", assetPath));
 
@@ -45,14 +46,38 @@ describe("白金水解乳清完整产品页", () => {
   });
 });
 
-describe("两张产品页的路由与说明", () => {
+describe("中国制造与一般贸易金标乳清完整产品页", () => {
+  it("按销售版本收录 12 个中国制造组合与 5 个一般贸易组合", () => {
+    expect(domesticGoldStandardData.variants).toHaveLength(17);
+    expect(domesticGoldStandardData.variants.filter((item) => item.sizeGroup.startsWith("domestic-"))).toHaveLength(12);
+    expect(domesticGoldStandardData.variants.filter((item) => item.sizeGroup === "general-trade-5lb")).toHaveLength(5);
+  });
+
+  it("每个组合都有对应产品图，5 磅与 4 磅双重巧克力规格信息不混用", () => {
+    for (const variant of domesticGoldStandardData.variants) {
+      expect(publicAssetExists(variant.frontImage.src)).toBe(true);
+    }
+    const fivePound = domesticGoldStandardData.variants.find((item) => item.id === "on-domestic-gsw-5lb-double-rich-chocolate");
+    const fourPound = domesticGoldStandardData.variants.find((item) => item.id === "on-domestic-gsw-4lb-double-rich-chocolate");
+    expect([fivePound?.size, fivePound?.servingsPerContainer]).toEqual(["2.27 千克", "约 74 份（中国包装正面）"]);
+    expect([fourPound?.size, fourPound?.servingsPerContainer]).toEqual(["1.8 千克", "约 59 份（中国包装正面）"]);
+  });
+
+  it("买家页面不展示内部素材来源和制作过程说明", () => {
+    const publicCopy = [...domesticGoldStandardPageContent.overview, ...domesticGoldStandardPageContent.benefits].join(" ");
+    expect(publicCopy).not.toMatch(/用户提供|公开缓存|按你确认|素材|AI 重绘|像素抠图/);
+  });
+});
+
+describe("三张产品页的路由与说明", () => {
   it("使用独立交互式产品页组件", () => {
     const route = readFileSync(path.join(process.cwd(), "src/app/products/[slug]/page.tsx"), "utf8");
     expect(route).toContain("GoldStandardIsolateShowcase");
     expect(route).toContain("PlatinumHydrowheyShowcase");
+    expect(route).toContain("DomesticGoldStandardShowcase");
   });
 
-  it.each([isolatePageContent, hydrowheyPageContent])("$slug 提供完整 FAQ", (content) => {
+  it.each([isolatePageContent, hydrowheyPageContent, domesticGoldStandardPageContent])("$slug 提供完整 FAQ", (content) => {
     expect(content.faqs).toHaveLength(10);
     expect(content.faqs.find((item) => item.question.includes("验证真伪"))?.href).toBe("/authenticity");
   });

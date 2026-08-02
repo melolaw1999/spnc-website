@@ -1,3 +1,5 @@
+import { domesticGoldStandardData } from "@/data/domestic-gold-standard-whey";
+
 export type CatalogImage = {
   asset: { projectPath: string; width: number; height: number };
   altText: string;
@@ -103,6 +105,35 @@ export const catalog: CatalogProduct[] = [
     images: [
       image("/assets/optimized/products/on/isolate/on-gold-standard-isolate-3lb-chocolate-bliss-front-official.webp", "ON 金标分离乳清 3 磅巧克力正面透明背景图", { width: 1000, height: 1000, variantIds: ["on-isolate-3lb-chocolate-bliss"], caption: "3 磅 · 巧克力", sourceType: "brand-official-copy" }),
     ],
+  },
+  {
+    ...shared,
+    id: "on-domestic-gold-standard-whey",
+    slug: "on-domestic-gold-standard-whey",
+    brand: "OPTIMUM NUTRITION",
+    name: "金标乳清蛋白粉（中国制造 / 一般贸易进口）",
+    type: "乳清蛋白",
+    salesVersion: "国产版本",
+    summary: "中国制造收录 5 磅、4 磅、2 磅各 4 种口味；咸焦糖、摩卡卡布奇诺、巧克力薄荷、巧克力椰子与奶油香蕉归入一般贸易进口。",
+    highlights: ["中国制造 12 个组合", "一般贸易进口 5 个口味", "规格与销售版本联动"],
+    versionInfo: "中国制造与一般贸易进口共用一个产品页选择器，但销售版本、包装事实及标签参考分别注明。购买前请在淘宝商品页再次核对实际在售组合。",
+    featured: false,
+    variants: domesticGoldStandardData.variants.map((variant) => ({
+      id: variant.id,
+      size: variant.sizeLabel,
+      flavor: variant.flavorZh,
+    })),
+    images: domesticGoldStandardData.variants.map((variant) => image(
+      variant.frontImage.src,
+      `ON 金标乳清蛋白粉 ${variant.sizeLabel} ${variant.flavorZh}产品图`,
+      {
+        width: variant.frontImage.width,
+        height: variant.frontImage.height,
+        variantIds: [variant.id],
+        caption: `${variant.sizeGroupLabel} · ${variant.flavorZh}`,
+        sourceType: variant.sizeGroup.startsWith("domestic-") ? "user-confirmed-copy" : "brand-official-copy",
+      },
+    )),
   },
   {
     ...shared,

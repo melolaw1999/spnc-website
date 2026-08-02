@@ -1,11 +1,16 @@
 .official-protein-page.isolate-page{--blue:#9a6a00}
 .official-protein-page.hydrowhey-page{--blue:#526778}
+.official-protein-page.domestic-gold-standard-page{--blue:#9c342b}
 .official-protein-page .gold-product-lighting{display:none}
 .official-protein-page .gold-source-status{margin:10px 0 0;padding:11px 13px;border:1px solid #eadfca;border-radius:13px;background:#fffdf8;color:#665c4a!important;font-size:12px;font-weight:400;line-height:1.65}
 .official-protein-page .gold-source-status strong{color:#3f382d}
 .official-protein-page .gold-nutrition-stage.is-missing{min-height:240px}
 .isolate-page .gold-selector-hero{background:radial-gradient(circle at 18% 22%,rgba(200,153,41,.11),transparent 31%),linear-gradient(180deg,#fbfaf6 0%,#fff 72%)}
 .hydrowhey-page .gold-selector-hero{background:radial-gradient(circle at 18% 22%,rgba(105,126,143,.13),transparent 31%),linear-gradient(180deg,#f8fafb 0%,#fff 72%)}
+.domestic-gold-standard-page .gold-selector-hero{background:radial-gradient(circle at 16% 22%,rgba(182,137,50,.12),transparent 31%),radial-gradient(circle at 88% 15%,rgba(156,52,43,.07),transparent 26%),linear-gradient(180deg,#fbf8f2 0%,#fff 72%)}
+.domestic-gold-standard-page .gold-product-copy h1 span{display:block}
+.domestic-gold-standard-page .gold-product-image{background:#fff}
+.domestic-gold-standard-page .gold-product-image img{filter:none}
 .isolate-page .gold-product-image{isolation:isolate;background:radial-gradient(ellipse at 33% 24%,rgba(255,255,255,1) 0 10%,rgba(255,252,244,.96) 27%,transparent 50%),radial-gradient(ellipse at 52% 47%,#fffefa 0 25%,#f2e5ca 64%,#dfceb0 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.94),inset 24px 18px 58px rgba(255,255,255,.4),inset -30px -24px 64px rgba(98,70,19,.1),0 26px 74px rgba(96,67,18,.09)}
 .isolate-page .gold-product-image:before{content:"";position:absolute;z-index:0;inset:7% 10% 13%;border-radius:50%;background:radial-gradient(ellipse at 36% 30%,rgba(255,255,255,.96) 0 15%,rgba(220,177,83,.28) 48%,transparent 72%);filter:blur(9px)}
 .isolate-page .gold-product-image:after{left:19%;right:19%;bottom:6.4%;height:9%;background:rgba(51,37,14,.3);filter:blur(26px)}
@@ -13,15 +18,22 @@
 .hydrowhey-page .gold-product-image{background:radial-gradient(circle at 50% 46%,#fff 0 31%,#eef2f4 72%,#e4e9ed 100%)}
 .isolate-page .gold-benefit-list li:before{box-shadow:0 0 0 5px rgba(154,106,0,.11)}
 .hydrowhey-page .gold-benefit-list li:before{box-shadow:0 0 0 5px rgba(82,103,120,.12)}
+.domestic-gold-standard-page .gold-benefit-list li:before{box-shadow:0 0 0 5px rgba(156,52,43,.11)}
 .isolate-page .gold-use-current{border-color:rgba(154,106,0,.18);background:#fbf7ed}
 .isolate-page .gold-use-current span,.isolate-page .gold-use-current p{color:#765b20}
 .isolate-page .gold-use-current strong{color:#553b00}
 .hydrowhey-page .gold-use-current{border-color:rgba(82,103,120,.2);background:#f1f5f7}
 .hydrowhey-page .gold-use-current span,.hydrowhey-page .gold-use-current p{color:#526778}
 .hydrowhey-page .gold-use-current strong{color:#304352}
+.domestic-gold-standard-page .gold-use-current{border-color:rgba(156,52,43,.18);background:#fff5f2}
+.domestic-gold-standard-page .gold-use-current span,.domestic-gold-standard-page .gold-use-current p{color:#874138}
+.domestic-gold-standard-page .gold-use-current strong{color:#67281f}
 .isolate-page .gold-translation-notes{background:#fbf4e4;color:#765b20}
 .isolate-page .gold-translation-notes strong{color:#553b00}
 .hydrowhey-page .gold-translation-notes{background:#edf2f5;color:#526778}
 .hydrowhey-page .gold-translation-notes strong{color:#304352}
+.domestic-gold-standard-page .gold-translation-notes{background:#fff3ed;color:#874138}
+.domestic-gold-standard-page .gold-translation-notes strong{color:#67281f}
 .isolate-page .gold-selector-panel select:focus-visible{outline-color:rgba(154,106,0,.25)}
 .hydrowhey-page .gold-selector-panel select:focus-visible{outline-color:rgba(82,103,120,.28)}
+.domestic-gold-standard-page .gold-selector-panel select:focus-visible{outline-color:rgba(156,52,43,.25)}
