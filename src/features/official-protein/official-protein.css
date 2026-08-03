@@ -1,6 +1,8 @@
 .official-protein-page.isolate-page{--blue:#9a6a00}
 .official-protein-page.hydrowhey-page{--blue:#526778}
 .official-protein-page.domestic-gold-standard-page{--blue:#9c342b}
+.official-protein-page.creatine-page{--blue:#247943}
+.official-protein-page.pre-workout-page{--blue:#9a6a00}
 .official-protein-page .gold-product-lighting{display:none}
 .official-protein-page .gold-source-status{margin:10px 0 0;padding:11px 13px;border:1px solid #eadfca;border-radius:13px;background:#fffdf8;color:#665c4a!important;font-size:12px;font-weight:400;line-height:1.65}
 .official-protein-page .gold-source-status strong{color:#3f382d}
@@ -8,9 +10,13 @@
 .isolate-page .gold-selector-hero{background:radial-gradient(circle at 18% 22%,rgba(200,153,41,.11),transparent 31%),linear-gradient(180deg,#fbfaf6 0%,#fff 72%)}
 .hydrowhey-page .gold-selector-hero{background:radial-gradient(circle at 18% 22%,rgba(105,126,143,.13),transparent 31%),linear-gradient(180deg,#f8fafb 0%,#fff 72%)}
 .domestic-gold-standard-page .gold-selector-hero{background:radial-gradient(circle at 16% 22%,rgba(182,137,50,.12),transparent 31%),radial-gradient(circle at 88% 15%,rgba(156,52,43,.07),transparent 26%),linear-gradient(180deg,#fbf8f2 0%,#fff 72%)}
+.creatine-page .gold-selector-hero{background:radial-gradient(circle at 17% 23%,rgba(36,121,67,.12),transparent 31%),linear-gradient(180deg,#f7fbf8 0%,#fff 72%)}
+.pre-workout-page .gold-selector-hero{background:radial-gradient(circle at 17% 23%,rgba(192,143,44,.14),transparent 31%),linear-gradient(180deg,#fcfaf5 0%,#fff 72%)}
 .domestic-gold-standard-page .gold-product-copy h1 span{display:block}
 .domestic-gold-standard-page .gold-product-image{background:#fff}
 .domestic-gold-standard-page .gold-product-image img{filter:none}
+.creatine-page .gold-product-image,.pre-workout-page .gold-product-image{background:#fff;border:1px solid rgba(210,210,215,.58);box-shadow:0 28px 76px rgba(0,0,0,.06)}
+.creatine-page .gold-product-image img,.pre-workout-page .gold-product-image img{filter:none}
 .isolate-page .gold-product-image{isolation:isolate;background:radial-gradient(ellipse at 33% 24%,rgba(255,255,255,1) 0 10%,rgba(255,252,244,.96) 27%,transparent 50%),radial-gradient(ellipse at 52% 47%,#fffefa 0 25%,#f2e5ca 64%,#dfceb0 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.94),inset 24px 18px 58px rgba(255,255,255,.4),inset -30px -24px 64px rgba(98,70,19,.1),0 26px 74px rgba(96,67,18,.09)}
 .isolate-page .gold-product-image:before{content:"";position:absolute;z-index:0;inset:7% 10% 13%;border-radius:50%;background:radial-gradient(ellipse at 36% 30%,rgba(255,255,255,.96) 0 15%,rgba(220,177,83,.28) 48%,transparent 72%);filter:blur(9px)}
 .isolate-page .gold-product-image:after{left:19%;right:19%;bottom:6.4%;height:9%;background:rgba(51,37,14,.3);filter:blur(26px)}
@@ -19,6 +25,8 @@
 .isolate-page .gold-benefit-list li:before{box-shadow:0 0 0 5px rgba(154,106,0,.11)}
 .hydrowhey-page .gold-benefit-list li:before{box-shadow:0 0 0 5px rgba(82,103,120,.12)}
 .domestic-gold-standard-page .gold-benefit-list li:before{box-shadow:0 0 0 5px rgba(156,52,43,.11)}
+.creatine-page .gold-benefit-list li:before{box-shadow:0 0 0 5px rgba(36,121,67,.12)}
+.pre-workout-page .gold-benefit-list li:before{box-shadow:0 0 0 5px rgba(154,106,0,.11)}
 .isolate-page .gold-use-current{border-color:rgba(154,106,0,.18);background:#fbf7ed}
 .isolate-page .gold-use-current span,.isolate-page .gold-use-current p{color:#765b20}
 .isolate-page .gold-use-current strong{color:#553b00}
@@ -26,8 +34,14 @@
 .hydrowhey-page .gold-use-current span,.hydrowhey-page .gold-use-current p{color:#526778}
 .hydrowhey-page .gold-use-current strong{color:#304352}
 .domestic-gold-standard-page .gold-use-current{border-color:rgba(156,52,43,.18);background:#fff5f2}
+.creatine-page .gold-use-current{border-color:rgba(36,121,67,.2);background:#f1f8f3}
+.pre-workout-page .gold-use-current{border-color:rgba(154,106,0,.18);background:#fbf7ed}
 .domestic-gold-standard-page .gold-use-current span,.domestic-gold-standard-page .gold-use-current p{color:#874138}
+.creatine-page .gold-use-current span,.creatine-page .gold-use-current p{color:#3f7050}
+.pre-workout-page .gold-use-current span,.pre-workout-page .gold-use-current p{color:#765b20}
 .domestic-gold-standard-page .gold-use-current strong{color:#67281f}
+.creatine-page .gold-use-current strong{color:#205635}
+.pre-workout-page .gold-use-current strong{color:#553b00}
 .isolate-page .gold-translation-notes{background:#fbf4e4;color:#765b20}
 .isolate-page .gold-translation-notes strong{color:#553b00}
 .hydrowhey-page .gold-translation-notes{background:#edf2f5;color:#526778}
@@ -37,3 +51,18 @@
 .isolate-page .gold-selector-panel select:focus-visible{outline-color:rgba(154,106,0,.25)}
 .hydrowhey-page .gold-selector-panel select:focus-visible{outline-color:rgba(82,103,120,.28)}
 .domestic-gold-standard-page .gold-selector-panel select:focus-visible{outline-color:rgba(156,52,43,.25)}
+.creatine-page .gold-selector-panel select:focus-visible{outline-color:rgba(36,121,67,.25)}
+.pre-workout-page .gold-selector-panel select:focus-visible{outline-color:rgba(154,106,0,.25)}
+
+.gold-nutrition-stage.is-fact-sheet{min-height:480px;padding:clamp(24px,4vw,52px);background:linear-gradient(145deg,#fff 0%,#fbfbfc 100%);place-items:stretch}
+.gold-front-facts-card{align-self:stretch;display:grid;align-content:center;gap:24px;width:100%;max-width:760px;margin:0 auto}
+.gold-front-facts-card h3{margin:0;font-size:clamp(34px,4.6vw,58px);line-height:1.03;letter-spacing:-.045em}
+.gold-front-facts-card dl{display:grid;grid-template-columns:1fr 1fr;margin:0;border-top:1px solid var(--line);border-left:1px solid var(--line);border-radius:22px;overflow:hidden}
+.gold-front-facts-card dl div{padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.gold-front-facts-card dt{color:#6e6e73;font-size:12px}
+.gold-front-facts-card dd{margin:8px 0 0;font-size:24px;font-weight:760;line-height:1.15}
+.gold-front-facts-copy{padding:22px;border-radius:20px;background:#f5f5f7}
+.gold-front-facts-copy strong{display:block;margin-bottom:8px;font-size:14px}
+.gold-front-facts-copy p,.gold-front-facts-note{margin:0;color:#515154;font-size:13px;line-height:1.75}
+.gold-front-facts-note{padding-top:18px;border-top:1px solid var(--line)}
+@media(max-width:560px){.gold-nutrition-stage.is-fact-sheet{min-height:0;padding:24px 18px}.gold-front-facts-card dl{grid-template-columns:1fr}.gold-front-facts-card h3{font-size:36px}}

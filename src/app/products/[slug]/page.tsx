@@ -6,7 +6,13 @@ import "@/features/official-protein/official-protein.css";
 import { catalog } from "@/data/catalog";
 import { TaobaoButton } from "@/components/TaobaoButton";
 import { GoldStandardShowcase } from "@/features/gold-standard/GoldStandardShowcase";
-import { DomesticGoldStandardShowcase, GoldStandardIsolateShowcase, PlatinumHydrowheyShowcase } from "@/features/official-protein/ProductShowcases";
+import {
+  DomesticGoldStandardShowcase,
+  GoldStandardIsolateShowcase,
+  GoldStandardPreWorkoutShowcase,
+  MicronizedCreatineShowcase,
+  PlatinumHydrowheyShowcase,
+} from "@/features/official-protein/ProductShowcases";
 import { getProduct } from "@/lib/products";
 import { siteName } from "@/lib/site";
 
@@ -42,6 +48,12 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
   }
   if (product.id === "on-domestic-gold-standard-whey") {
     return <main className="gold-standard-page official-protein-page domestic-gold-standard-page"><DomesticGoldStandardShowcase /></main>;
+  }
+  if (product.id === "on-micronized-creatine") {
+    return <main className="gold-standard-page official-protein-page creatine-page"><MicronizedCreatineShowcase /></main>;
+  }
+  if (product.id === "on-gold-standard-pre-workout") {
+    return <main className="gold-standard-page official-protein-page pre-workout-page"><GoldStandardPreWorkoutShowcase /></main>;
   }
   return <main className="section"><div className="container detail">
     <div className="product-gallery">{product.images.length > 0 ? <div className={`product-gallery-images${product.images.length > 1 ? " is-multiple" : ""}`}>{product.images.map((item, index) => <figure className="product-gallery-item" key={item.asset.projectPath}><div className="product-gallery-main"><Image src={item.asset.projectPath} alt={item.altText} width={item.asset.width} height={item.asset.height} {...(index === 0 ? { priority: true } : { loading: "lazy" as const })} sizes={product.images.length > 1 ? "(max-width: 860px) 92vw, 26vw" : "(max-width: 860px) 92vw, 52vw"} /></div><figcaption>{item.caption}</figcaption></figure>)}</div> : <div className="placeholder">真实产品图待确认<br />不会生成、重绘或修改包装</div>}<p className="muted">产品图来自真实素材复制件，保持原始宽高比并完整展示包装。</p></div>

@@ -1,3 +1,18 @@
 .blackMembershipLink{border:1px solid rgba(179,137,60,.58);background:linear-gradient(135deg,#211a0f 0%,#080808 72%);box-shadow:inset 0 1px rgba(255,255,255,.08),0 6px 16px rgba(0,0,0,.09);color:#d9ba73!important;font-weight:720!important}
 .blackMembershipLink:hover{border-color:rgba(204,163,81,.82);background:linear-gradient(135deg,#2c2111 0%,#050505 72%)!important;color:#f0d28d!important}
+.onMenu{position:relative;display:flex;align-items:center}
+.onMenuTrigger{display:flex!important;align-items:center;gap:4px}
+.onMenuTrigger span{position:relative;top:-1px;color:#777;font-size:12px;transition:transform .2s ease}
+.onSubmenu{position:absolute;left:-14px;top:calc(100% + 9px);z-index:40;width:230px;padding:8px;border:1px solid rgba(210,210,215,.72);border-radius:16px;background:rgba(255,255,255,.98);box-shadow:0 20px 55px rgba(0,0,0,.14);opacity:0;visibility:hidden;transform:translateY(-7px);transition:opacity .18s ease,transform .18s ease,visibility .18s ease}
+.onSubmenu:before{content:"";position:absolute;left:0;right:0;top:-11px;height:11px}
+.onSubmenu a{display:grid!important;grid-template-columns:28px 1fr;align-items:center;gap:8px;padding:12px!important;border-radius:11px!important;color:#202024!important}
+.onSubmenu a:hover{background:#f2f2f4!important;color:#0071e3!important}
+.onSubmenu small{color:#8e8e93;font-size:9px;font-weight:760;letter-spacing:.08em}
+.onSubmenu span{font-weight:650}
+.onMenu:hover .onSubmenu,.onMenu:focus-within .onSubmenu{opacity:1;visibility:visible;transform:translateY(0)}
+.onMenu:hover .onMenuTrigger span,.onMenu:focus-within .onMenuTrigger span{transform:rotate(180deg)}
+.mobileOnMenu{display:grid;padding:0 0 6px;border-bottom:1px solid #ededf0;margin-bottom:5px}
+.mobileOnMenu>a:first-child{font-weight:700}
+.mobileOnMenu>a:last-child{display:grid!important;grid-template-columns:58px 1fr;align-items:center;color:#424245}
+.mobileOnMenu small{color:#8e8e93;font-size:9px;font-weight:700;letter-spacing:.04em}
 @media(max-width:1040px){.blackMembershipLink{margin:3px 0;padding:11px 12px!important;border-radius:10px!important}}

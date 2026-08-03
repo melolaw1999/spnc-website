@@ -78,11 +78,14 @@ describe("生产商品目录", () => {
   });
 
   it("新肌酸与训练前配方主图保留原图并读取压缩副本", () => {
-    const productIds = ["on-micronized-creatine", "on-gold-standard-pre-workout"];
-    for (const id of productIds) {
+    const expectedSuffixes = new Map([
+      ["on-micronized-creatine", "-transparent.webp"],
+      ["on-gold-standard-pre-workout", "-user.webp"],
+    ]);
+    for (const [id, expectedSuffix] of expectedSuffixes) {
       const item = catalog.find((product) => product.id === id)?.images[0];
       expect(item?.sourceType).toBe("user-confirmed-copy");
-      expect(item?.asset.projectPath.endsWith("-user.webp")).toBe(true);
+      expect(item?.asset.projectPath.endsWith(expectedSuffix)).toBe(true);
       const originalPath = item?.asset.projectPath.replace("/assets/optimized/", "/assets/").replace(/\.webp$/, ".png") ?? "";
       expect(existsSync(path.join(process.cwd(), "public", originalPath))).toBe(true);
     }

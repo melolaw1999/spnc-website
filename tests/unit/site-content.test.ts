@@ -50,12 +50,14 @@ describe("官网定位与联系信息", () => {
     expect(contactPage).toContain("不会索取淘宝密码");
   });
 
-  it("公开导航提供合规与资质入口并使用 Batch 验证调取", () => {
+  it("合规与资质位于 ON 专区二级菜单并使用 Batch 验证调取", () => {
     const header = readFileSync(path.join(process.cwd(), "src/components/Header.tsx"), "utf8");
     const page = readFileSync(path.join(process.cwd(), "src/app/compliance/page.tsx"), "utf8");
     const portal = readFileSync(path.join(process.cwd(), "src/components/CompliancePortal.tsx"), "utf8");
 
-    expect(header).toContain('["合规与资质", "/compliance"]');
+    expect(header).not.toContain('["合规与资质", "/compliance"]');
+    expect(header).toContain('aria-label="ON 专区二级菜单"');
+    expect(header).toContain('<Link href="/compliance"');
     expect(page).toContain("一桶，一批，一份对应资料");
     expect(portal).toContain("验证 Batch 并调取");
     expect(portal).toContain("提交资料申请");

@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
-import { complianceDocumentTypes, complianceProductOptions } from "@/data/compliance";
+import { complianceDocumentTypes, complianceProductGroups } from "@/data/compliance";
 import styles from "@/app/admin/compliance/admin.module.css";
 
 export function ComplianceAdminUpload() {
@@ -31,7 +31,7 @@ export function ComplianceAdminUpload() {
 
   return <form className={styles.uploadForm} onSubmit={submit}>
     <div className={styles.twoColumns}>
-      <label>商品与规格<select className="field" name="productKey" required defaultValue=""><option value="" disabled>请选择商品</option>{complianceProductOptions.map((product) => <option value={product.key} key={product.key}>{product.label}</option>)}</select></label>
+      <label>商品与规格<select className="field" name="productKey" required defaultValue=""><option value="" disabled>请选择商品</option>{complianceProductGroups.map((group) => <optgroup label={group.label} key={group.label}>{group.options.map((product) => <option value={product.key} key={product.key}>{product.label}</option>)}</optgroup>)}</select></label>
       <label>文件类型<select className="field" name="documentType" required defaultValue=""><option value="" disabled>请选择类型</option>{complianceDocumentTypes.map((type) => <option value={type.value} key={type.value}>{type.label}</option>)}</select></label>
       <label>对应 Batch / Lot<input className="field" name="batchCode" autoCapitalize="characters" minLength={5} maxLength={48} required placeholder="按桶底喷码原样填写" /></label>
       <label>公开文件标题<input className="field" name="title" maxLength={120} placeholder="留空则自动生成" /></label>

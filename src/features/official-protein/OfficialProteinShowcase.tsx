@@ -48,6 +48,8 @@ export type OfficialProteinVariant = {
   calories: number | null;
   ingredients: string | null;
   nutritionReference: NutritionReference | null;
+  facts?: Array<{ label: string; value: string }>;
+  directions?: string | null;
   frontImage: ImageAsset;
   nutritionImage: ImageAsset | null;
 };
@@ -157,10 +159,12 @@ export function OfficialProteinShowcase({
           <p className="gold-source-status"><strong>资料状态：</strong>{selectedVariant.sourceStatus}</p>
 
           <dl className="gold-facts">
-            <div><dt>每份蛋白质</dt><dd>{metricAmount(selectedVariant.proteinPerServing)}</dd></div>
-            <div><dt>每份 BCAA</dt><dd>{metricAmount(selectedVariant.bcaaInformation)}</dd></div>
-            <div><dt>每份热量</dt><dd>{selectedVariant.calories === null ? "以标签为准" : `${selectedVariant.calories} kcal`}</dd></div>
-            <div><dt>每桶份数</dt><dd>{selectedVariant.servingsPerContainer.replace(" Servings", " 份")}</dd></div>
+            {(selectedVariant.facts ?? [
+              { label: "每份蛋白质", value: metricAmount(selectedVariant.proteinPerServing) },
+              { label: "每份 BCAA", value: metricAmount(selectedVariant.bcaaInformation) },
+              { label: "每份热量", value: selectedVariant.calories === null ? "以标签为准" : `${selectedVariant.calories} kcal` },
+              { label: "每桶份数", value: selectedVariant.servingsPerContainer.replace(" Servings", " 份") },
+            ]).map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}
           </dl>
           {content.factsNote ? <p className="gold-facts-note">{content.factsNote}</p> : null}
 
@@ -205,7 +209,7 @@ export function OfficialProteinShowcase({
               <div className="gold-use-current">
                 <span>当前选择</span>
                 <strong>{selectedVariant.sizeLabel} · {selectedVariant.flavorZh}</strong>
-                <p>{selectedVariant.nutritionReference?.directionsZh || "当前没有可核对的冲调说明，请以实际包装标签为准。"}</p>
+                <p>{selectedVariant.nutritionReference?.directionsZh || selectedVariant.directions || "当前没有可核对的冲调说明，请以实际包装标签为准。"}</p>
               </div>
               <ul>{content.suggestedUseNotes.map((note) => <li key={note}>{note}</li>)}</ul>
             </div>
@@ -229,7 +233,7 @@ export function OfficialProteinShowcase({
         </div>
 
         <div className="gold-label-stack" aria-live="polite">
-          <div className={`gold-nutrition-stage${selectedVariant.nutritionImage ? "" : " is-missing"}`}>
+          <div className={`gold-nutrition-stage${selectedVariant.nutritionImage ? "" : selectedVariant.facts ? " is-fact-sheet" : " is-missing"}`}>
             {selectedVariant.nutritionImage ? <Image
               key={selectedVariant.nutritionImage.src}
               className="gold-nutrition-image"
@@ -238,7 +242,16 @@ export function OfficialProteinShowcase({
               width={selectedVariant.nutritionImage.width}
               height={selectedVariant.nutritionImage.height}
               sizes="(max-width: 860px) 92vw, 56vw"
-            /> : <div className="gold-nutrition-missing">
+            /> : selectedVariant.facts ? <article className="gold-front-facts-card">
+              <div className="eyebrow">PACK FRONT · 已核对包装正面</div>
+              <h3>{selectedVariant.sizeLabel} · {selectedVariant.flavorZh}</h3>
+              <dl>{selectedVariant.facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl>
+              <div className="gold-front-facts-copy">
+                <strong>配料与背标状态</strong>
+                <p>{selectedVariant.ingredients || "请以实际到货包装标签为准。"}</p>
+              </div>
+              <p className="gold-front-facts-note">这里仅整理当前包装可确认的信息，没有套用其他规格、口味或地区版本的完整标签。</p>
+            </article> : <div className="gold-nutrition-missing">
               <strong>当前资料来源未公开这项组合的独立营养标签图</strong>
               <p>没有套用其他规格的标签图片。下方中文每份数据会说明核对来源，购买时仍请以实际包装为准。</p>
             </div>}

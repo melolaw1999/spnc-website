@@ -222,14 +222,14 @@ export const catalog: CatalogProduct[] = [
     brand: "OPTIMUM NUTRITION",
     name: "微粉化肌酸粉",
     type: "肌酸",
-    summary: "ON 微粉化肌酸粉。当前仅展示已有真实素材对应的 300 克商品。",
-    highlights: ["无味", "购买前核对实际规格"],
+    summary: "ON 微粉化肌酸粉 300 克无味规格，包装正面标示每份 5 克一水肌酸、约 60 份。",
+    highlights: ["每份 5 克一水肌酸", "300 克无味", "约 60 份"],
     featured: true,
     variants: [
       { id: "on-creatine-300g-unflavored", size: "300 克", flavor: "无味" },
     ],
     images: [
-      image("/assets/optimized/products/on/creatine/on-micronized-creatine-300g-unflavored-front-user.webp", "ON 微粉化肌酸粉 300 克无味正面白底图", { width: 474, height: 498, variantIds: ["on-creatine-300g-unflavored"], caption: "300 克 · 无味", sourceType: "user-confirmed-copy" }),
+      image("/assets/optimized/products/on/creatine/on-micronized-creatine-300g-unflavored-front-transparent.webp", "ON 微粉化肌酸粉 300 克无味正面透明底产品图", { width: 474, height: 498, variantIds: ["on-creatine-300g-unflavored"], caption: "300 克 · 无味", sourceType: "user-confirmed-copy" }),
     ],
   },
   {
@@ -239,8 +239,8 @@ export const catalog: CatalogProduct[] = [
     brand: "OPTIMUM NUTRITION",
     name: "金标训练前配方",
     type: "训练前配方",
-    summary: "ON 金标训练前配方。当前确认展示 300 克蓝莓柠檬味包装，购买前请核对在售版本与标签。",
-    highlights: ["300 克", "蓝莓柠檬味"],
+    summary: "ON 金标训练前配方 300 克蓝莓柠檬味，包装正面标示每份 175 毫克咖啡因、3.3 克一水肌酸和 1.6 克 β-丙氨酸。",
+    highlights: ["每份 175 毫克咖啡因", "每份 3.3 克一水肌酸", "30 份"],
     featured: false,
     variants: [
       { id: "on-pre-workout-300g-blueberry-lemonade", size: "300 克", flavor: "蓝莓柠檬味" },

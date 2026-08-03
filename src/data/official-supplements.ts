@@ -1,0 +1,156 @@
+import type { OfficialProteinVariant } from "@/features/official-protein/OfficialProteinShowcase";
+
+export type OfficialSupplementData = {
+  productName: string;
+  officialUrl: string;
+  retrievedAt: string;
+  variants: OfficialProteinVariant[];
+};
+
+export const micronizedCreatineData: OfficialSupplementData = {
+  productName: "MICRONIZED CREATINE POWDER",
+  officialUrl: "https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-powder",
+  retrievedAt: "2026-08-03T00:00:00.000Z",
+  variants: [
+    {
+      id: "on-creatine-300g-unflavored",
+      variantId: "748927023848",
+      sku: "748927023848",
+      sizeGroup: "300g",
+      sizeGroupLabel: "300 克",
+      size: "300 g",
+      sizeLabel: "300 克",
+      flavor: "Unflavored",
+      flavorZh: "无味",
+      availableOnOfficialSite: true,
+      sourceStatus: "中国在售实物包装正面核对 · 使用方式参考 ON 美国官网同规格无味产品",
+      servingSize: "约 5 克（包装正面）",
+      servingsPerContainer: "约 60 份（包装正面）",
+      proteinPerServing: "",
+      bcaaInformation: "",
+      calories: null,
+      ingredients: "None.",
+      nutritionReference: {
+        flavoringEn: "Unflavored",
+        flavoringZh: "无味",
+        servingsPerContainerZh: "60 份",
+        servingSizeZh: "1 满茶匙（5 克）",
+        referenceNoteZh: "ON 当前美国官网 0.66 磅 / 60 份无味标签，与本页 300 克无味规格的包装正面数据一致；最终仍以实际到货标签为准。",
+        nutrientRows: [
+          { key: "creatineMonohydrate", labelEn: "Creatine Monohydrate", labelZh: "一水肌酸", amountZh: "5 克", dailyValue: null },
+        ],
+        ingredientsZh: "无其他配料。",
+        allergensEn: null,
+        allergensZh: null,
+        directionsZh: "加入 1 满茶匙（5 克）至蛋白奶昔或一杯喜欢的饮料中，用勺搅拌。",
+        insignificantSourceZh: null,
+        dailyValueNoteZh: "一水肌酸的每日参考值尚未建立。中文内容按 ON 当前美国官网英文标签整理，仅供参考。",
+        claims: [
+          { labelEn: "100% Pure Creatine Monohydrate", labelZh: "100% 纯一水肌酸" },
+          { labelEn: "5g Per Serving", labelZh: "每份 5 克" },
+          { labelEn: "Banned Substance Tested", labelZh: "经过禁用物质检测" },
+        ],
+      },
+      facts: [
+        { label: "每份一水肌酸", value: "5 g" },
+        { label: "每桶份数", value: "约 60 份" },
+        { label: "净含量", value: "300 g" },
+        { label: "口味", value: "无味" },
+      ],
+      directions: "ON 当前美国官网建议将 1 满茶匙加入蛋白奶昔或其他饮料并搅拌。实际每份用量、适用人群和注意事项以到货包装说明为准。",
+      frontImage: {
+        src: "/assets/optimized/products/on/creatine/on-micronized-creatine-300g-unflavored-front-transparent.webp",
+        width: 474,
+        height: 498,
+      },
+      nutritionImage: {
+        src: "/assets/optimized/products/on/creatine/labels/on-micronized-creatine-300g-unflavored-official-label.webp",
+        width: 1000,
+        height: 1000,
+      },
+    },
+  ],
+};
+
+export const goldStandardPreWorkoutData: OfficialSupplementData = {
+  productName: "GOLD STANDARD PRE-WORKOUT",
+  officialUrl: "https://www.optimumnutrition.com/en-us/products/gold-standard-pre-workout-powder",
+  retrievedAt: "2026-08-03T00:00:00.000Z",
+  variants: [
+    {
+      id: "on-pre-workout-300g-blueberry-lemonade",
+      variantId: "748927052961",
+      sku: "748927052961",
+      sizeGroup: "300g",
+      sizeGroupLabel: "300 克",
+      size: "300 g",
+      sizeLabel: "300 克",
+      flavor: "Blueberry Lemonade",
+      flavorZh: "蓝莓柠檬味",
+      availableOnOfficialSite: true,
+      sourceStatus: "核心数字按中国在售实物包装正面核对 · 下方标签为 ON 当前美国官网参考",
+      servingSize: "约 1 勺（官网当前标签为 10 克；以实物标签为准）",
+      servingsPerContainer: "30 份（包装正面）",
+      proteinPerServing: "",
+      bcaaInformation: "",
+      calories: 10,
+      ingredients: "Natural and Artificial Flavor, Citric Acid, Malic Acid, Calcium Silicate, Silicon Dioxide, Gum Blend (Cellulose Gum, Xanthan Gum, Carrageenan), Sucralose, Tartaric Acid, Acesulfame Potassium, Blue 1.",
+      nutritionReference: {
+        flavoringEn: "Artificially Flavored",
+        flavoringZh: "人工调味",
+        servingsPerContainerZh: "30 份",
+        servingSizeZh: "10 克（约 1 勺）",
+        referenceNoteZh: "本表来自 ON 当前美国官网 0.66 磅 / 30 份蓝莓柠檬味标签，仅用于版本对照。它标示一水肌酸 3 克、β-丙氨酸 1.5 克，与中国在售实物包装正面的 3.3 克和 1.6 克不同；不得替代实际到货背标。",
+        nutrientRows: [
+          { key: "totalCarbohydrate", labelEn: "Total Carbohydrate", labelZh: "总碳水化合物", amountZh: "3 克", dailyValue: "1%" },
+          { key: "vitaminD", labelEn: "Vitamin D", labelZh: "维生素 D", amountZh: "12.5 微克", dailyValue: "63%" },
+          { key: "thiamin", labelEn: "Thiamin", labelZh: "硫胺素（维生素 B1）", amountZh: "2 毫克", dailyValue: "167%" },
+          { key: "niacin", labelEn: "Niacin", labelZh: "烟酸", amountZh: "20 毫克", dailyValue: "125%" },
+          { key: "vitaminB6", labelEn: "Vitamin B6", labelZh: "维生素 B6", amountZh: "2 毫克", dailyValue: "118%" },
+          { key: "folate", labelEn: "Folate", labelZh: "叶酸", amountZh: "340 微克 DFE（叶酸 200 微克）", dailyValue: "85%" },
+          { key: "vitaminB12", labelEn: "Vitamin B12", labelZh: "维生素 B12", amountZh: "10 微克", dailyValue: "417%" },
+          { key: "pantothenicAcid", labelEn: "Pantothenic Acid", labelZh: "泛酸", amountZh: "10 毫克", dailyValue: "200%" },
+          { key: "calcium", labelEn: "Calcium", labelZh: "钙", amountZh: "50 毫克", dailyValue: "4%" },
+          { key: "sodium", labelEn: "Sodium", labelZh: "钠", amountZh: "20 毫克", dailyValue: "1%" },
+          { key: "creatineMonohydrate", labelEn: "Creatine Monohydrate", labelZh: "一水肌酸", amountZh: "3 克", dailyValue: null },
+          { key: "astragin", labelEn: "AstraGin Proprietary Blend", labelZh: "AstraGin 专有混合物", amountZh: "25 毫克", dailyValue: null },
+          { key: "betaAlanine", labelEn: "Beta-Alanine", labelZh: "β-丙氨酸", amountZh: "1.5 克", dailyValue: null },
+          { key: "citrulline", labelEn: "Micronized L-Citrulline", labelZh: "微粉化 L-瓜氨酸", amountZh: "750 毫克", dailyValue: null },
+          { key: "acetylCarnitine", labelEn: "Acetyl-L-Carnitine Hydrochloride", labelZh: "乙酰左旋肉碱盐酸盐", amountZh: "375 毫克", dailyValue: null },
+          { key: "tyrosine", labelEn: "N-Acetyl L-Tyrosine", labelZh: "N-乙酰 L-酪氨酸", amountZh: "250 毫克", dailyValue: null },
+          { key: "caffeine", labelEn: "Caffeine", labelZh: "咖啡因", amountZh: "175 毫克", dailyValue: null },
+          { key: "citrusBioflavonoid", labelEn: "Citrus Bioflavonoid Complex", labelZh: "柑橘生物类黄酮复合物", amountZh: "100 毫克", dailyValue: null },
+        ],
+        ingredientsZh: "天然及人工香料、柠檬酸、苹果酸、硅酸钙、二氧化硅、胶体混合物（纤维素胶、黄原胶、卡拉胶）、三氯蔗糖、酒石酸、安赛蜜、亮蓝 1 号。",
+        allergensEn: null,
+        allergensZh: "该官网标签图未列出单独的 Contains 过敏原声明；请以实际到货包装为准。",
+        directionsZh: "取 1 勺（10 克）加入 6–8 液体盎司（约 177–237 毫升）冷水，混合约 30 秒直至溶解。",
+        insignificantSourceZh: null,
+        dailyValueNoteZh: "带 * 的每日参考值按 2,000 千卡饮食计算；标注 ** 的成分每日参考值尚未建立。中文仅按 ON 当前美国官网标签整理。",
+        claims: [
+          { labelEn: "175mg Caffeine", labelZh: "每份 175 毫克咖啡因" },
+          { labelEn: "3g Creatine Monohydrate", labelZh: "该官网标签每份 3 克一水肌酸" },
+          { labelEn: "1.5g Beta-Alanine", labelZh: "该官网标签每份 1.5 克 β-丙氨酸" },
+          { labelEn: "30 Servings", labelZh: "每桶 30 份" },
+        ],
+      },
+      facts: [
+        { label: "每份咖啡因", value: "175 mg" },
+        { label: "每份一水肌酸", value: "3.3 g" },
+        { label: "每份 β-丙氨酸", value: "1.6 g" },
+        { label: "每桶份数", value: "30 份" },
+      ],
+      directions: "ON 当前美国官网建议：1 勺加入 6–8 液体盎司（约 177–237 毫升）冷水，摇匀约 30 秒，并在运动前 15–30 分钟饮用。请先核对实物包装警示，不要超过标签建议用量。",
+      frontImage: {
+        src: "/assets/optimized/products/on/pre-workout/on-gold-standard-pre-workout-300g-blueberry-lemonade-front-user.webp",
+        width: 1122,
+        height: 1402,
+      },
+      nutritionImage: {
+        src: "/assets/optimized/products/on/pre-workout/labels/on-gold-standard-pre-workout-300g-blueberry-lemonade-official-label.webp",
+        width: 1000,
+        height: 1000,
+      },
+    },
+  ],
+};
