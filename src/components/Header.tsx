@@ -8,7 +8,6 @@ const links = [
   ["版本说明", "/versions"],
   ["文章", "/articles"],
   ["黑卡会员", "/membership"],
-  ["售后 FAQ", "/faq"],
   ["售后登记", "/support"],
   ["关于我们", "/about"],
   ["联系我们", "/contact"],

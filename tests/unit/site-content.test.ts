@@ -16,9 +16,22 @@ describe("官网定位与联系信息", () => {
     expect(enterpriseContacts.map((contact) => contact.email)).toEqual([
       "contact@spnc.cn",
       "service@spnc.cn",
-      "melolaw@spnc.cn",
     ]);
     expect(enterpriseContacts.every((contact) => mailto(contact.email) === `mailto:${contact.email}`)).toBe(true);
+  });
+
+  it("公开导航不再显示售后 FAQ，联系页面不显示负责人邮箱", () => {
+    const publicNavigation = [
+      "src/components/Header.tsx",
+      "src/components/Footer.tsx",
+    ].map((filePath) => readFileSync(path.join(process.cwd(), filePath), "utf8")).join("\n");
+    const publicSource = sourceFiles(path.join(process.cwd(), "src"))
+      .map((filePath) => readFileSync(filePath, "utf8"))
+      .join("\n");
+
+    expect(publicNavigation).not.toContain("售后 FAQ");
+    expect(publicNavigation).not.toContain('href="/faq"');
+    expect(publicSource).not.toContain("melolaw@spnc.cn");
   });
 
   it("页面源码不出现未经确认的品牌身份表述或旧占位邮箱", () => {

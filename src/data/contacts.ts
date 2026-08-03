@@ -9,11 +9,6 @@ export const enterpriseContacts = [
     email: "service@spnc.cn",
     note: "适用于订单售后、商品核验、破损反馈与消费者咨询。",
   },
-  {
-    role: "商务合作 / 负责人联系",
-    email: "melolaw@spnc.cn",
-    note: "适用于需要负责人直联的长期合作与重要事项沟通。",
-  },
 ] as const;
 
 export const publicContactEmail = "contact@spnc.cn";
