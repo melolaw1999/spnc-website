@@ -50,6 +50,18 @@ describe("官网定位与联系信息", () => {
     expect(contactPage).toContain("不会索取淘宝密码");
   });
 
+  it("公开导航提供合规与资质入口并使用 Batch 验证调取", () => {
+    const header = readFileSync(path.join(process.cwd(), "src/components/Header.tsx"), "utf8");
+    const page = readFileSync(path.join(process.cwd(), "src/app/compliance/page.tsx"), "utf8");
+    const portal = readFileSync(path.join(process.cwd(), "src/components/CompliancePortal.tsx"), "utf8");
+
+    expect(header).toContain('["合规与资质", "/compliance"]');
+    expect(page).toContain("一桶，一批，一份对应资料");
+    expect(portal).toContain("验证 Batch 并调取");
+    expect(portal).toContain("提交资料申请");
+    expect(portal).toContain("1 个工作日");
+  });
+
   it("页面源码不出现未经确认的品牌身份表述或旧占位邮箱", () => {
     const content = sourceFiles(path.join(process.cwd(), "src")).map((filePath) => readFileSync(filePath, "utf8")).join("\n");
     [

@@ -17,6 +17,8 @@ export type TicketRecord = {
   productName: string;
   variant: string;
   campaignCode: string;
+  batchCode?: string;
+  documentTypes?: string;
   description: string;
   contactMethod: ContactMethod;
   contactValue: string;

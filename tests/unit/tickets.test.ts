@@ -9,6 +9,8 @@ const validInput = {
   productName: "金标乳清蛋白粉",
   variant: "5 磅 / 双重巧克力",
   campaignCode: "",
+  batchCode: "",
+  documentTypes: "",
   description: "收到商品后发现桶身明显变形，希望核验并登记。",
   contactMethod: "mobile",
   contactValue: "13800138000",
@@ -25,6 +27,20 @@ describe("售后工单业务规则", () => {
   it("活动权益必须填写活动名称或代码", () => {
     const result = validateTicketInput({ ...validInput, kind: "activity-benefit" });
     expect(result.errors).toContain("活动权益登记需要填写活动名称或活动代码。");
+  });
+
+  it("合规资料申请必须填写 Batch 与文件类型", () => {
+    const missing = validateTicketInput({ ...validInput, kind: "compliance-document" });
+    expect(missing.errors).toContain("请填写完整的桶底 Batch / Lot 批次代码。");
+    expect(missing.errors).toContain("请至少选择一种需要申请的合规文件。");
+
+    const valid = validateTicketInput({
+      ...validInput,
+      kind: "compliance-document",
+      batchCode: "L2407A01",
+      documentTypes: "customs-declaration,quality-report",
+    });
+    expect(valid.errors).toEqual([]);
   });
 
   it("拒绝无效订单号、短描述和未同意隐私说明", () => {

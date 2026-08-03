@@ -1,0 +1,49 @@
+.page { min-height: 100vh; background: #f3f3f1; }
+.hero { padding: 88px 0 92px; background: #111113; color: #fff; }
+.hero span, .panel header span { color: #77b7f5; font-size: 11px; font-weight: 760; letter-spacing: .12em; }
+.hero h1 { margin: 16px 0 18px; font-size: clamp(58px, 7vw, 92px); line-height: .94; letter-spacing: -.07em; }
+.hero p { max-width: 720px; margin: 0; color: #a1a1a7; line-height: 1.7; }
+.content { padding: 34px 0 120px; }
+.panel { margin-top: 62px; }
+.panel > header { display: flex; justify-content: space-between; align-items: end; gap: 34px; margin-bottom: 24px; }
+.panel header h2 { margin: 8px 0 0; font-size: 40px; letter-spacing: -.05em; }
+.panel header p { max-width: 520px; margin: 0; color: #6e6e73; line-height: 1.7; }
+.uploadForm { display: grid; gap: 20px; padding: 34px; border: 1px solid #dddde1; border-radius: 30px; background: #fff; box-shadow: 0 18px 50px rgba(0,0,0,.045); }
+.uploadForm label { display: grid; gap: 8px; font-size: 13px; font-weight: 680; }
+.uploadForm label small { color: #77777d; font-size: 11px; font-weight: 400; line-height: 1.6; }
+.twoColumns { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.watermarkRule { display: flex; justify-content: space-between; gap: 18px; padding: 15px 17px; border-radius: 15px; background: #f5f5f7; font-size: 13px; }
+.watermarkRule span { color: #6e6e73; }
+.uploadForm button { justify-self: start; }
+.message, .error { margin: 0; color: #2c6d44; font-size: 13px; }
+.error { color: #b42318; }
+.requestList { display: grid; gap: 14px; }
+.requestList article { display: grid; gap: 20px; padding: 26px; border: 1px solid #dddde1; border-radius: 24px; background: #fff; }
+.requestList article > div { display: grid; gap: 7px; }
+.requestList article > div span { color: #0874d1; font-size: 11px; font-weight: 750; }
+.requestList article > div strong { font-size: 19px; }
+.requestList article > div small { color: #77777d; }
+.requestList dl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 0; }
+.requestList dl div { padding: 13px; border-radius: 14px; background: #f5f5f7; }
+.requestList dt { color: #77777d; font-size: 10px; }
+.requestList dd { margin: 6px 0 0; overflow-wrap: anywhere; font-size: 12px; }
+.requestList a { color: #0874d1; font-size: 13px; font-weight: 680; }
+.tableWrap { overflow: auto; border: 1px solid #dddde1; border-radius: 24px; background: #fff; }
+.tableWrap table { min-width: 850px; }
+.tableWrap td small { display: block; margin-top: 5px; color: #77777d; }
+.tableWrap code { font-size: 12px; }
+.empty { padding: 32px; color: #77777d; text-align: center; }
+
+@media (max-width: 860px) {
+  .panel > header { align-items: start; flex-direction: column; gap: 10px; }
+  .requestList dl { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .hero { padding: 64px 0 72px; }
+  .hero h1 { font-size: 56px; }
+  .twoColumns, .requestList dl { grid-template-columns: 1fr; }
+  .uploadForm { padding: 22px 18px; border-radius: 24px; }
+  .watermarkRule { flex-direction: column; }
+  .uploadForm button { width: 100%; }
+}

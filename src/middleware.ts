@@ -25,8 +25,10 @@ function requireTicketAdministrator(request: NextRequest) {
   });
 }
 
-function isTicketAdministration(pathname: string) {
-  return pathname.startsWith("/admin/tickets") || pathname.startsWith("/api/admin");
+function isAdministration(pathname: string) {
+  return pathname.startsWith("/admin/tickets")
+    || pathname.startsWith("/admin/compliance")
+    || pathname.startsWith("/api/admin");
 }
 
 function isMembershipPreview(pathname: string) {
@@ -39,7 +41,7 @@ function isMembershipPreview(pathname: string) {
 
 export async function middleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
-  if (isTicketAdministration(pathname)) return requireTicketAdministrator(request);
+  if (isAdministration(pathname)) return requireTicketAdministrator(request);
   if (!isMembershipPreview(pathname)) return NextResponse.next();
   if (pathname === "/membership/access" || pathname === "/api/membership/access") return NextResponse.next();
 
@@ -60,6 +62,7 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     "/admin/tickets/:path*",
+    "/admin/compliance/:path*",
     "/api/admin/:path*",
     "/membership/:path*",
     "/admin/membership/:path*",

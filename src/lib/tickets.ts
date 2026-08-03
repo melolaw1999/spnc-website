@@ -24,7 +24,9 @@ export const ticketStatusOptions = [
   { value: "closed", label: "已关闭" },
 ] as const;
 
-export type TicketKind = typeof ticketKindOptions[number]["value"];
+export const complianceTicketKind = "compliance-document" as const;
+
+export type TicketKind = typeof ticketKindOptions[number]["value"] | typeof complianceTicketKind;
 export type ContactMethod = typeof contactMethodOptions[number]["value"];
 export type TicketStatus = typeof ticketStatusOptions[number]["value"];
 
@@ -35,6 +37,8 @@ export type TicketInput = {
   productName: string;
   variant: string;
   campaignCode: string;
+  batchCode: string;
+  documentTypes: string;
   description: string;
   contactMethod: string;
   contactValue: string;
@@ -46,7 +50,7 @@ export type ValidatedTicketInput = Omit<TicketInput, "kind" | "contactMethod"> &
   contactMethod: ContactMethod;
 };
 
-const ticketKinds = new Set(ticketKindOptions.map((option) => option.value));
+const ticketKinds = new Set<string>([...ticketKindOptions.map((option) => option.value), complianceTicketKind]);
 const contactMethods = new Set(contactMethodOptions.map((option) => option.value));
 const catalogProductNames = new Set(catalog.map((product) => product.name));
 
@@ -60,6 +64,8 @@ export function validateTicketInput(input: TicketInput): { data?: ValidatedTicke
     productName: clean(input.productName, 120),
     variant: clean(input.variant, 120),
     campaignCode: clean(input.campaignCode, 80),
+    batchCode: clean(input.batchCode, 48).toUpperCase(),
+    documentTypes: clean(input.documentTypes, 160),
     description: input.description.trim().slice(0, 1200),
     contactMethod: clean(input.contactMethod, 20),
     contactValue: clean(input.contactValue, 120),
@@ -78,13 +84,19 @@ export function validateTicketInput(input: TicketInput): { data?: ValidatedTicke
   if (data.contactValue.length < 3) errors.push("请填写可用于本次工单联系的信息。");
   if (data.contactMethod === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.contactValue)) errors.push("请填写有效邮箱。");
   if (data.kind === "activity-benefit" && data.campaignCode.length < 2) errors.push("活动权益登记需要填写活动名称或活动代码。");
+  if (data.kind === complianceTicketKind) {
+    if (!/^[A-Z0-9._/ -]{5,48}$/.test(data.batchCode)) errors.push("请填写完整的桶底 Batch / Lot 批次代码。");
+    if (!data.documentTypes) errors.push("请至少选择一种需要申请的合规文件。");
+  }
   if (!data.consent) errors.push("提交前请确认隐私与处理说明。");
 
   if (errors.length) return { errors };
   return { data: data as ValidatedTicketInput, errors };
 }
 
-export const ticketKindLabel = (kind: TicketKind) => ticketKindOptions.find((option) => option.value === kind)?.label ?? kind;
+export const ticketKindLabel = (kind: TicketKind) => kind === complianceTicketKind
+  ? "合规文件 / 批次资料申请"
+  : ticketKindOptions.find((option) => option.value === kind)?.label ?? kind;
 export const ticketStatusLabel = (status: TicketStatus) => ticketStatusOptions.find((option) => option.value === status)?.label ?? status;
 
 export const maskOrderNumber = (value: string) => value.length < 10 ? "********" : `${value.slice(0, 4)}••••${value.slice(-4)}`;

@@ -5,6 +5,7 @@ import styles from "./Header.module.css";
 const links = [
   ["ON 专区", "/on"],
   ["防伪溯源", "/authenticity"],
+  ["合规与资质", "/compliance"],
   ["版本说明", "/versions"],
   ["文章", "/articles"],
   ["黑卡会员", "/membership"],

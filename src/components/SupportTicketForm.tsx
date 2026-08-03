@@ -49,6 +49,8 @@ export function SupportTicketForm({ configured, turnstileSiteKey }: { configured
       const form = new FormData(formElement);
       form.set("submissionId", submissionId.current || crypto.randomUUID());
       form.delete("evidence");
+      if (!form.has("batchCode")) form.set("batchCode", "");
+      if (!form.has("documentTypes")) form.set("documentTypes", "");
       const fileInput = formElement.elements.namedItem("evidence") as HTMLInputElement | null;
       const files = Array.from(fileInput?.files ?? []);
       if (files.length > maxEvidenceFiles) throw new Error(`最多上传 ${maxEvidenceFiles} 张图片。`);
