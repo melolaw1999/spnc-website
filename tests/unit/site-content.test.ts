@@ -34,6 +34,22 @@ describe("官网定位与联系信息", () => {
     expect(publicSource).not.toContain("melolaw@spnc.cn");
   });
 
+  it("公开导航暂不显示关于我们，联系页面只保留邮箱卡片与安全提示", () => {
+    const publicNavigation = [
+      "src/components/Header.tsx",
+      "src/components/Footer.tsx",
+    ].map((filePath) => readFileSync(path.join(process.cwd(), filePath), "utf8")).join("\n");
+    const contactPage = readFileSync(path.join(process.cwd(), "src/app/contact/page.tsx"), "utf8");
+
+    expect(publicNavigation).not.toContain("关于我们");
+    expect(publicNavigation).not.toContain('href="/about"');
+    expect(contactPage).not.toContain("购买咨询");
+    expect(contactPage).not.toContain("订单售后");
+    expect(contactPage).not.toContain("page-title");
+    expect(contactPage).toContain("enterpriseContacts.map");
+    expect(contactPage).toContain("不会索取淘宝密码");
+  });
+
   it("页面源码不出现未经确认的品牌身份表述或旧占位邮箱", () => {
     const content = sourceFiles(path.join(process.cwd(), "src")).map((filePath) => readFileSync(filePath, "utf8")).join("\n");
     [
