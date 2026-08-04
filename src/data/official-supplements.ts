@@ -59,7 +59,7 @@ export const micronizedCreatineData: OfficialSupplementData = {
       ],
       directions: "ON 当前美国官网建议将 1 满茶匙加入蛋白奶昔或其他饮料并搅拌。实际每份用量、适用人群和注意事项以到货包装说明为准。",
       frontImage: {
-        src: "/assets/optimized/products/on/creatine/on-micronized-creatine-300g-unflavored-front-transparent.webp",
+        src: "/assets/optimized/products/on/creatine/on-micronized-creatine-300g-unflavored-front-transparent-v2.webp",
         width: 474,
         height: 498,
       },

@@ -229,7 +229,7 @@ export const catalog: CatalogProduct[] = [
       { id: "on-creatine-300g-unflavored", size: "300 克", flavor: "无味" },
     ],
     images: [
-      image("/assets/optimized/products/on/creatine/on-micronized-creatine-300g-unflavored-front-transparent.webp", "ON 微粉化肌酸粉 300 克无味正面透明底产品图", { width: 474, height: 498, variantIds: ["on-creatine-300g-unflavored"], caption: "300 克 · 无味", sourceType: "user-confirmed-copy" }),
+      image("/assets/optimized/products/on/creatine/on-micronized-creatine-300g-unflavored-front-transparent-v2.webp", "ON 微粉化肌酸粉 300 克无味正面透明底产品图", { width: 474, height: 498, variantIds: ["on-creatine-300g-unflavored"], caption: "300 克 · 无味", sourceType: "user-confirmed-copy" }),
     ],
   },
   {
