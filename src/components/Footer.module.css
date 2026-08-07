@@ -1,0 +1,46 @@
+.legalBar {
+  position: relative;
+  margin-top: 44px;
+  padding: 27px 20px 29px;
+  overflow: hidden;
+  background: #080c17;
+  color: rgba(255, 255, 255, 0.88);
+  text-align: center;
+}
+
+.legalBar::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #1687ee 34%, #1687ee 66%, transparent 100%);
+  content: "";
+}
+
+.legalBar p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 520;
+  letter-spacing: 0.015em;
+}
+
+.legalBar p > span:last-child {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+@media (max-width: 560px) {
+  .legalBar {
+    margin-top: 36px;
+    padding: 23px 18px 25px;
+  }
+
+  .legalBar p {
+    display: grid;
+    gap: 5px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .legalBar p > span[aria-hidden="true"] {
+    display: none;
+  }
+}

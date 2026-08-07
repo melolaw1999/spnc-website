@@ -20,6 +20,17 @@ describe("官网定位与联系信息", () => {
     expect(enterpriseContacts.every((contact) => mailto(contact.email) === `mailto:${contact.email}`)).toBe(true);
   });
 
+  it("全站页脚包含正式版权信息与无障碍返回顶部按钮", () => {
+    const footer = readFileSync(path.join(process.cwd(), "src/components/Footer.tsx"), "utf8");
+    const backToTop = readFileSync(path.join(process.cwd(), "src/components/BackToTop.tsx"), "utf8");
+
+    expect(footer).toContain("SPNC · 理想营养");
+    expect(footer).toContain("All Rights Reserved.");
+    expect(footer).toContain("<BackToTop />");
+    expect(backToTop).toContain('aria-label="返回页面顶部"');
+    expect(backToTop).toContain("prefers-reduced-motion: reduce");
+  });
+
   it("公开导航不再显示售后 FAQ，联系页面不显示负责人邮箱", () => {
     const publicNavigation = [
       "src/components/Header.tsx",
