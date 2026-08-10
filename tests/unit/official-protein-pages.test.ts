@@ -82,9 +82,10 @@ describe("微粉化肌酸与金标训练前配方完整产品页", () => {
     expect(goldStandardPreWorkoutData.variants).toHaveLength(1);
     for (const variant of [...micronizedCreatineData.variants, ...goldStandardPreWorkoutData.variants]) {
       expect(publicAssetExists(variant.frontImage.src)).toBe(true);
-      expect(variant.nutritionImage).not.toBeNull();
-      expect(publicAssetExists(variant.nutritionImage?.src ?? "")).toBe(true);
     }
+    expect(micronizedCreatineData.variants[0].nutritionImage).toBeNull();
+    expect(goldStandardPreWorkoutData.variants[0].nutritionImage).not.toBeNull();
+    expect(publicAssetExists(goldStandardPreWorkoutData.variants[0].nutritionImage?.src ?? "")).toBe(true);
     expect(micronizedCreatineData.variants.map((item) => [item.size, item.flavorZh])).toEqual([
       ["360 g", "蓝莓柠檬味"],
     ]);
@@ -109,6 +110,9 @@ describe("微粉化肌酸与金标训练前配方完整产品页", () => {
       dailyValue: "<1%",
     });
     expect(flavoredCreatine.ingredients).toBe("Natural and Artificial Flavor, Citric Acid, Sucralose.");
+    expect(flavoredCreatine.nutritionImage).toBeNull();
+    expect(publicAssetExists("assets/optimized/products/on/creatine/labels/on-micronized-creatine-360g-blueberry-lemonade-full-label.webp")).toBe(false);
+    expect(publicAssetExists("assets/products/on/creatine/labels/on-micronized-creatine-360g-blueberry-lemonade-full-label.png")).toBe(false);
     expect(goldStandardPreWorkoutData.variants[0].facts).toContainEqual({ label: "每份一水肌酸", value: "3.3 g" });
     expect(goldStandardPreWorkoutPageContent.factsNote).toContain("请以实际到货包装为准");
   });

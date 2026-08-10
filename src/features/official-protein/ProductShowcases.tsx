@@ -16,12 +16,16 @@ import {
 } from "@/features/official-protein/OfficialProteinShowcase";
 
 type InternalVariant = Omit<OfficialProteinVariant, "nutritionReference"> & {
+  variantId?: string;
+  sku?: string;
   sourceStatus?: string;
   nutritionReference: (NutritionReference & { referenceNoteZh?: string | null }) | null;
 };
 
 const buyerVariants = (variants: InternalVariant[]): OfficialProteinVariant[] => variants.map((variant) => {
-  const { sourceStatus, nutritionReference, ...buyerVariant } = variant;
+  const { variantId, sku, sourceStatus, nutritionReference, ...buyerVariant } = variant;
+  void variantId;
+  void sku;
   void sourceStatus;
   if (!nutritionReference) return { ...buyerVariant, nutritionReference: null };
 

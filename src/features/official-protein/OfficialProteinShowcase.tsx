@@ -30,8 +30,6 @@ export type NutritionReference = {
 
 export type OfficialProteinVariant = {
   id: string;
-  variantId: string;
-  sku: string;
   sizeGroup: string;
   sizeGroupLabel: string;
   size: string;

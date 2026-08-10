@@ -1,6 +1,8 @@
 import type { OfficialProteinVariant } from "@/features/official-protein/OfficialProteinShowcase";
 
 type InternalOfficialProteinVariant = Omit<OfficialProteinVariant, "nutritionReference"> & {
+  variantId: string;
+  sku: string;
   sourceStatus: string;
   nutritionReference: (NonNullable<OfficialProteinVariant["nutritionReference"]> & {
     referenceNoteZh: string | null;
@@ -72,11 +74,7 @@ export const micronizedCreatineData: OfficialSupplementData = {
         width: 1200,
         height: 1311,
       },
-      nutritionImage: {
-        src: "/assets/optimized/products/on/creatine/labels/on-micronized-creatine-360g-blueberry-lemonade-full-label.webp",
-        width: 2768,
-        height: 834,
-      },
+      nutritionImage: null,
     },
   ],
 };
