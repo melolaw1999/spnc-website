@@ -13,16 +13,16 @@ export default function OnZone() {
     <section className="hero compact-hero"><div className="container">
       <div className="eyebrow">Selected Brand · Optimum Nutrition</div>
       <h1>ON 商品专区</h1>
-      <p className="lead">当前官网只展示 ON 商品资料，覆盖跨境进口、国产版本与一般贸易说明。本页不代表品牌主体。</p>
+      <p className="lead">查看 ON 跨境进口、中国制造与一般贸易进口商品，按销售版本选择适合的规格与口味。</p>
       <div className="actions"><TaobaoButton label="前往淘宝店查看 ON 商品" /></div>
     </div></section>
     <section className="section"><div className="container">
       <section className="catalog-family" aria-labelledby="on-imported-title">
-        <div className="catalog-family-head"><div><div className="eyebrow">Cross-Border Import Series</div><h2 id="on-imported-title">跨境进口系列</h2></div><p className="muted">展示已完成商品身份与素材核对的跨境进口产品，规格与实时库存以淘宝商品页为准。</p></div>
+        <div className="catalog-family-head"><div><div className="eyebrow">Cross-Border Import Series</div><h2 id="on-imported-title">跨境进口系列</h2></div><p className="muted">境内保税仓发货的跨境进口商品，规格与实时库存以淘宝商品页为准。</p></div>
         <div className="grid">{importedProducts.map((product) => <ProductCard p={product} key={product.id} />)}</div>
       </section>
       <section className="catalog-family" aria-labelledby="on-domestic-title">
-        <div className="catalog-family-head"><div><div className="eyebrow">Domestic Series</div><h2 id="on-domestic-title">ON 国产系列</h2></div><p className="muted">已确认素材按国产包装独立展示，规格与实时库存以淘宝商品页为准。</p></div>
+        <div className="catalog-family-head"><div><div className="eyebrow">Domestic Series</div><h2 id="on-domestic-title">ON 国产系列</h2></div><p className="muted">中国生产与中文包装系列，规格与实时库存以淘宝商品页为准。</p></div>
         <div className="grid">{domesticProducts.map((product) => <ProductCard p={product} key={product.id} />)}</div>
       </section>
     </div></section>

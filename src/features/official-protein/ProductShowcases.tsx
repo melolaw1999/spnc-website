@@ -1,5 +1,3 @@
-"use client";
-
 import { domesticGoldStandardData } from "@/data/domestic-gold-standard-whey";
 import goldStandardIsolateData from "@/data/gold-standard-isolate.json";
 import { goldStandardPreWorkoutData, micronizedCreatineData } from "@/data/official-supplements";
@@ -11,39 +9,58 @@ import {
   isolatePageContent,
   micronizedCreatinePageContent,
 } from "@/features/official-protein/content";
-import { OfficialProteinShowcase, type OfficialProteinVariant } from "@/features/official-protein/OfficialProteinShowcase";
+import {
+  OfficialProteinShowcase,
+  type NutritionReference,
+  type OfficialProteinVariant,
+} from "@/features/official-protein/OfficialProteinShowcase";
+
+type InternalVariant = Omit<OfficialProteinVariant, "nutritionReference"> & {
+  sourceStatus?: string;
+  nutritionReference: (NutritionReference & { referenceNoteZh?: string | null }) | null;
+};
+
+const buyerVariants = (variants: InternalVariant[]): OfficialProteinVariant[] => variants.map((variant) => {
+  const { sourceStatus, nutritionReference, ...buyerVariant } = variant;
+  void sourceStatus;
+  if (!nutritionReference) return { ...buyerVariant, nutritionReference: null };
+
+  const { referenceNoteZh, ...buyerNutritionReference } = nutritionReference;
+  void referenceNoteZh;
+  return { ...buyerVariant, nutritionReference: buyerNutritionReference };
+});
 
 export function GoldStandardIsolateShowcase() {
   return <OfficialProteinShowcase
-    variants={goldStandardIsolateData.variants as OfficialProteinVariant[]}
+    variants={buyerVariants(goldStandardIsolateData.variants as InternalVariant[])}
     content={isolatePageContent}
   />;
 }
 
 export function PlatinumHydrowheyShowcase() {
   return <OfficialProteinShowcase
-    variants={platinumHydrowheyData.variants as OfficialProteinVariant[]}
+    variants={buyerVariants(platinumHydrowheyData.variants as InternalVariant[])}
     content={hydrowheyPageContent}
   />;
 }
 
 export function DomesticGoldStandardShowcase() {
   return <OfficialProteinShowcase
-    variants={domesticGoldStandardData.variants as OfficialProteinVariant[]}
+    variants={buyerVariants(domesticGoldStandardData.variants as OfficialProteinVariant[])}
     content={domesticGoldStandardPageContent}
   />;
 }
 
 export function MicronizedCreatineShowcase() {
   return <OfficialProteinShowcase
-    variants={micronizedCreatineData.variants}
+    variants={buyerVariants(micronizedCreatineData.variants)}
     content={micronizedCreatinePageContent}
   />;
 }
 
 export function GoldStandardPreWorkoutShowcase() {
   return <OfficialProteinShowcase
-    variants={goldStandardPreWorkoutData.variants}
+    variants={buyerVariants(goldStandardPreWorkoutData.variants)}
     content={goldStandardPreWorkoutPageContent}
   />;
 }

@@ -110,7 +110,7 @@ describe("微粉化肌酸与金标训练前配方完整产品页", () => {
     });
     expect(flavoredCreatine.ingredients).toBe("Natural and Artificial Flavor, Citric Acid, Sucralose.");
     expect(goldStandardPreWorkoutData.variants[0].facts).toContainEqual({ label: "每份一水肌酸", value: "3.3 g" });
-    expect(goldStandardPreWorkoutPageContent.factsNote).toContain("ON 当前美国官网标签写 3 克和 1.5 克");
+    expect(goldStandardPreWorkoutPageContent.factsNote).toContain("请以实际到货包装为准");
   });
 });
 

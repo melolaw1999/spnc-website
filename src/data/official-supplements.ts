@@ -1,10 +1,17 @@
 import type { OfficialProteinVariant } from "@/features/official-protein/OfficialProteinShowcase";
 
+type InternalOfficialProteinVariant = Omit<OfficialProteinVariant, "nutritionReference"> & {
+  sourceStatus: string;
+  nutritionReference: (NonNullable<OfficialProteinVariant["nutritionReference"]> & {
+    referenceNoteZh: string | null;
+  }) | null;
+};
+
 export type OfficialSupplementData = {
   productName: string;
   officialUrl: string;
   retrievedAt: string;
-  variants: OfficialProteinVariant[];
+  variants: InternalOfficialProteinVariant[];
 };
 
 export const micronizedCreatineData: OfficialSupplementData = {

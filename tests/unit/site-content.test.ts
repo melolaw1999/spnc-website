@@ -110,6 +110,43 @@ describe("官网定位与联系信息", () => {
     expect(onPage.indexOf("跨境进口系列")).toBeLessThan(onPage.indexOf("ON 国产系列"));
   });
 
+  it("公开商品页不显示内部资料整理与素材制作注释", () => {
+    const buyerFacingFiles = [
+      "src/features/official-protein/OfficialProteinShowcase.tsx",
+      "src/features/official-protein/content.ts",
+      "src/features/gold-standard/GoldStandardShowcase.tsx",
+      "src/features/gold-standard/content.ts",
+      "src/app/on/page.tsx",
+      "src/components/ProductCard.tsx",
+      "src/app/products/[slug]/page.tsx",
+      "src/data/catalog.ts",
+    ].map((filePath) => readFileSync(path.join(process.cwd(), filePath), "utf8")).join("\n");
+
+    [
+      "当前仅收录",
+      "官网当前收录",
+      "资料状态：",
+      "已核对包装正面",
+      "这里仅整理",
+      "资料来源未公开",
+      "不会生成、重绘",
+      "真实素材复制件",
+      "素材核对",
+      "未制作翻译",
+      "本页根据",
+      "本页按",
+      "页面只陈列",
+      "官网收录状态",
+    ].forEach((forbidden) => expect(buyerFacingFiles).not.toContain(forbidden));
+
+    const officialShowcase = readFileSync(
+      path.join(process.cwd(), "src/features/official-protein/OfficialProteinShowcase.tsx"),
+      "utf8",
+    );
+    expect(officialShowcase).not.toContain("selectedVariant.sourceStatus");
+    expect(officialShowcase).not.toContain("referenceNoteZh}");
+  });
+
   it("公开入口只保留 ON 专区，不再展示商品矩阵", () => {
     const publicEntryFiles = [
       "src/components/Header.tsx",

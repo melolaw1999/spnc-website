@@ -58,7 +58,7 @@ const image = (
 const shared = {
   audience: "适合希望根据日常饮食与训练安排补充运动营养的成年人。",
   formula: "商品类别与包装信息仅用于选购核对；配料、营养成分和净含量以实际到货商品标签为准。",
-  versionInfo: "官网当前收录跨境进口、国产版本与一般贸易商品。具体商品对应版本以淘宝订单页面和实际到货标签为准。",
+  versionInfo: "商品可能分为跨境进口、国产版本与一般贸易进口；具体销售版本以淘宝订单页面和实际到货标签为准。",
   usage: "请遵循实际到货商品包装标签，并结合个人饮食与训练安排使用。",
   allergen: "请阅读实物过敏原和注意事项标签；特殊人群使用前应先咨询专业人士。",
 };
@@ -76,7 +76,7 @@ export const catalog: CatalogProduct[] = [
     name: "金标乳清蛋白粉",
     type: "乳清蛋白",
     summary: "ON 金标乳清蛋白粉。购买前请在淘宝商品页核对规格、口味与销售版本。",
-    highlights: ["真实白底产品图", "不同版本分别核对"],
+    highlights: ["每份约 24 克蛋白质", "2 磅与 5 磅规格"],
     featured: true,
     variants: [
       { id: "on-whey-5lb-chocolate", size: "5 磅", flavor: "双重巧克力" },
@@ -97,7 +97,7 @@ export const catalog: CatalogProduct[] = [
     name: "金标分离乳清",
     type: "分离乳清",
     summary: "ON 金标分离乳清。具体配方、规格与销售版本以淘宝商品页及实物标签为准。",
-    highlights: ["分离乳清类别", "规格与版本分别核对"],
+    highlights: ["分离乳清类别", "每份约 25 克蛋白质"],
     featured: true,
     variants: [
       { id: "on-isolate-3lb-chocolate-bliss", size: "3 磅", flavor: "巧克力" },
@@ -143,9 +143,9 @@ export const catalog: CatalogProduct[] = [
     name: "国产肌酸粉",
     type: "肌酸",
     salesVersion: "国产版本",
-    summary: "ON 国产肌酸粉。当前确认展示 100 克与 200 克无味包装，实时在售情况以淘宝商品页为准。",
+    summary: "ON 国产肌酸粉，提供 100 克与 200 克无味规格，实时在售情况以淘宝商品页为准。",
     highlights: ["100 克与 200 克", "无味"],
-    versionInfo: "本条目展示国产版本包装。购买前请在淘宝商品页核对规格，并以实际到货商品标签为准。",
+    versionInfo: "中国制造与中文包装版本。购买前请在淘宝商品页核对规格，并以实际到货商品标签为准。",
     featured: true,
     variants: [
       { id: "on-domestic-creatine-200g-unflavored", size: "200 克", flavor: "无味" },
@@ -164,9 +164,9 @@ export const catalog: CatalogProduct[] = [
     name: "国产谷氨酰胺粉",
     type: "氨基酸补充剂",
     salesVersion: "国产版本",
-    summary: "ON 国产谷氨酰胺粉。当前确认展示 300 克无味包装，实时在售情况以淘宝商品页为准。",
+    summary: "ON 国产谷氨酰胺粉，提供 300 克无味规格，实时在售情况以淘宝商品页为准。",
     highlights: ["300 克", "无味"],
-    versionInfo: "本条目展示国产版本包装。购买前请在淘宝商品页核对规格，并以实际到货商品标签为准。",
+    versionInfo: "中国制造与中文包装版本。购买前请在淘宝商品页核对规格，并以实际到货商品标签为准。",
     featured: false,
     variants: [
       { id: "on-domestic-glutamine-300g-unflavored", size: "300 克", flavor: "无味" },
@@ -183,9 +183,9 @@ export const catalog: CatalogProduct[] = [
     name: "国产双层香脆乳清蛋白棒",
     type: "蛋白棒",
     salesVersion: "国产版本",
-    summary: "ON 国产双层香脆乳清蛋白棒。当前确认展示两种 30 克单支包装，实时在售情况以淘宝商品页为准。",
+    summary: "ON 国产双层香脆乳清蛋白棒，提供两种 30 克单支口味，实时在售情况以淘宝商品页为准。",
     highlights: ["30 克单支装", "两种口味"],
-    versionInfo: "本条目展示国产版本包装。购买前请在淘宝商品页核对口味与装数，并以实际到货商品标签为准。",
+    versionInfo: "中国制造与中文包装版本。购买前请在淘宝商品页核对口味与装数，并以实际到货商品标签为准。",
     featured: false,
     variants: [
       { id: "on-domestic-protein-bar-30g-peanut-sauce", size: "30 克", flavor: "花生酱味" },
@@ -203,8 +203,8 @@ export const catalog: CatalogProduct[] = [
     brand: "OPTIMUM NUTRITION",
     name: "白金水解乳清",
     type: "水解乳清",
-    summary: "ON 白金水解乳清当前确认在售大小两个规格，购买前请在淘宝商品页核对版本与库存。",
-    highlights: ["大小规格分别展示", "Turbo Chocolate（巧克力）"],
+    summary: "ON 白金水解乳清提供 3.61 磅与 1.8 磅巧克力规格，购买前请在淘宝商品页核对版本与库存。",
+    highlights: ["水解乳清类别", "Turbo Chocolate（巧克力）"],
     featured: true,
     variants: [
       { id: "on-hydrowhey-3-61lb-turbo-chocolate", size: "3.61 磅（1.64 千克）", flavor: "Turbo Chocolate（巧克力）" },

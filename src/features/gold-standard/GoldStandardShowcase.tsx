@@ -89,7 +89,7 @@ export function GoldStandardShowcase() {
         <div className="gold-product-copy">
           <div className="eyebrow">OPTIMUM NUTRITION · GOLD STANDARD 100% WHEY</div>
           <h1>金标乳清蛋白粉</h1>
-          <p className="gold-intro">选择规格和口味，页面会同步切换对应的官网产品图、营养标签与每份信息。</p>
+          <p className="gold-intro">每份提供 24 克蛋白质及 5.5 克天然存在的 BCAA，提供 2 磅、5 磅规格与多种口味。</p>
 
           <div className="gold-selector-panel" aria-label="选择金标乳清规格与口味">
             <label>
@@ -137,7 +137,7 @@ export function GoldStandardShowcase() {
           <div className="actions actions-left gold-actions">
             <a className="btn" href={goldStandardTaobaoUrl} target="_blank" rel="noopener noreferrer">前往淘宝查看在售商品</a>
           </div>
-          <p className="gold-role-note">ON 官网状态不等同于理想营养店铺库存；购买时请在淘宝商品页再次核对销售版本、规格和口味。</p>
+          <p className="gold-role-note">规格、口味与实时库存以淘宝商品页为准。</p>
         </div>
       </div>
     </section>
@@ -147,7 +147,7 @@ export function GoldStandardShowcase() {
         <header className="gold-info-heading">
           <div className="eyebrow">产品信息 · Product Information</div>
           <h2 id="gold-information-title">了解金标乳清</h2>
-          <p>以下内容依据 ON 金标乳清官网产品说明及对应英文标签整理；具体配料、营养和使用方式以当前所选口味及实际到货包装为准。</p>
+          <p>不同规格与口味的配料、营养成分和每份用量可能不同，请以所选组合及实际到货包装为准。</p>
         </header>
 
         <div className="gold-info-accordions">
@@ -191,12 +191,12 @@ export function GoldStandardShowcase() {
           <div className="eyebrow">营养信息 · Nutritional Information</div>
           <h2>对应营养成分标签</h2>
           <p>当前展示：<strong>{selectedVariant.sizeLabel} · {selectedVariant.flavorZh}</strong></p>
-          <p className="muted">营养标签来自 ON 官网所选规格与口味的对应图片。切换上方选项后，这里会同步更新。</p>
+          <p className="muted">选择规格与口味后，可查看对应的营养成分、配料及每份用量。</p>
           <details className="gold-ingredients" open>
             <summary>英文配料原文</summary>
             <p>{selectedVariant.ingredients || "官网当前没有提供可核对的配料文本，请以实际到货包装标签为准。"}</p>
           </details>
-          <div className="notice">标签内容可能因销售地区和包装版本不同而变化。理想营养页面用于选购核对，最终以淘宝订单页面和实际到货标签为准。</div>
+          <div className="notice">标签内容可能因销售地区、规格和批次不同而变化，请以淘宝订单与实际到货包装为准。</div>
         </div>
 
         <div className="gold-label-stack" aria-live="polite">
@@ -210,8 +210,8 @@ export function GoldStandardShowcase() {
               height={selectedVariant.nutritionImage.height}
               sizes="(max-width: 860px) 92vw, 56vw"
             /> : <div className="gold-nutrition-missing">
-              <strong>ON 官网当前未提供这项组合的营养标签图片</strong>
-              <p>我们没有套用其他口味的标签，也没有自行生成数据。请以实际包装标签为准。</p>
+              <strong>完整营养标签请查看实际包装</strong>
+              <p>不同口味和批次的营养成分可能存在差异，请以实际到货包装为准。</p>
             </div>}
           </div>
 
@@ -221,7 +221,7 @@ export function GoldStandardShowcase() {
                 <span className="gold-reference-badge">仅供参考</span>
                 <h3>中文标签对照</h3>
               </div>
-              <p>根据上方英文官网标签整理翻译；营养、配料及过敏原信息请以英文原标签和实际到货包装为准。</p>
+              <p>中文对照便于阅读；营养、配料及过敏原信息请以英文原标签和实际到货包装为准。</p>
             </header>
 
             <dl className="gold-label-summary">
@@ -273,8 +273,8 @@ export function GoldStandardShowcase() {
             </footer>
           </article> : <div className="gold-translation-missing">
             <span className="gold-reference-badge">仅供参考</span>
-            <strong>暂无可核对的中文标签对照</strong>
-            <p>ON 官网没有提供这项组合的英文营养标签，因此未制作翻译，也未套用其他口味资料。</p>
+            <strong>中文标签对照请查看实际包装</strong>
+            <p>不同口味和批次的标签可能存在差异，请以实际到货包装为准。</p>
           </div>}
         </div>
       </div>

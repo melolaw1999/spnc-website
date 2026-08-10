@@ -7,12 +7,11 @@ import type { ProteinPageContent } from "@/features/official-protein/content";
 
 type ImageAsset = { src: string; width: number; height: number };
 
-type NutritionReference = {
+export type NutritionReference = {
   flavoringEn: string;
   flavoringZh: string;
   servingsPerContainerZh: string;
   servingSizeZh: string | null;
-  referenceNoteZh: string | null;
   nutrientRows: Array<{
     key: string;
     labelEn: string;
@@ -40,7 +39,6 @@ export type OfficialProteinVariant = {
   flavor: string;
   flavorZh: string;
   availableOnOfficialSite: boolean;
-  sourceStatus: string;
   servingSize: string | null;
   servingsPerContainer: string;
   proteinPerServing: string;
@@ -156,8 +154,6 @@ export function OfficialProteinShowcase({
               <small>{selectedVariant.flavor}</small>
             </div>
           </div>
-          <p className="gold-source-status"><strong>资料状态：</strong>{selectedVariant.sourceStatus}</p>
-
           <dl className="gold-facts">
             {(selectedVariant.facts ?? [
               { label: "每份蛋白质", value: metricAmount(selectedVariant.proteinPerServing) },
@@ -172,7 +168,7 @@ export function OfficialProteinShowcase({
           <div className="actions actions-left gold-actions">
             <TaobaoButton label="前往淘宝店查看在售商品" />
           </div>
-          <p className="gold-role-note">区域资料状态不等同于理想营养店铺库存；购买时请在淘宝商品页再次核对销售版本、规格和口味。</p>
+          <p className="gold-role-note">规格、口味与实时库存以淘宝商品页为准。</p>
         </div>
       </div>
     </section>
@@ -224,12 +220,12 @@ export function OfficialProteinShowcase({
           <div className="eyebrow">营养信息 · Nutritional Information</div>
           <h2>{content.nutritionTitle || "对应营养成分标签"}</h2>
           <p>当前展示：<strong>{selectedVariant.sizeLabel} · {selectedVariant.flavorZh}</strong></p>
-          <p className="muted">{content.nutritionIntro || "切换上方选项后，这里会同步更新。标签原图与中文对照均注明资料状态，不同地区规格不会混用其他规格的标签。"}</p>
+          <p className="muted">{content.nutritionIntro || "切换上方规格与口味后，营养成分和配料信息会同步更新。"}</p>
           <details className="gold-ingredients" open>
             <summary>英文配料原文</summary>
             <p>{selectedVariant.ingredients || "当前没有可核对的配料文本，请以实际到货包装标签为准。"}</p>
           </details>
-          <div className="notice">标签内容可能因销售地区和包装版本不同而变化。理想营养页面用于选购核对，最终以淘宝订单页面和实际到货标签为准。</div>
+          <div className="notice">标签内容可能因销售地区、规格和批次不同而变化，请以淘宝订单与实际到货包装为准。</div>
         </div>
 
         <div className="gold-label-stack" aria-live="polite">
@@ -243,17 +239,17 @@ export function OfficialProteinShowcase({
               height={selectedVariant.nutritionImage.height}
               sizes="(max-width: 860px) 92vw, 56vw"
             /> : selectedVariant.facts ? <article className="gold-front-facts-card">
-              <div className="eyebrow">PACK FRONT · 已核对包装正面</div>
+              <div className="eyebrow">PACK FRONT · 包装正面</div>
               <h3>{selectedVariant.sizeLabel} · {selectedVariant.flavorZh}</h3>
               <dl>{selectedVariant.facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl>
               <div className="gold-front-facts-copy">
                 <strong>配料与背标状态</strong>
                 <p>{selectedVariant.ingredients || "请以实际到货包装标签为准。"}</p>
               </div>
-              <p className="gold-front-facts-note">这里仅整理当前包装可确认的信息，没有套用其他规格、口味或地区版本的完整标签。</p>
+              <p className="gold-front-facts-note">营养成分、配料与食用方式请以实际到货包装为准。</p>
             </article> : <div className="gold-nutrition-missing">
-              <strong>当前资料来源未公开这项组合的独立营养标签图</strong>
-              <p>没有套用其他规格的标签图片。下方中文每份数据会说明核对来源，购买时仍请以实际包装为准。</p>
+              <strong>完整营养标签请查看实际包装</strong>
+              <p>不同规格与批次的营养成分可能存在差异，请以实际到货包装为准。</p>
             </div>}
           </div>
 
@@ -263,7 +259,7 @@ export function OfficialProteinShowcase({
                 <span className="gold-reference-badge">仅供参考</span>
                 <h3>{content.translationTitle || "中文标签对照"}</h3>
               </div>
-              <p>根据上方英文标签或已注明的同口味资料整理翻译；营养、配料及过敏原信息请以英文原标签和实际到货包装为准。</p>
+              <p>中文对照便于阅读；营养、配料及过敏原信息请以英文原标签和实际到货包装为准。</p>
             </header>
 
             <dl className="gold-label-summary">
@@ -309,7 +305,6 @@ export function OfficialProteinShowcase({
             </div>
 
             <footer className="gold-translation-notes">
-              {selectedVariant.nutritionReference.referenceNoteZh ? <p><strong>资料状态：</strong>{selectedVariant.nutritionReference.referenceNoteZh}</p> : null}
               {selectedVariant.nutritionReference.insignificantSourceZh ? <p>{selectedVariant.nutritionReference.insignificantSourceZh}</p> : null}
               <p>{selectedVariant.nutritionReference.dailyValueNoteZh}</p>
               <strong>中文内容仅供阅读参考，不作为商品标签或购买承诺。</strong>
