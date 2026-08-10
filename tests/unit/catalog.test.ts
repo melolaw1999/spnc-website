@@ -77,9 +77,9 @@ describe("生产商品目录", () => {
     }
   });
 
-  it("新肌酸与训练前配方主图保留原图并读取压缩副本", () => {
+  it("跨境肌酸与训练前配方主图保留原图并读取压缩副本", () => {
     const expectedSuffixes = new Map([
-      ["on-micronized-creatine", "-transparent-v2.webp"],
+      ["on-micronized-creatine", "-blueberry-lemonade-front-transparent.webp"],
       ["on-gold-standard-pre-workout", "-user.webp"],
     ]);
     for (const [id, expectedSuffix] of expectedSuffixes) {

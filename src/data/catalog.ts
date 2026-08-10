@@ -222,15 +222,13 @@ export const catalog: CatalogProduct[] = [
     brand: "OPTIMUM NUTRITION",
     name: "微粉化肌酸粉",
     type: "肌酸",
-    summary: "ON 微粉化肌酸粉现收录 300 克无味与 360 克蓝莓柠檬味跨境规格，两款均标示每份 5 克一水肌酸、60 份。",
-    highlights: ["每份 5 克一水肌酸", "无味与蓝莓柠檬味", "每桶 60 份"],
+    summary: "ON 微粉化肌酸粉 360 克蓝莓柠檬味跨境规格，包装标示每份 5 克一水肌酸，共 60 份。",
+    highlights: ["360 克蓝莓柠檬味", "每份 5 克一水肌酸", "每桶 60 份"],
     featured: true,
     variants: [
-      { id: "on-creatine-300g-unflavored", size: "300 克", flavor: "无味" },
       { id: "on-creatine-360g-blueberry-lemonade", size: "360 克", flavor: "蓝莓柠檬味" },
     ],
     images: [
-      image("/assets/optimized/products/on/creatine/on-micronized-creatine-300g-unflavored-front-transparent-v2.webp", "ON 微粉化肌酸粉 300 克无味正面透明底产品图", { width: 474, height: 498, variantIds: ["on-creatine-300g-unflavored"], caption: "300 克 · 无味", sourceType: "user-confirmed-copy" }),
       image("/assets/optimized/products/on/creatine/on-micronized-creatine-360g-blueberry-lemonade-front-transparent.webp", "ON 微粉化肌酸粉 360 克蓝莓柠檬味正面透明底产品图", { width: 1200, height: 1311, variantIds: ["on-creatine-360g-blueberry-lemonade"], caption: "360 克 · 蓝莓柠檬味", sourceType: "user-confirmed-copy" }),
     ],
   },
