@@ -115,6 +115,18 @@ describe("生产商品目录", () => {
     expect(hydrowhey?.images.flatMap((item) => item.variantIds).sort()).toEqual(hydrowhey?.variants.map((variant) => variant.id).sort());
   });
 
+  it("金标分离乳清目录与详情页保持四个组合一致", () => {
+    const isolate = catalog.find((product) => product.id === "on-gold-standard-isolate");
+    expect(isolate?.cardMeta).toBe("5.2 磅巧克力 · 5.02 磅香草 · 3 磅");
+    expect(isolate?.variants.map((variant) => [variant.size, variant.flavor])).toEqual([
+      ["5.2 磅（2.36 千克）", "醇享巧克力"],
+      ["5.02 磅（2.28 千克）", "浓郁香草"],
+      ["3 磅（1.36 千克）", "醇享巧克力"],
+      ["3 磅档（包装实标 2.91 磅 / 1.32 千克）", "浓郁香草"],
+    ]);
+    expect(isolate?.images.flatMap((item) => item.variantIds).sort()).toEqual(isolate?.variants.map((variant) => variant.id).sort());
+  });
+
   it("优先使用已核对规格的品牌透明主图", () => {
     const officialMainImages = [
       "on-gold-standard-whey",

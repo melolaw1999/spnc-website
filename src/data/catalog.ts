@@ -1,4 +1,5 @@
 import { domesticGoldStandardData } from "@/data/domestic-gold-standard-whey";
+import goldStandardIsolateData from "@/data/gold-standard-isolate.json";
 
 export type CatalogImage = {
   asset: { projectPath: string; width: number; height: number };
@@ -21,6 +22,7 @@ export type CatalogProduct = {
   brand: "OPTIMUM NUTRITION";
   name: string;
   type: string;
+  cardMeta?: string;
   salesVersion?: (typeof publicSalesVersions)[number];
   summary: string;
   highlights: string[];
@@ -96,14 +98,30 @@ export const catalog: CatalogProduct[] = [
     brand: "OPTIMUM NUTRITION",
     name: "金标分离乳清",
     type: "分离乳清",
-    summary: "ON 金标分离乳清。具体配方、规格与销售版本以淘宝商品页及实物标签为准。",
+    summary: "ON 金标分离乳清提供 5.2 磅醇享巧克力、5.02 磅浓郁香草及 3 磅档规格。实时库存以淘宝商品页为准。",
     highlights: ["分离乳清类别", "每份约 25 克蛋白质"],
+    cardMeta: "5.2 磅巧克力 · 5.02 磅香草 · 3 磅",
     featured: true,
-    variants: [
-      { id: "on-isolate-3lb-chocolate-bliss", size: "3 磅", flavor: "巧克力" },
-    ],
+    variants: goldStandardIsolateData.variants.map((variant) => ({
+      id: variant.id,
+      size: variant.sizeLabel,
+      flavor: variant.flavorZh,
+    })),
     images: [
       image("/assets/optimized/products/on/isolate/on-gold-standard-isolate-3lb-chocolate-bliss-front-official.webp", "ON 金标分离乳清 3 磅巧克力正面透明背景图", { width: 1000, height: 1000, variantIds: ["on-isolate-3lb-chocolate-bliss"], caption: "3 磅 · 巧克力", sourceType: "brand-official-copy" }),
+      ...goldStandardIsolateData.variants
+        .filter((variant) => variant.id !== "on-isolate-3lb-chocolate-bliss")
+        .map((variant) => image(
+          variant.frontImage.src,
+          `ON 金标分离乳清 ${variant.sizeLabel} ${variant.flavorZh}产品图`,
+          {
+            width: variant.frontImage.width,
+            height: variant.frontImage.height,
+            variantIds: [variant.id],
+            caption: `${variant.sizeLabel} · ${variant.flavorZh}`,
+            sourceType: "brand-official-copy",
+          },
+        )),
     ],
   },
   {
