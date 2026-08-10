@@ -77,15 +77,18 @@ describe("中国制造与一般贸易金标乳清完整产品页", () => {
 });
 
 describe("微粉化肌酸与金标训练前配方完整产品页", () => {
-  it("两款商品只绑定已确认的 300 克实物规格与原图", () => {
-    expect(micronizedCreatineData.variants).toHaveLength(1);
+  it("微粉化肌酸绑定 300 克无味与 360 克蓝莓柠檬味，训练前配方保持已确认规格", () => {
+    expect(micronizedCreatineData.variants).toHaveLength(2);
     expect(goldStandardPreWorkoutData.variants).toHaveLength(1);
     for (const variant of [...micronizedCreatineData.variants, ...goldStandardPreWorkoutData.variants]) {
-      expect(variant.size).toBe("300 g");
       expect(publicAssetExists(variant.frontImage.src)).toBe(true);
       expect(variant.nutritionImage).not.toBeNull();
       expect(publicAssetExists(variant.nutritionImage?.src ?? "")).toBe(true);
     }
+    expect(micronizedCreatineData.variants.map((item) => [item.size, item.flavorZh])).toEqual([
+      ["300 g", "无味"],
+      ["360 g", "蓝莓柠檬味"],
+    ]);
   });
 
   it("核心数字按实际包装分别登记，不混用 ON 当前官网差异值", () => {
@@ -95,6 +98,18 @@ describe("微粉化肌酸与金标训练前配方完整产品页", () => {
       { label: "净含量", value: "300 g" },
       { label: "口味", value: "无味" },
     ]);
+    const flavoredCreatine = micronizedCreatineData.variants[1];
+    expect(flavoredCreatine.sku).toBe("748927069808");
+    expect(flavoredCreatine.servingSize).toBe("6 克（约 1 满勺）");
+    expect(flavoredCreatine.facts).toContainEqual({ label: "每份一水肌酸", value: "5 g" });
+    expect(flavoredCreatine.nutritionReference?.nutrientRows).toContainEqual({
+      key: "totalCarbohydrate",
+      labelEn: "Total Carbohydrate",
+      labelZh: "总碳水化合物",
+      amountZh: "1 克",
+      dailyValue: "<1%",
+    });
+    expect(flavoredCreatine.ingredients).toBe("Natural and Artificial Flavor, Citric Acid, Sucralose.");
     expect(goldStandardPreWorkoutData.variants[0].facts).toContainEqual({ label: "每份一水肌酸", value: "3.3 g" });
     expect(goldStandardPreWorkoutPageContent.factsNote).toContain("ON 当前美国官网标签写 3 克和 1.5 克");
   });
