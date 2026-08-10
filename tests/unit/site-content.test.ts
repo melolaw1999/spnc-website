@@ -45,7 +45,7 @@ describe("官网定位与联系信息", () => {
     expect(publicSource).not.toContain("melolaw@spnc.cn");
   });
 
-  it("公开导航暂不显示关于我们，联系页面只保留邮箱卡片与安全提示", () => {
+  it("公开导航暂不显示关于我们，联系页面保留正式邮箱、旺旺客服与安全提示", () => {
     const publicNavigation = [
       "src/components/Header.tsx",
       "src/components/Footer.tsx",
@@ -58,7 +58,38 @@ describe("官网定位与联系信息", () => {
     expect(contactPage).not.toContain("订单售后");
     expect(contactPage).not.toContain("page-title");
     expect(contactPage).toContain("enterpriseContacts.map");
+    expect(contactPage).toContain("<TaobaoServiceButton />");
     expect(contactPage).toContain("不会索取淘宝密码");
+  });
+
+  it("首页精选内容进入可控制的自动轮播，联系区保持独立", () => {
+    const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
+    const carousel = readFileSync(path.join(process.cwd(), "src/components/HomeCarousel.tsx"), "utf8");
+
+    expect(homePage).toContain("<HomeCarousel");
+    expect(homePage).toContain("品牌主视觉");
+    expect(homePage).toContain("BEST SELLER");
+    expect(homePage).toContain("三个版本");
+    expect(homePage).toContain("TEAM ON");
+    expect(homePage).toContain("防伪溯源");
+    expect(homePage.indexOf("</HomeCarousel>")).toBeLessThan(homePage.indexOf("home-billboard-contact"));
+    expect(carousel).toContain("window.setInterval");
+    expect(carousel).toContain("IntersectionObserver");
+    expect(carousel).toContain("prefers-reduced-motion: reduce");
+    expect(carousel).toContain("暂停自动播放");
+  });
+
+  it("首页与联系页面均提供淘宝旺旺客服入口", () => {
+    const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
+    const contactPage = readFileSync(path.join(process.cwd(), "src/app/contact/page.tsx"), "utf8");
+    const serviceButton = readFileSync(path.join(process.cwd(), "src/components/TaobaoServiceButton.tsx"), "utf8");
+    const siteConfig = readFileSync(path.join(process.cwd(), "src/lib/site.ts"), "utf8");
+
+    expect(homePage).toContain("<TaobaoServiceButton />");
+    expect(contactPage).toContain("<TaobaoServiceButton />");
+    expect(serviceButton).toContain("旺旺客服");
+    expect(serviceButton).toContain('target="_blank"');
+    expect(siteConfig).toContain("https://spnc.taobao.com");
   });
 
   it("合规与资质位于 ON 专区二级菜单并使用 Batch 验证调取", () => {

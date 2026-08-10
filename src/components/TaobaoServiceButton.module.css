@@ -1,0 +1,50 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 26px;
+  border: 1px solid rgba(210, 210, 215, .82);
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, .055);
+  color: #18181a;
+  font-size: 17px;
+  font-weight: 720;
+  letter-spacing: -.02em;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.button:hover {
+  border-color: rgba(10, 132, 255, .32);
+  box-shadow: 0 16px 42px rgba(0, 113, 227, .13);
+  transform: translateY(-2px);
+}
+
+.button:focus-visible {
+  outline: 3px solid rgba(10, 132, 255, .34);
+  outline-offset: 3px;
+}
+
+.button svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: #0a84ff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.75;
+}
+
+@media (max-width: 560px) {
+  .button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

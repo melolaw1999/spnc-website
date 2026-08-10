@@ -9,6 +9,22 @@
   gap: 20px;
 }
 
+.serviceRow {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0 28px;
+}
+
+.serviceRow p {
+  margin: 0;
+  color: #86868b;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: right;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -49,5 +65,15 @@
 
   .card {
     min-height: 190px;
+  }
+
+  .serviceRow {
+    display: grid;
+    gap: 14px;
+    padding-bottom: 18px;
+  }
+
+  .serviceRow p {
+    text-align: center;
   }
 }

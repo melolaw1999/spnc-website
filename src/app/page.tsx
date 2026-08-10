@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HomeCarousel } from "@/components/HomeCarousel";
+import { TaobaoServiceButton } from "@/components/TaobaoServiceButton";
 import { catalog, publicSalesVersions } from "@/data/catalog";
 import { publicContactEmail, serviceEmail, mailto } from "@/data/contacts";
 import styles from "./home.module.css";
@@ -42,6 +44,7 @@ const versionHighlights = [
 export default function Home() {
   const featured = catalog.filter((product) => product.featured).slice(0, 4);
   return <main className="apple-home">
+    <HomeCarousel labels={["品牌主视觉", "BEST SELLER", "三个版本", "TEAM ON", "防伪溯源"]}>
     <section className="home-hero" aria-label="为你的下一次突破做好准备">
       <div className="home-hero-visual">
         <Image
@@ -159,12 +162,17 @@ export default function Home() {
         </div>
       </div>
     </section>
+    </HomeCarousel>
 
     <section className="home-billboard home-billboard-contact">
       <div className="container billboard-inner contact-billboard">
         <div className="billboard-copy">
           <h2>联系我们</h2>
-          <p className="billboard-subtitle">合作与售后，分别找到正确入口。</p>
+          <p className="billboard-subtitle">日常咨询优先旺旺，需要留档的问题使用邮箱。</p>
+          <div className={styles.contactService}>
+            <TaobaoServiceButton />
+            <p>商品、订单与售后问题，可直接进入淘宝店联系在线客服。</p>
+          </div>
           <div className="mail-strip mail-strip-two">
             <a href={mailto(publicContactEmail)}><span>{publicContactEmail}</span><small>品牌合作 / 通用联系</small></a>
             <a href={mailto(serviceEmail)}><span>{serviceEmail}</span><small>售后客服 / 消费者咨询</small></a>
