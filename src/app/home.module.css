@@ -24,67 +24,171 @@
   margin: 34px auto 0;
 }
 
-.bestSeller {
+.brandStatement {
   position: relative;
   min-height: clamp(690px, 86svh, 900px);
-  grid-template-rows: auto minmax(0, 1fr) auto;
-  gap: 4px;
-  padding-top: clamp(34px, 4vw, 60px);
-  padding-bottom: clamp(32px, 4vw, 54px);
+  display: block;
+  padding: clamp(56px, 6vw, 88px);
+  overflow: hidden;
+  color: #fff;
+  text-align: left;
   background:
-    radial-gradient(circle at 50% 42%, rgba(193, 145, 54, .14), transparent 28%),
-    linear-gradient(180deg, #fbfaf7 0%, #f2f1ed 100%);
+    radial-gradient(circle at 84% 78%, rgba(255, 90, 90, .25), transparent 32%),
+    radial-gradient(circle at 8% 8%, rgba(255, 255, 255, .08), transparent 30%),
+    linear-gradient(145deg, #9f0018 0%, #bc001d 55%, #920016 100%);
 }
 
-.bestSellerTitle {
-  position: relative;
-  z-index: 2;
-  margin: 0;
-  color: #111;
-  font-size: clamp(48px, 6.3vw, 84px);
-  font-weight: 780;
-  line-height: .92;
-  letter-spacing: -.055em;
-}
-
-.bestSellerVisual {
-  position: relative;
-  width: min(100%, 620px);
-  height: clamp(440px, 48svh, 560px);
-  margin: -4px auto -16px;
-}
-
-.bestSellerVisual::before {
+.brandStatement::before {
   content: "";
   position: absolute;
-  inset: 15% 17% 12%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(207, 166, 82, .24), rgba(207, 166, 82, 0) 68%);
-  filter: blur(16px);
+  inset: 0;
+  pointer-events: none;
+  opacity: .32;
+  background:
+    linear-gradient(110deg, rgba(255, 255, 255, .08), transparent 28% 74%, rgba(255, 255, 255, .04)),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, .018) 0 1px, transparent 1px 13px);
 }
 
-.bestSellerProduct {
+.brandStatementCopy {
   position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transform: translateY(18px) scale(1.34);
-  transform-origin: center 49%;
-  filter: drop-shadow(0 34px 30px rgba(29, 24, 15, .19));
+  z-index: 3;
+  width: min(66%, 820px);
 }
 
-.bestSellerActions {
+.brandStatementEyebrow {
+  margin: 0 0 clamp(22px, 3vw, 42px);
+  color: rgba(255, 255, 255, .72);
+  font-size: 13px;
+  font-weight: 760;
+  letter-spacing: .18em;
+}
+
+.brandStatementCopy h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(56px, 6.5vw, 94px);
+  font-weight: 790;
+  line-height: .98;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+}
+
+.brandStatementCopy h2 span {
+  display: block;
+  white-space: nowrap;
+}
+
+.brandStatementRule {
+  width: 64px;
+  height: 5px;
+  margin: clamp(34px, 4vw, 54px) 0 22px;
+  border-radius: 99px;
+  background: #fff;
+}
+
+.brandStatementLead,
+.brandStatementBody {
+  margin: 0;
+  color: rgba(255, 255, 255, .93);
+  font-size: clamp(20px, 2.1vw, 31px);
+  font-weight: 590;
+  line-height: 1.35;
+  letter-spacing: -.025em;
+}
+
+.brandStatementLead strong {
+  color: #fff;
+  font-size: 1.18em;
+  font-weight: 790;
+}
+
+.brandStatementBody {
+  color: rgba(255, 255, 255, .72);
+}
+
+.brandStatementActions {
   position: relative;
-  z-index: 2;
   display: flex;
-  justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-.bestSellerActions :global(.btn) {
+.brandStatementActions :global(.btn) {
   margin-top: 0;
+  color: #a3001a;
+  background: #fff;
+}
+
+.brandStatement .brandStatementActions :global(.btn.secondary) {
+  color: #fff;
+  background: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .55);
+  backdrop-filter: blur(12px);
+}
+
+.brandStatementProducts {
+  position: absolute;
+  z-index: 2;
+  right: clamp(20px, 3vw, 52px);
+  bottom: clamp(12px, 2vw, 30px);
+  width: min(52%, 690px);
+  height: min(52%, 450px);
+  filter: drop-shadow(0 32px 30px rgba(40, 0, 6, .32));
+}
+
+.brandStatementProducts::after {
+  content: "";
+  position: absolute;
+  right: 1%;
+  bottom: 1%;
+  width: 96%;
+  height: 16%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(45, 0, 8, .42), transparent 68%);
+  filter: blur(10px);
+}
+
+.brandStatementProduct {
+  position: absolute;
+  bottom: 0;
+  width: clamp(145px, 20vw, 275px);
+  height: clamp(205px, 28vw, 390px);
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.brandStatementProduct:nth-child(1) {
+  right: 72%;
+  z-index: 2;
+  width: clamp(105px, 13vw, 175px);
+  height: clamp(160px, 20vw, 275px);
+}
+
+.brandStatementProduct:nth-child(2) {
+  right: 52%;
+  z-index: 3;
+  width: clamp(120px, 16vw, 210px);
+  height: clamp(180px, 23vw, 320px);
+}
+
+.brandStatementProduct:nth-child(3) {
+  right: 26%;
+  z-index: 8;
+}
+
+.brandStatementProduct:nth-child(4) {
+  right: 8%;
+  z-index: 5;
+  width: clamp(130px, 17vw, 225px);
+  height: clamp(190px, 24vw, 335px);
+}
+
+.brandStatementProduct:nth-child(5) {
+  right: -3%;
+  z-index: 4;
+  width: clamp(100px, 13vw, 170px);
+  height: clamp(155px, 20vw, 270px);
 }
 
 .versionHomeSection {
@@ -507,27 +611,67 @@
     width: 145px;
   }
 
-  .bestSeller {
-    min-height: 660px;
-    padding: 40px 18px 34px;
+  .brandStatement {
+    min-height: 720px;
+    padding: 42px 24px 34px;
   }
 
-  .bestSellerTitle {
-    font-size: clamp(44px, 14vw, 58px);
-  }
-
-  .bestSellerVisual {
-    width: 100%;
-    height: 400px;
-    margin: -8px auto -10px;
-  }
-
-  .bestSellerActions {
+  .brandStatementCopy {
     width: 100%;
   }
 
-  .bestSellerActions :global(.btn) {
-    flex: 1 1 150px;
+  .brandStatementCopy h2 {
+    font-size: 40px;
+    letter-spacing: -.055em;
+  }
+
+  .brandStatementEyebrow {
+    margin-bottom: 26px;
+  }
+
+  .brandStatementRule {
+    margin: 28px 0 18px;
+  }
+
+  .brandStatementLead,
+  .brandStatementBody {
+    font-size: 20px;
+  }
+
+  .brandStatementActions {
+    display: none;
+  }
+
+  .brandStatementProducts {
+    right: 6px;
+    bottom: 10px;
+    width: 94%;
+    height: 260px;
+  }
+
+  .brandStatementProduct {
+    width: 160px;
+    height: 230px;
+  }
+
+  .brandStatementProduct:nth-child(1) {
+    width: 90px;
+    height: 150px;
+  }
+
+  .brandStatementProduct:nth-child(2) {
+    width: 115px;
+    height: 180px;
+  }
+
+  .brandStatementProduct:nth-child(4) {
+    width: 125px;
+    height: 190px;
+  }
+
+  .brandStatementProduct:nth-child(5) {
+    width: 85px;
+    height: 145px;
   }
 
   .versionHomeSection {

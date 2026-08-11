@@ -8,6 +8,29 @@ import styles from "./home.module.css";
 
 const bestSellerTaobaoUrl = "https://item.taobao.com/item.htm?id=794493827958&mi_id=0000-9V2LcrTfxjJgXjEcUmo8aM2EtipRAyJ6fZTVLQyMow&spm=a21xtw.29178619.0.0&xxc=shop&sku_properties=1627207%3A10026360243";
 
+const brandStatementProducts = [
+  {
+    src: "/assets/products/on/creatine/on-micronized-creatine-300g-unflavored-front-transparent-v2.png",
+    alt: "ON 一水肌酸粉",
+  },
+  {
+    src: "/assets/products/on/hydro-whey/on-platinum-hydrowhey-1-8lb-turbo-chocolate-front.png",
+    alt: "ON 水解乳清蛋白粉",
+  },
+  {
+    src: "/assets/products/on/gold-standard-whey/on-gold-standard-whey-5lb-double-rich-chocolate-front-transparent-v2.png",
+    alt: "ON 金标乳清蛋白粉",
+  },
+  {
+    src: "/assets/products/on/isolate/on-gold-standard-isolate-3lb-chocolate-bliss-front-official.png",
+    alt: "ON 金标分离乳清蛋白粉",
+  },
+  {
+    src: "/assets/products/on/gold-standard-whey/selector/2lb/delicious-strawberry/product-front.png",
+    alt: "ON 金标乳清蛋白粉草莓味",
+  },
+] as const;
+
 const versionHighlights = [
   {
     number: "01",
@@ -44,7 +67,7 @@ const versionHighlights = [
 export default function Home() {
   const featured = catalog.filter((product) => product.featured).slice(0, 4);
   return <main className="apple-home">
-    <HomeCarousel labels={["品牌主视觉", "BEST SELLER", "三个版本", "TEAM ON", "防伪溯源"]}>
+    <HomeCarousel labels={["品牌主视觉", "理想营养", "三个版本", "TEAM ON", "防伪溯源"]}>
     <section className="home-hero" aria-label="为你的下一次突破做好准备">
       <div className="home-hero-visual">
         <Image
@@ -60,22 +83,30 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="home-billboard" aria-labelledby="best-seller-title">
-      <div className={`container billboard-inner ${styles.bestSeller}`}>
-        <h2 className={styles.bestSellerTitle} id="best-seller-title">BEST SELLER</h2>
-        <div className={styles.bestSellerVisual}>
-          <Image
-            className={styles.bestSellerProduct}
-            src="/assets/products/on/gold-standard-whey/on-gold-standard-whey-5lb-double-rich-chocolate-front-transparent-v2.png"
-            alt="ON 金标乳清蛋白粉 5 磅双重巧克力跨境版"
+    <section className="home-billboard" aria-labelledby="brand-statement-title">
+      <div className={`container billboard-inner ${styles.brandStatement}`}>
+        <div className={styles.brandStatementCopy}>
+          <p className={styles.brandStatementEyebrow}>SPNC · 理想营养</p>
+          <h2 id="brand-statement-title"><span>立足全球，</span><span>耕耘中国大陆。</span></h2>
+          <div className={styles.brandStatementRule} aria-hidden="true" />
+          <p className={styles.brandStatementLead}>为中国超 <strong>10,000</strong> 位用户</p>
+          <p className={styles.brandStatementBody}>持续供应不可替代的<br />专业运动营养品。</p>
+          <div className={styles.brandStatementActions}>
+            <Link className="btn" href="/on">浏览 ON 专区</Link>
+            <a className="btn secondary" href={bestSellerTaobaoUrl} target="_blank" rel="noopener noreferrer">淘宝店购买</a>
+          </div>
+        </div>
+
+        <div className={styles.brandStatementProducts} aria-label="理想营养供应的 ON 专业运动营养产品">
+          {brandStatementProducts.map((product) => <Image
+            className={styles.brandStatementProduct}
+            src={product.src}
+            alt={product.alt}
             width={1254}
             height={1254}
-            sizes="(max-width: 560px) 88vw, 620px"
-          />
-        </div>
-        <div className={styles.bestSellerActions}>
-          <Link className="btn" href="/products/on-gold-standard-whey">官网产品详情</Link>
-          <a className="btn secondary" href={bestSellerTaobaoUrl} target="_blank" rel="noopener noreferrer">淘宝店购买</a>
+            sizes="(max-width: 760px) 31vw, 21vw"
+            key={product.src}
+          />)}
         </div>
       </div>
     </section>
