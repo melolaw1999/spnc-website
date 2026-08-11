@@ -168,10 +168,8 @@ export default function Home() {
       <div className="container billboard-inner contact-billboard">
         <div className="billboard-copy">
           <h2>联系我们</h2>
-          <p className="billboard-subtitle">日常咨询优先旺旺，需要留档的问题使用邮箱。</p>
           <div className={styles.contactService}>
             <TaobaoServiceButton />
-            <p>商品、订单与售后问题，可直接进入淘宝店联系在线客服。</p>
           </div>
           <div className="mail-strip mail-strip-two">
             <a href={mailto(publicContactEmail)}><span>{publicContactEmail}</span><small>品牌合作 / 通用联系</small></a>

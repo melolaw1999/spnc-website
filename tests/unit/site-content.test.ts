@@ -86,6 +86,8 @@ describe("官网定位与联系信息", () => {
     const siteConfig = readFileSync(path.join(process.cwd(), "src/lib/site.ts"), "utf8");
 
     expect(homePage).toContain("<TaobaoServiceButton />");
+    expect(homePage).not.toContain("日常咨询优先旺旺");
+    expect(homePage).not.toContain("商品、订单与售后问题，可直接进入淘宝店联系在线客服");
     expect(contactPage).toContain("<TaobaoServiceButton />");
     expect(serviceButton).toContain("旺旺客服");
     expect(serviceButton).toContain('target="_blank"');
