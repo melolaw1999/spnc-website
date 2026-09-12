@@ -1,0 +1,87 @@
+.main { background:#fff; color:#18212d; padding:0 0 100px; }
+.container { width:min(1100px,calc(100% - 72px)); margin:0 auto; }
+.intro { padding:92px 0 68px; }
+.eyebrow { margin:0; color:#0071d8; font-size:11px; font-weight:700; letter-spacing:.16em; }
+.intro h1 { margin:20px 0 25px; font-size:clamp(48px,5.6vw,72px); font-weight:650; line-height:1.12; letter-spacing:0; }
+.introText { margin:0; color:#636b76; font-size:18px; line-height:1.9; }
+.company { margin:24px 0 0; font-size:12px; color:#636b76; }
+.opening { border-top:1px solid #dce1e7; }
+.roleHeading { display:grid; grid-template-columns:minmax(0,1fr) 246px; gap:48px; align-items:center; padding:44px 0 48px; }
+.openRole { display:flex; align-items:center; gap:8px; margin:0 0 16px; color:#0071d8; font-size:12px; font-weight:600; }
+.openRole>span { width:6px; height:6px; border-radius:50%; background:#0071d8; }
+.roleHeading h2 { margin:0; font-size:clamp(28px,3vw,39px); line-height:1.32; font-weight:650; text-wrap:balance; }
+.roleLead { margin:15px 0 0; color:#636b76; font-size:14px; line-height:1.8; }
+.roleTags { display:flex; align-items:center; gap:0; flex-wrap:wrap; margin-top:23px; color:#586271; font-size:12px; }
+.roleTags span+span::before { content:"/"; margin:0 14px; color:#c1c7cf; }
+.salary { border-left:1px solid #e2e6eb; padding-left:32px; }
+.salary>p { margin:0 0 9px; color:#6a7380; font-size:12px; }
+.salary strong { font-size:39px; font-weight:600; font-variant-numeric:tabular-nums; }
+.salary div>span { color:#6a7380; font-size:13px; white-space:nowrap; }
+.primaryButton,.applyButton { display:inline-flex; justify-content:center; align-items:center; gap:24px; min-height:44px; border-radius:999px; padding:12px 20px; font-size:13px; font-weight:600; transition:background .18s ease,color .18s ease; }
+.primaryButton { margin-top:22px; background:#0071d8; color:#fff; }
+.primaryButton:hover { background:#005eb5; }
+.primaryButton:focus-visible,.applyButton:focus-visible,.email:focus-visible { outline:3px solid #58a9fa; outline-offset:5px; }
+.detailsSection { display:grid; grid-template-columns:200px minmax(0,1fr); gap:48px; padding:43px 0; border-top:1px solid #e5e8ed; }
+.sectionLabel { display:flex; align-items:baseline; gap:16px; }
+.sectionLabel>span { color:#a1a9b4; font-size:11px; font-variant-numeric:tabular-nums; }
+.sectionLabel h3 { margin:0; font-size:18px; font-weight:600; }
+.detailGrid,.workGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:42px; row-gap:28px; }
+.detailItem h4 { margin:0 0 9px; font-size:15px; line-height:1.5; font-weight:600; }
+.detailItem p { margin:0; color:#69717d; font-size:14px; line-height:1.85; }
+.workSection { padding-bottom:50px; }
+.application { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:68px; padding:54px 52px; margin-top:24px; background:#0d1c2c; border-radius:28px; color:#fff; scroll-margin-top:100px; }
+.application .eyebrow { color:#82bafb; }
+.application h2 { margin:23px 0 18px; font-size:clamp(25px,2.6vw,34px); font-weight:600; line-height:1.3; }
+.applicationHeading>p:not(.eyebrow) { max-width:310px; margin:0; color:#b8c4d0; font-size:14px; line-height:1.9; }
+.email { display:inline-flex; gap:12px; align-items:center; max-width:100%; margin-top:35px; font-size:clamp(18px,2vw,23px); font-weight:550; user-select:text; }
+.email>span { color:#82bafb; }
+.applyButton { display:flex; width:fit-content; margin-top:22px; color:#0d1c2c; background:#fff; }
+.applyButton:hover { background:#dcecff; }
+.applicationDetails { display:grid; gap:23px; padding-left:36px; border-left:1px solid #344251; }
+.applicationDetails h3 { margin:0 0 8px; color:#fff; font-size:13px; line-height:1.5; font-weight:600; }
+.applicationDetails p,.applicationDetails ul { margin:0; color:#b8c4d0; font-size:12px; line-height:1.85; }
+.applicationDetails ul { padding:0; list-style:none; }
+.subject { overflow-wrap:anywhere; }
+.example { padding-top:23px; border-top:1px solid #344251; }
+@media(max-width:900px) {
+  .container { width:calc(100% - 48px); }
+  .detailsSection { grid-template-columns:156px minmax(0,1fr); gap:28px; }
+  .roleHeading { grid-template-columns:minmax(0,1fr) 210px; gap:24px; }
+  .salary { padding-left:24px; }
+  .salary strong { font-size:34px; }
+  .detailGrid,.workGrid { column-gap:26px; }
+  .application { gap:32px; padding:40px 32px; }
+  .applicationDetails { padding-left:26px; }
+}
+@media(max-width:640px) {
+  .main { padding-bottom:56px; }
+  .container { width:calc(100% - 40px); }
+  .intro { padding:58px 0 40px; }
+  .intro h1 { margin:18px 0 22px; font-size:46px; }
+  .introText { font-size:15px; line-height:1.9; }
+  .company { margin-top:20px; font-size:11px; }
+  .roleHeading { grid-template-columns:1fr; gap:25px; padding:32px 0; }
+  .roleHeading h2 { font-size:28px; }
+  .roleLead { font-size:13px; }
+  .roleTags { margin-top:18px; font-size:11px; }
+  .roleTags span+span::before { margin:0 10px; }
+  .salary { display:grid; grid-template-columns:1fr auto; border-left:0; border-top:1px solid #edf0f4; padding:22px 0 0; align-items:center; gap:4px 10px; }
+  .salary>p { grid-column:1; margin:0; font-size:11px; }
+  .salary>div { grid-column:1; }
+  .salary strong { font-size:32px; }
+  .salary .primaryButton { grid-column:2; grid-row:1 / 3; margin:0; gap:10px; font-size:12px; padding:12px 16px; }
+  .detailsSection { grid-template-columns:1fr; gap:25px; padding:30px 0; }
+  .sectionLabel { gap:13px; }
+  .sectionLabel h3 { font-size:18px; }
+  .detailGrid,.workGrid { grid-template-columns:1fr; gap:21px; }
+  .detailItem h4 { font-size:14px; margin-bottom:6px; }
+  .detailItem p { font-size:13px; line-height:1.85; }
+  .workSection { padding-bottom:26px; }
+  .application { grid-template-columns:1fr; gap:34px; border-radius:22px; padding:34px 25px; margin-top:14px; scroll-margin-top:85px; }
+  .application h2 { font-size:29px; margin-top:18px; }
+  .applicationHeading>p:not(.eyebrow) { font-size:13px; }
+  .email { font-size:21px; gap:9px; margin-top:26px; }
+  .applicationDetails { padding:28px 0 0; border-left:0; border-top:1px solid #344251; }
+  .applyButton { margin-top:20px; }
+}
+@media(prefers-reduced-motion:reduce) { .primaryButton,.applyButton { transition:none; } }

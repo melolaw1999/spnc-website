@@ -8,6 +8,7 @@ const links = [
   ["文章", "/articles"],
   ["黑卡会员", "/membership"],
   ["售后登记", "/support"],
+  ["诚聘英才", "/careers"],
   ["联系我们", "/contact"],
 ] as const;
 
