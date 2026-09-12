@@ -28,6 +28,10 @@
 .detailGrid,.workGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:42px; row-gap:28px; }
 .detailItem h4 { margin:0 0 9px; font-size:15px; line-height:1.5; font-weight:600; }
 .detailItem p { margin:0; color:#69717d; font-size:14px; line-height:1.85; }
+.requirementsContent { min-width:0; }
+.requirementsLead { margin:0 0 26px; font-size:16px; line-height:1.8; font-weight:600; }
+.requirementsGrid>div:last-child { grid-column:1 / -1; }
+.preferred { margin-top:28px; padding-top:22px; border-top:1px solid #e5e8ed; }
 .workSection { padding-bottom:50px; }
 .application { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:68px; padding:54px 52px; margin-top:24px; background:#0d1c2c; border-radius:28px; color:#fff; scroll-margin-top:100px; }
 .application .eyebrow { color:#82bafb; }
@@ -76,6 +80,7 @@
   .detailGrid,.workGrid { grid-template-columns:1fr; gap:21px; }
   .detailItem h4 { font-size:14px; margin-bottom:6px; }
   .detailItem p { font-size:13px; line-height:1.85; }
+  .requirementsLead { margin-bottom:23px; font-size:14px; }
   .workSection { padding-bottom:26px; }
   .application { grid-template-columns:1fr; gap:34px; border-radius:22px; padding:34px 25px; margin-top:14px; scroll-margin-top:85px; }
   .application h2 { font-size:29px; margin-top:18px; }
