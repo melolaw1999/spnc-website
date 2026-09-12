@@ -1,3 +1,65 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: 44px;
+  align-items: start;
+}
+
+.identity {
+  min-width: 0;
+}
+
+.logo {
+  width: 230px;
+}
+
+.companyName {
+  max-width: 280px;
+  margin: 20px 0 8px;
+  color: #515154;
+  font-size: 13px;
+  line-height: 1.65;
+  text-wrap: balance;
+}
+
+.companyNameZh {
+  margin: 0;
+  color: #86868b;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.grid > .note {
+  grid-column: auto;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  .grid > .note {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .logo {
+    width: 210px;
+  }
+
+  .grid > .note {
+    grid-column: auto;
+  }
+}
+
 .legalBar {
   position: relative;
   margin-top: 44px;

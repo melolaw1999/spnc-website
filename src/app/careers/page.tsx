@@ -1,4 +1,5 @@
 import { pageMetadata } from "@/lib/site";
+import { companyNameEn, companyNameZh } from "@/data/company";
 import styles from "./page.module.css";
 
 export const metadata = pageMetadata(
@@ -33,10 +34,11 @@ export default function Careers() {
         <header className={styles.intro}>
           <p className={styles.eyebrow}>SPNC · CAREERS</p>
           <h1>加入 SPNC</h1>
+          <p className={styles.companyNameEn} lang="en">{companyNameEn}</p>
           <p className={styles.introText}>
             SPNC 理想营养专注运动营养产品的电商零售。
           </p>
-          <p className={styles.company}>湛江市萨瑟恩电子商务有限公司</p>
+          <p className={styles.company}>招聘主体：{companyNameZh}</p>
         </header>
 
         <section className={styles.opening} aria-labelledby="role-title">

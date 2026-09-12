@@ -11,9 +11,10 @@
 
 .serviceRow {
   display: flex;
-  gap: 18px;
+  flex-direction: column;
+  gap: 14px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 8px 0 28px;
 }
 
@@ -22,7 +23,7 @@
   color: #86868b;
   font-size: 14px;
   line-height: 1.7;
-  text-align: right;
+  text-align: center;
 }
 
 .grid {
@@ -48,6 +49,43 @@
   line-height: 1.7;
 }
 
+.companyIdentity {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+  margin-top: 12px;
+  padding: 32px 0;
+  border-top: 1px solid #e5e5e7;
+}
+
+.companyLogo {
+  width: 220px;
+  max-width: 100%;
+}
+
+.companyIdentity h2 {
+  margin: 0 0 10px;
+  color: #626268;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.companyName {
+  margin: 0;
+  color: #1d1d1f;
+  font-size: 17px;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
+.companyDetails {
+  margin: 12px 0 0;
+  color: #626268;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
 .notice {
   margin: 0;
   padding: 14px 18px;
@@ -68,12 +106,16 @@
   }
 
   .serviceRow {
-    display: grid;
-    gap: 14px;
     padding-bottom: 18px;
   }
 
-  .serviceRow p {
-    text-align: center;
+  .companyIdentity {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 0;
+  }
+
+  .companyName {
+    font-size: 16px;
   }
 }

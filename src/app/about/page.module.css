@@ -1,0 +1,50 @@
+.companyIdentity {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+  margin-top: 44px;
+  padding-top: 32px;
+  border-top: 1px solid #e5e5e7;
+}
+
+.companyLogo {
+  width: 220px;
+  max-width: 100%;
+}
+
+.companyIdentity > div > h2 {
+  margin: 0 0 10px;
+  color: #626268;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.companyIdentity .companyName {
+  margin: 0;
+  color: #1d1d1f;
+  font-size: 17px;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
+.companyIdentity .companyDetails {
+  margin: 12px 0 0;
+  color: #626268;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+@media (max-width: 560px) {
+  .companyIdentity {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 36px;
+    padding-top: 28px;
+  }
+
+  .companyIdentity .companyName {
+    font-size: 16px;
+  }
+}
