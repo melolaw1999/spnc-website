@@ -42,12 +42,11 @@
 .email>span { color:#82bafb; }
 .applyButton { display:flex; width:fit-content; margin-top:22px; color:#0d1c2c; background:#fff; }
 .applyButton:hover { background:#dcecff; }
-.applicationDetails { display:grid; gap:23px; padding-left:36px; border-left:1px solid #344251; }
+.applicationDetails { display:grid; align-content:start; gap:23px; padding-left:36px; border-left:1px solid #344251; }
 .applicationDetails h3 { margin:0 0 8px; color:#fff; font-size:13px; line-height:1.5; font-weight:600; }
 .applicationDetails p,.applicationDetails ul { margin:0; color:#b8c4d0; font-size:12px; line-height:1.85; }
 .applicationDetails ul { padding:0; list-style:none; }
 .subject { overflow-wrap:anywhere; }
-.example { padding-top:23px; border-top:1px solid #344251; }
 @media(max-width:900px) {
   .container { width:calc(100% - 48px); }
   .detailsSection { grid-template-columns:156px minmax(0,1fr); gap:28px; }

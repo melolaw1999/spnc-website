@@ -24,7 +24,7 @@ const requirements = [
 ];
 
 const applicationSubject = "应聘电商运营助理－姓名－现居城市";
-const applicationBody = "您好，我希望申请电商运营助理。\n\n教育背景：\n相关经历及掌握的工具：\n现居城市及可到岗时间：\n英语成绩、证书或实际使用经历（选填）：\n\n请简述一个解决问题的经历，课程、实习、个人项目或工作中的例子都可以：\n\n（请附上简历）";
+const applicationBody = "您好，我希望申请电商运营助理。\n\n教育背景：\n相关经历及掌握的工具：\n现居城市及可到岗时间：\n英语成绩、证书或实际使用经历（选填）：\n\n（请附上简历）";
 const applicationHref = "mailto:CONTACT@SPNC.CN?subject=" + encodeURIComponent(applicationSubject) + "&body=" + encodeURIComponent(applicationBody);
 
 export default function Careers() {
@@ -119,10 +119,6 @@ export default function Careers() {
                 <li>现居城市与可到岗时间</li>
                 <li>英语成绩、证书或实际使用经历（选填）</li>
               </ul>
-            </div>
-            <div className={styles.example}>
-              <h3>再分享一个小例子</h3>
-              <p>请在邮件正文简述一次解决问题的经历。课程、实习、个人项目或工作中的例子都可以。</p>
             </div>
           </div>
         </section>
