@@ -202,7 +202,9 @@ describe("官网定位与联系信息", () => {
     expect(homePage).toContain("10,000");
     expect(homePage).toContain("不可替代");
     expect(homePage).toContain('href="/on"');
-    expect(homePage).toContain("id=794493827958");
+    expect(homePage).toContain('<TaobaoButton label="淘宝店购买" secondary />');
+    expect(homePage).toContain("on-micronized-creatine-360g-blueberry-lemonade-front-transparent.webp");
+    expect(homePage).not.toContain("on-micronized-creatine-300g");
     expect(homePage).toContain("double-rich-chocolate-front-transparent-v2.png");
     expect(homePage).not.toContain("长期训练");
   });

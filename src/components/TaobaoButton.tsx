@@ -1,5 +1,6 @@
 import { taobaoStoreUrl } from "@/lib/site";
+import { TaobaoStoreLink } from "@/components/TaobaoStoreLink";
 
 export function TaobaoButton({ label, secondary = false }: { label: string; secondary?: boolean }) {
-  return <a className={`btn${secondary ? " secondary" : ""}`} href={taobaoStoreUrl} target="_blank" rel="noopener noreferrer">{label}</a>;
+  return <TaobaoStoreLink className={`btn${secondary ? " secondary" : ""}`} href={taobaoStoreUrl}>{label}</TaobaoStoreLink>;
 }

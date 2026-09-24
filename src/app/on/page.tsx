@@ -7,7 +7,8 @@ export const metadata = pageMetadata("ON 商品专区", "理想营养售卖品�
 
 export default function OnZone() {
   const domesticProducts = catalog.filter((product) => product.salesVersion === "国产版本");
-  const importedProducts = catalog.filter((product) => product.salesVersion !== "国产版本");
+  const importedProducts = catalog.filter((product) => product.salesVersion === "跨境进口");
+  const generalTradeProducts = catalog.filter((product) => product.salesVersion === "一般贸易");
 
   return <main>
     <section className="hero compact-hero"><div className="container">
@@ -20,6 +21,10 @@ export default function OnZone() {
       <section className="catalog-family" aria-labelledby="on-imported-title">
         <div className="catalog-family-head"><div><div className="eyebrow">Cross-Border Import Series</div><h2 id="on-imported-title">跨境进口系列</h2></div><p className="muted">境内保税仓发货的跨境进口商品，规格与实时库存以淘宝商品页为准。</p></div>
         <div className="grid">{importedProducts.map((product) => <ProductCard p={product} key={product.id} />)}</div>
+      </section>
+      <section className="catalog-family" aria-labelledby="on-general-trade-title">
+        <div className="catalog-family-head"><div><div className="eyebrow">General Trade Import Series</div><h2 id="on-general-trade-title">一般贸易进口系列</h2></div><p className="muted">原装进口、附中文标签，购买前请核对订单中的销售版本与口味。</p></div>
+        <div className="grid">{generalTradeProducts.map((product) => <ProductCard p={product} key={product.id} />)}</div>
       </section>
       <section className="catalog-family" aria-labelledby="on-domestic-title">
         <div className="catalog-family-head"><div><div className="eyebrow">Domestic Series</div><h2 id="on-domestic-title">ON 国产系列</h2></div><p className="muted">中国生产与中文包装系列，规格与实时库存以淘宝商品页为准。</p></div>

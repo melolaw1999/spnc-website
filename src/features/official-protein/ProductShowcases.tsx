@@ -1,9 +1,10 @@
-import { domesticGoldStandardData } from "@/data/domestic-gold-standard-whey";
+import { chinaMadeGoldStandardVariants, generalTradeGoldStandardVariants } from "@/data/domestic-gold-standard-whey";
 import goldStandardIsolateData from "@/data/gold-standard-isolate.json";
 import { goldStandardPreWorkoutData, micronizedCreatineData } from "@/data/official-supplements";
 import platinumHydrowheyData from "@/data/platinum-hydrowhey.json";
 import {
   domesticGoldStandardPageContent,
+  generalTradeGoldStandardPageContent,
   goldStandardPreWorkoutPageContent,
   hydrowheyPageContent,
   isolatePageContent,
@@ -50,8 +51,15 @@ export function PlatinumHydrowheyShowcase() {
 
 export function DomesticGoldStandardShowcase() {
   return <OfficialProteinShowcase
-    variants={buyerVariants(domesticGoldStandardData.variants as OfficialProteinVariant[])}
+    variants={buyerVariants(chinaMadeGoldStandardVariants)}
     content={domesticGoldStandardPageContent}
+  />;
+}
+
+export function GeneralTradeGoldStandardShowcase() {
+  return <OfficialProteinShowcase
+    variants={buyerVariants(generalTradeGoldStandardVariants)}
+    content={generalTradeGoldStandardPageContent}
   />;
 }
 

@@ -1,4 +1,4 @@
-import { domesticGoldStandardData } from "@/data/domestic-gold-standard-whey";
+import { chinaMadeGoldStandardVariants, generalTradeGoldStandardVariants } from "@/data/domestic-gold-standard-whey";
 import goldStandardIsolateData from "@/data/gold-standard-isolate.json";
 
 export type CatalogImage = {
@@ -77,6 +77,7 @@ export const catalog: CatalogProduct[] = [
     brand: "OPTIMUM NUTRITION",
     name: "金标乳清蛋白粉",
     type: "乳清蛋白",
+    salesVersion: "跨境进口",
     summary: "ON 金标乳清蛋白粉。购买前请在淘宝商品页核对规格、口味与销售版本。",
     highlights: ["每份约 24 克蛋白质", "2 磅与 5 磅规格"],
     featured: true,
@@ -98,6 +99,7 @@ export const catalog: CatalogProduct[] = [
     brand: "OPTIMUM NUTRITION",
     name: "金标分离乳清",
     type: "分离乳清",
+    salesVersion: "跨境进口",
     summary: "ON 金标分离乳清提供 5.2 磅醇享巧克力、5.02 磅浓郁香草及 3 磅档规格。实时库存以淘宝商品页为准。",
     highlights: ["分离乳清类别", "每份约 25 克蛋白质"],
     cardMeta: "5.2 磅巧克力 · 5.02 磅香草 · 3 磅",
@@ -129,19 +131,18 @@ export const catalog: CatalogProduct[] = [
     id: "on-domestic-gold-standard-whey",
     slug: "on-domestic-gold-standard-whey",
     brand: "OPTIMUM NUTRITION",
-    name: "金标乳清蛋白粉（中国制造 / 一般贸易进口）",
+    name: "金标乳清蛋白粉（中国制造）",
     type: "乳清蛋白",
     salesVersion: "国产版本",
-    summary: "中国制造收录 5 磅、4 磅、2 磅各 4 种口味；咸焦糖、摩卡卡布奇诺、巧克力薄荷、巧克力椰子与奶油香蕉归入一般贸易进口。",
-    highlights: ["中国制造 12 个组合", "一般贸易进口 5 个口味", "规格与销售版本联动"],
-    versionInfo: "中国制造与一般贸易进口共用一个产品页选择器，但销售版本、包装事实及标签参考分别注明。购买前请在淘宝商品页再次核对实际在售组合。",
+    summary: "中国制造金标乳清，提供 5 磅、4 磅、2 磅及双重巧克力、牛奶巧克力、草莓、香草冰激凌 4 种口味。",
+    highlights: ["3 个规格 · 4 种口味", "中国制造 · 中文包装"],
     featured: false,
-    variants: domesticGoldStandardData.variants.map((variant) => ({
+    variants: chinaMadeGoldStandardVariants.map((variant) => ({
       id: variant.id,
       size: variant.sizeLabel,
       flavor: variant.flavorZh,
     })),
-    images: domesticGoldStandardData.variants.map((variant) => image(
+    images: chinaMadeGoldStandardVariants.map((variant) => image(
       variant.frontImage.src,
       `ON 金标乳清蛋白粉 ${variant.sizeLabel} ${variant.flavorZh}产品图`,
       {
@@ -149,7 +150,35 @@ export const catalog: CatalogProduct[] = [
         height: variant.frontImage.height,
         variantIds: [variant.id],
         caption: `${variant.sizeGroupLabel} · ${variant.flavorZh}`,
-        sourceType: variant.sizeGroup.startsWith("domestic-") ? "user-confirmed-copy" : "brand-official-copy",
+        sourceType: "user-confirmed-copy",
+      },
+    )),
+  },
+  {
+    ...shared,
+    id: "on-general-trade-gold-standard-whey",
+    slug: "on-general-trade-gold-standard-whey",
+    brand: "OPTIMUM NUTRITION",
+    name: "金标乳清蛋白粉（一般贸易进口）",
+    type: "乳清蛋白",
+    salesVersion: "一般贸易",
+    summary: "一般贸易进口金标乳清，提供 5 磅咸焦糖、摩卡卡布奇诺、巧克力薄荷、巧克力椰子与奶油香蕉口味。",
+    highlights: ["5 磅 · 5 种口味", "一般贸易进口 · 中文标签"],
+    featured: false,
+    variants: generalTradeGoldStandardVariants.map((variant) => ({
+      id: variant.id,
+      size: variant.sizeLabel,
+      flavor: variant.flavorZh,
+    })),
+    images: generalTradeGoldStandardVariants.map((variant) => image(
+      variant.frontImage.src,
+      `ON 金标乳清蛋白粉 ${variant.sizeLabel} ${variant.flavorZh}产品图`,
+      {
+        width: variant.frontImage.width,
+        height: variant.frontImage.height,
+        variantIds: [variant.id],
+        caption: `${variant.sizeGroupLabel} · ${variant.flavorZh}`,
+        sourceType: "brand-official-copy",
       },
     )),
   },
@@ -221,6 +250,7 @@ export const catalog: CatalogProduct[] = [
     brand: "OPTIMUM NUTRITION",
     name: "白金水解乳清",
     type: "水解乳清",
+    salesVersion: "跨境进口",
     summary: "ON 白金水解乳清提供 3.61 磅与 1.8 磅巧克力规格，购买前请在淘宝商品页核对版本与库存。",
     highlights: ["水解乳清类别", "Turbo Chocolate（巧克力）"],
     featured: true,
@@ -240,6 +270,7 @@ export const catalog: CatalogProduct[] = [
     brand: "OPTIMUM NUTRITION",
     name: "微粉化肌酸粉",
     type: "肌酸",
+    salesVersion: "跨境进口",
     summary: "ON 微粉化肌酸粉 360 克蓝莓柠檬味跨境规格，包装标示每份 5 克一水肌酸，共 60 份。",
     highlights: ["360 克蓝莓柠檬味", "每份 5 克一水肌酸", "每桶 60 份"],
     featured: true,
@@ -257,6 +288,7 @@ export const catalog: CatalogProduct[] = [
     brand: "OPTIMUM NUTRITION",
     name: "金标训练前配方",
     type: "训练前配方",
+    salesVersion: "跨境进口",
     summary: "ON 金标训练前配方 300 克蓝莓柠檬味，包装正面标示每份 175 毫克咖啡因、3.3 克一水肌酸和 1.6 克 β-丙氨酸。",
     highlights: ["每份 175 毫克咖啡因", "每份 3.3 克一水肌酸", "30 份"],
     featured: false,

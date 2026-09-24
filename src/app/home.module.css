@@ -802,3 +802,28 @@
     border-left: 0;
   }
 }
+
+/* 首屏标题与操作共用布局，避免内部继承整屏高度将操作推出手机首屏。 */
+.hero.hero { display: flex; min-height: clamp(600px, calc(100svh - 54px), 860px); }
+.hero :global(.home-hero-content) { min-height: 0; padding-top: 64px; padding-bottom: 72px; }
+.heroCopy { width: 43%; }
+.hero .heroCopy h1 { width: 100%; }
+.heroActions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.quickLinks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-top: 32px; padding-bottom: 48px; }
+.quickLinks a { position: relative; display: grid; gap: 8px; padding: 24px 36px 24px 0; border-top: 1px solid #d9dce0; }
+.quickLinks span { font-size: 22px; font-weight: 650; }
+.quickLinks small { color: #646971; font-size: 14px; }
+.quickLinks b { position: absolute; right: 0; top: 24px; color: #0879df; font-size: 22px; font-weight: 400; }
+.quickLinks a:hover span { color: #0879df; }
+@media (max-width: 760px) {
+  .hero.hero { min-height: max(580px, calc(100svh - 50px)); }
+  .hero :global(.home-hero-content) { padding-top: 210px; padding-bottom: 38px; }
+  .heroCopy { width: 100%; }
+  .hero .heroCopy h1 { max-width: 480px; font-size: clamp(38px, 10.5vw, 60px); }
+  .heroActions { gap: 10px; margin-top: 24px; }
+  .heroActions :global(.btn) { padding: 14px 21px; min-height: 48px; }
+  .heroActions :global(.secondary) { background: rgba(255, 255, 255, .94); color: #17191d; border-color: transparent; }
+  .quickLinks { grid-template-columns: 1fr; gap: 0; padding-top: 22px; padding-bottom: 30px; }
+  .quickLinks a { padding: 20px 32px 20px 0; }
+  .quickLinks span { font-size: 20px; }
+}

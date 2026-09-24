@@ -66,3 +66,8 @@
 .gold-front-facts-copy p,.gold-front-facts-note{margin:0;color:#515154;font-size:13px;line-height:1.75}
 .gold-front-facts-note{padding-top:18px;border-top:1px solid var(--line)}
 @media(max-width:560px){.gold-nutrition-stage.is-fact-sheet{min-height:0;padding:24px 18px}.gold-front-facts-card dl{grid-template-columns:1fr}.gold-front-facts-card h3{font-size:36px}}
+
+.gold-version-links{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:0 0 20px;font-size:13px;line-height:1.6}
+.gold-version-links>span{color:#737373}.gold-version-links a{text-decoration:underline;text-underline-offset:4px}
+.domestic-gold-standard-page .gold-product-copy h1{font-size:clamp(44px,4.6vw,62px);line-height:1.08;letter-spacing:-.04em}
+@media(max-width:860px){.domestic-gold-standard-page .gold-product-copy h1{font-size:clamp(36px,10.5vw,48px)}}

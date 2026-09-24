@@ -50,8 +50,7 @@ const officialVariant = (size: "2lb" | "5lb", slug: string) => {
   return variant as GoldStandardOfficialVariant;
 };
 
-const domesticVariants = domesticSizes.flatMap((size) => domesticFlavors.map((flavor) => {
-  const reference = officialVariant(size.assetSize === "2lb" ? "2lb" : "5lb", flavor.slug);
+export const chinaMadeGoldStandardVariants = domesticSizes.flatMap((size) => domesticFlavors.map((flavor) => {
   const servings = size.servings[flavor.slug];
   return {
     id: `on-domestic-gsw-${size.assetSize}-${flavor.slug}`,
@@ -64,21 +63,20 @@ const domesticVariants = domesticSizes.flatMap((size) => domesticFlavors.map((fl
     flavor: flavor.en,
     flavorZh: flavor.zh,
     availableOnOfficialSite: true,
-    sourceStatus: `中国制造在售组合已核对；正面图对应 ${size.sizeLabel} ${flavor.zh}。营养与配料采用 ON 官网同口味资料，仅供参考。`,
-    servingSize: reference.servingSize
-      ? `${reference.servingSize.replace("g", " 克").replace("(About 1 Scoop)", "（约 1 勺）")}（官网同口味参考）`
-      : "请以实际中国包装背标为准",
+    sourceStatus: `中国制造包装正面对应 ${size.sizeLabel} ${flavor.zh}；未取得对应背标，不使用其他销售地区的营养与配料数据。`,
+    servingSize: null,
     servingsPerContainer: `${servings}（中国包装正面）`,
     proteinPerServing: "约 24 g（中国包装正面）",
-    bcaaInformation: "5.5 g（官网同口味参考）",
-    calories: reference.calories,
-    ingredients: reference.ingredients,
-    nutritionReference: {
-      ...reference.nutritionReference,
-      servingsPerContainerZh: `${servings}（中国包装正面）`,
-      referenceNoteZh: `所选中国制造包装正面已核对规格、口味、每份约 24 克蛋白质及约 ${servings.replace("约 ", "")}；营养表、BCAA、配料与过敏原采用 ON 官网当前 ${flavor.zh}同口味资料，仅供阅读参考，不作为中国制造版本背标。`,
-      dailyValueNoteZh: "表中每日参考值为所引用官网标签体系，仅用于阅读同口味资料，不等同于中国营养标签 NRV%。",
-    },
+    bcaaInformation: "以实际包装标签为准",
+    calories: null,
+    ingredients: null,
+    nutritionReference: null,
+    facts: [
+      { label: "每份蛋白质", value: "约 24 g" },
+      { label: "每桶份数", value: servings },
+      { label: "净含量", value: size.size },
+      { label: "口味", value: flavor.zh },
+    ],
     frontImage: {
       src: `/assets/optimized/products/on/domestic/gold-standard-whey/selector/${size.assetSize}/${flavor.slug}/product-cutout.webp`,
       width: flavor.slug === "double-rich-chocolate" && size.assetSize !== "2lb" ? 1254 : 1200,
@@ -88,7 +86,7 @@ const domesticVariants = domesticSizes.flatMap((size) => domesticFlavors.map((fl
   };
 }));
 
-const generalTradeVariants = generalTradeFlavors.map((flavor) => {
+export const generalTradeGoldStandardVariants = generalTradeFlavors.map((flavor) => {
   if (flavor.slug === "salted-caramel") {
     return {
       id: "on-general-trade-gsw-5lb-salted-caramel",
@@ -109,6 +107,12 @@ const generalTradeVariants = generalTradeFlavors.map((flavor) => {
       calories: null,
       ingredients: null,
       nutritionReference: null,
+      facts: [
+        { label: "每份蛋白质", value: "约 24 g" },
+        { label: "每桶份数", value: "约 72 份" },
+        { label: "净含量", value: "2.27 千克" },
+        { label: "口味", value: flavor.zh },
+      ],
       frontImage: {
         src: "/assets/optimized/products/on/gold-standard-whey/selector/5lb/salted-caramel/product-cutout.webp",
         width: 800,
@@ -120,7 +124,6 @@ const generalTradeVariants = generalTradeFlavors.map((flavor) => {
 
   const reference = officialVariant("5lb", flavor.slug);
   return {
-    ...reference,
     id: `on-general-trade-gsw-5lb-${flavor.slug}`,
     variantId: `general-trade-5lb-${flavor.slug}`,
     sku: "public-channel-verified",
@@ -128,18 +131,28 @@ const generalTradeVariants = generalTradeFlavors.map((flavor) => {
     sizeGroupLabel: "一般贸易进口 · 5 磅",
     size: "2.27 千克",
     sizeLabel: "5 磅（2.27 千克）",
+    flavor: flavor.en,
     flavorZh: flavor.zh,
     availableOnOfficialSite: true,
-    sourceStatus: `一般贸易进口 5 磅 ${flavor.zh}在售组合已核对；营养标签与中文对照采用 ON 官网当前同口味资料，仅供参考。`,
-    nutritionReference: {
-      ...reference.nutritionReference,
-      referenceNoteZh: `当前展示一般贸易进口 5 磅 ${flavor.zh}产品图；营养表、配料和过敏原采用 ON 官网当前同口味 5 磅标签资料，仅供参考，最终以实际到货中文背标为准。`,
-    },
+    sourceStatus: `一般贸易进口 5 磅 ${flavor.zh}在售组合已核对；保留品牌产品图，未取得对应中文背标，不使用其他销售地区的营养与配料数据。`,
+    servingSize: null,
+    servingsPerContainer: "以实际包装标签为准",
+    proteinPerServing: "以实际包装标签为准",
+    bcaaInformation: "以实际包装标签为准",
+    calories: null,
+    ingredients: null,
+    nutritionReference: null,
+    nutritionImage: null,
+    frontImage: reference.frontImage,
+    facts: [
+      { label: "净含量", value: "2.27 千克" },
+      { label: "口味", value: flavor.zh },
+    ],
   };
 });
 
 export const domesticGoldStandardData = {
   productName: "GOLD STANDARD WHEY 金标乳清蛋白粉｜中国制造 / 一般贸易进口",
   retrievedAt: "2026-07-31T00:00:00.000Z",
-  variants: [...domesticVariants, ...generalTradeVariants],
+  variants: [...chinaMadeGoldStandardVariants, ...generalTradeGoldStandardVariants],
 };

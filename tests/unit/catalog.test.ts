@@ -6,7 +6,7 @@ import { siteUrl, taobaoStoreUrl } from "@/lib/site";
 
 describe("生产商品目录", () => {
   it("商品 slug 唯一且公开目录完整", () => {
-    expect(catalog).toHaveLength(9);
+    expect(catalog).toHaveLength(10);
     expect(new Set(catalog.map((product) => product.slug)).size).toBe(catalog.length);
   });
 
@@ -15,7 +15,8 @@ describe("生产商品目录", () => {
     expect(catalog.map((product) => product.name)).toEqual([
       "金标乳清蛋白粉",
       "金标分离乳清",
-      "金标乳清蛋白粉（中国制造 / 一般贸易进口）",
+      "金标乳清蛋白粉（中国制造）",
+      "金标乳清蛋白粉（一般贸易进口）",
       "国产肌酸粉",
       "国产谷氨酰胺粉",
       "国产双层香脆乳清蛋白棒",
@@ -32,7 +33,7 @@ describe("生产商品目录", () => {
   it("国产系列按版本独立登记并绑定对应图片", () => {
     const domesticProducts = catalog.filter((product) => product.salesVersion === "国产版本");
     expect(domesticProducts.map((product) => product.name)).toEqual([
-      "金标乳清蛋白粉（中国制造 / 一般贸易进口）",
+      "金标乳清蛋白粉（中国制造）",
       "国产肌酸粉",
       "国产谷氨酰胺粉",
       "国产双层香脆乳清蛋白棒",
@@ -45,6 +46,19 @@ describe("生产商品目录", () => {
     for (const product of domesticProducts) {
       expect(product.images.flatMap((item) => item.variantIds).sort()).toEqual(product.variants.map((variant) => variant.id).sort());
     }
+  });
+
+  it("一般贸易与国产独立分类，全部组合只归属一个商品页", () => {
+    const domestic = catalog.find((product) => product.id === "on-domestic-gold-standard-whey")!;
+    const generalTrade = catalog.find((product) => product.id === "on-general-trade-gold-standard-whey")!;
+    expect(domestic.variants).toHaveLength(12);
+    expect(generalTrade.salesVersion).toBe("一般贸易");
+    expect(generalTrade.variants).toHaveLength(5);
+    expect(domestic.variants.every((variant) => variant.id.startsWith("on-domestic-"))).toBe(true);
+    expect(generalTrade.variants.every((variant) => variant.id.startsWith("on-general-trade-"))).toBe(true);
+    const ids = catalog.flatMap((product) => product.variants.map((variant) => variant.id));
+    expect(new Set(ids).size).toBe(ids.length);
+    expect(catalog.every((product) => product.salesVersion)).toBe(true);
   });
 
   it("谷氨酰胺只保留当前在售的国产版本", () => {

@@ -1,17 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HomeCarousel } from "@/components/HomeCarousel";
+import { TaobaoButton } from "@/components/TaobaoButton";
 import { TaobaoServiceButton } from "@/components/TaobaoServiceButton";
 import { catalog, publicSalesVersions } from "@/data/catalog";
 import { publicContactEmail, serviceEmail, mailto } from "@/data/contacts";
 import styles from "./home.module.css";
 
-const bestSellerTaobaoUrl = "https://item.taobao.com/item.htm?id=794493827958&mi_id=0000-9V2LcrTfxjJgXjEcUmo8aM2EtipRAyJ6fZTVLQyMow&spm=a21xtw.29178619.0.0&xxc=shop&sku_properties=1627207%3A10026360243";
-
 const brandStatementProducts = [
   {
-    src: "/assets/products/on/creatine/on-micronized-creatine-300g-unflavored-front-transparent-v2.png",
-    alt: "ON 一水肌酸粉",
+    src: "/assets/optimized/products/on/creatine/on-micronized-creatine-360g-blueberry-lemonade-front-transparent.webp",
+    alt: "ON 微粉化肌酸粉 360 克蓝莓柠檬味",
   },
   {
     src: "/assets/products/on/hydro-whey/on-platinum-hydrowhey-1-8lb-turbo-chocolate-front.png",
@@ -68,7 +67,7 @@ export default function Home() {
   const featured = catalog.filter((product) => product.featured).slice(0, 4);
   return <main className="apple-home">
     <HomeCarousel labels={["品牌主视觉", "理想营养", "三个版本", "TEAM ON", "防伪溯源"]}>
-    <section className="home-hero" aria-label="为你的下一次突破做好准备">
+    <section className={`home-hero ${styles.hero}`} aria-label="为你的下一次突破做好准备">
       <div className="home-hero-visual">
         <Image
           src="/assets/hero/spnc-finish-line-rain.png"
@@ -79,7 +78,13 @@ export default function Home() {
         />
       </div>
       <div className="container home-hero-content">
-        <h1>为你的下一次突破做好准备</h1>
+        <div className={styles.heroCopy}>
+          <h1>为你的下一次突破做好准备</h1>
+          <div className={styles.heroActions}>
+            <Link className="btn" href="/on">浏览 ON 商品</Link>
+            <TaobaoButton label="前往淘宝店" secondary />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -93,7 +98,7 @@ export default function Home() {
           <p className={styles.brandStatementBody}>持续供应不可替代的<br />专业运动营养品。</p>
           <div className={styles.brandStatementActions}>
             <Link className="btn" href="/on">浏览 ON 专区</Link>
-            <a className="btn secondary" href={bestSellerTaobaoUrl} target="_blank" rel="noopener noreferrer">淘宝店购买</a>
+            <TaobaoButton label="淘宝店购买" secondary />
           </div>
         </div>
 
@@ -194,6 +199,12 @@ export default function Home() {
       </div>
     </section>
     </HomeCarousel>
+
+    <nav className={`container ${styles.quickLinks}`} aria-label="商品与选购帮助">
+      <Link href="/on"><span>ON 商品</span><small>按版本选规格与口味</small><b aria-hidden="true">↗</b></Link>
+      <Link href="/versions"><span>版本说明</span><small>了解三种销售版本</small><b aria-hidden="true">↗</b></Link>
+      <Link href="/authenticity"><span>防伪溯源</span><small>查看包装与查验方式</small><b aria-hidden="true">↗</b></Link>
+    </nav>
 
     <section className="home-billboard home-billboard-contact">
       <div className="container billboard-inner contact-billboard">

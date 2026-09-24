@@ -7,6 +7,7 @@ import { domesticGoldStandardData } from "@/data/domestic-gold-standard-whey";
 import { goldStandardPreWorkoutData, micronizedCreatineData } from "@/data/official-supplements";
 import {
   domesticGoldStandardPageContent,
+  generalTradeGoldStandardPageContent,
   goldStandardPreWorkoutPageContent,
   hydrowheyPageContent,
   isolatePageContent,
@@ -70,6 +71,22 @@ describe("中国制造与一般贸易金标乳清完整产品页", () => {
     expect([fourPound?.size, fourPound?.servingsPerContainer]).toEqual(["1.8 千克", "约 59 份（中国包装正面）"]);
   });
 
+  it("中国制造及一般贸易不借用其他销售地区的背标数据", () => {
+    for (const variant of domesticGoldStandardData.variants) {
+      expect(variant.servingSize).toBeNull();
+      expect(variant.calories).toBeNull();
+      expect(variant.ingredients).toBeNull();
+      expect(variant.nutritionReference).toBeNull();
+      expect(variant.nutritionImage).toBeNull();
+      expect(variant.bcaaInformation).not.toMatch(/5[.]5/);
+      expect(variant.facts).toContainEqual({ label: "口味", value: variant.flavorZh });
+    }
+    expect(domesticGoldStandardData.variants.find((item) => item.id === "on-domestic-gsw-4lb-double-rich-chocolate")?.facts)
+      .toContainEqual({ label: "每桶份数", value: "约 59 份" });
+    expect(domesticGoldStandardData.variants.find((item) => item.id === "on-general-trade-gsw-5lb-mocha-cappuccino")?.facts)
+      .toEqual([{ label: "净含量", value: "2.27 千克" }, { label: "口味", value: "摩卡卡布奇诺" }]);
+  });
+
   it("买家页面不展示内部素材来源和制作过程说明", () => {
     const publicCopy = [...domesticGoldStandardPageContent.overview, ...domesticGoldStandardPageContent.benefits].join(" ");
     expect(publicCopy).not.toMatch(/用户提供|公开缓存|按你确认|素材|AI 重绘|像素抠图/);
@@ -118,12 +135,13 @@ describe("微粉化肌酸与金标训练前配方完整产品页", () => {
   });
 });
 
-describe("五张产品页的路由与说明", () => {
+describe("独立产品页的路由与说明", () => {
   it("使用独立交互式产品页组件", () => {
     const route = readFileSync(path.join(process.cwd(), "src/app/products/[slug]/page.tsx"), "utf8");
     expect(route).toContain("GoldStandardIsolateShowcase");
     expect(route).toContain("PlatinumHydrowheyShowcase");
     expect(route).toContain("DomesticGoldStandardShowcase");
+    expect(route).toContain("GeneralTradeGoldStandardShowcase");
     expect(route).toContain("MicronizedCreatineShowcase");
     expect(route).toContain("GoldStandardPreWorkoutShowcase");
   });
@@ -132,6 +150,7 @@ describe("五张产品页的路由与说明", () => {
     isolatePageContent,
     hydrowheyPageContent,
     domesticGoldStandardPageContent,
+  generalTradeGoldStandardPageContent,
     micronizedCreatinePageContent,
     goldStandardPreWorkoutPageContent,
   ])("$slug 提供完整 FAQ", (content) => {

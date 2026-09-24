@@ -8,6 +8,7 @@ import { TaobaoButton } from "@/components/TaobaoButton";
 import { GoldStandardShowcase } from "@/features/gold-standard/GoldStandardShowcase";
 import {
   DomesticGoldStandardShowcase,
+  GeneralTradeGoldStandardShowcase,
   GoldStandardIsolateShowcase,
   GoldStandardPreWorkoutShowcase,
   MicronizedCreatineShowcase,
@@ -48,6 +49,9 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
   }
   if (product.id === "on-domestic-gold-standard-whey") {
     return <main className="gold-standard-page official-protein-page domestic-gold-standard-page"><DomesticGoldStandardShowcase /></main>;
+  }
+  if (product.id === "on-general-trade-gold-standard-whey") {
+    return <main className="gold-standard-page official-protein-page domestic-gold-standard-page"><GeneralTradeGoldStandardShowcase /></main>;
   }
   if (product.id === "on-micronized-creatine") {
     return <main className="gold-standard-page official-protein-page creatine-page"><MicronizedCreatineShowcase /></main>;

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { TaobaoButton } from "@/components/TaobaoButton";
 import type { ProteinPageContent } from "@/features/official-protein/content";
@@ -114,6 +115,10 @@ export function OfficialProteinShowcase({
               : content.productNameZh}
           </h1>
           <p className="gold-intro">{content.intro}</p>
+          {content.relatedVersions && <nav className="gold-version-links" aria-label="其他销售版本">
+            <span>其他版本</span>
+            {content.relatedVersions.map((version) => <Link href={version.href} key={version.href}>{version.label} →</Link>)}
+          </nav>}
 
           <div className="gold-selector-panel" aria-label={content.selectorAria}>
             <label>
@@ -220,8 +225,8 @@ export function OfficialProteinShowcase({
           <p>当前展示：<strong>{selectedVariant.sizeLabel} · {selectedVariant.flavorZh}</strong></p>
           <p className="muted">{content.nutritionIntro || "切换上方规格与口味后，营养成分和配料信息会同步更新。"}</p>
           <details className="gold-ingredients" open>
-            <summary>英文配料原文</summary>
-            <p>{selectedVariant.ingredients || "当前没有可核对的配料文本，请以实际到货包装标签为准。"}</p>
+            <summary>{selectedVariant.ingredients ? "英文配料原文" : "配料与过敏原"}</summary>
+            <p>{selectedVariant.ingredients || "配料与过敏原请查看对应实物标签，购买前也可联系淘宝店客服核对。"}</p>
           </details>
           <div className="notice">标签内容可能因销售地区、规格和批次不同而变化，请以淘宝订单与实际到货包装为准。</div>
         </div>
@@ -241,7 +246,7 @@ export function OfficialProteinShowcase({
               <h3>{selectedVariant.sizeLabel} · {selectedVariant.flavorZh}</h3>
               <dl>{selectedVariant.facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl>
               <div className="gold-front-facts-copy">
-                <strong>配料与背标状态</strong>
+                <strong>配料与标签</strong>
                 <p>{selectedVariant.ingredients || "请以实际到货包装标签为准。"}</p>
               </div>
               <p className="gold-front-facts-note">营养成分、配料与食用方式请以实际到货包装为准。</p>

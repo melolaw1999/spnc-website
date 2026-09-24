@@ -13,6 +13,7 @@ export type ProteinPageContent = {
   productAltNameZh: string;
   intro: string;
   factsNote?: string;
+  relatedVersions?: { label: string; href: string }[];
   selectorAria: string;
   infoTitle: string;
   infoIntro: string;
@@ -158,40 +159,70 @@ export const hydrowheyPageContent: ProteinPageContent = {
 export const domesticGoldStandardPageContent: ProteinPageContent = {
   slug: "on-domestic-gold-standard-whey",
   defaultVariantId: "on-domestic-gsw-5lb-double-rich-chocolate",
-  eyebrow: "OPTIMUM NUTRITION · 中国制造 / 一般贸易进口",
-  productNameZh: "金标乳清蛋白粉（中国制造 / 一般贸易进口）",
-  productNameLines: ["金标乳清蛋白粉", "中国制造 / 一般贸易进口"],
-  productAltNameZh: "ON 金标乳清蛋白粉",
-  intro: "中国制造提供 5 磅、4 磅、2 磅及 4 种经典口味；一般贸易进口另有 5 种补充口味。",
-  factsNote: "不同销售版本、规格和口味的每份用量、配料及营养成分可能不同，请以实际到货包装为准。",
-  selectorAria: "选择金标乳清中国制造或一般贸易进口规格与口味",
-  infoTitle: "了解中国制造 / 一般贸易进口金标乳清",
-  infoIntro: "中国制造与一般贸易进口在生产地、标签语言、口味和流通方式上有所不同，请按订单中的销售版本选择。",
-  overviewTitle: "中国制造与一般贸易进口",
+  eyebrow: "OPTIMUM NUTRITION · 中国制造",
+  productNameZh: "金标乳清蛋白粉（中国制造）",
+  productNameLines: ["金标乳清蛋白粉", "中国制造"],
+  productAltNameZh: "ON 中国制造金标乳清蛋白粉",
+  intro: "中国制造，中文包装。提供 5 磅、4 磅、2 磅及 4 种经典口味。",
+  factsNote: "以上数字来自所选包装正面。每份用量、完整营养成分、配料与过敏原请查看对应实物标签。",
+  relatedVersions: [
+    { label: "跨境进口版", href: "/products/on-gold-standard-whey" },
+    { label: "一般贸易进口版", href: "/products/on-general-trade-gold-standard-whey" },
+  ],
+  selectorAria: "选择金标乳清中国制造规格与口味",
+  infoTitle: "了解中国制造金标乳清",
+  infoIntro: "按规格与口味选择，购买前请在淘宝商品页核对销售版本及实时库存。",
+  overviewTitle: "中国制造 · 中文包装",
   overview: [
     "中国制造系列提供 5 磅、4 磅、2 磅，每个规格包含双重巧克力、牛奶巧克力、草莓和香草冰激凌。",
-    "咸焦糖、摩卡卡布奇诺、巧克力薄荷、巧克力椰子和奶油香蕉属于一般贸易进口口味。",
-    "不同规格与口味的包装、每桶份数及营养信息可能不同，请以淘宝订单和实际到货标签为准。",
+    "不同规格与口味的每桶份数可能不同，切换选项可查看对应包装信息。",
+    "配料、过敏原及营养成分应以当前产品实物标签为准，其他销售地区的同名口味不能替代当前版本标签。",
   ],
-  benefits: [
-    "中国制造提供 3 个磅数与 4 种口味",
-    "一般贸易进口提供 5 种补充口味",
-    "销售版本、规格与口味清晰区分",
-    "每份约 24 克蛋白质",
-    "多种乳清蛋白来源组合",
-  ],
+  benefits: ["3 个规格与 4 种口味", "中国制造与中文包装", "每份约 24 克蛋白质"],
   suggestedUseNotes: [
     "量勺可能在运输过程中沉入粉末，首次开桶可用清洁、干燥器具轻轻寻找。",
-    "不同口味、磅数和销售版本的每勺克数可能不同；没有对应中文背标时，不应仅按其他地区标签自行换算。",
+    "每份用量与冲调方式请遵循对应包装说明，不应按其他地区或其他口味的标签自行换算。",
     "蛋白质补充剂不能替代均衡饮食，请结合个人饮食与训练安排使用。",
   ],
-  nutritionTitle: "营养成分与配料",
-  nutritionIntro: "不同销售版本、规格与口味的营养成分可能不同，请选择对应组合查看，并以实际到货标签为准。",
-  translationTitle: "中文标签对照",
+  nutritionTitle: "包装信息与标签说明",
+  nutritionIntro: "以下为所选规格的包装正面信息。完整营养成分、配料和过敏原请以对应实物标签为准；购买前如需核对，可联系淘宝店客服。",
   faqs: sharedFaqs(
-    "金标乳清中国制造 / 一般贸易进口",
+    "中国制造金标乳清",
     "#on-domestic-gold-standard-whey-selector",
-    "中国制造版本使用中国包装与中文食品标签；一般贸易进口版本的口味、标签和规格标示可能不同。页面会把当前包装可确认的信息与其他地区官网参考分开标注；购买时请以订单中的销售版本和实际到货标签为准。",
+    "中国制造、一般贸易进口与跨境进口的生产地、包装、配料和标签可能不同。请按订单中的销售版本核对实际到货包装，不要直接套用其他销售地区的营养成分或过敏原信息。",
+  ),
+};
+
+export const generalTradeGoldStandardPageContent: ProteinPageContent = {
+  slug: "on-general-trade-gold-standard-whey",
+  defaultVariantId: "on-general-trade-gsw-5lb-salted-caramel",
+  eyebrow: "OPTIMUM NUTRITION · 一般贸易进口",
+  productNameZh: "金标乳清蛋白粉（一般贸易进口）",
+  productNameLines: ["金标乳清蛋白粉", "一般贸易进口"],
+  productAltNameZh: "ON 一般贸易进口金标乳清蛋白粉",
+  intro: "原装进口，附中文标签。提供 5 磅咸焦糖、摩卡卡布奇诺、巧克力薄荷、巧克力椰子和奶油香蕉口味。",
+  factsNote: "包装可能随批次更新。每份用量、完整营养成分、配料与过敏原请查看实际到货中文标签。",
+  relatedVersions: [
+    { label: "跨境进口版", href: "/products/on-gold-standard-whey" },
+    { label: "中国制造版", href: "/products/on-domestic-gold-standard-whey" },
+  ],
+  selectorAria: "选择金标乳清一般贸易进口规格与口味",
+  infoTitle: "了解一般贸易进口金标乳清",
+  infoIntro: "一般贸易进口与中国制造分别展示，购买时请核对淘宝商品页中的销售版本。",
+  overviewTitle: "一般贸易进口 · 中文标签",
+  overview: [
+    "一般贸易进口金标乳清提供 5 磅（2.27 千克）规格，可选择咸焦糖、摩卡卡布奇诺、巧克力薄荷、巧克力椰子和奶油香蕉。",
+    "产品图用于口味与包装识别，具体包装与中文标签以实际到货批次为准。",
+    "不同销售地区的同名口味可能有不同配料与营养成分，请勿将海外标签直接视为本版本标签。",
+  ],
+  benefits: ["5 磅（2.27 千克）规格", "5 种口味可选", "一般贸易进口与中文标签"],
+  suggestedUseNotes: domesticGoldStandardPageContent.suggestedUseNotes,
+  nutritionTitle: "包装信息与标签说明",
+  nutritionIntro: "完整营养成分、配料、过敏原和食用方式请查看实际到货中文标签。购买前如需核对，可联系淘宝店客服。",
+  faqs: sharedFaqs(
+    "一般贸易进口金标乳清",
+    "#on-general-trade-gold-standard-whey-selector",
+    "一般贸易进口属于进口商品，附中文标签；中国制造属于国产版本，跨境进口通常以英文包装为主。不同版本的配料、营养成分与过敏原请分别核对，不应相互套用。",
   ),
 };
 
