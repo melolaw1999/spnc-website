@@ -31,7 +31,7 @@ export default function MembershipAccountPage() {
           <article><span>会籍剩余</span><strong>365<small>天</small></strong><p>2027年8月2日到期</p></article>
         </div>
 
-        <section className={styles.accountTasting}><div><span>BLACK CARD · TASTING ROOM</span><h2>这一期，尝点新口味。</h2><p>每 3 个月任选 3 份，每份 15g，试喝装免费。随单免运费，单独寄 ¥6。</p><small>当前为内测菜单体验，领取资格与实物库存尚未开放。</small></div><Link className={styles.primaryButton} href="/membership/tasting">进入口味试饮室 →</Link></section>
+        <section className={styles.accountTasting}><div><span>BLACK CARD · TASTING ROOM</span><h2>这一期，尝点新口味。</h2><p>基础每月 1 款，每款 3 袋 × 20g。首次开卡前 3 期每期加赠 2 款，共 9 袋；第 4 期起每月 3 袋。首盒免运费。</p><small>当前为内测菜单体验，领取资格与实物库存尚未开放。</small></div><Link className={styles.primaryButton} href="/membership/tasting">进入口味试饮室 →</Link></section>
 
         <div className={styles.accountGrid}>
           <section className={styles.activityPanel}>
