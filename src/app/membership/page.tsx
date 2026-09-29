@@ -19,7 +19,7 @@ export default function MembershipPage() {
         <div className={styles.heroCopy}>
           <p className={styles.kicker}>SPNC BLACK MEMBERSHIP</p>
           <h1>每一次长期选择，<br />都有回报。</h1>
-          <p className={styles.heroLead}>¥299 / 年。黑卡会员在会籍有效期内购买指定商品，可按未税实付金额获得2%返利。</p>
+          <p className={styles.heroLead}>¥299 / 年。指定商品享未税实付金额 2% 返利，再加每 3 个月任选 3 份免费口味试喝装。</p>
           <div className={styles.heroActions}><Link className={styles.primaryButton} href="/membership/activate">已有CDKEY，立即开卡</Link><Link className={styles.textButton} href="/membership/account">预览会员中心 <span>→</span></Link></div>
           <div className={styles.heroFinePrint}>会员服务于淘宝店铺购买 · 从成功兑换日起365天有效</div>
         </div>
@@ -29,14 +29,16 @@ export default function MembershipPage() {
 
     <section className={styles.benefitsSection}>
       <div className="container">
-        <header className={styles.sectionHeader}><span>MEMBERSHIP BENEFITS</span><h2>简单、透明、按月兑现。</h2></header>
+        <header className={styles.sectionHeader}><span>MEMBERSHIP BENEFITS</span><h2>长期有回报，尝新有期待。</h2></header>
         <div className={styles.benefitGrid}>
           <article><small>01</small><strong>2%</strong><h3>指定商品返利</h3><p>按规则剔除对应税费，以未税实付金额计算。</p></article>
-          <article><small>02</small><strong>1<em>st</em></strong><h3>每月核对</h3><p>每月1日导入上月宝贝销售明细，自动匹配规格与订单。</p></article>
-          <article><small>03</small><strong>15<em>th</em></strong><h3>集中打款</h3><p>审核通过的返利，于每月15日通过企业支付宝批量发放。</p></article>
+          <article><small>02</small><strong>3<em>份 / 期</em></strong><h3>免费口味试喝</h3><p>每 3 个月任选 3 份，每份 15g。一年 4 期，最多 12 份；随单免运费，单独寄 ¥6。</p></article>
+          <article><small>03</small><strong>15<em>th</em></strong><h3>按月兑现返利</h3><p>每月1日核对上月订单，审核通过的返利于每月15日通过企业支付宝集中发放。</p></article>
         </div>
       </div>
     </section>
+
+    <section className={styles.tastingSection}><div className={`container ${styles.tastingFeature}`}><div><span>BLACK CARD · TASTING ROOM</span><h2>先尝一口，<br />再选一整桶。</h2><p>我们自购市面上的经典、畅销与热门口味，把 ON 全系全口味逐步加入探索菜单。每期轮换，按自己的喜好选三味。</p><Link className={styles.lightButton} href="/membership/tasting">看看试喝菜单 →</Link><small>内测菜单预览 · 实际品项以当期采购与可领取库存为准</small></div><div className={styles.tastingFeatureValue}><span>每 3 个月</span><strong>3<em>份</em></strong><b>试喝装 ¥0</b><p>随店铺订单寄免运费<br />单独寄送 ¥6 运费</p></div></div></section>
 
     <section className={styles.calculationSection}>
       <div className={`container ${styles.calculationGrid}`}>
@@ -63,4 +65,3 @@ export default function MembershipPage() {
     <section className={styles.ctaSection}><div className={`container ${styles.ctaCard}`}><div><span>READY WHEN YOU ARE</span><h2>拿到CDKEY后，<br />从这里开始。</h2></div><div><p>开卡时间即会籍开始时间。续费会籍将在原到期日之后顺延365天。</p><Link className={styles.lightButton} href="/membership/activate">注册并兑换黑卡</Link></div></div></section>
   </main>;
 }
-

@@ -1,0 +1,76 @@
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .15em; color: #92703b; }
+.hero { padding: 96px 0; background: #111214; color: #f9f7f1; }
+.heroGrid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; }
+.hero .eyebrow { color: #dfc99d; }
+.hero h1 { margin: 26px 0; font-size: clamp(48px, 6.5vw, 86px); letter-spacing: -.055em; line-height: 1.13; }
+.lead { margin-bottom: 32px; font-size: 20px; line-height: 1.9; color: #c6c5c2; }
+.heroNote { margin-top: 24px; font-size: 12px; color: #a6a5a2; }
+.heroNumbers { border: 1px solid #4a463d; border-radius: 32px; padding: 36px; background: linear-gradient(130deg, #292722, #17181a); }
+.heroNumbers > span { font-size: 11px; letter-spacing: .13em; color: #d5bd8e; }
+.heroNumbers > div { display: flex; gap: 28px; align-items: end; padding: 35px 0; }
+.heroNumbers strong { font-size: 150px; line-height: 1; font-weight: 450; letter-spacing: -.08em; }
+.heroNumbers p { line-height: 1.9; font-size: 17px; color: #c7c4bd; }
+.heroNumbers p b { color: #f1dfb7; font-weight: 500; }
+.heroNumbers footer { border-top: 1px solid #46423a; padding-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.heroNumbers footer b { font-size: 30px; margin-left: 8px; }
+.heroNumbers small { color: #b5b1a8; font-size: 11px; }
+.section, .menuSection { padding: 88px 0; }
+.section { background: #fff; }
+.menuSection { background: #f1f0eb; scroll-margin-top: 90px; }
+.heading { max-width: 730px; margin-bottom: 36px; }
+.heading h2 { margin: 18px 0; font-size: clamp(32px, 4vw, 52px); letter-spacing: -.045em; line-height: 1.22; }
+.heading p { color: #686963; font-size: 15px; line-height: 1.9; }
+.collectionGrid, .menuGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.collectionGrid article { border-top: 1px solid #dcdad3; padding: 27px 18px 8px 0; }
+.collectionGrid span { font-size: 10px; letter-spacing: .08em; color: #92703b; }
+.collectionGrid h3 { font-size: 25px; margin: 30px 0 14px; }
+.collectionGrid p { color: #73736d; font-size: 14px; line-height: 1.9; }
+.menuCard { padding: 8px; border: 1px solid #deddd6; border-radius: 24px; background: #fff; text-align: left; color: #1c1c1b; cursor: pointer; transition: border-color .2s, box-shadow .2s; }
+.menuCard.selected { border-color: #97743d; box-shadow: 0 0 0 2px #97743d; }
+.menuCard:disabled { opacity: .5; cursor: not-allowed; }
+.menuCard:focus-visible, .selectionTotal button:focus-visible { outline: 3px solid #0878df; outline-offset: 4px; }
+.flavorTile { position: relative; display: grid; align-content: center; height: 180px; padding: 24px; overflow: hidden; border-radius: 17px; }
+.flavorTile > span { position: absolute; top: 20px; left: 22px; font-size: 11px; opacity: .7; }
+.flavorTile > b { text-align: center; font-size: 70px; font-weight: 400; letter-spacing: -.07em; }
+.flavorTile small { font-size: 20px; padding-left: 5px; }
+.flavorTile i { font-size: 8px; letter-spacing: .2em; font-style: normal; text-align: center; }
+.cocoa { background: #503c31; color: #f2dfc4; }
+.vanilla { background: #f0e8d7; color: #675b41; }
+.cookie { background: #ccc4b6; color: #51493d; }
+.berry { background: #e4bfc0; color: #77494e; }
+.banana { background: #e6d6a6; color: #6b5835; }
+.coffee { background: #9d8270; color: #fff1de; }
+.menuCardCopy { padding: 22px 18px; }
+.menuCardCopy small { color: #73736d; font-size: 10px; }
+.menuCardCopy h3 { font-size: 23px; margin: 12px 0; }
+.menuCardCopy p { color: #7c7b74; font-size: 11px; }
+.menuCardCopy > span { display: block; border-top: 1px solid #eae8e2; margin-top: 20px; padding-top: 17px; color: #836332; font-size: 13px; font-weight: 600; }
+.selectionPanel { display: grid; grid-template-columns: 1.2fr 1fr .8fr; gap: 24px; margin-top: 28px; padding: 32px; background: #fff; border: 1px solid #deddd6; border-radius: 24px; align-items: center; }
+.selectionPanel h3 { font-size: 25px; margin: 12px 0; }
+.selectionPanel p { font-size: 13px; color: #73736d; line-height: 1.8; }
+.shippingChoices { border: 0; padding: 0; margin: 0; display: grid; gap: 14px; }
+.shippingChoices legend { margin-bottom: 14px; font-size: 12px; font-weight: 600; }
+.shippingChoices label { font-size: 12px; cursor: pointer; }
+.shippingChoices input { accent-color: #8b6b36; margin-right: 6px; }
+.selectionTotal { display: grid; gap: 10px; }
+.selectionTotal > span { font-size: 10px; color: #73736d; }
+.selectionTotal strong { font-size: 35px; font-weight: 500; }
+.selectionTotal button { border: 0; border-radius: 30px; padding: 13px 20px; background: #151515; color: #fff; cursor: pointer; font-size: 13px; }
+.selectionTotal button:disabled { background: #d7d5ce; color: #72716a; cursor: not-allowed; }
+.selectionPanel .previewNote { grid-column: 1 / -1; border-top: 1px solid #e5e3dc; padding-top: 18px; margin: 0; font-size: 11px; }
+.selectionPanel .feedback { grid-column: 1 / -1; background: #f2efe6; padding: 16px; border-radius: 12px; margin: 0; color: #68552e; }
+.rulesGrid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; }
+.rules article { padding: 25px 0; border-top: 1px solid #e0ded6; }
+.rules article h3 { font-size: 18px; margin: 0 0 12px; }
+.rules article p { color: #73736d; font-size: 13px; line-height: 1.9; margin: 0; }
+@media (max-width: 1000px) { .heroGrid { gap: 35px; } .selectionPanel { grid-template-columns: 1fr 1fr; } .selectionTotal { grid-column: 1 / -1; } .rulesGrid { gap: 40px; } }
+@media (max-width: 700px) {
+  .hero, .section, .menuSection { padding: 52px 0; }
+  .heroGrid, .collectionGrid, .rulesGrid, .selectionPanel { grid-template-columns: 1fr; gap: 24px; }
+  .hero h1 { font-size: 48px; } .lead { font-size: 17px; }
+  .heroNumbers { padding: 27px; } .heroNumbers strong { font-size: 116px; }
+  .menuGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .flavorTile { height: 135px; padding: 14px; } .flavorTile > b { font-size: 53px; }
+  .menuCardCopy { padding: 16px 7px; } .menuCardCopy h3 { font-size: 18px; }
+  .menuCardCopy small { font-size: 9px; } .selectionPanel { padding: 24px; }
+}

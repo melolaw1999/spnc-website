@@ -5,6 +5,7 @@ const links = [
   ["会籍介绍", "/membership"],
   ["注册开卡", "/membership/activate"],
   ["会员中心", "/membership/account"],
+  ["口味试饮室", "/membership/tasting"],
   ["申请返利", "/membership/claim"],
   ["管理预览", "/admin/membership"],
 ] as const;
@@ -19,4 +20,3 @@ export function MembershipPreviewNav({ current }: { current: string }) {
     </div>
   </div>;
 }
-

@@ -31,6 +31,8 @@ export default function MembershipAccountPage() {
           <article><span>会籍剩余</span><strong>365<small>天</small></strong><p>2027年8月2日到期</p></article>
         </div>
 
+        <section className={styles.accountTasting}><div><span>BLACK CARD · TASTING ROOM</span><h2>这一期，尝点新口味。</h2><p>每 3 个月任选 3 份，每份 15g，试喝装免费。随单免运费，单独寄 ¥6。</p><small>当前为内测菜单体验，领取资格与实物库存尚未开放。</small></div><Link className={styles.primaryButton} href="/membership/tasting">进入口味试饮室 →</Link></section>
+
         <div className={styles.accountGrid}>
           <section className={styles.activityPanel}>
             <header><div><span>REBATE ACTIVITY</span><h2>返利记录</h2></div><button type="button">查看全部</button></header>
@@ -45,4 +47,3 @@ export default function MembershipAccountPage() {
     </section>
   </main>;
 }
-

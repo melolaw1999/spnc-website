@@ -413,6 +413,30 @@
 .auditPanel time { color: #707076; }
 .auditPanel strong { color: #fff; }
 
+.tastingSection { padding: 0 0 76px; background: #fff; }
+.tastingFeature { display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; padding: 65px; border-radius: 32px; background: #141517; color: #fff; }
+.tastingFeature > div > span, .accountTasting span { color: #c6a76d; font-size: 10px; letter-spacing: .12em; font-weight: 700; }
+.tastingFeature h2 { margin: 22px 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.14; letter-spacing: -.055em; }
+.tastingFeature p { color: #b3b2ac; font-size: 14px; line-height: 1.9; max-width: 480px; margin-bottom: 26px; }
+.tastingFeature small { display: block; color: #a4a29b; margin-top: 18px; font-size: 10px; line-height: 1.8; }
+.tastingFeatureValue { align-self: center; text-align: center; border-left: 1px solid #3b3933; padding-left: 35px; }
+.tastingFeatureValue strong { display: block; font-size: 130px; font-weight: 450; line-height: 1.2; color: #e7d4ab; }
+.tastingFeatureValue em { font-size: 23px; font-style: normal; margin-left: 10px; }
+.tastingFeatureValue b { font-size: 22px; font-weight: 500; }
+.tastingFeatureValue p { margin: 18px 0 0; }
+.accountTasting { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 32px; border: 1px solid #dfd6c4; border-radius: 26px; background: #faf7f0; margin-top: 24px; }
+.accountTasting h2 { font-size: 28px; margin: 12px 0; letter-spacing: -.04em; }
+.accountTasting p { color: #6c675d; font-size: 13px; line-height: 1.8; }
+.accountTasting small { color: #817a6e; font-size: 11px; }
+.accountTasting > a { flex-shrink: 0; }
+@media (max-width: 760px) {
+  .tastingSection { padding-bottom: 50px; }
+  .tastingFeature { grid-template-columns: 1fr; gap: 35px; padding: 35px 24px; }
+  .tastingFeatureValue { border-left: 0; border-top: 1px solid #3b3933; padding: 28px 0 0; }
+  .tastingFeatureValue strong { font-size: 100px; }
+  .accountTasting { align-items: start; flex-direction: column; padding: 26px; }
+}
+
 @media (max-width: 1050px) {
   .heroGrid,
   .authGrid,
