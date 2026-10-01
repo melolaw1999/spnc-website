@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ProductOrbitGallery } from "@/components/ProductOrbitGallery";
 import { HomeCarousel } from "@/components/HomeCarousel";
 import { TaobaoButton } from "@/components/TaobaoButton";
 import { TaobaoServiceButton } from "@/components/TaobaoServiceButton";
@@ -64,9 +65,19 @@ const versionHighlights = [
 ] as const;
 
 export default function Home() {
-  const featured = catalog.filter((product) => product.featured).slice(0, 4);
+  const galleryProducts = [...catalog].sort((a, b) => {
+    const order = ["跨境进口", "一般贸易", "国产版本"];
+    const rank = (version?: string) => version ? order.indexOf(version) : order.length;
+    return rank(a.salesVersion) - rank(b.salesVersion);
+  }).map((product) => ({
+    slug: product.slug,
+    name: product.name,
+    version: product.salesVersion ?? "版本以商品页为准",
+    image: { src: product.images[0].asset.projectPath, alt: product.images[0].altText,
+      width: product.images[0].asset.width, height: product.images[0].asset.height },
+  }));
   return <main className="apple-home">
-    <HomeCarousel labels={["品牌主视觉", "理想营养", "三个版本", "TEAM ON", "防伪溯源"]}>
+    <HomeCarousel labels={["品牌主视觉", "理想营养", "三个版本", "防伪溯源"]}>
     <section className={`home-hero ${styles.hero}`} aria-label="为你的下一次突破做好准备">
       <div className="home-hero-visual">
         <Image
@@ -146,25 +157,6 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="home-billboard home-billboard-products">
-      <div className="container billboard-inner product-billboard">
-        <div className="billboard-copy">
-          <h2 className={styles.teamOn} aria-label="TEAM ON">
-            <span aria-hidden="true">TEAM</span>
-            <Image className={styles.teamOnLogo} src="/assets/brand/on-swoosh-logo.png" width={4096} height={1696} alt="" aria-hidden="true" sizes="(max-width: 560px) 150px, 220px" />
-          </h2>
-          <div className="version-scope version-scope-centered">{publicSalesVersions.map((version) => <span key={version}>{version}</span>)}</div>
-          <div className="home-product-row">
-            {featured.map((product) => <Link href={`/products/${product.slug}`} key={product.id} className="home-product-item">
-              <Image src={product.images[0].asset.projectPath} alt={product.images[0].altText} width={product.images[0].asset.width} height={product.images[0].asset.height} loading="lazy" sizes="(max-width: 560px) 42vw, 210px" />
-              <span>{product.name}</span>
-            </Link>)}
-          </div>
-          <Link className="btn" href="/on">浏览 ON 专区</Link>
-        </div>
-      </div>
-    </section>
-
     <section className={`home-billboard ${styles.authHomeSection}`} aria-labelledby="home-auth-title">
       <div className={`container billboard-inner ${styles.authHome}`}>
         <div className={styles.authHomeCopy}>
@@ -205,6 +197,20 @@ export default function Home() {
       <Link href="/versions"><span>版本说明</span><small>了解三种销售版本</small><b aria-hidden="true">↗</b></Link>
       <Link href="/authenticity"><span>防伪溯源</span><small>查看包装与查验方式</small><b aria-hidden="true">↗</b></Link>
     </nav>
+
+    <section className={styles.productGallerySection} aria-labelledby="on-gallery-title">
+      <div className={`container ${styles.productGalleryPanel}`}>
+        <header className={styles.productGalleryHeader}>
+          <h2 id="on-gallery-title" className={styles.teamOn} aria-label="TEAM ON">
+            <span aria-hidden="true">TEAM</span>
+            <Image className={styles.teamOnLogo} src="/assets/brand/on-swoosh-logo.png" width={4096} height={1696} alt="" aria-hidden="true" sizes="(max-width: 560px) 150px, 220px" />
+          </h2>
+          <div className="version-scope version-scope-centered">{publicSalesVersions.map((version) => <span key={version}>{version}</span>)}</div>
+        </header>
+        <ProductOrbitGallery products={galleryProducts} />
+        <Link className="btn" href="/on">浏览 ON 专区</Link>
+      </div>
+    </section>
 
     <section className="home-billboard home-billboard-contact">
       <div className="container billboard-inner contact-billboard">

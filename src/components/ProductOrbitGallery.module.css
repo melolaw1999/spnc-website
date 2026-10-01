@@ -1,0 +1,51 @@
+.gallery { width: 100%; min-width: 0; }
+.hint { margin: 14px 0 0; color: #73716c; font-size: 13px; text-align: center; }
+.stage { height: 380px; position: relative; overflow: hidden; perspective: 850px; touch-action: pan-y; }
+.ring { margin: 0; padding: 40px 24px; height: 100%; display: flex; align-items: center; gap: 16px; overflow-x: auto; overflow-y: hidden; list-style: none; scroll-snap-type: x mandatory; }
+.card { flex: 0 0 230px; width: 230px; height: 292px; border: 1px solid #e8e3db; border-radius: 18px; background: #fffefa; box-shadow: 0 16px 28px #3b2b1210; scroll-snap-align: center; }
+.card a { display: flex; flex-direction: column; height: 100%; padding: 20px 16px; text-decoration: none; color: #242421; }
+.cardVersion { color: #827969; font-size: 11px; text-align: left; }
+.image { flex: 1; min-height: 0; padding: 12px 10px; }
+.image img { width: 100%; height: 100%; object-fit: contain; }
+.cardName { font-size: 14px; font-weight: 650; line-height: 1.35; }
+.gallery[data-orbit="true"] .stage { cursor: grab; user-select: none; }
+.gallery[data-dragging="true"] .stage { cursor: grabbing; }
+.gallery[data-orbit="true"] .ring { display: block; position: absolute; inset: 0; padding: 0; overflow: visible; transform-style: preserve-3d; pointer-events: none; }
+.gallery[data-orbit="true"] .card { position: absolute; left: calc(50% - 115px); top: calc(50% - 146px); backface-visibility: hidden; }
+.selection { min-height: 64px; text-align: center; display: grid; align-content: center; gap: 7px; padding: 0 18px; }
+.selection > span { color: #81796d; font-size: 12px; }
+.selection i { padding: 0 6px; font-style: normal; }
+.selection > a { font-weight: 650; font-size: 20px; line-height: 1.3; }
+.selection b { color: #0879df; font-weight: 400; margin-left: 4px; }
+.controls { display: flex; justify-content: center; align-items: center; gap: 10px; margin: 18px 0 6px; }
+.controls > button { min-width: 44px; min-height: 44px; border: 1px solid #dcd6cc; border-radius: 50%; background: transparent; color: #242421; font: inherit; cursor: pointer; }
+.controls > .pause { border-radius: 24px; padding: 0 13px; font-size: 12px; }
+.dots { display: flex; align-items: center; }
+.dots button { padding: 0; width: 24px; height: 44px; display: grid; place-items: center; border: 0; background: transparent; cursor: pointer; }
+.dots span { width: 5px; height: 5px; border-radius: 50%; background: #c8c1b5; }
+.dots button[aria-pressed="true"] span { background: #242421; width: 8px; height: 8px; }
+.gallery :is(button, a, .stage):focus-visible { outline: 2px solid #0879df; outline-offset: -3px; }
+@media (min-width: 900px) {
+  .gallery { flex: 1; display: flex; flex-direction: column; }
+  .stage { flex: 1; height: auto; min-height: 320px; }
+  .card { background: #fff; border-color: #e8e8eb; box-shadow: 0 16px 28px #0000000a; }
+  .hint, .cardVersion, .selection > span { color: #747478; }
+  .controls > button { border-color: #d9d9dd; }
+  .dots span { background: #c8c8cd; }
+}
+@media (max-width: 600px) {
+  .stage { height: 300px; perspective: 600px; }
+  .card { flex-basis: 180px; width: 180px; height: 236px; border-radius: 14px; }
+  .card a { padding: 14px 12px; }
+  .cardName { font-size: 12px; }
+  .image { padding: 8px; }
+  .gallery[data-orbit="true"] .card { left: calc(50% - 90px); top: calc(50% - 118px); }
+  .controls { gap: 4px; flex-wrap: wrap; padding: 0 12px; }
+  .dots button { width: 20px; }
+  .controls > .pause { flex-basis: 65px; }
+  .selection > a { font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery .ring { scroll-behavior: auto; }
+  .gallery .card { transform: none !important; opacity: 1 !important; }
+}
