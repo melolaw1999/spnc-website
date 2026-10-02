@@ -27,7 +27,8 @@
       try {localStorage.removeItem('spnc-abacus-locked-v1');sessionStorage.removeItem('spnc-abacus-notice');}
       catch {$('accessStatus').textContent='验证已通过，但浏览器禁止本站存储。请允许存储后重新登录。';return;}
       reset();$('accessStatus').textContent='验证通过，正在连接工作台…';
-      location.replace('/abacus/?connect=1');
+      const next=new URLSearchParams(location.search||'').get('next');
+      location.replace(next==='initialize'?'/abacus/initialize':'/abacus/?connect=1');
     } catch {$('accessStatus').textContent='连接失败，请联网后重试。';}
     finally {clearTimeout(timeout);password.value='';busy=false;submit.disabled=false;username.disabled=false;password.disabled=false;}
   });

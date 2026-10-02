@@ -18,8 +18,8 @@
     },
     {
       "path": "access.js",
-      "sha256": "b03ecd69d53ff204480a818b954bd9dbee775738849d572232fb470a872d207c",
-      "bytes": 2308,
+      "sha256": "8e6ed7e3208e1bfef6f545c74e8101a6fd8c1946810e69c44d266ebcce571873",
+      "bytes": 2420,
       "contentType": "text/javascript; charset=utf-8",
       "access": "public"
     },
@@ -123,7 +123,7 @@
     },
     {
       "path": "sw.js",
-      "sha256": "0714e078796a47ecb5d31c8247bc0357dc06b592d53c6318f1ffbfcfed23b5e3",
+      "sha256": "c733d46bc7a0ffeb913284658f4c552a75fc6d0e71a30519f9f082facbefb177",
       "bytes": 2231,
       "contentType": "text/javascript; charset=utf-8",
       "access": "authenticated"

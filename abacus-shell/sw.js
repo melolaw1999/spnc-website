@@ -1,5 +1,5 @@
 // Increment BUILD whenever any shell file changes. No private data or API caches.
-const BUILD='spnc-abacus-shell-20c5b05e7e362830';
+const BUILD='spnc-abacus-shell-aea6a088fb79ae28';
 const BASE='/abacus/';
 const ASSETS=['index.html','app.js','calculator.js','legacy.css','mobile.css','fifo-inventory.js','fifo-inventory.css','procurement-history.js','procurement-history.css','manifest.webmanifest','icons/icon.svg','icons/icon-192.png','icons/icon-512.png','icons/icon-maskable-512.png'];
 self.addEventListener('install',event=>event.waitUntil((async()=>{
