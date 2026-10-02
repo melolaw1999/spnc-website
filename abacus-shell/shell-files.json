@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "basePath": "/abacus/",
+  "files": [
+    {
+      "path": "access.css",
+      "sha256": "827e1c5d5518e9898e3b7292748520ced6437d050a16ed6dff4bdabff4905ca8",
+      "bytes": 2238,
+      "contentType": "text/css; charset=utf-8",
+      "access": "public"
+    },
+    {
+      "path": "access.html",
+      "sha256": "de95f6a6a27711a0cad63b15986c99792d73d5bc17541a9283ca9fd3861a11d4",
+      "bytes": 1660,
+      "contentType": "text/html; charset=utf-8",
+      "access": "public"
+    },
+    {
+      "path": "access.js",
+      "sha256": "b03ecd69d53ff204480a818b954bd9dbee775738849d572232fb470a872d207c",
+      "bytes": 2308,
+      "contentType": "text/javascript; charset=utf-8",
+      "access": "public"
+    },
+    {
+      "path": "app.js",
+      "sha256": "c54af5862987f42f3e79b35aa260a7c789f5a488a3f7a8658929abd37102eed2",
+      "bytes": 13209,
+      "contentType": "text/javascript; charset=utf-8",
+      "access": "authenticated"
+    },
+    {
+      "path": "calculator.js",
+      "sha256": "ae12b8e5172ad70e8fdf42cbefc5878ca0ef1eadf641b0800c1dd9b9a234d050",
+      "bytes": 35049,
+      "contentType": "text/javascript; charset=utf-8",
+      "access": "authenticated"
+    },
+    {
+      "path": "fifo-inventory.css",
+      "sha256": "65c9dddd7fd1929f905d9bdfb4fe31e5cb19bd4ec6e43d3e028a1a757ba11a9a",
+      "bytes": 5331,
+      "contentType": "text/css; charset=utf-8",
+      "access": "authenticated"
+    },
+    {
+      "path": "fifo-inventory.js",
+      "sha256": "05fef38c9b1bf4546e53005eb47dc72741191c25e491839df658052382606b0a",
+      "bytes": 13580,
+      "contentType": "text/javascript; charset=utf-8",
+      "access": "authenticated"
+    },
+    {
+      "path": "icons/icon-192.png",
+      "sha256": "265c27f40dbc575faf867feaf3ffeb12245ee7ffa82e4c4b13a0be331d362bc1",
+      "bytes": 901,
+      "contentType": "image/png",
+      "access": "authenticated"
+    },
+    {
+      "path": "icons/icon-512.png",
+      "sha256": "077dd793baa7ec07f0ef211ed76a5cc6654918e68cdf83ff24adcdc7519fba80",
+      "bytes": 4657,
+      "contentType": "image/png",
+      "access": "authenticated"
+    },
+    {
+      "path": "icons/icon-maskable-512.png",
+      "sha256": "077dd793baa7ec07f0ef211ed76a5cc6654918e68cdf83ff24adcdc7519fba80",
+      "bytes": 4657,
+      "contentType": "image/png",
+      "access": "authenticated"
+    },
+    {
+      "path": "icons/icon.svg",
+      "sha256": "8311193c33b44a7ce30df2d3394040599d6952e810fb0193ce44492727705401",
+      "bytes": 594,
+      "contentType": "image/svg+xml",
+      "access": "authenticated"
+    },
+    {
+      "path": "index.html",
+      "sha256": "c8ef377c4733c88b5bca0f04b33533ae867a9b926f09f490ea48efdce869af7c",
+      "bytes": 18855,
+      "contentType": "text/html; charset=utf-8",
+      "access": "authenticated"
+    },
+    {
+      "path": "legacy.css",
+      "sha256": "b275fd9b3966971f8954ee2a1ec862a139d12f9d5eb95c99ad4593b512b8099e",
+      "bytes": 17732,
+      "contentType": "text/css; charset=utf-8",
+      "access": "authenticated"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "sha256": "27aaf40c36d8d4ab1bd45a590921659708181094c3247bfbe5681d7735b5a97f",
+      "bytes": 774,
+      "contentType": "application/manifest+json",
+      "access": "authenticated"
+    },
+    {
+      "path": "mobile.css",
+      "sha256": "5d67dba4c3f068e66d6934b81cb7a44f8dd3b8c67281eb87f4f65e74d84afa6d",
+      "bytes": 12436,
+      "contentType": "text/css; charset=utf-8",
+      "access": "authenticated"
+    },
+    {
+      "path": "procurement-history.css",
+      "sha256": "015fe3c8e9907534bb0a8633f65fd7bc5a73808fe498a04daf895f48dcafa3c3",
+      "bytes": 1523,
+      "contentType": "text/css; charset=utf-8",
+      "access": "authenticated"
+    },
+    {
+      "path": "procurement-history.js",
+      "sha256": "10b36fd718161ad62db1d351eb6bcbdfee0783b16d0107ef18ef6bc28b94145e",
+      "bytes": 5277,
+      "contentType": "text/javascript; charset=utf-8",
+      "access": "authenticated"
+    },
+    {
+      "path": "sw.js",
+      "sha256": "0714e078796a47ecb5d31c8247bc0357dc06b592d53c6318f1ffbfcfed23b5e3",
+      "bytes": 2231,
+      "contentType": "text/javascript; charset=utf-8",
+      "access": "authenticated"
+    }
+  ]
+}

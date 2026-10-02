@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="same-origin">
+  <title>黑算盘 · 访问验证</title>
+  <link rel="stylesheet" href="/abacus/access.css">
+  <script src="/abacus/access.js" defer></script>
+</head>
+<body class="abacus-access">
+  <main class="access-card">
+    <a class="access-brand" href="/">SPNC · 理想营养</a>
+    <p class="access-eyebrow">经营工作台</p>
+    <h1>进入黑算盘</h1>
+    <p class="access-intro">使用获授权的账号登录。此入口需要服务端已配置访问账号；尚未配置时无法登录。</p>
+    <p id="accessNotice" class="access-notice" hidden></p>
+    <form id="accessForm" action="/api/abacus/access" method="post" autocomplete="off">
+      <label for="username">账号</label>
+      <input id="username" name="username" type="text" required maxlength="128" autocomplete="off" autocapitalize="none" spellcheck="false">
+      <label for="password">密码</label>
+      <input id="password" name="password" type="password" required maxlength="1024" autocomplete="off">
+      <button id="accessSubmit" type="submit">登录工作台</button>
+      <p id="accessStatus" class="access-status" role="status" aria-live="polite"></p>
+    </form>
+    <p class="access-footnote">联网验证后同步数据。离线仅可查看本机最近成功同步的副本；退出会清除该副本。</p>
+    <noscript><p class="access-status">请启用 JavaScript 后登录。</p></noscript>
+  </main>
+</body>
+</html>

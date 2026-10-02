@@ -1,0 +1,18 @@
+/* Scoped access-page presentation; no shared website selectors. */
+.abacus-access{margin:0;min-height:100svh;display:grid;place-items:center;box-sizing:border-box;padding:32px 20px;background:#f5f4f0;color:#253029;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+.abacus-access *{box-sizing:border-box}
+.abacus-access [hidden]{display:none!important}
+.abacus-access .access-card{width:100%;max-width:440px;padding:36px;background:#fff;border:1px solid #dfdfd8;border-radius:14px}
+.abacus-access .access-brand{display:inline-block;margin-bottom:38px;color:#34483b;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.04em}
+.abacus-access .access-eyebrow{margin:0 0 8px;color:#667367;font-size:12px;letter-spacing:.12em}
+.abacus-access h1{font-size:28px;line-height:1.3;margin:0 0 14px;letter-spacing:-.03em;font-weight:650}
+.abacus-access .access-intro{margin:0 0 25px;color:#5c685f;font-size:14px}
+.abacus-access label{display:block;margin:16px 0 7px;font-size:14px;font-weight:600}
+.abacus-access input{display:block;width:100%;min-width:0;min-height:46px;border:1px solid #bac4bc;border-radius:7px;background:#fff;padding:10px 12px;color:#253029;font:inherit;line-height:1.5}
+.abacus-access button{width:100%;min-height:48px;margin-top:23px;padding:12px;border:1px solid #334d3d;border-radius:7px;background:#334d3d;color:#fff;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.abacus-access :is(input,button,a):focus-visible{outline:3px solid #849d8b;outline-offset:3px}
+.abacus-access :disabled{opacity:.65;cursor:wait}
+.abacus-access .access-status{min-height:24px;margin:12px 0 0;color:#795322;font-size:13px;overflow-wrap:anywhere}
+.abacus-access .access-notice{padding:12px;border:1px solid #ddd5c2;border-radius:7px;background:#faf7ef;color:#695534;font-size:13px;overflow-wrap:anywhere}
+.abacus-access .access-footnote{margin:25px 0 0;padding-top:20px;border-top:1px solid #e9e9e2;color:#657167;font-size:12px;line-height:1.8}
+@media(max-width:480px){.abacus-access{padding:max(20px,env(safe-area-inset-top)) 16px max(20px,env(safe-area-inset-bottom))}.abacus-access .access-card{padding:28px 22px}.abacus-access .access-brand{margin-bottom:30px}}

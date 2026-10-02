@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>黑算盘 · 经营工作台</title>
+  <link rel="stylesheet" href="/abacus/legacy.css">
+  <link rel="stylesheet" href="/abacus/fifo-inventory.css">
+<link rel="stylesheet" href="/abacus/procurement-history.css"><link rel="stylesheet" href="/abacus/mobile.css">
+<link rel="manifest" href="/abacus/manifest.webmanifest"><meta name="theme-color" content="#263c53"><link rel="icon" href="/abacus/icons/icon.svg"></head>
+<body>
+<section class="sync-bar" aria-label="同步状态"><div><strong id="syncStatus" role="status" aria-live="polite">正在连接…</strong><div id="syncTime"></div></div><div class="sync-actions"><button id="syncNow">立即同步</button><button id="installApp" hidden>添加到桌面</button><button id="logoutApp">退出并清除此机数据</button></div></section>
+<section id="startGate" hidden><h1>黑算盘</h1><p id="gateMessage">正在加载…</p><button id="enterApp">前往登录</button></section>
+<div id="workspace" hidden>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>黑算盘</h1>
+        <p>利润测算 · 采购批次 · 库存成本</p>
+      </div>
+      <div class="top-actions">
+        <span class="pill">蓝灰经营工作台 · FIFO</span>
+        <span class="pill">跨境 / 国产 / 临期</span>
+        <span class="pill">30 天回款口径</span>
+      </div>
+    </header>
+
+    <aside id="fifoReference" class="fifo-rail fifo-reference" aria-label="采购与库存依据"></aside>
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <input id="searchInput" class="search" type="search" placeholder="搜索品名、口味、条码">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">全部</button>
+          <button class="filter-btn" data-filter="domestic">国产/大贸</button>
+          <button class="filter-btn" data-filter="cross">跨境良品</button>
+          <button class="filter-btn" data-filter="clearance">临期瑕疵</button>
+          <button class="filter-btn" data-filter="isolate">金标分离</button>
+          <button class="filter-btn" data-filter="whey">金标乳清</button>
+          <button class="filter-btn" data-filter="bronson">布朗森</button>
+          <button class="filter-btn" data-filter="bpj">BPJ 饮料</button>
+          <button class="filter-btn" data-filter="ovodan">欧福蛋白饮</button>
+        </div>
+      </div>
+      <div id="skuList" class="sku-list"></div>
+    </aside>
+
+    <main class="main-panel" id="calculator">
+      <section class="main-head">
+        <div>
+          <h2 id="productName" class="product-name"></h2>
+          <div id="productSub" class="product-sub"></div>
+          <div id="ovodanInfo" class="product-sub" hidden style="margin-top:10px;padding:12px;background:#fff4df;border-radius:10px;color:#674d20;line-height:1.7"></div>
+        </div>
+        <div id="statusChip" class="status-chip">健康</div>
+      </section>
+
+      <section class="content">
+        <div class="controls">
+          <div class="group">
+            <div class="group-title"><span>基础参数</span><span id="costTypeLabel"></span></div>
+            <div class="control">
+              <label class="control-label"><strong id="priceLabel">售价 / 挂牌价</strong><span class="control-value" id="vPrice"></span></label>
+              <div class="input-row">
+                <input id="price" type="range" min="99" max="999" step="1">
+                <input id="priceNum" type="number" min="0" step="1">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label"><strong id="purchaseLabel">采购成本</strong><span class="control-value" id="vCost"></span></label>
+              <div class="input-row">
+                <input id="cost" type="range" min="0" max="900" step="0.1">
+                <input id="costNum" type="number" min="0" step="0.01">
+              </div>
+            </div>
+            <div class="control" id="fxControl">
+              <label class="control-label"><strong>汇率 RMB/USD</strong><span class="control-value" id="vFx"></span></label>
+              <div class="input-row">
+                <input id="fx" type="range" min="6.2" max="7.4" step="0.01">
+                <input id="fxNum" type="number" min="0" step="0.01">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label"><strong id="shippingLabel">快递费</strong><span class="control-value" id="vShipping"></span></label>
+              <div class="input-row">
+                <input id="shipping" type="range" min="0" max="35" step="0.5">
+                <input id="shippingNum" type="number" min="0" step="0.1">
+              </div>
+            </div>
+          </div>
+
+          <div class="group" id="sfControls" hidden>
+            <div class="group-title"><span>深圳仓发货费用估算</span><span>1箱顺丰／多箱普快</span></div>
+            <div class="control"><label for="freightProvince">收货地区</label><select id="freightProvince"></select></div>
+            <div class="control"><label for="freightCarrier">快递选择</label><select id="freightCarrier"><option value="auto">1箱顺丰，2箱普快择低</option><option value="sf">顺丰</option><option value="yto">圆通普快</option><option value="yunda">韵达普快（仅有3kg以上报价）</option></select></div>
+            <div class="control"><label for="sfWeight">整单预估计费重量（kg）</label><input id="sfWeight" type="number" min="0.01" step="0.1"></div>
+            <div class="control"><label for="sfSplit">发货方式</label><select id="sfSplit"><option value="0">合包发1票</option><option value="1">每箱1票（需仓库确认）</option></select></div>
+            <div class="control"><label for="freightHandling">订单操作费（元，按箱计件暂估）</label><input id="freightHandling" type="number" min="0" step="0.1"></div>
+            <div class="control"><label for="sfTax">报价税费</label><select id="sfTax"><option value="0">未税原报价</option><option value="6">按开专票加6%</option></select></div>
+            <div class="control"><div id="sfEstimate" class="small" aria-live="polite"></div><button type="button" class="mini-btn" id="sfRecalculate" style="margin-top:8px">使用报价估算运费</button></div>
+          </div>
+
+          <div class="group">
+            <div class="group-title"><span>平台 / 税费 / 优惠</span><span id="unitLabel">按单罐</span></div>
+            <div class="control">
+              <label class="control-label"><strong>跨境税率</strong><span class="control-value" id="vTaxRate"></span></label>
+              <div class="input-row">
+                <input id="taxRate" type="range" min="0" max="12" step="0.1">
+                <input id="taxRateNum" type="number" min="0" step="0.1">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label"><strong>平台扣点</strong><span class="control-value" id="vPlatformRate"></span></label>
+              <div class="input-row">
+                <input id="platformRate" type="range" min="0" max="8" step="0.1">
+                <input id="platformRateNum" type="number" min="0" step="0.1">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label"><strong>消费券 / 降价承担</strong><span class="control-value" id="vCouponRate"></span></label>
+              <div class="input-row">
+                <input id="couponRate" type="range" min="0" max="20" step="0.1">
+                <input id="couponRateNum" type="number" min="0" step="0.1">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label"><strong>商家淘金币</strong><span class="control-value" id="vCoinRate"></span></label>
+              <div class="input-row">
+                <input id="coinRate" type="range" min="0" max="10" step="0.1">
+                <input id="coinRateNum" type="number" min="0" step="0.1">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label"><strong>平台淘金币加补</strong><span class="control-value" id="vPlatformCoin"></span></label>
+              <div class="input-row">
+                <input id="platformCoin" type="range" min="0" max="10" step="0.1">
+                <input id="platformCoinNum" type="number" min="0" step="0.1">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label"><strong>平台加补命中概率</strong><span class="control-value" id="vPlatformCoinHit"></span></label>
+              <div class="input-row">
+                <input id="platformCoinHit" type="range" min="0" max="100" step="5">
+                <input id="platformCoinHitNum" type="number" min="0" max="100" step="1">
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="group-title"><span>推广 / 其他费用</span><span id="adModeText"></span></div>
+            <div class="control">
+              <div class="mode-row">
+                <button id="directMode" class="mode-btn active">直接填推广费</button>
+                <button id="roiMode" class="mode-btn">按 ROI 反推</button>
+              </div>
+            </div>
+            <div class="control" id="adSpendControl">
+              <label class="control-label"><strong>推广费</strong><span class="control-value" id="vAdSpend"></span></label>
+              <div class="input-row">
+                <input id="adSpend" type="range" min="0" max="120" step="1">
+                <input id="adSpendNum" type="number" min="0" step="0.1">
+              </div>
+            </div>
+            <div class="control" id="roiControl">
+              <label class="control-label"><strong>推广 ROI</strong><span class="control-value" id="vRoi"></span></label>
+              <div class="input-row">
+                <input id="roi" type="range" min="3" max="50" step="0.5">
+                <input id="roiNum" type="number" min="0" step="0.1">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label"><strong>分期 / 支付费</strong><span class="control-value" id="vPaymentFee"></span></label>
+              <div class="input-row">
+                <input id="paymentFee" type="range" min="0" max="20" step="0.5">
+                <input id="paymentFeeNum" type="number" min="0" step="0.1">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label"><strong>其他杂费</strong><span class="control-value" id="vOtherFee"></span></label>
+              <div class="input-row">
+                <input id="otherFee" type="range" min="0" max="50" step="0.5">
+                <input id="otherFeeNum" type="number" min="0" step="0.1">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label"><strong>目标净利</strong><span class="control-value" id="vTargetProfit"></span></label>
+              <div class="input-row">
+                <input id="targetProfit" type="range" min="0" max="150" step="1">
+                <input id="targetProfitNum" type="number" min="0" step="1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard">
+          <section class="plan-card" id="planSection">
+            <div class="plan-head">
+              <div>
+                <h3>我的计划 / SKU 便签</h3>
+                <p>跟随当前商品保存，用来记活动、备货、目标价和风险提醒。</p>
+              </div>
+              <div class="plan-actions">
+                <button id="applyPlanPrice" class="mini-btn primary" type="button">套用目标售价</button>
+                <button id="clearPlan" class="mini-btn" type="button">清空本品便签</button>
+              </div>
+            </div>
+            <div class="plan-body">
+              <label class="plan-field">
+                <span>动作</span>
+                <select id="planAction">
+                  <option value="">未设置</option>
+                  <option value="百亿补贴">百亿补贴</option>
+                  <option value="88VIP/消费券">88VIP/消费券</option>
+                  <option value="淘金币">淘金币</option>
+                  <option value="关键词推广">关键词推广</option>
+                  <option value="补货">补货</option>
+                  <option value="观察">观察</option>
+                </select>
+              </label>
+              <label class="plan-field">
+                <span>计划数量</span>
+                <input id="planQty" type="number" min="0" step="1" placeholder="例如 200">
+              </label>
+              <label class="plan-field">
+                <span>目标售价</span>
+                <input id="planPrice" type="number" min="0" step="1" placeholder="例如 638">
+              </label>
+              <label class="plan-field">
+                <span>优先级</span>
+                <select id="planPriority">
+                  <option value="">未设置</option>
+                  <option value="高">高</option>
+                  <option value="中">中</option>
+                  <option value="低">低</option>
+                  <option value="暂停">暂停</option>
+                </select>
+              </label>
+              <label class="plan-field">
+                <span>时间 / 节点</span>
+                <input id="planDate" type="text" placeholder="例如 7月百亿 / 今晚8点">
+              </label>
+              <label class="plan-field note-field">
+                <span>提醒自己</span>
+                <textarea id="planNote" rows="4" placeholder="比如：200罐准备638提报百亿；注意竞品价格、ROI、库存压力。"></textarea>
+              </label>
+            </div>
+            <div id="planSummary" class="plan-summary"></div>
+            <div class="archive-panel">
+              <div class="archive-toolbar">
+                <div class="archive-title">
+                  <strong>测算存档</strong>
+                  <span>保存当前全部参数、利润结果和本品便签，之后可以一键恢复。</span>
+                </div>
+                <div class="archive-save-row">
+                  <input id="archiveName" type="text" maxlength="40" placeholder="存档名称，例如：峨眉山采购后测算">
+                  <button id="saveSnapshot" class="mini-btn primary" type="button">保存当前测算</button>
+                </div>
+              </div>
+              <div id="archiveList" class="archive-list"></div>
+            </div>
+          </section>
+
+          <div class="kpis">
+            <div class="card">
+              <div class="kpi-label" id="profitLabel">单件净利润</div>
+              <div id="profitKpi" class="kpi-value good">0.00</div>
+              <div id="marginKpi" class="small">利润率 0.0%</div>
+            </div>
+            <div class="card">
+              <div class="kpi-label">买家预估到手价</div>
+              <div id="buyerKpi" class="kpi-value">0.00</div>
+              <div class="small">包含消费券、商家淘金币、平台加补概率</div>
+            </div>
+            <div class="card">
+              <div class="kpi-label">保本售价</div>
+              <div id="breakEvenKpi" class="kpi-value">0.00</div>
+              <div class="small">按当前费用结构反推</div>
+            </div>
+            <div class="card">
+              <div class="kpi-label">还可承受推广费</div>
+              <div id="roomKpi" class="kpi-value">0.00</div>
+              <div id="roomSub" class="small">距离目标净利的空间</div>
+            </div>
+          </div>
+
+          <div class="bars">
+            <div class="bar-box">
+              <div class="bar-head"><span>成本占售价</span><span id="costShareText">0%</span></div>
+              <div class="bar-track"><div id="costShareBar" class="bar-fill"></div></div>
+            </div>
+            <div class="bar-box">
+              <div class="bar-head"><span>营销空间占售价</span><span id="roomShareText">0%</span></div>
+              <div class="bar-track"><div id="roomShareBar" class="bar-fill"></div></div>
+            </div>
+          </div>
+
+          <div class="compare">
+            <div class="card">
+              <div class="kpi-label">不投放时净利</div>
+              <div id="noAdProfit" class="kpi-value">0.00</div>
+              <div class="small">判断这款本身有没有底气</div>
+            </div>
+            <div class="card">
+              <div class="kpi-label">88 折到手价场景</div>
+              <div id="discount88" class="kpi-value">0.00</div>
+              <div id="discount88Sub" class="small">假设消费券由商家完全承担</div>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>项目</th>
+                  <th>算法</th>
+                  <th>金额</th>
+                </tr>
+              </thead>
+              <tbody id="costTable"></tbody>
+            </table>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>场景</th>
+                  <th>售价</th>
+                  <th>推广 ROI</th>
+                  <th>推广费</th>
+                  <th>净利润</th>
+                  <th>利润率</th>
+                  <th>风险</th>
+                </tr>
+              </thead>
+              <tbody id="scenarioTable"></tbody>
+            </table>
+          </div>
+
+          <div class="formula" id="formulaText"></div>
+        </div>
+      </section>
+
+      <div class="footer-note">
+        说明：平台加补只影响“买家到手价”的竞争力展示，默认不作为商家确定成本；商家淘金币、消费券、平台扣点、税费、快递、推广费会进入净利计算。所有预填值都可以当场改。
+      </div>
+    </main>
+    <aside id="fifoPanel" class="fifo-rail fifo-panel" aria-label="先进先出成本提醒"></aside>
+  </div>
+
+  
+  
+
+
+
+</div><nav class="mobile-nav" aria-label="主要功能" hidden><a href="#skuList">选商品</a><a href="#calculator">算利润</a><a href="#planSection">看计划</a><a href="#fifoPanel">看库存</a></nav><script src="/abacus/app.js" defer></script></body>
+</html>
