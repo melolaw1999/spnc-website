@@ -1,0 +1,143 @@
+.story { --nav-height: 76px; --frame-height: max(720px, calc(100svh - var(--nav-height))); position: relative; background: #fff; color: #0755aa; isolation: isolate; }
+.frame { position: relative; }
+.panel { position: relative; min-height: var(--frame-height); display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 32px; padding: 70px max(5vw, 28px); }
+.copy { position: relative; z-index: 2; }
+.eyebrow { margin: 0 0 24px; font-size: 13px; font-weight: 650; letter-spacing: .13em; }
+.copy h1, .copy h2 { margin: 0; font-weight: 750; letter-spacing: -.055em; line-height: 1.12; }
+.copy h1 { font-size: clamp(58px, 6vw, 84px); }
+.copy h1 span { display: block; }
+.heroProductName { margin: 24px 0 0; font-size: 11px; font-weight: 650; letter-spacing: .12em; line-height: 1.6; }
+.heroProductName span { display: block; margin-top: 4px; font-size: 15px; font-weight: 450; letter-spacing: .02em; }
+.copy h2 { font-size: clamp(46px, 4.7vw, 72px); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.actions :global(.btn) { min-height: 48px; padding: 14px 23px; background: #0755aa; color: #fff; border: 1px solid transparent; box-shadow: none; font-weight: 600; font-size: 14px; }
+.actions :global(.btn.secondary) { color: #0755aa; background: transparent; border-color: #0755aa; }
+.description { margin: 24px 0 0; font-size: 19px; line-height: 1.65; }
+.flavorNames { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; font-size: 13px; }
+.flavorNames a, .flavorNames button { display: inline-flex; align-items: center; gap: 7px; }
+.flavorNames button { min-height: 36px; padding: 7px 14px; border: 1px solid rgba(255,255,255,.5); border-radius: 20px; background: transparent; color: inherit; cursor: pointer; font: inherit; }
+.flavorNames button[aria-pressed="true"] { background: #fff; border-color: #fff; color: #0755aa; }
+.faceControls { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.faceControls button, .faceControls a { min-height: 36px; padding: 8px 10px; border: 1px solid rgba(255,255,255,.55); border-radius: 8px; background: transparent; color: inherit; font-size: 11px; line-height: 18px; cursor: pointer; }
+.faceControls button[aria-pressed="true"] { background: #fff; color: #0755aa; }
+.faceControls button:disabled { opacity: .45; cursor: default; }
+.faceControls a { border-color: transparent; }
+.goldControls { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+.goldControls button, .goldControls a { min-height: 36px; padding: 8px 11px; border: 1px solid rgba(255,255,255,.55); border-radius: 8px; background: transparent; color: inherit; font-size: 11px; line-height: 18px; cursor: pointer; }
+.goldControls a { border-color: transparent; }
+.goldControls button:disabled { opacity: .4; cursor: default; }
+.goldDragArea { position: absolute; z-index: 2; left: 58%; right: 9%; top: 15%; bottom: 105px; cursor: grab; touch-action: pan-y; }
+.goldDragArea:active { cursor: grabbing; }
+.goldDragArea:focus-visible { outline: 2px solid rgba(255,255,255,.85); outline-offset: 5px; border-radius: 16px; }
+.goldDragArea span { position: absolute; bottom: -20px; left: 0; right: 0; text-align: center; font-size: 11px; color: rgba(255,255,255,.8); pointer-events: none; }
+.bottleDragArea { position: absolute; z-index: 1; left: 51%; right: 5%; top: 14%; bottom: 92px; touch-action: pan-y; cursor: grab; }
+.bottleDragArea:active { cursor: grabbing; }
+.bottleDragArea span { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; font-size: 11px; opacity: .75; pointer-events: none; }
+.srStatus { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.flavorNames i { width: 8px; height: 8px; border-radius: 50%; box-shadow: 0 0 0 1px rgba(255,255,255,.6); }
+.productLinks { display: grid; gap: 14px; max-width: 320px; margin-top: 26px; }
+.productLinks a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 10px; color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; font-size: 15px; }
+.productLinks a span { opacity: .75; }
+.staticProducts { display: flex; align-items: center; justify-content: center; height: min(600px, 65svh); }
+.staticProducts img { width: 48%; height: 100%; object-fit: contain; }
+.staticOn img { width: 72%; }
+.staticOnHero { position: relative; width: 100%; }
+.staticOnHero img { position: absolute; object-fit: contain; width: 70%; height: 95%; left: 12%; top: 4%; z-index: 2; transform: rotate(-4deg); }
+.staticOnHero img:nth-child(2) { width: 42%; height: 52%; left: -6%; top: 0; z-index: 1; transform: rotate(7deg); }
+.staticOnHero img:nth-child(3) { width: 43%; height: 54%; left: auto; right: -5%; top: 3%; z-index: 1; transform: rotate(-7deg); }
+.staticOnHero img:nth-child(4) { width: 34%; height: 42%; left: auto; right: 0; top: auto; bottom: 0; z-index: 1; transform: rotate(-7deg); }
+.canvas { display: block; position: absolute; top: 0; left: 0; right: 0; height: var(--frame-height); z-index: 1; pointer-events: none; opacity: 0; }
+.halo { display: none; }
+.story a:focus-visible, .story button:focus-visible { outline: 3px solid #ffe97c; outline-offset: 5px; }
+
+/* 连续背景＋本机原生滚动。sticky仅作用于这三个章节，不截获触摸或wheel。 */
+.story[data-enhanced="true"] { min-height: calc(var(--frame-height) * 3); background: #0867d8; color: #fff; }
+.story[data-enhanced="true"] .frame { position: sticky; top: var(--nav-height); height: var(--frame-height); overflow: clip; }
+.story[data-enhanced="true"] .canvas { display: block; position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: 0; transition: opacity 300ms ease; }
+.story[data-enhanced="true"][data-loaded="true"] .canvas { opacity: 1; }
+.story[data-enhanced="true"] .halo { display: block; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 48%, rgba(140,215,255,.17), transparent 62%); }
+.story[data-enhanced="true"] .panel { position: absolute; inset: 0; min-height: 0; display: flex; align-items: center; padding: 80px 5vw 110px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 260ms ease, visibility 260ms; }
+.story[data-enhanced="true"] .panel[data-active="true"] { opacity: 1; visibility: visible; pointer-events: auto; }
+.story[data-enhanced="true"] .panel > .copy { width: 43%; pointer-events: auto; }
+.story[data-enhanced="true"] .intro { justify-content: flex-start; text-align: left; }
+.story[data-enhanced="true"] .intro > .copy { width: 43%; }
+.story[data-enhanced="true"][data-loaded="true"] .staticProducts { display: none; }
+.story[data-enhanced="true"] .actions :global(.btn) { background: #fff; color: #0755aa; }
+.story[data-enhanced="true"] .actions :global(.btn.secondary) { background: transparent; color: #fff; border-color: rgba(255,255,255,.75); }
+.controls { position: absolute; z-index: 3; right: 5vw; left: 5vw; bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.chapterNav { display: flex; gap: 7px; }
+.chapterNav button { width: 44px; height: 44px; background: transparent; color: rgba(255,255,255,.68); border: 1px solid rgba(255,255,255,.4); border-radius: 50%; cursor: pointer; font-size: 11px; }
+.chapterNav button[aria-current="step"] { background: #fff; color: #0755aa; border-color: #fff; }
+.pause { min-height: 44px; padding: 9px 16px; border: 1px solid rgba(255,255,255,.6); border-radius: 24px; color: #fff; background: transparent; cursor: pointer; font-size: 12px; }
+.next { color: inherit; text-decoration: none; font-size: 12px; padding: 12px; }
+.next span { display: inline-block; margin-left: 12px; font-size: 18px; }
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .copy h1 { font-size: clamp(50px, 6.2vw, 68px); }
+  .copy h2 { font-size: 48px; }
+}
+@media (max-width: 760px) {
+  .story { --nav-height: 72px; --frame-height: max(760px, calc(100svh - var(--nav-height))); }
+  .panel { display: flex; flex-direction: column; gap: 18px; min-height: var(--frame-height); padding: 36px 22px 30px; text-align: center; }
+  .copy { width: 100%; }
+  .eyebrow { margin-bottom: 18px; font-size: 11px; }
+  .copy h1 { font-size: clamp(40px, 11vw, 54px); line-height: 1.13; }
+  .intro .copy h1 { font-size: clamp(32px, 10vw, 42px); }
+  .intro .copy h1 span:nth-child(-n+2) { display: inline; }
+  .heroProductName { margin-top: 16px; font-size: 9px; letter-spacing: .08em; }
+  .heroProductName span { display: inline; margin: 0 0 0 10px; font-size: 11px; }
+  .copy h2 { font-size: clamp(34px, 9.5vw, 46px); }
+  .actions { justify-content: center; margin-top: 22px; gap: 10px; }
+  .actions :global(.btn) { min-height: 44px; padding: 12px 17px; font-size: 13px; }
+  .description { margin-top: 18px; font-size: 15px; }
+  .flavorNames { justify-content: center; gap: 18px; margin-top: 14px; font-size: 12px; }
+  .faceControls { justify-content: center; margin-top: 12px; }
+  .goldControls { justify-content: center; margin-top: 12px; }
+  .goldDragArea { left: 12%; right: 12%; top: calc(var(--frame-height) * .44); bottom: 86px; }
+  .story[data-chapter="1"] .goldDragArea { left: 3%; right: 27%; top: calc(var(--frame-height) * .49); }
+  .bottleDragArea { left: 5%; right: 5%; top: calc(var(--frame-height) * .48); bottom: 86px; }
+  .productLinks { grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 18px auto 0; gap: 8px 14px; max-width: 346px; text-align: left; }
+  .productLinks a { min-height: 38px; font-size: 12px; gap: 4px; padding: 5px 0 8px; }
+  .staticProducts { height: 340px; width: 100%; }
+  .staticOnHero img:nth-child(3) { right: 0; }
+  .story[data-enhanced="true"] .panel { display: flex; align-items: flex-start; justify-content: center; flex-direction: row; padding: 36px 22px 0; }
+  .story[data-enhanced="true"] .panel > .copy, .story[data-enhanced="true"] .intro > .copy { width: 100%; }
+  .story[data-enhanced="true"] .intro { align-items: flex-start; text-align: center; }
+  .controls { left: 18px; right: 18px; bottom: 17px; gap: 8px; }
+  .chapterNav { gap: 5px; }
+  .chapterNav button { width: 36px; height: 44px; border-radius: 22px; }
+  .pause { padding: 9px 12px; font-size: 11px; }
+  .next { font-size: 11px; padding: 12px 3px; }
+  .next span { margin-left: 5px; font-size: 14px; }
+}
+@media (max-width: 350px) {
+  .panel, .story[data-enhanced="true"] .panel { padding-left: 16px; padding-right: 16px; }
+  .copy h1 { font-size: 38px; }
+  .copy h2 { font-size: 34px; }
+  .actions { gap: 8px; }
+  .actions :global(.btn) { padding-left: 13px; padding-right: 13px; font-size: 12px; }
+  .controls { left: 12px; right: 12px; gap: 5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .panel, .canvas { transition: none !important; }
+}
+
+/* 手机沿用原生滚页，只有当前章节的三维画面持续渲染。 */
+.canvas[data-suspended="true"] { visibility: hidden; }
+.skyCanvas { position: absolute; inset: 0; pointer-events: none; }
+.skyCanvas * { pointer-events: none !important; }
+.mobileSky { background: #c0f0f5; position: relative; overflow: hidden; }
+.skyFallback { position: relative; display: grid; place-items: center; width: 100%; height: var(--frame-height); }
+.skyFallback strong { position: absolute; top: 14%; color: #f97315; font-size: 28vw; line-height: 1; }
+.skyFallback img { position: relative; width: 85%; height: 65%; object-fit: contain; transform: rotate(-28deg); }
+.mobileSky[data-ready="true"] .skyFallback { visibility: hidden; }
+.story[data-chapter="3"] .controls { color: #0755aa; }
+.story[data-chapter="3"] .chapterNav button,
+.story[data-chapter="3"] .pause { color: #0755aa; border-color: rgba(7,85,170,.55); background: rgba(255,255,255,.3); }
+.story[data-chapter="3"] .chapterNav button[aria-current="step"] { color: #fff; background: #0755aa; border-color: #0755aa; }
+@media (max-width: 760px) {
+  .story[data-enhanced="true"] { min-height: calc(var(--frame-height) * 4); }
+  .story[data-enhanced="true"] .mobileSky { padding: 0; display: block; }
+  .chapterNav { gap: 4px; }
+  .chapterNav button { width: 32px; }
+}

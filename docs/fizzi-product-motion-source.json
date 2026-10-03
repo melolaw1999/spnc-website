@@ -1,0 +1,349 @@
+{
+  "fizzi": {
+    "repo": "https://github.com/prismicio-community/course-fizzi-next",
+    "commit": "84b5775f799c531b69d379ec60930bc2e64e0330",
+    "license": "Apache-2.0",
+    "adapted": [
+      "src/slices/Hero/Scene.tsx",
+      "src/components/FloatingCan.tsx"
+    ],
+    "excluded": [
+      "第三方罐身、标签、HDRI、字体、Prismic CMS初始化或内容迁移"
+    ]
+  },
+  "ovodan": {
+    "projectLibraryId": "libfile_461067de873c81918b8b592ba9827e84",
+    "version": 1,
+    "geometry": "source-derived Blender profile ported to Three.js, approximate physical dimensions",
+    "supports360": true,
+    "yawLimitRadians": null,
+    "photos": [
+      {
+        "file": "passionfruit-front.jpg",
+        "source": "outputs/hero-20261001/三维制作素材包_20261001/03_欧福225mL瓶_原始像素/01_百香果味_225mL×6瓶/04_欧福蛋清蛋白饮_百香果味_225mL_单瓶正面白底.jpg",
+        "sha256": "d616bc8a93e665dd8f0854ab7bd4bc40803c3f6336328f630cd74023100cc497",
+        "pixels": [
+          1500,
+          2126
+        ],
+        "method": "复制原始字节；正面投射，不生成标签或背面",
+        "capBaseColor": {
+          "capROI": [
+            650,
+            475,
+            895,
+            555
+          ],
+          "medianRGB": [
+            103,
+            174,
+            220
+          ],
+          "hex": "#67aedc"
+        }
+      },
+      {
+        "file": "strawberry-front.png",
+        "source": "outputs/hero-20261001/三维制作素材包_20261001/03_欧福225mL瓶_原始像素/02_草莓味_225mL×6瓶/06_欧福蛋清蛋白饮_草莓味_225mL_单瓶正面白底.png",
+        "sha256": "70270bb0ceb50e15b01c3b66d78ef750c6fce0297e9020469fe540b37d923bf3",
+        "pixels": [
+          1500,
+          2126
+        ],
+        "method": "复制原始字节；正面投射，不生成标签或背面",
+        "capBaseColor": {
+          "capROI": [
+            650,
+            475,
+            895,
+            555
+          ],
+          "medianRGB": [
+            214,
+            56,
+            47
+          ],
+          "hex": "#d6382f"
+        }
+      }
+    ],
+    "colorPipeline": "首屏与ON保留既有材质；欧福段和单品样品使用sRGB三面真实照片、MeshStandardMaterial且toneMapped=false，按口味分别校准投射参数，瓶盖取原始照片基色。",
+    "desktopFit": "首屏大瓶位置±0.39、相对高度0.55，桌面比例低于1.45时按横向空间进一步限尺寸；中央文案占可用宽度46%，手机编排不变。",
+    "rotationScope": "首页欧福段与单品样品支持完整几何Y轴旋转；首屏仍保留原展示。"
+  },
+  "on": "四款真实正面图空间陈列，金标为主；完整背标尚未取得，ON完整360暂未启用。",
+  "dependencies": "GSAP另遵循其Standard No Charge许可；R3F、Drei、Three为MIT",
+  "onMobileFit": {
+    "creatine": {
+      "x": 0.2,
+      "scale": 0.29
+    },
+    "scaleLimit": "仅手机ON组min(1,viewportAspect/(390/772))",
+    "testedWidths": [
+      310,
+      320,
+      360,
+      390
+    ],
+    "testedFrameHeights": [
+      760,
+      772,
+      900
+    ],
+    "actualAlphaBoundaryCheck": true,
+    "desktopAndMobileOvodanUnchanged": false,
+    "v9Scope": "ON编排不变；欧福段桌面双瓶、手机单瓶口味切换。"
+  },
+  "singleVolumeSample": {
+    "route": "/preview/ovodan-3d",
+    "flavor": "OVODAN草莓味与百香果味225mL",
+    "completeGeometryRotation": true,
+    "completeAccuratePackaging": false,
+    "geometry": "复用现有近似Lathe瓶体、肩部、瓶颈、瓶盖、64道盖齿、顶面、底面；未按实测尺寸校准",
+    "rearMaterial": "各口味对应的用户上传配料面及营养面原图",
+    "existingGenuineViews": [
+      "正面",
+      "配料面",
+      "营养面",
+      "草莓味单瓶三视图"
+    ],
+    "macPixelViewed": "03_欧福225mL瓶_原始像素/02_草莓味_225mL×6瓶/08_欧福蛋清蛋白饮_草莓味_225mL_单瓶三视图白底.png",
+    "interaction": [
+      "透视相机",
+      "绕Y轴全周旋转，16秒/周",
+      "横拖、角度滑块及4面按钮",
+      "瓶盖/瓶底手动俯仰",
+      "减少动效时手动查看",
+      "离屏和隐藏暂停"
+    ],
+    "threeFaceAppearance": true,
+    "blockedByPhysicalDimensions": false,
+    "displayLimitations": [
+      "真实标签接缝角度按照片估算",
+      "瓶盖与底部细节为照片比例近似"
+    ],
+    "labelCoverage": {
+      "frontDegrees": 140,
+      "ingredientsDegrees": 110,
+      "nutritionDegrees": 110,
+      "cameraAngles": [
+        0,
+        125,
+        235
+      ],
+      "backgroundOnlyBlendDegrees": 8,
+      "textOrBarcodeGenerated": false
+    },
+    "v7BrowserQA": "主线程确认全部通过",
+    "v8BrowserQA": "主线程确认草莓样品通过，用户同意继续首页集成。",
+    "v9BrowserQA": "代码与构建通过，待主线程1440桌面/390手机实屏复验。"
+  },
+  "threeLabelSources": [
+    {
+      "libraryFileId": "libfile_033545b45f6c8191984875abbb15fdc0",
+      "image": "strawberry-label-front.png",
+      "view": "front",
+      "flavor": "strawberry"
+    },
+    {
+      "libraryFileId": "libfile_90246e0ec23c819197112b9ccf957ff4",
+      "image": "strawberry-ingredients.png",
+      "view": "ingredients",
+      "flavor": "strawberry"
+    },
+    {
+      "libraryFileId": "libfile_e62c4e4e5ee4819180f3470fa4b3d461",
+      "image": "strawberry-nutrition.png",
+      "view": "nutrition",
+      "flavor": "strawberry"
+    },
+    {
+      "libraryFileId": "libfile_17b7117a42708191861e15879be02876",
+      "image": "passionfruit-label-front.jpg",
+      "view": "front",
+      "flavor": "passionfruit"
+    },
+    {
+      "libraryFileId": "libfile_6ad06b9940f081918faabef43027f6b4",
+      "image": "passionfruit-ingredients.jpg",
+      "view": "ingredients",
+      "flavor": "passionfruit"
+    },
+    {
+      "libraryFileId": "libfile_76dd49003bd4819180f3470fa4b3d461",
+      "image": "passionfruit-nutrition.jpg",
+      "view": "nutrition",
+      "flavor": "passionfruit"
+    }
+  ],
+  "previewVersion": "10-on-priority-layout",
+  "homeChapters": [
+    "ON金标乳清主视觉",
+    "ON金标/分离/水解/肌酸",
+    "OVODAN欧福双口味"
+  ],
+  "onHero": {
+    "productId": "on-gold-standard-whey",
+    "flavor": "Vanilla Ice Cream",
+    "size": "5lb / 2.26kg",
+    "servings": 73,
+    "image": "/assets/optimized/products/on/gold-standard-whey/selector/5lb/vanilla-ice-cream/product-front.webp",
+    "pixelViewed": true,
+    "officialSource": "https://www.optimumnutrition.com/cdn/shop/files/US_GSW_5LB_Vanilla_Ice_Cream_FOP.png?v=1781190981&width=2500",
+    "iherbProduct": "https://ca.iherb.com/pr/optimum-nutrition-gold-standard-100-whey-vanilla-ice-cream-5-lb-2-26-kg/27514",
+    "fullRotationReady": false,
+    "noInventedBackLabels": true,
+    "sha256": "f9eb9df96f574ea803e7bdf05cc04477d82344de85fe2a50c311d45ae82f06e5",
+    "rotationStatus": "真实金标八图已齐备，独立样品/preview/on-3d验收后再接入首页；其他ON商品仍为真实正面展示。"
+  },
+  "onStudioSample": {
+    "route": "/preview/on-3d?variant=vanilla",
+    "sourceLibraryFileId": "libfile_53ef7e3841008191afae2c89821da543",
+    "sku": "Vanilla Ice Cream / 5 lb / 2.26 kg / 73 servings",
+    "files": "public/assets/media/on-vanilla-360-20261002/85.avif 至92.avif",
+    "originalBytesUnchanged": true,
+    "actualPixelsViewedOnMac": true,
+    "method": "真实照片曲面逆投射，连续旋转三维罐形；接缝避开正面标题、营养表及条码，不重画或混合标签文字；仅深灰/红色底色做8°缓接。八张作为完整来源归档，最终接缝覆盖使用85、87、88、89、90、91六张。",
+    "camera": {
+      "fov": 24,
+      "position": [
+        0,
+        0.45,
+        9.4
+      ],
+      "target": [
+        0,
+        0.03,
+        0
+      ]
+    },
+    "lighting": "本地程序化柔光棚环境及一次性接触阴影；不加载远程HDRI。标签保留sRGB与原拍摄光影，不重复受场景灯光影响。",
+    "studioReferenceLibraryFileId": "libfile_f61acf06d8b48191a56885a96d69613c",
+    "referenceScope": "仅相机、近似比例和灯光；不复制巧克力74份、防伪贴、二维码及广告内容。",
+    "limits": "罐形尺寸和盖底为照片参考近似模型；拍摄高光仍包含在标签照片内，不是印刷展开稿或扫描级模型。",
+    "homepageIntegrated": false,
+    "status": "保留对照；主样品已改用宝尊完整巧克力矢量稿"
+  },
+  "onChocolateStudioSample": {
+    "route": "/preview/on-3d",
+    "sourceLibraryFileId": "libfile_e35cf582e09c8191879140bf9ea17e8d",
+    "sourcePdfSha256": "d89d112807a6360906d7b9db37327dba5f595d24c14b87b36944cc158d8cea4e",
+    "sku": "Double Rich Chocolate / 5.05 lb / 2.29 kg / 74 servings",
+    "barcode": "748927028669",
+    "artwork": "V.8.866.0825US / 6076685",
+    "actualPdfPixelsViewedOnMac": true,
+    "pagePoints": [
+      1534.5,
+      378
+    ],
+    "allPageBoxesIdentical": true,
+    "separateDielineSeen": false,
+    "texture": "/assets/media/on-chocolate-label-20261002/chocolate-label-srgb.webp",
+    "texturePixels": [
+      4096,
+      1009
+    ],
+    "textureBytes": 291886,
+    "textureSha256": "143a26bbf51c29f6ea0583401eedff7f39b2a3eadffd1e81567ff052cfb6658e",
+    "method": "完整矢量页原样栅格化并无损WebP编码；以原稿宽高比做真实圆柱UV映射，不镜像、不重排、不改字、不重生成二维码条码。",
+    "colorManagement": "原PDF没有OutputIntent；保留Spotblack、DAL-454和PANTONE 476 C的原稿替代颜色，经PDFium转RGB，贴图以sRGB采样，场景中性柔光。只作为屏幕展示，不声称印刷色样匹配。 PDF RGB渲染图与无损WebP逐像素RGB一致已核验。",
+    "lighting": "标签通过真实材质受光；FOV24°、相机[0,.45,9.4]和程序化柔光棚环境；不再包含原照片光影。",
+    "homepageIntegrated": true,
+    "preservedVanillaRoute": "/preview/on-3d?variant=vanilla",
+    "geometryLimit": "原稿物理页面尺寸不代表已实测罐尺寸；按照片近似几何、以展开稿宽高比贴合；原稿未标额外搭接区，背后接缝不吞文字。"
+  },
+  "onWhiteStudioV13": {
+    "status": "local-preview-awaiting-visual-approval",
+    "preview": "http://127.0.0.1:3104/preview/on-3d?v=13",
+    "labelContent": "unchanged complete Baozun vector artwork; original QR and barcode retained",
+    "color": "sRGB, explicit NoToneMapping, white ambient and neutral softbox reflections",
+    "shell": "photo-reference approximate geometry; shortened shoulder/base, smooth profile, black nonmetal plastic",
+    "interaction": [
+      "hover/focus pause and 6% smooth zoom",
+      "manual rotation keeps playing=false",
+      "mobile native dialog with one Canvas",
+      "Escape/close focus return",
+      "reduced motion static zoom and no autoplay",
+      "native vertical scrolling"
+    ],
+    "modified": [
+      "src/components/motion/OnRotateCanvas.tsx",
+      "src/components/motion/OnGoldTub.tsx",
+      "src/components/motion/OnChocolateTub.tsx",
+      "src/components/OnRotateDemo.tsx",
+      "src/components/OnRotateDemo.module.css",
+      "src/app/preview/on-3d/page.module.css",
+      "src/lib/on-inspection.ts",
+      "tests/unit/on-inspection.test.ts"
+    ],
+    "notDeployed": true
+  },
+  "onDeepBlackV14": {
+    "preview": "http://127.0.0.1:3104/preview/on-3d?v=14",
+    "status": "rotatable-local-candidate",
+    "sourceArtwork": "unchanged PDF and lossless WebP, same UV and label content",
+    "inkTreatment": "shader only: low-chroma dark ink multiplied by0.22 in linear space; bright ink and chromatic regions excluded",
+    "environmentFix": "bind shared scene.environment to label material.envMap so scene.environmentIntensity no longer overrides envMapIntensity0.04",
+    "lighting": "remove frontal fill; side/rear softboxes define black plastic contour",
+    "changedSource": [
+      "src/components/motion/OnChocolateTub.tsx",
+      "src/components/motion/OnRotateCanvas.tsx",
+      "src/components/motion/OnGoldTub.tsx"
+    ],
+    "previousInteractionsRetained": true,
+    "notDeployed": true
+  },
+  "onHomeV15": {
+    "homepage": "http://127.0.0.1:3104/?v=15",
+    "status": "local-preview-awaiting-visual-approval",
+    "notDeployed": true,
+    "gold": "完整宝尊巧克力74份原稿，首页及独立页共用三维材质",
+    "supporting": "分离、水解、肌酸保持已核验正面图片，不编造背标",
+    "displayInk": {
+      "red": {
+        "source": "#d6252d",
+        "target": "#b0262a"
+      },
+      "gold": {
+        "source": "#f9a51b",
+        "target": "#bf9650"
+      }
+    },
+    "method": "线性空间分色掩码，只调整红墨及深金；原始PDF/WebP与亮字、近中性暗墨不变",
+    "poster": "/assets/media/on-chocolate-label-20261002/hero-poster-v15.png",
+    "posterMethod": "本版真实WebGL Canvas透明截图，减少动效和加载回退使用",
+    "interaction": "桌面停留放大、临时暂停/恢复、键盘；横拖后保持暂停；手机纵滚和细看入口；离屏/后台暂停",
+    "qa": "qa/home-on-v15/verification.json",
+    "changedSource": [
+      "src/components/ProductMotionHero.tsx",
+      "src/components/ProductMotionHero.module.css",
+      "src/components/motion/MotionCanvas.tsx",
+      "src/components/motion/OnHeroProduct.tsx",
+      "src/components/motion/OnStudioLighting.tsx",
+      "src/components/motion/OnChocolateTub.tsx",
+      "src/components/motion/OnRotateCanvas.tsx",
+      "src/data/on-chocolate-label.ts",
+      "src/lib/hero-bottle-motion.ts",
+      "src/lib/product-motion.ts",
+      "tests/unit/hero-bottle-motion.test.ts"
+    ]
+  },
+  "onColorV16": {
+    "status": "local-preview-awaiting-visual-approval",
+    "notDeployed": true,
+    "request": "红色再暗一点点，金色再亮一点，保持暗金色相",
+    "red": {
+      "previousTarget": "#b0262a",
+      "target": "#a62327"
+    },
+    "gold": {
+      "previousTarget": "#bf9650",
+      "target": "#ca9f55"
+    },
+    "method": "沿用v15局部印刷色掩码，只改两个目标色；不使用全局滤镜",
+    "sourceArtwork": "原PDF与lossless WebP字节不变，完整标签不改字、不重排、不重绘码",
+    "preserved": "v15罐形、黑底、亮字、灯光、布局、旋转与停留放大",
+    "poster": "/assets/media/on-chocolate-label-20261002/hero-poster-v16.png",
+    "qa": "qa/home-on-v16/verification.json"
+  }
+}

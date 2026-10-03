@@ -28,6 +28,7 @@ describe("官网定位与联系信息", () => {
     expect(footer).toContain("All Rights Reserved.");
     expect(footer).toContain("<BackToTop />");
     expect(backToTop).toContain('aria-label="返回页面顶部"');
+    expect(backToTop).toContain("jumpToPageTop(window)");
     expect(backToTop).toContain("prefers-reduced-motion: reduce");
   });
 
@@ -62,15 +63,19 @@ describe("官网定位与联系信息", () => {
     expect(contactPage).toContain("不会索取淘宝密码");
   });
 
-  it("首页精选内容进入可控制的自动轮播，联系区保持独立", () => {
+  it("商品悬浮首屏保持常驻，品牌精选轮播和联系区保持独立", () => {
     const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
     const carousel = readFileSync(path.join(process.cwd(), "src/components/HomeCarousel.tsx"), "utf8");
 
     expect(homePage).toContain("<HomeCarousel");
-    expect(homePage).toContain("品牌主视觉");
+    expect(homePage).toContain("<HomeProductMotion");
+    expect(homePage.indexOf("<HomeProductMotion")).toBeLessThan(homePage.indexOf("<HomeCarousel"));
+    const motion = readFileSync(path.join(process.cwd(), "src/components/HomeProductMotion.tsx"), "utf8");
+    expect(motion).toContain("<ProductMotionHero");
+    expect(motion).toContain("<FizziDesktopHero");
     expect(homePage).toContain("理想营养");
     expect(homePage).toContain("三个版本");
-    expect(homePage).toContain("TEAM ON");
+    expect(homePage).toContain("探索 ON 全系列");
     expect(homePage).toContain("防伪溯源");
     expect(homePage.indexOf("</HomeCarousel>")).toBeLessThan(homePage.indexOf("home-billboard-contact"));
     expect(carousel).toContain("window.setInterval");
@@ -128,9 +133,16 @@ describe("官网定位与联系信息", () => {
     });
   });
 
-  it("首页 ON 商品区只使用 TEAM ON 标识", () => {
+  it("首页保留三分类与原品牌页锚点链接", () => {
     const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
-    expect(homePage).toContain('aria-label="TEAM ON"');
+    const onPage = readFileSync(path.join(process.cwd(), "src/app/on/page.tsx"), "utf8");
+    expect(homePage).toContain('id="on-gallery-title"');
+    expect(homePage).toContain("publicSalesVersions.map");
+    for (const target of ["on-imported-title", "on-domestic-title", "on-general-trade-title"]) {
+      expect(homePage).toContain(target);
+      expect(onPage).toContain(`id="${target}"`);
+    }
+    expect(homePage).not.toContain("ProductOrbitGallery");
     expect(homePage).not.toContain("ON Product Library");
     expect(homePage).not.toContain("ON 商品矩阵");
   });

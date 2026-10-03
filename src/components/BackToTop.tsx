@@ -1,21 +1,30 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { jumpToPageTop, watchBackToTopVisibility } from "@/lib/back-to-top";
 import styles from "./BackToTop.module.css";
 
 const visibilityThreshold = 520;
 
 export function BackToTop() {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    if (isHomePage) return watchBackToTopVisibility(window, document, setVisible);
     const updateVisibility = () => setVisible(window.scrollY > visibilityThreshold);
     updateVisibility();
     window.addEventListener("scroll", updateVisibility, { passive: true });
     return () => window.removeEventListener("scroll", updateVisibility);
-  }, []);
+  }, [isHomePage]);
 
   const scrollToTop = () => {
+    if (isHomePage) {
+      jumpToPageTop(window);
+      return;
+    }
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
   };
@@ -25,6 +34,8 @@ export function BackToTop() {
     className={`${styles.button} ${visible ? styles.visible : ""}`}
     onClick={scrollToTop}
     aria-label="返回页面顶部"
+    aria-hidden={isHomePage ? !visible : undefined}
+    inert={isHomePage ? !visible : undefined}
     title="返回顶部"
     tabIndex={visible ? 0 : -1}
   >

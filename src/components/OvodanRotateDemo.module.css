@@ -1,0 +1,38 @@
+.demo{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);gap:72px;width:min(1240px,calc(100% - 64px));margin:0 auto;padding:16px 0 80px;align-items:center}
+.stage{position:relative;min-width:0;height:640px;touch-action:pan-y;cursor:grab;background:radial-gradient(ellipse at 50% 55%,#fff 0%,#f3f3f0 65%);border-radius:28px;overflow:hidden}
+.stage:active{cursor:grabbing}
+.stageCaption{position:absolute;z-index:2;top:28px;left:30px;right:30px;display:flex;justify-content:space-between;gap:14px;font-size:12px;color:#73736d;pointer-events:none}
+.canvas,.original{position:absolute;inset:0}
+.original{display:grid;place-items:center;pointer-events:none}
+.original[hidden]{display:none}
+.original img{height:88%;width:auto;max-width:88%;object-fit:contain;mix-blend-mode:multiply}
+.hint{position:absolute;bottom:24px;left:20px;right:20px;margin:0;text-align:center;font-size:12px;line-height:1.6;color:#6e6e73;pointer-events:none}
+.controls{min-width:0}
+.quickControls{display:none}
+.flavorSwitch{display:flex;gap:8px;margin:0 0 22px}
+.flavorSwitch button{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:8px 13px;border:1px solid #dddeda;border-radius:20px;background:transparent;color:#555;font-size:12px;cursor:pointer}
+.flavorSwitch button[aria-pressed=true]{border-color:#333;color:#111;background:#fff}
+.flavorSwitch i{width:7px;height:7px;border-radius:50%}
+.quickControls button:focus-visible,.flavorSwitch button:focus-visible{outline:3px solid #0071e3;outline-offset:4px}
+.eyebrow{margin:0 0 18px;color:#74746e;font-size:12px;font-weight:650;letter-spacing:.1em}
+.controls h2{margin:0 0 22px;font-size:clamp(40px,4vw,60px);line-height:1.1;letter-spacing:-.055em;font-weight:650}
+.description{max-width:340px;color:#6e6e73;font-size:16px;line-height:1.8;margin:0 0 32px}
+.rotationHead{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin:0 0 8px}
+.rotationHead output{font-variant-numeric:tabular-nums;color:#6e6e73;font-weight:400}
+.slider{display:block;width:100%;height:32px;accent-color:#303030;cursor:ew-resize;margin:0 0 14px}
+.views{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.views button{border:1px solid #dddeda;border-radius:10px;padding:11px 4px;font-size:12px;color:#444;background:transparent;cursor:pointer}
+.views button[aria-pressed=true]{border-color:#333;background:#333;color:#fff}
+.details{display:flex;flex-wrap:wrap;gap:18px;margin-top:18px}
+.details button{border:0;border-bottom:1px solid transparent;background:none;padding:6px 0;color:#6e6e73;font-size:12px;cursor:pointer}
+.details button[aria-pressed=true]{color:#222;border-color:#222}
+.play{display:block;min-width:148px;padding:12px 24px;border:0;border-radius:999px;background:#202020;color:#fff;font-size:13px;cursor:pointer;margin-top:24px}
+.controls button:disabled,.slider:disabled{opacity:.38;cursor:default}
+.controls button:focus-visible,.slider:focus-visible{outline:3px solid #0071e3;outline-offset:4px}
+.scope{margin:26px 0 0;padding-top:22px;border-top:1px solid #dddeda;color:#777770;font-size:12px;line-height:1.8}
+.scope strong{color:#55554f;font-weight:600}
+.preference{color:#6e6e73;font-size:12px;line-height:1.8;margin:18px 0 0}
+@media(max-width:1000px){.demo{gap:34px;grid-template-columns:minmax(0,1fr) minmax(300px,.8fr)}.stage{height:600px}.stageCaption{left:20px;right:20px}}
+@media(max-width:760px){.demo{grid-template-columns:1fr;gap:32px;width:calc(100% - 32px);padding:0 0 56px}.stage{height:480px;border-radius:22px}.stageCaption{top:20px;font-size:11px}.hint{bottom:18px}.controls{padding:0 8px}.controls h2{font-size:42px}.description{max-width:none;margin-bottom:24px}.eyebrow{margin-bottom:12px}.scope{margin-top:24px}}
+@media(max-width:360px){.stage{height:440px}.demo{width:calc(100% - 24px)}.details{gap:14px}}
+@media(max-width:760px){.quickControls{display:grid;gap:12px;margin-top:-16px;padding:0 8px}.quickControls .flavorSwitch{justify-content:center;margin:0}.desktopFlavor,.desktopFaces{display:none}.quickControls .views button{min-height:40px}.quickControls button:disabled{opacity:.38;cursor:default}}

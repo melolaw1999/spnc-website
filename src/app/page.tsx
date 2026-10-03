@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ProductOrbitGallery } from "@/components/ProductOrbitGallery";
 import { HomeCarousel } from "@/components/HomeCarousel";
 import { TaobaoButton } from "@/components/TaobaoButton";
 import { TaobaoServiceButton } from "@/components/TaobaoServiceButton";
-import { catalog, publicSalesVersions } from "@/data/catalog";
+import { HomeProductMotion } from "@/components/HomeProductMotion";
+import { publicSalesVersions } from "@/data/catalog";
 import { publicContactEmail, serviceEmail, mailto } from "@/data/contacts";
 import styles from "./home.module.css";
 
@@ -64,41 +64,16 @@ const versionHighlights = [
   },
 ] as const;
 
-export default function Home() {
-  const galleryProducts = [...catalog].sort((a, b) => {
-    const order = ["跨境进口", "一般贸易", "国产版本"];
-    const rank = (version?: string) => version ? order.indexOf(version) : order.length;
-    return rank(a.salesVersion) - rank(b.salesVersion);
-  }).map((product) => ({
-    slug: product.slug,
-    name: product.name,
-    version: product.salesVersion ?? "版本以商品页为准",
-    image: { src: product.images[0].asset.projectPath, alt: product.images[0].altText,
-      width: product.images[0].asset.width, height: product.images[0].asset.height },
-  }));
-  return <main className="apple-home">
-    <HomeCarousel labels={["品牌主视觉", "理想营养", "三个版本", "防伪溯源"]}>
-    <section className={`home-hero ${styles.hero}`} aria-label="为你的下一次突破做好准备">
-      <div className="home-hero-visual">
-        <Image
-          src="/assets/hero/spnc-finish-line-rain.png"
-          alt="雨中冲过终点线的跑者高举双臂"
-          fill
-          priority
-          sizes="(max-width: 760px) 100vw, 58vw"
-        />
-      </div>
-      <div className="container home-hero-content">
-        <div className={styles.heroCopy}>
-          <h1>为你的下一次突破做好准备</h1>
-          <div className={styles.heroActions}>
-            <Link className="btn" href="/on">浏览 ON 商品</Link>
-            <TaobaoButton label="前往淘宝店" secondary />
-          </div>
-        </div>
-      </div>
-    </section>
+const onVersionAnchors = {
+  "跨境进口": "on-imported-title",
+  "国产版本": "on-domestic-title",
+  "一般贸易": "on-general-trade-title",
+} as const;
 
+export default function Home() {
+  return <main className="apple-home">
+    <HomeProductMotion />
+    <HomeCarousel labels={["理想营养", "三个版本", "防伪溯源"]}>
     <section className="home-billboard" aria-labelledby="brand-statement-title">
       <div className={`container billboard-inner ${styles.brandStatement}`}>
         <div className={styles.brandStatementCopy}>
@@ -198,17 +173,17 @@ export default function Home() {
       <Link href="/authenticity"><span>防伪溯源</span><small>查看包装与查验方式</small><b aria-hidden="true">↗</b></Link>
     </nav>
 
-    <section className={styles.productGallerySection} aria-labelledby="on-gallery-title">
-      <div className={`container ${styles.productGalleryPanel}`}>
-        <header className={styles.productGalleryHeader}>
-          <h2 id="on-gallery-title" className={styles.teamOn} aria-label="TEAM ON">
-            <span aria-hidden="true">TEAM</span>
-            <Image className={styles.teamOnLogo} src="/assets/brand/on-swoosh-logo.png" width={4096} height={1696} alt="" aria-hidden="true" sizes="(max-width: 560px) 150px, 220px" />
-          </h2>
-          <div className="version-scope version-scope-centered">{publicSalesVersions.map((version) => <span key={version}>{version}</span>)}</div>
-        </header>
-        <ProductOrbitGallery products={galleryProducts} />
-        <Link className="btn" href="/on">浏览 ON 专区</Link>
+    <section className={styles.onExplore} aria-labelledby="on-gallery-title">
+      <div className={`container ${styles.onExploreInner}`}>
+        <div>
+          <p className={styles.onExploreEyebrow}>OPTIMUM NUTRITION</p>
+          <h2 id="on-gallery-title">探索 ON 全系列</h2>
+          <p className={styles.onExploreDescription}>按销售版本，查看规格与口味。</p>
+          <Link className={styles.onExploreLink} href="/on">进入 ON 商品专区 <span aria-hidden="true">↗</span></Link>
+        </div>
+        <nav className={styles.onVersionLinks} aria-label="按版本探索 ON 商品">
+          {publicSalesVersions.map((version) => <Link key={version} href={`/on#${onVersionAnchors[version]}`}><span>{version}</span><b aria-hidden="true">↗</b></Link>)}
+        </nav>
       </div>
     </section>
 

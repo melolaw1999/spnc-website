@@ -1,0 +1,13 @@
+Fizzi motion structure
+Original work: Prismic, course-fizzi-next
+https://github.com/prismicio-community/course-fizzi-next
+Source commit: 84b5775f799c531b69d379ec60930bc2e64e0330
+Licensed under Apache License, Version 2.0 (see fizzi-Apache-2.0.txt).
+Modified for SPNC on 2026-10-02: original cans and branding replaced with source-derived OVODAN geometry and verified ON photographs; responsive poses, bounded rotations, native scroll sequencing, accessibility and motion preferences added; CMS/HDRI/fonts omitted.
+GSAP and @gsap/react retain their separate Standard No Charge license; this notice does not relicense those libraries.
+
+v17 修改说明（2026-10-02）：新增 ON 完整真实包装模型的透视相机、多轴滚动姿态、连续品牌交接、独立用户旋转和几何盖纹；保留原来源与许可证。Fizzi 品牌图像、罐体资源和 HDR 未纳入本改动。
+
+v18 修改说明（2026-10-02）：桌面 Hero 恢复原源码的五演员初终变换、3秒入场、4.3时间线、scrub 1.5、fov 30/z5相机及两屏sticky布局。替换为已核验的ON/欧福完整标签与SPNC文字颜色；仅模型比例和现有导航高度作适配。Drei Float同方程使用独立可暂停时钟；增加静态回退、减少动效与既有手机交互保留。未复制Fizzi品牌素材或整站其他章节。
+
+v20 修改说明（2026-10-02）：保留SkyDive路径与时间线，增加固定灯箱下真实小幅倾转以观察塑料桶反射；采用原创云密度纹理、实际前后深度分布与球面薄壳气泡材质。未引入Fizzi产品、字体、HDR或授权未明的远程云图。
