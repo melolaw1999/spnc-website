@@ -25,7 +25,7 @@ describe("官网定位与联系信息", () => {
     const backToTop = readFileSync(path.join(process.cwd(), "src/components/BackToTop.tsx"), "utf8");
 
     expect(footer).toContain("SPNC · 理想营养");
-    expect(footer).toContain("All Rights Reserved.");
+    expect(footer).toContain("保留所有权利。");
     expect(footer).toContain("<BackToTop />");
     expect(backToTop).toContain('aria-label="返回页面顶部"');
     expect(backToTop).toContain("jumpToPageTop(window)");
@@ -63,21 +63,28 @@ describe("官网定位与联系信息", () => {
     expect(contactPage).toContain("不会索取淘宝密码");
   });
 
-  it("商品悬浮首屏保持常驻，品牌精选轮播和联系区保持独立", () => {
+  it("首页保留商品动效，品牌精选轮播移至 ON 专区顶部", () => {
     const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
     const carousel = readFileSync(path.join(process.cwd(), "src/components/HomeCarousel.tsx"), "utf8");
 
-    expect(homePage).toContain("<HomeCarousel");
+    const onPage = readFileSync(path.join(process.cwd(), "src/app/on/page.tsx"), "utf8");
+    const featured = readFileSync(path.join(process.cwd(), "src/components/OnFeaturedCarousel.tsx"), "utf8");
+    expect(homePage).not.toContain("<HomeCarousel");
+    expect(homePage).not.toContain("<OnFeaturedCarousel");
+    expect(onPage).toContain("<OnFeaturedCarousel");
+    expect(onPage.indexOf("<OnFeaturedCarousel")).toBeLessThan(onPage.indexOf('id="on-products"'));
+    expect(onPage).not.toContain("compact-hero");
     expect(homePage).toContain("<HomeProductMotion");
-    expect(homePage.indexOf("<HomeProductMotion")).toBeLessThan(homePage.indexOf("<HomeCarousel"));
     const motion = readFileSync(path.join(process.cwd(), "src/components/HomeProductMotion.tsx"), "utf8");
-    expect(motion).toContain("<ProductMotionHero");
+    expect(motion).toContain("<MobileHomeStory");
+    expect(motion).toContain("<OvodanStory");
     expect(motion).toContain("<FizziDesktopHero");
-    expect(homePage).toContain("理想营养");
-    expect(homePage).toContain("三个版本");
+    expect(featured).toContain("理想营养");
+    expect(featured).toContain("三个版本");
     expect(homePage).toContain("探索 ON 全系列");
     expect(homePage).toContain("防伪溯源");
-    expect(homePage.indexOf("</HomeCarousel>")).toBeLessThan(homePage.indexOf("home-billboard-contact"));
+    expect(featured).toContain('href="#on-products"');
+    expect(featured).toContain('<TaobaoButton label="淘宝店购买"');
     expect(carousel).toContain("window.setInterval");
     expect(carousel).toContain("IntersectionObserver");
     expect(carousel).toContain("prefers-reduced-motion: reduce");
@@ -108,7 +115,7 @@ describe("官网定位与联系信息", () => {
     expect(header).toContain('aria-label="ON 专区二级菜单"');
     expect(header).toContain('<Link href="/compliance"');
     expect(page).toContain("一桶，一批，一份对应资料");
-    expect(portal).toContain("验证 Batch 并调取");
+    expect(portal).toContain("验证批次并调取");
     expect(portal).toContain("提交资料申请");
     expect(portal).toContain("1 个工作日");
   });
@@ -207,13 +214,13 @@ describe("官网定位与联系信息", () => {
     expect(productsPage).toContain('redirect("/on")');
   });
 
-  it("首页 Hero 后展示理想营养品牌宣言与 ON 产品阵列", () => {
-    const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
+  it("ON 专区轮播展示理想营养品牌宣言与 ON 产品阵列", () => {
+    const homePage = readFileSync(path.join(process.cwd(), "src/components/OnFeaturedCarousel.tsx"), "utf8");
     expect(homePage).toContain("立足全球");
     expect(homePage).toContain("耕耘中国大陆");
     expect(homePage).toContain("10,000");
     expect(homePage).toContain("不可替代");
-    expect(homePage).toContain('href="/on"');
+    expect(homePage).toContain('href="#on-products"');
     expect(homePage).toContain('<TaobaoButton label="淘宝店购买" secondary />');
     expect(homePage).toContain("on-micronized-creatine-360g-blueberry-lemonade-front-transparent.webp");
     expect(homePage).not.toContain("on-micronized-creatine-300g");
@@ -221,8 +228,8 @@ describe("官网定位与联系信息", () => {
     expect(homePage).not.toContain("长期训练");
   });
 
-  it("首页与版本说明页一致区分三种销售版本", () => {
-    const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
+  it("ON 专区轮播与版本说明页一致区分三种销售版本", () => {
+    const homePage = readFileSync(path.join(process.cwd(), "src/components/OnFeaturedCarousel.tsx"), "utf8");
     const versionsPage = readFileSync(path.join(process.cwd(), "src/app/versions/page.tsx"), "utf8");
 
     expect(homePage).toContain("同是 ON");
@@ -239,8 +246,8 @@ describe("官网定位与联系信息", () => {
     expect(versionsPage).toContain("中国生产");
   });
 
-  it("首页使用两种真实标签介绍防伪溯源，并移除售后登记信息栏", () => {
-    const homePage = readFileSync(path.join(process.cwd(), "src/app/page.tsx"), "utf8");
+  it("ON 专区轮播使用两种真实标签介绍防伪溯源，并移除售后登记信息栏", () => {
+    const homePage = readFileSync(path.join(process.cwd(), "src/components/OnFeaturedCarousel.tsx"), "utf8");
 
     expect(homePage).toContain("两种码");
     expect(homePage).toContain("ON 防伪码");

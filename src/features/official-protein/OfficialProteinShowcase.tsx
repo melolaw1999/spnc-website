@@ -144,7 +144,7 @@ export function OfficialProteinShowcase({
                 onChange={(event) => setSelectedVariantId(event.target.value)}
               >
                 {sizeVariants.map((variant) => <option value={variant.id} key={variant.id}>
-                  {variant.flavorZh} · {variant.flavor} · {variant.size}
+                  {variant.flavorZh} · {variant.sizeLabel}
                 </option>)}
               </select>
             </label>
@@ -154,20 +154,20 @@ export function OfficialProteinShowcase({
             <div>
               <span>当前选择</span>
               <strong>{selectedVariant.sizeLabel} · {selectedVariant.flavorZh}</strong>
-              <small>{selectedVariant.flavor}</small>
+
             </div>
           </div>
           <dl className="gold-facts">
             {(selectedVariant.facts ?? [
               { label: "每份蛋白质", value: metricAmount(selectedVariant.proteinPerServing) },
               { label: "每份 BCAA", value: metricAmount(selectedVariant.bcaaInformation) },
-              { label: "每份热量", value: selectedVariant.calories === null ? "以标签为准" : `${selectedVariant.calories} kcal` },
+              { label: "每份热量", value: selectedVariant.calories === null ? "以标签为准" : `${selectedVariant.calories} 千卡` },
               { label: "每桶份数", value: selectedVariant.servingsPerContainer.replace(" Servings", " 份") },
             ]).map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}
           </dl>
           {content.factsNote ? <p className="gold-facts-note">{content.factsNote}</p> : null}
 
-          <p className="gold-serving">每份用量：{selectedVariant.servingSize || "请以实际包装标签为准"}</p>
+          <p className="gold-serving">每份用量：{selectedVariant.nutritionReference?.servingSizeZh || selectedVariant.servingSize || "请以实际包装标签为准"}</p>
           <div className="actions actions-left gold-actions">
             <TaobaoButton label="前往淘宝店查看在售商品" />
           </div>
@@ -179,14 +179,14 @@ export function OfficialProteinShowcase({
     <section className="gold-info-section" aria-labelledby={`${content.slug}-information-title`}>
       <div className="container gold-info-layout">
         <header className="gold-info-heading">
-          <div className="eyebrow">产品信息 · Product Information</div>
+          <div className="eyebrow">产品信息</div>
           <h2 id={`${content.slug}-information-title`}>{content.infoTitle}</h2>
           <p>{content.infoIntro}</p>
         </header>
 
         <div className="gold-info-accordions">
           <details open>
-            <summary><span>产品概览<small>Product Overview</small></span></summary>
+            <summary><span>产品概览</span></summary>
             <div className="gold-info-content">
               <h3>{content.overviewTitle}</h3>
               {content.overview.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
@@ -194,7 +194,7 @@ export function OfficialProteinShowcase({
           </details>
 
           <details open>
-            <summary><span>产品特点<small>Benefits</small></span></summary>
+            <summary><span>产品特点</span></summary>
             <div className="gold-info-content">
               <ul className="gold-benefit-list">
                 {content.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}
@@ -203,7 +203,7 @@ export function OfficialProteinShowcase({
           </details>
 
           <details open>
-            <summary><span>建议食用方式<small>Suggested Use</small></span></summary>
+            <summary><span>建议食用方式</span></summary>
             <div className="gold-info-content gold-use-content">
               <div className="gold-use-current">
                 <span>当前选择</span>
@@ -220,11 +220,11 @@ export function OfficialProteinShowcase({
     <section className="gold-nutrition-section" id={`${content.slug}-nutritional-information`}>
       <div className="container gold-nutrition-layout">
         <div className="gold-nutrition-copy">
-          <div className="eyebrow">营养信息 · Nutritional Information</div>
+          <div className="eyebrow">营养信息</div>
           <h2>{content.nutritionTitle || "对应营养成分标签"}</h2>
           <p>当前展示：<strong>{selectedVariant.sizeLabel} · {selectedVariant.flavorZh}</strong></p>
           <p className="muted">{content.nutritionIntro || "切换上方规格与口味后，营养成分和配料信息会同步更新。"}</p>
-          <details className="gold-ingredients" open>
+          <details className="gold-ingredients">
             <summary>{selectedVariant.ingredients ? "英文配料原文" : "配料与过敏原"}</summary>
             <p>{selectedVariant.ingredients || "配料与过敏原请查看对应实物标签，购买前也可联系淘宝店客服核对。"}</p>
           </details>
@@ -242,12 +242,12 @@ export function OfficialProteinShowcase({
               height={selectedVariant.nutritionImage.height}
               sizes="(max-width: 860px) 92vw, 56vw"
             /> : selectedVariant.facts ? <article className="gold-front-facts-card">
-              <div className="eyebrow">PACK FRONT · 包装正面</div>
+              <div className="eyebrow">包装正面</div>
               <h3>{selectedVariant.sizeLabel} · {selectedVariant.flavorZh}</h3>
               <dl>{selectedVariant.facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl>
               <div className="gold-front-facts-copy">
                 <strong>配料与标签</strong>
-                <p>{selectedVariant.ingredients || "请以实际到货包装标签为准。"}</p>
+                <p>{selectedVariant.nutritionReference?.ingredientsZh || selectedVariant.ingredients || "请以实际到货包装标签为准。"}</p>
               </div>
               <p className="gold-front-facts-note">营养成分、配料与食用方式请以实际到货包装为准。</p>
             </article> : <div className="gold-nutrition-missing">
@@ -266,19 +266,19 @@ export function OfficialProteinShowcase({
             </header>
 
             <dl className="gold-label-summary">
-              <div><dt>口味 <small>Flavor</small></dt><dd>{selectedVariant.flavorZh}<small>{selectedVariant.flavor}</small></dd></div>
-              <div><dt>调味方式 <small>Flavoring</small></dt><dd>{selectedVariant.nutritionReference.flavoringZh}<small>{selectedVariant.nutritionReference.flavoringEn}</small></dd></div>
-              <div><dt>每桶份数 <small>Servings per container</small></dt><dd>{selectedVariant.nutritionReference.servingsPerContainerZh}</dd></div>
-              <div><dt>每份用量 <small>Serving size</small></dt><dd>{selectedVariant.nutritionReference.servingSizeZh || "请以包装为准"}<small>{selectedVariant.servingSize}</small></dd></div>
+              <div><dt>口味</dt><dd>{selectedVariant.flavorZh}</dd></div>
+              <div><dt>调味方式</dt><dd>{selectedVariant.nutritionReference.flavoringZh}</dd></div>
+              <div><dt>每桶份数</dt><dd>{selectedVariant.nutritionReference.servingsPerContainerZh}</dd></div>
+              <div><dt>每份用量</dt><dd>{selectedVariant.nutritionReference.servingSizeZh || "请以包装为准"}</dd></div>
             </dl>
 
             <div className="gold-table-scroll">
               <table className="gold-nutrient-table">
-                <thead><tr><th>营养项目 <small>Nutrition Facts</small></th><th>每份含量 <small>Amount per serving</small></th><th>每日参考值 <small>% Daily Value</small></th></tr></thead>
+                <thead><tr><th>营养项目</th><th>每份含量</th><th>每日参考值</th></tr></thead>
                 <tbody>
-                  <tr><th>热量 <small>Calories</small></th><td>{selectedVariant.calories === null ? "—" : `${selectedVariant.calories} 千卡`}</td><td>—</td></tr>
+                  <tr><th>热量</th><td>{selectedVariant.calories === null ? "—" : `${selectedVariant.calories} 千卡`}</td><td>—</td></tr>
                   {selectedVariant.nutritionReference.nutrientRows.map((row) => <tr key={row.key}>
-                    <th>{row.labelZh}<small>{row.labelEn}</small></th>
+                    <th>{row.labelZh}</th>
                     <td>{row.amountZh}</td>
                     <td>{row.dailyValue || "—"}</td>
                   </tr>)}
@@ -288,22 +288,22 @@ export function OfficialProteinShowcase({
 
             <div className="gold-label-sections">
               <section>
-                <h4>配料 <small>Ingredients</small></h4>
+                <h4>配料</h4>
                 <p>{selectedVariant.nutritionReference.ingredientsZh || "暂无可核对的中文配料对照。"}</p>
                 <details><summary>查看英文配料原文</summary><p lang="en">{selectedVariant.ingredients}</p></details>
               </section>
               <section>
-                <h4>过敏原 <small>Contains</small></h4>
+                <h4>过敏原</h4>
                 <p>{selectedVariant.nutritionReference.allergensZh || "请查看英文原标签。"}</p>
-                {selectedVariant.nutritionReference.allergensEn ? <p className="gold-label-original" lang="en">{selectedVariant.nutritionReference.allergensEn}</p> : null}
+                {selectedVariant.nutritionReference.allergensEn ? <details><summary>查看过敏原原文</summary><p lang="en">{selectedVariant.nutritionReference.allergensEn}</p></details> : null}
               </section>
               <section>
-                <h4>冲调方式 <small>Directions</small></h4>
+                <h4>冲调方式</h4>
                 <p>{selectedVariant.nutritionReference.directionsZh || "请以实际包装说明为准。"}</p>
               </section>
               <section>
-                <h4>标签声明 <small>Label claims</small></h4>
-                <ul>{selectedVariant.nutritionReference.claims.map((claim) => <li key={claim.labelEn}>{claim.labelZh}<small>{claim.labelEn}</small></li>)}</ul>
+                <h4>标签声明</h4>
+                <ul>{selectedVariant.nutritionReference.claims.map((claim) => <li key={claim.labelEn}>{claim.labelZh}</li>)}</ul>
               </section>
             </div>
 
@@ -320,7 +320,7 @@ export function OfficialProteinShowcase({
     <section className="gold-faq-section" aria-labelledby={`${content.slug}-faq-title`}>
       <div className="container gold-faq-layout">
         <header className="gold-faq-heading">
-          <div className="eyebrow">常见问题 · FAQ</div>
+          <div className="eyebrow">常见问题</div>
           <h2 id={`${content.slug}-faq-title`}>购买与收货常见问题</h2>
           <p>从量勺、桶身和粉末状态，到防伪、版本与保存方式，先在这里快速核对。</p>
         </header>

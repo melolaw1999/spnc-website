@@ -32,7 +32,7 @@ export default function Careers() {
     <main className={styles.main}>
       <div className={styles.container}>
         <header className={styles.intro}>
-          <p className={styles.eyebrow}>SPNC · CAREERS</p>
+
           <h1>加入 SPNC</h1>
           <p className={styles.companyNameEn} lang="en">{companyNameEn}</p>
           <p className={styles.introText}>
@@ -100,7 +100,7 @@ export default function Careers() {
 
         <section className={styles.application} id="apply" aria-labelledby="apply-title">
           <div className={styles.applicationHeading}>
-            <p className={styles.eyebrow}>YOUR NEXT STEP</p>
+
             <h2 id="apply-title">从一份简历开始。</h2>
             <p>没有电商经验也可以。我们更关注你如何分析问题、学习和执行。</p>
             <a className={styles.email} href={applicationHref}>CONTACT@SPNC.CN <span aria-hidden="true">↗</span></a>

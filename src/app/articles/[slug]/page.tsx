@@ -37,7 +37,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
     <section className="article-detail-section"><div className="container article-detail-grid">
       <article className="wechat-article-frame">
-        {article.contentMode === "html" ? <div className="wechat-content" dangerouslySetInnerHTML={{ __html: article.contentHtml }} /> : article.contentImages?.length ? article.contentImages.map((image, index) => <Image className="wechat-long-image" src={image.src} alt={`${article.title}（第 ${index + 1} 部分）`} width={image.width} height={image.height} priority={index === 0} sizes="(max-width: 820px) 100vw, 760px" key={image.src} />) : article.contentImage ? <Image className="wechat-long-image" src={article.contentImage} alt={article.title} width={1588} height={11266} priority sizes="(max-width: 820px) 100vw, 760px" /> : null}
+        {article.contentMode === "html" ? <div className="wechat-content" dangerouslySetInnerHTML={{ __html: article.contentHtml.replace(/<p\b[^>]*>(?:(?!<\/p>)[\s\S])*?-End-(?:(?!<\/p>)[\s\S])*?<\/p>/g, "") }} /> : article.contentImages?.length ? article.contentImages.map((image, index) => <Image className="wechat-long-image" src={image.src} alt={`${article.title}（第 ${index + 1} 部分）`} width={image.width} height={image.height} priority={index === 0} sizes="(max-width: 820px) 100vw, 760px" key={image.src} />) : article.contentImage ? <Image className="wechat-long-image" src={article.contentImage} alt={article.title} width={1588} height={11266} priority sizes="(max-width: 820px) 100vw, 760px" /> : null}
       </article>
       <aside className="article-source-rail"><div className="article-source-card">
         <span>文章信息</span>

@@ -1,0 +1,4 @@
+/* 首次HTML即可按视口选对版式，避免等待JS后从桌面海报跳到手机版。 */
+.mobile { display:none; }
+.desktop { display:block; }
+@media(max-width:760px) { .mobile { display:block; } .desktop { display:none; } }

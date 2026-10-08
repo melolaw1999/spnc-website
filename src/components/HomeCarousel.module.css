@@ -145,9 +145,15 @@
   }
 
   .arrow {
-    top: 46%;
+    top: auto;
+    bottom: 4px;
     width: 42px;
     height: 42px;
+    transform: none;
+  }
+
+  .arrow:hover {
+    transform: none;
   }
 
   .arrow svg {

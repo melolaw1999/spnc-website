@@ -17,12 +17,12 @@ export default async function MembershipPreviewAccessPage({ searchParams }: Acce
   return <main className={styles.accessPage}>
     <section className={styles.accessPanel}>
       <div className={styles.accessCard} aria-hidden="true">
-        <div className={styles.cardTop}><strong>SPNC</strong><span>BLACK</span></div>
+        <div className={styles.cardTop}><strong>SPNC</strong><span>黑卡</span></div>
         <div className={styles.cardMark}>2<small>%</small></div>
-        <div className={styles.cardBottom}><span>INVITATION ONLY</span><b>TEAM PREVIEW</b></div>
+        <div className={styles.cardBottom}><span>仅限受邀成员</span><b>团队预览</b></div>
       </div>
       <div className={styles.accessCopy}>
-        <span>SPNC BLACK · INVITED PREVIEW</span>
+
         <h1>受邀访问。</h1>
         <p>黑卡会员目前处于内部方案核对阶段。请输入团队邀请密码，查看会籍、开卡、返利和结算演示。</p>
         <AccessForm

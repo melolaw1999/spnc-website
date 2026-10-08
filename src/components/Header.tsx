@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MobileNavigation } from "@/components/MobileNavigation";
 import styles from "./Header.module.css";
 
 const links = [
@@ -26,9 +27,9 @@ export function Header() {
       </div>
       {links.map(([label, href]) => <Link className={href === "/membership" ? styles.blackMembershipLink : undefined} href={href} key={href}>{label}</Link>)}
     </nav>
-    <details className="mobile-nav"><summary>菜单</summary><nav>
+    <MobileNavigation><summary>菜单</summary><nav>
       <div className={styles.mobileOnMenu}><Link href="/on">ON 专区</Link><Link href="/compliance"><small>ON 专区内</small>合规与资质</Link></div>
       {links.map(([label, href]) => <Link className={href === "/membership" ? styles.blackMembershipLink : undefined} href={href} key={href}>{label}</Link>)}
-    </nav></details>
+    </nav></MobileNavigation>
   </div></header>;
 }

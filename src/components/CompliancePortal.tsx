@@ -107,21 +107,21 @@ export function CompliancePortal({ configured, turnstileSiteKey }: { configured:
     {!configured && <div className={`notice ${styles.configNotice}`}>资料调取与申请入口正在完成安全配置，请暂时从淘宝订单联系售后。</div>}
 
     <section className={styles.lookupSection} aria-labelledby="compliance-lookup-title">
-      <div className={styles.sectionCopy}><span>01 · BATCH ACCESS</span><h2 id="compliance-lookup-title">按桶底 Batch 调取。</h2><p>选择商品与文件类型，输入桶底喷码中的完整 Batch / Lot 代码。系统只返回完全匹配且已加水印的资料。</p></div>
+      <div className={styles.sectionCopy}><span>01 · 资料查询</span><h2 id="compliance-lookup-title">按桶底批次代码调取。</h2><p>选择商品与文件类型，输入桶底喷码中的完整 Batch / Lot 代码。系统只返回完全匹配且已加水印的资料。</p></div>
       <form className={styles.formCard} onSubmit={verifyBatch}>
         <label>商品与规格<select className="field" name="productKey" required defaultValue=""><option value="" disabled>请选择商品</option>{complianceProductGroups.map((group) => <optgroup label={group.label} key={group.label}>{group.options.map((product) => <option value={product.key} key={product.key}>{product.label}</option>)}</optgroup>)}</select></label>
         <label>文件类型<select className="field" name="documentType" required defaultValue=""><option value="" disabled>请选择文件</option>{complianceDocumentTypes.map((type) => <option value={type.value} key={type.value}>{type.label}</option>)}</select></label>
         <label>桶底 Batch / Lot<input className="field" name="batchCode" autoCapitalize="characters" autoComplete="off" minLength={5} maxLength={48} required placeholder="请按桶底喷码原样输入" /><small>不要只填写 EXP 有效期；字母 O / 数字 0、字母 I / L 请仔细核对。</small></label>
         <label className="honeypot" aria-hidden="true">网站<input name="website" tabIndex={-1} autoComplete="off" /></label>
         {configured && <div className="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="light" />}
-        <button className="btn" type="submit" disabled={!configured || lookupStatus === "loading"}>{lookupStatus === "loading" ? "正在验证…" : "验证 Batch 并调取"}</button>
+        <button className="btn" type="submit" disabled={!configured || lookupStatus === "loading"}>{lookupStatus === "loading" ? "正在验证…" : "验证批次并调取"}</button>
         {lookupMessage && <p className={lookupStatus === "error" ? styles.error : styles.message} role="status">{lookupMessage}</p>}
         {documents.length > 0 && <div className={styles.documentList}>{documents.map((document) => <a href={document.url} target="_blank" rel="noreferrer" key={document.id}><span>{document.contentType === "application/pdf" ? "PDF" : "IMAGE"}</span><strong>{document.title}</strong><small>打开带水印文件 ↗</small></a>)}</div>}
       </form>
     </section>
 
     <section className={styles.requestSection} aria-labelledby="compliance-request-title">
-      <div className={styles.sectionCopy}><span>02 · REQUEST</span><h2 id="compliance-request-title">没有找到，提交申请。</h2><p>提交商品、Batch 与订单信息。我们核对后通常在 1 个工作日内回传，并按对应产品和文件类型归档。</p></div>
+      <div className={styles.sectionCopy}><span>02 · 资料申请</span><h2 id="compliance-request-title">没有找到，提交申请。</h2><p>提交商品、批次代码与订单信息。我们核对后通常在 1 个工作日内回传，并按对应产品和文件类型归档。</p></div>
       <form className={styles.formCard} onSubmit={submitRequest}>
         <label>商品与规格<select className="field" name="productKey" required defaultValue=""><option value="" disabled>请选择商品</option>{complianceProductGroups.map((group) => <optgroup label={group.label} key={group.label}>{group.options.map((product) => <option value={product.key} key={product.key}>{product.label}</option>)}</optgroup>)}</select></label>
         <fieldset><legend>需要的文件</legend><div className={styles.checkGrid}>{complianceDocumentTypes.map((type) => <label key={type.value}><input type="checkbox" name="documentTypes" value={type.value} />{type.label}</label>)}</div></fieldset>

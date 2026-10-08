@@ -16,9 +16,10 @@ const rotationInterval = 7000;
 type HomeCarouselProps = {
   children: ReactNode;
   labels: readonly string[];
+  label: string;
 };
 
-export function HomeCarousel({ children, labels }: HomeCarouselProps) {
+export function HomeCarousel({ children, labels, label }: HomeCarouselProps) {
   const slides = Children.toArray(children);
   const [activeIndex, setActiveIndex] = useState(0);
   const [manualPause, setManualPause] = useState(false);
@@ -76,7 +77,7 @@ export function HomeCarousel({ children, labels }: HomeCarouselProps) {
   return <section
     ref={carouselRef}
     className={styles.carousel}
-    aria-label="首页精选内容"
+    aria-label={label}
     aria-roledescription="轮播广告"
     onFocusCapture={() => setInteractionPause(true)}
     onBlurCapture={handleBlur}

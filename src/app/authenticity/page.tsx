@@ -49,7 +49,7 @@ export default function Authenticity() {
   return <main className="auth-page">
     <section className="auth-hero"><div className="container auth-hero-grid">
       <div className="auth-hero-copy">
-        <div className="eyebrow">Authenticity & Traceability</div>
+
         <h1>两种码，<br />两种作用。</h1>
         <p>先确认购买版本：国产和一般贸易商品核对防伪码；跨境商品同时核对防伪码与进口商品溯源码。再按实物提示扫码、刮开、验证。</p>
         <div className="auth-hero-tags"><span>国产 / 一般贸易 · 防伪码</span><span>跨境 · 防伪码 + 溯源码</span></div>
@@ -61,16 +61,16 @@ export default function Authenticity() {
     </div></section>
 
     <section className="auth-code-section"><div className="container">
-      <header className="auth-section-head"><div><span>Check the version</span><h2>先看版本，再找标签</h2></div><p>不是每一个版本都有两张码。以订单标注的销售版本和手中实物为准。</p></header>
+      <header className="auth-section-head"><div><h2>先看版本，再找标签</h2></div><p>不是每一个版本都有两张码。以订单标注的销售版本和手中实物为准。</p></header>
       <div className="auth-version-map">
         <article><div><span>01</span><strong>国产 / 一般贸易</strong></div><p>应核对</p><b>防伪码</b></article>
         <article><div><span>02</span><strong>跨境</strong></div><p>应同时核对</p><b>防伪码 <i>+</i> 溯源码</b></article>
       </div>
-      <header className="auth-section-head"><div><span>Start here</span><h2>先认清你扫的是哪一种码</h2></div><p>两张标签都可能出现在进口商品上，但它们回答的不是同一个问题。</p></header>
+      <header className="auth-section-head"><div><h2>先认清你扫的是哪一种码</h2></div><p>两张标签都可能出现在进口商品上，但它们回答的不是同一个问题。</p></header>
       <div className="auth-demo-warning"><strong>请扫描你收到的实物标签</strong><p>下方图片只用于辨认标签外观，不用于代替实物防伪或溯源验证。</p></div>
       <div className="auth-code-grid">
         <article className="auth-code-card auth-code-card-dark">
-          <div className="auth-code-card-head"><span>01 · Product authentication</span><strong>防伪码</strong></div>
+          <div className="auth-code-card-head"><span>01</span><strong>防伪码</strong></div>
           <div className="auth-code-media auth-code-media-round"><Image src="/assets/authenticity/on-authentication-label-crop.png" width={1035} height={1035} alt="ON 防伪码标签：扫码后刮开验证" sizes="(max-width: 820px) 80vw, 520px" /></div>
           <div className="auth-code-copy">
             <p className="auth-code-answer">负责回答：这张 ON 防伪标签能否通过对应验证。</p>
@@ -80,7 +80,7 @@ export default function Authenticity() {
         </article>
 
         <article className="auth-code-card auth-code-card-warm">
-          <div className="auth-code-card-head"><span>02 · Import traceability</span><strong>溯源码</strong></div>
+          <div className="auth-code-card-head"><span>02</span><strong>溯源码</strong></div>
           <div className="auth-code-media auth-code-media-tall"><Image src="/assets/authenticity/import-traceability-label-crop.png" width={810} height={1190} alt="进口商品防伪溯源码标签：扫码查询并刮开验证" sizes="(max-width: 820px) 72vw, 430px" /></div>
           <div className="auth-code-copy">
             <p className="auth-code-answer">负责回答：这件跨境商品能否查询到相应的进口溯源信息。</p>
@@ -92,7 +92,7 @@ export default function Authenticity() {
     </div></section>
 
     <section className="auth-refit-section"><div className="container">
-      <header className="auth-section-head"><div><span>Common question</span><h2>看到双层防伪码，先别慌</h2></div><p>个别商品可能在工厂贴码质检时重新覆盖防伪码，这是贴附返工，不等于商品被二次使用。</p></header>
+      <header className="auth-section-head"><div><h2>看到双层防伪码，先别慌</h2></div><p>个别商品可能在工厂贴码质检时重新覆盖防伪码，这是贴附返工，不等于商品被二次使用。</p></header>
       <div className="auth-refit-layout">
         <div className="auth-refit-flow">
           <article><span>01</span><div><strong>产品出厂贴码</strong><p>正常情况下，防伪码应完整贴附在包装指定位置。</p></div></article>
@@ -101,7 +101,7 @@ export default function Authenticity() {
           <article><span>04</span><div><strong>两层分别验证</strong><p>两张防伪码均可刮开，建议分别输入验证码并核对结果。</p></div></article>
         </div>
         <aside className="auth-code-reader">
-          <span>How to read the code</span>
+
           <h3>验证码这样分段看</h3>
           <div className="auth-code-format"><div><small>前 6 位</small><strong>日期数字</strong><em>仅数字</em></div><i aria-hidden="true">+</i><div><small>后 4 位</small><strong>字符组合</strong><em>字母＋数字，或纯字母</em></div></div>
           <div className="auth-character-title"><strong>容易看错的 3 组字符</strong><p>若第一次输入未通过，先放大验证码，再分别尝试这些可能的字符。</p></div>
@@ -113,17 +113,17 @@ export default function Authenticity() {
     </div></section>
 
     <section className="auth-results-section"><div className="container">
-      <header className="auth-section-head auth-section-head-light"><div><span>Read the result</span><h2>扫完以后，结果这样处理</h2></div><p>验证不是“扫一下就放心”，而是把结果、实物和原订单放在一起核对。</p></header>
+      <header className="auth-section-head auth-section-head-light"><div><h2>扫完以后，结果这样处理</h2></div><p>验证不是“扫一下就放心”，而是把结果、实物和原订单放在一起核对。</p></header>
       <div className="auth-result-grid">{resultGuide.map((item) => <article key={item.index}><span>{item.index}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>
       <div className="auth-result-action"><div><strong>准备好这 6 张照片</strong><p>商品正面、商品背面、防伪码、溯源码、批次/效期、淘宝订单。</p></div><Link className="btn" href="/support">从原订单继续售后</Link></div>
     </div></section>
 
     <section className="auth-official-section"><div className="container">
-      <header className="auth-section-head"><div><span>From ON</span><h2>再配合 ON 官网说明判断</h2></div><p>包装细节只能辅助判断。两种码的验证结果和购买订单，优先级更高。</p></header>
+      <header className="auth-section-head"><div><h2>再配合 ON 官网说明判断</h2></div><p>包装细节只能辅助判断。两种码的验证结果和购买订单，优先级更高。</p></header>
       <div className="auth-official-grid">{officialNotes.map((note, index) => <article key={note.title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{note.title}</h3><p>{note.text}</p></article>)}</div>
-      <div className="auth-source-row"><p>以上包装说明依据 ON 的 Product authentication tips 整理；不同地区及后续批次可能更新，请以品牌当前页面和商品实物为准。</p><a href="https://www.optimumnutrition.com/en-us/pages/authentic-products" target="_blank" rel="noreferrer">查看 ON 官网说明 ↗</a></div>
+      <div className="auth-source-row"><p>以上包装说明依据 ON 的产品防伪说明整理；不同地区及后续批次可能更新，请以品牌当前页面和商品实物为准。</p><a href="https://www.optimumnutrition.com/en-us/pages/authentic-products" target="_blank" rel="noreferrer">查看 ON 官网说明 ↗</a></div>
     </div></section>
 
-    <section className="auth-final-section"><div className="container auth-final-card"><span>One last rule</span><h2>没有任何一张包装照片，<br />能替代你手里的验证结果。</h2><p>保留订单和完整包装；防伪码、溯源码、批次与商品信息一起核对。遇到异常，从原订单继续沟通。</p><div><Link className="btn" href="/support">售后登记</Link><Link className="btn secondary" href="/articles/authenticity-and-supply-chain">阅读正品与供应链文章</Link></div></div></section>
+    <section className="auth-final-section"><div className="container auth-final-card"><h2>没有任何一张包装照片，<br />能替代你手里的验证结果。</h2><p>保留订单和完整包装；防伪码、溯源码、批次与商品信息一起核对。遇到异常，从原订单继续沟通。</p><div><Link className="btn" href="/support">售后登记</Link><Link className="btn secondary" href="/articles/authenticity-and-supply-chain">阅读正品与供应链文章</Link></div></div></section>
   </main>;
 }

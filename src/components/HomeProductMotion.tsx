@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ProductMotionHero } from "./ProductMotionHero";
+import { MobileHomeStory } from "./MobileHomeStory";
+import { OvodanStory } from "./OvodanStory";
 import { FizziDesktopHero } from "./FizziDesktopHero";
+import styles from "./HomeProductMotion.module.css";
 
 export function HomeProductMotion() {
   const [desktop, setDesktop] = useState<boolean | null>(null);
@@ -12,6 +14,6 @@ export function HomeProductMotion() {
     update(); query.addEventListener("change", update);
     return () => query.removeEventListener("change", update);
   }, []);
-  // 手机沿用已实现的横拖/纵向滚页；原 Fizzi 手机首屏本来就是静态图。
-  return desktop === false ? <ProductMotionHero /> : <FizziDesktopHero interactive={desktop === true} />;
+  return <>{desktop === null ? <><div className={styles.mobile}><MobileHomeStory interactive={false} /></div><div className={styles.desktop}><FizziDesktopHero interactive={false} /></div></>
+    : desktop ? <FizziDesktopHero interactive /> : <MobileHomeStory />}<OvodanStory /></>;
 }

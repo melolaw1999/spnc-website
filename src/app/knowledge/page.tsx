@@ -28,7 +28,7 @@ const articles = [
 
 export default function Knowledge() {
   return <main>
-    <section className="hero compact-hero"><div className="container"><div className="eyebrow">Knowledge Center</div><h1>知识中心</h1><p className="lead">用简单、可核对的方式解释运动营养商品选择、包装现象和版本差异。</p></div></section>
+    <section className="hero compact-hero"><div className="container"><h1>知识中心</h1><p className="lead">用简单、可核对的方式解释运动营养商品选择、包装现象和版本差异。</p></div></section>
     <section className="section"><div className="container"><div className="knowledge-grid">{articles.map((article) => <article className="card knowledge-card" key={article.title}><h2>{article.title}</h2><p className="muted">{article.text}</p></article>)}</div><div className="notice knowledge-notice">以上内容用于基础认知和选购核对，不构成医疗建议，也不替代产品实物标签、品牌公开说明或专业人士建议。</div><div className="actions"><Link className="btn" href="/versions">查看版本说明</Link><Link className="btn secondary" href="/authenticity">查看防伪溯源</Link></div></div></section>
   </main>;
 }

@@ -11,7 +11,7 @@ export default function About() {
     <main>
       <section className="hero">
         <div className="container">
-          <div className="eyebrow">About SPNC</div>
+
           <h1>正品源自正道</h1>
           <p className="lead">理想营养由 SPNC 运营，专注于全球运动营养品牌商品的正品供应、版本说明、防伪溯源与售后服务。</p>
         </div>

@@ -14,19 +14,15 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { addFizziEntrance, addFizziScrollTracks, resetFizziActors } from "@/lib/fizzi-hero-timeline";
-import { OvodanLabelFlavor } from "@/data/ovodan-labels";
-import { HeroBottleCommand } from "@/lib/hero-bottle-motion";
 import { OnChocolateTub } from "./OnChocolateTub";
 import { OnStudioLighting } from "./OnStudioLighting";
-import { OvodanThreeFaceBottle } from "./OvodanThreeFaceBottle";
 import { OnSkyDive } from "./OnSkyDive";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 type Props = {
-  primary: RefObject<HTMLElement | null>; primaryView: RefObject<HTMLDivElement | null>; ovoView: RefObject<HTMLDivElement | null>;
-  sky: RefObject<HTMLElement | null>; skyView: RefObject<HTMLDivElement | null>; ovoVisible: boolean;
+  primary: RefObject<HTMLElement | null>; primaryView: RefObject<HTMLDivElement | null>;
+  sky: RefObject<HTMLElement | null>; skyView: RefObject<HTMLDivElement | null>;
   running: boolean; onReady: () => void; onFailure: () => void;
-  flavor: OvodanLabelFlavor; command: HeroBottleCommand; onAngle: (yaw: number) => void;
 };
 
 // 与源 Drei Float 完全相同的速度/幅度/方程。独立累加时间只为暂停恢复
@@ -145,17 +141,6 @@ function HeroScene({ primary, running, onReady }: Pick<Props, "primary" | "runni
   </>;
 }
 
-function OvodanScene({ running, flavor, command, onAngle }: Pick<Props, "running" | "flavor" | "command" | "onAngle">) {
-  const model = useRef<Group>(null);
-  const { invalidate } = useThree();
-  useEffect(() => { if (model.current) model.current.rotation.y = command.yaw; invalidate(); }, [command, invalidate]);
-  useFrame((_, delta) => { if (model.current) { if (running) model.current.rotation.y += Math.min(delta, .05) * .255; onAngle(model.current.rotation.y); } });
-  return <>
-    <ambientLight intensity={1.45} /><directionalLight position={[-4, 4, 5]} intensity={2.1} /><directionalLight position={[4, 2, -3]} intensity={1.5} />
-    <group scale={.65} rotation-x={.05}><group ref={model}><OvodanThreeFaceBottle flavor={flavor} /></group></group>
-  </>;
-}
-
 export default function FizziViews(props: Props) {
   return <Canvas camera={{ position: [0, 0, 5], fov: 30 }} dpr={[1, 1.5]} frameloop={props.running ? "always" : "demand"}
     gl={{ antialias: true, alpha: true, toneMapping: NoToneMapping }}
@@ -165,6 +150,5 @@ export default function FizziViews(props: Props) {
     }}>
     <View track={props.primaryView as RefObject<HTMLDivElement>} index={1}><Suspense fallback={null}><HeroScene {...props} /></Suspense></View>
     <View track={props.skyView as RefObject<HTMLDivElement>} index={2}><Suspense fallback={null}><OnSkyDive section={props.sky} running={props.running} /></Suspense></View>
-    <View track={props.ovoView as RefObject<HTMLDivElement>} index={3}><Suspense fallback={null}>{props.ovoVisible && <OvodanScene {...props} />}</Suspense></View>
   </Canvas>;
 }

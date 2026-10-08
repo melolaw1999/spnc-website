@@ -13,7 +13,6 @@ const versions = [
   {
     id: "cross-border",
     number: "01",
-    eyebrow: "Cross-border import",
     title: "跨境进口版",
     short: "保税仓发货",
     summary: "原装进口的跨境销售版本，下单后由境内保税仓发出，通常以英文包装为主。",
@@ -26,7 +25,6 @@ const versions = [
   {
     id: "general-trade",
     number: "02",
-    eyebrow: "General trade import",
     title: "一般贸易进口版",
     short: "原装进口 · 境内流通",
     summary: "原装进口后按一般贸易链路在境内销售，正面或背面通常可见中文标签信息。",
@@ -39,7 +37,6 @@ const versions = [
   {
     id: "domestic",
     number: "03",
-    eyebrow: "Made in China",
     title: "国产版本",
     short: "中国制造",
     summary: "ON 品牌体系下的中国生产版本，包装以中文信息为主，可见中国制造或受托生产相关信息。",
@@ -56,7 +53,7 @@ export default function Versions() {
     <section className={styles.hero}>
       <div className={`container ${styles.heroInner}`}>
         <div className={styles.heroCopy}>
-          <p>ON PRODUCT VERSIONS</p>
+
           <h1>同是 ON，<br />版本路径不同。</h1>
           <span>先看订单，再看包装与码。版本区别来自生产、进口和发货链路，不应只凭桶身外观判断。</span>
           <div className={styles.heroActions}>
@@ -83,13 +80,13 @@ export default function Versions() {
     <section className={styles.versionSection} aria-labelledby="version-detail-title">
       <div className="container">
         <header className={styles.sectionHead}>
-          <div><p>THREE ROUTES</p><h2 id="version-detail-title">三条路径，一次看懂。</h2></div>
+          <div><h2 id="version-detail-title">三条路径，一次看懂。</h2></div>
           <span>包装示例用于帮助识别，具体文字、排版和细节可能随产品与批次更新。</span>
         </header>
 
         <div className={styles.versionList}>
           {versions.map((version) => <article className={styles.versionCard} id={version.id} key={version.id}>
-            <div className={styles.versionNumber}><span>{version.number}</span><small>{version.eyebrow}</small></div>
+            <div className={styles.versionNumber}><span>{version.number}</span></div>
             <div className={styles.versionImage}>
               <Image src={version.image} alt={version.imageAlt} fill sizes="(max-width: 760px) 72vw, 31vw" />
             </div>
@@ -109,7 +106,7 @@ export default function Versions() {
     <section className={styles.compareSection} id="compare" aria-labelledby="compare-title">
       <div className="container">
         <header className={styles.compareHead}>
-          <p>QUICK COMPARISON</p>
+
           <h2 id="compare-title">只记住这四项。</h2>
         </header>
 
